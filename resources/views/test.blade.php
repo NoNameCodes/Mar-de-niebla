@@ -9,6 +9,9 @@
     <x-header />
     hola
     <img src="{{ asset('storage/fotoprueba.PNG') }}" alt="fotoprueba">
+    <img src="{{ asset('storage/fotoprueba.PNG') }}" alt="fotoprueba">
+    <img src="{{ asset('storage/fotoprueba.PNG') }}" alt="fotoprueba">
+    
 </body>
 <x-footer />
 </html>
