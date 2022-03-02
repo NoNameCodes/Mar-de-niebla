@@ -1,18 +1,23 @@
 <x-guest-layout>
+    <x-header>
+        <a href="{{ route('login') }}" style="text-decoration: none">
+            <h3 style="color: #F8981D">Login</h3>
+        </a>
+    </x-header>
     <x-jet-authentication-card>
         <x-slot name="logo">
             <x-jet-authentication-card-logo />
         </x-slot>
 
         <x-jet-validation-errors class="mb-4" />
-        <h3 class="mt-1 mb-20 text-[#F8981D] text-2xl font-semibold italic">
+        <h3 class="mt-1 mb-10 text-[#F8981D] text-2xl font-semibold italic">
             Registro
         </h3>
         <form method="POST" action="{{ route('register') }}">
             @csrf
 
             <div>
-                <x-jet-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required
+                <x-jet-input id="name" class="block mt-5 w-full" type="text" name="name" :value="old('name')" required
                     autofocus autocomplete="name" placeholder="Nombre de la organización" />
             </div>
 
@@ -48,13 +53,13 @@
                     </x-jet-label>
                 </div>
             @endif
-            <div class="flex items-center justify-center mt-16">
+            <div class="flex items-center justify-center mt-8">
                 <x-jet-button class="ml-4">
                     {{ __('Registrarse') }}
                 </x-jet-button>
             </div>
             <div>
-                <a class="flex items-center justify-center mt-16 underline text-sm text-gray-600 hover:text-gray-900"
+                <a class="flex items-center justify-center mt-8 underline text-sm text-gray-600 hover:text-gray-900"
                     href="{{ route('login') }}">
                     {{ __('¿Ya estás registrad@?') }}
                 </a>
@@ -62,4 +67,5 @@
             </div>
         </form>
     </x-jet-authentication-card>
+    <x-footer />
 </x-guest-layout>

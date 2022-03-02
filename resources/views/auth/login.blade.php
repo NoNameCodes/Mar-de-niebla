@@ -1,4 +1,7 @@
 <x-guest-layout>
+    <x-header >
+        <a href="{{ route('register') }}" style="text-decoration: none"><h3 style="color: #F8981D">Registro</h3></a>
+    </x-header>
     <x-jet-authentication-card>
         <x-jet-validation-errors class="mb-4" />
         @if (session('status'))
@@ -29,12 +32,12 @@
                 </label>
             </div>
 
-            <div class="flex items-center justify-center mt-16">
+            <div class="flex items-center justify-center mt-8">
                 <x-jet-button class="ml-4 bg-[#F8981D] font-bold">
                     {{ __('Entrar') }}
                 </x-jet-button>
             </div>
-            <div class="flex items-center justify-center mt-12">
+            <div class="flex items-center justify-center mt-8">
                 @if (Route::has('password.request'))
                     <a class="underline text-sm text-gray-600 hover:text-gray-900"
                         href="{{ route('password.request') }}">
@@ -43,11 +46,12 @@
                 @endif
             </div>
             <div>
-                <a class="flex items-center justify-center mt-5 underline text-sm text-gray-600 hover:text-gray-900"
+                <a class="flex items-center justify-center mt-3 underline text-sm text-gray-600 hover:text-gray-900"
                     href="{{ route('register') }}">
                     {{ __('¿No tienes cuenta? Registrate aquí.') }}
                 </a>
             </div>
         </form>
     </x-jet-authentication-card>
+    <x-footer />
 </x-guest-layout>
