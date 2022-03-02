@@ -5,9 +5,10 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
        
   <div class="flex justify-between items-center" >
     <img src="{{ asset('storage/logo.jpg') }}" alt="logo">
+     {{$slot}}
+</header>
+{{-- <img src="{{ asset('storage/logo.jpg') }}" alt="logo">
     <a href="{{ route('register') }}" style="text-decoration: none"><h3 style="color: #F8981D">Register</h3></a>
     <a href="{{ route('login') }}"style="text-decoration: none" ><h3 style="color: #F8981D">Login</h3></a>
     
-    <i class="fa-solid fa-user fa-2x" style="color: #F8981D" ></i>
-     {{$slot}}
-</header>
+    <i class="fa-solid fa-user fa-2x" style="color: #F8981D" ></i> --}}
