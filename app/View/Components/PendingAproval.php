@@ -4,7 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class UserApproval extends Component
+class PendingAproval extends Component
 {
     /**
      * Create a new component instance.
@@ -23,6 +23,6 @@ class UserApproval extends Component
      */
     public function render()
     {
-        return view('components.user-approval');
+        return view('components.pending-aproval');
     }
 }
