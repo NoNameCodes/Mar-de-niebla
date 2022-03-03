@@ -36,11 +36,6 @@ class CreateNewUser implements CreatesNewUsers
             'password' => Hash::make($input['password']),
         ]);
 
-        // $accepted = User::where('aproved_at', !'empty');
-        // if ($accepted) {
-        //     $accepted->notify(new RegisterAccepted($user));
-        // }
-
         $admin = User::where('admin', 1)->first();
         if ($admin) {
             $admin->notify(new NewUser($user));
