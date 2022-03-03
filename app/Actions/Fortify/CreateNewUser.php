@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Validator;
 use Laravel\Fortify\Contracts\CreatesNewUsers;
 use Laravel\Jetstream\Jetstream;
 use App\Notifications\NewUser;
+use App\Notifications\RegisterAccepted;
 
 
 class CreateNewUser implements CreatesNewUsers
@@ -34,6 +35,12 @@ class CreateNewUser implements CreatesNewUsers
             'email' => $input['email'],
             'password' => Hash::make($input['password']),
         ]);
+
+        // $accepted = User::where('aproved_at', !'empty');
+        // if ($accepted) {
+        //     $accepted->notify(new RegisterAccepted($user));
+        // }
+
         $admin = User::where('admin', 1)->first();
         if ($admin) {
             $admin->notify(new NewUser($user));
