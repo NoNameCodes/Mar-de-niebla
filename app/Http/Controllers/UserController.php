@@ -5,26 +5,19 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 
-
 class UserController extends Controller
 {
-
     public function index()
     {
-        $users = User::whereNull('aproved_at')->get();
-
-        return view('components.pending-aproval', compact('users'));
+        $users = User::get();
+        return view('admin-dashboard', compact('users'));
     }
 
-    /*     public function approve()
+    public function delete($id)
     {
-        return view('user-approval');
-    } */
-    public function approve($user_id)
-    {
-        $user = User::findOrFail($user_id);
-        $user->update(['aproved_at' => now()]);
+        $user = User::find($id);
+        $user->delete();
 
-        return redirect()->route('admin.users.index')->withMessage('User approved successfully');
+        return redirect()->route('admin.users.index')->withMessage('User deleted successfully');
     }
 }
