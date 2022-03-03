@@ -20,7 +20,7 @@ return new class extends Migration
 
             $table->unsignedBigInteger('resource_id');
 
-            $table->foreign('resource_id')->references('id')->on('resources');
+            $table->foreign('resource_id')->references('id')->on('resources')->onDelete('cascade');
         });
     }
 
