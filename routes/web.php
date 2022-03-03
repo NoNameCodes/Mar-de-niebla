@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserPendingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,7 +32,9 @@ Route::middleware(['auth'])->group(function () {
     });
 
     Route::middleware(['admin'])->group(function () {
-        Route::get('/users', [UserController::class, 'index'])->name('admin.users.index');
-        Route::get('/users/{user_id}/approve', [UserController::class, 'approve'])->name('admin.users.approve');
+        Route::get('aprove/users', [UserPendingController::class, 'index'])->name('admin.users.pending.index');
+        Route::get('aprove/users/{user_id}/', [UserPendingController::class, 'approve'])->name('admin.users.approve');
+        Route::get('users', [UserController::class, 'index'])->name('admin.users.index');
+        Route::get('users/{user_id}/delete', [UserController::class, 'delete'])->name('admin.users.delete');
     });
 });
