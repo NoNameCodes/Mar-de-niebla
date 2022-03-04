@@ -9,8 +9,24 @@
     }
 </style>
 
+
+
+	<div class="ms:w-full md:w-full lg:w-2/5 border-b-4 border-orange-400 flex">
+		<div class="w-3/12">
+			<img src="https://images.pexels.com/photos/4381392/pexels-photo-4381392.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=300" alt="photo de recurso" class="" />
+        </div>
+        <div class="flex w-3/4 border-2 border-indigo-400 align-middle">
+            
+            <span class="">Nombre de recurso</span>
+            <div class="">
+                <button class="aling-middle bg-[#92C954] hover:bg-[#85f307] duration-300" type="button">Reservar</button>
+            </div>
+        </div>
+	</div>
+
+
 <!-- component -->
-<div class="flex flex-col justify-center h-screen">
+{{-- <div class="flex flex-col justify-center h-screen">
 	<div class="relative flex flex-row md:flex-row md:space-x-5 space-y-3 md:space-y-0 rounded-xl shadow-lg p-3 max-w-xs md:max-w-3xl mx-auto border border-white bg-white">
 		<div class="w-full md:w-1/3 bg-white grid place-items-center">
 			<img src="https://images.pexels.com/photos/4381392/pexels-photo-4381392.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=300" alt="tailwind logo" class="rounded-xl w-3/4" />
@@ -23,7 +39,7 @@
             </div>
         </div>
 	</div>
-</div>
+</div> --}}
 
 
 
