@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\LogoutController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,3 +25,4 @@ Route::get('/reserve', function () {
     return view('reserve');
 });
 
+Route::get('logout', [LogoutController::class, 'logout'])->name('logout');
