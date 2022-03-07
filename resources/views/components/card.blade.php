@@ -12,8 +12,8 @@
 
 
 	<div class="ms:w-full md:w-full lg:w-2/5 border-b-4 border-orange-400 flex">
-		<div class="w-3/12">
-			<img src="https://images.pexels.com/photos/4381392/pexels-photo-4381392.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=300" alt="photo de recurso" class="" />
+		<div class="w-3/12 p-4">
+			<img src="https://images.pexels.com/photos/4381392/pexels-photo-4381392.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=300" alt="photo de recurso" class="rounded-xl " />
         </div>
         <div class="flex w-3/4 border-2 border-indigo-400 align-middle">
             
