@@ -6,6 +6,8 @@ module.exports = {
         './vendor/laravel/jetstream/**/*.blade.php',
         './storage/framework/views/*.php',
         './resources/views/**/*.blade.php',
+        '.resources/**/*.js',
+        '.resources/**/*.vue',
     ],
 
     theme: {
@@ -13,6 +15,11 @@ module.exports = {
             fontFamily: {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
             },
+            colors: {
+                primary: "var(--primary)",
+                buttonColorReserve: "var(--buttonColorReserve)",
+                secondary: "var(--secondary)",
+            }
         },
     },
 
