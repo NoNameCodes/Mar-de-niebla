@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('profile_photo_path', 2048)->nullable();
             $table->timestamps();
             $table->boolean('admin')->default(0);
+            $table->timestamp('aproved_at')->nullable();
         });
     }
 
