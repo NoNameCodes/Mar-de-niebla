@@ -1,17 +1,8 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
-<head>
-    <title>Profile Dashboard</title>
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <script src="https://unpkg.com/flowbite@1.3.4/dist/datepicker.js"></script>
-</head>
-
-    <body>
-
-      <x-header >
-       <div clase="flex">
-            <button  type="button" data-dropdown-toggle="dropdown"><i class="fa-solid fa-user fa-2x" style="color: #F8981D" ></i> </button>
+<x-guest-layout>
+      <x-header  >
+       <div >
+            <button  type="button" data-dropdown-toggle="dropdown"><i class="fa-solid fa-user fa-2x " style="color: #F8981D" ></i> </button>
 
             <!-- Dropdown menu -->
             <div class="hidden bg-[#F8981D] text-base z-50  " id="dropdown">
@@ -35,36 +26,35 @@
       </x-header >
       
       
-       <form action=""class="footerdown ">
+       <form action="" class="footerdown ">
         
-        <div class="flex items-center justify-center mt-8 mb-4 " >
-              <div class="flex flex-col ">
-              <img src="{{ asset('storage/furgoneta.PNG') }}" alt="recurso" class="mb-5">
+        <div class=" mb-6 flex flex-col items-center justify-center  " >
               
-              <div  class=" flex space-x-12">
+              <img src="{{ asset('storage/furgoneta.PNG') }}" alt="recurso" class="  mb-2 mt-2" >
+              
+              
                 
-                <label for="date" class="text-gray-700 italic"><p  class="flex justify-items-center" >Seleccione el día</p></label>
+                <label for="date" class="text-gray-700 italic">Seleccione el día</label>
               
                 <input  type="date"
-                  class="form-control  text-gray-700   border-orange-500 rounded-xl py-2 px-4 bg-[#FAF3F3]"
+                  class="form-control flex items-center text-gray-700   border-orange-500 rounded-xl  bg-[#FAF3F3] mb-6" 
                     id="date"/> 
               
-              </div>
-        </div>
-        </div>
-        <div class="flex flex-col items-center justify-center mt-5 ">
-          <input type="text" placeholder="Introduce tu nombre" class="text-gray-700 italic border-orange-500 rounded-xl py-2 px-24  bg-[#FAF3F3] mb-5 	"  >
-          <input type="number"   placeholder="Introduce tu teléfono" class="text-gray-700 italic border-orange-500 rounded-xl py-2 px-24 bg-[#FAF3F3] mb-5 	"  >
-          <textarea class="text-gray-700 italic border-orange-500 rounded-xl py-14 px-24 bg-[#FAF3F3] mb-5" placeholder="Comentarios" ></textarea>
-          <button class="bg-[#F8981D] hover:bg-[#ecc188] text-white font-bold py-2 px-4 rounded-xl mb-5 shadow-xl" type="submit">
+              
+        
+        
+       
+          <input type="text" placeholder="Introduce tu nombre" class="text-gray-700 italic border-orange-500 rounded-xl  bg-[#FAF3F3]  mb-6 "  >
+          <input type="number"   placeholder="Introduce tu teléfono" class="text-gray-700 italic border-orange-500 rounded-xl  bg-[#FAF3F3] mb-6"  >
+          <textarea class="text-gray-700 italic border-orange-500 rounded-xl bg-[#FAF3F3] py-12 mb-6" placeholder="Comentarios" ></textarea>
+          <button class="bg-[#F8981D] hover:bg-[#ecc188] text-white font-bold py-2 px-8 shadow-xl rounded-full" type="submit">
             Reservar
           </button>
+          
         </div>
-     
+      
       </form> 
           
-        <x-footer />
-
-    </body>
-
-</html> 
+      <x-footer  />
+      </x-guest-layout>
+     
