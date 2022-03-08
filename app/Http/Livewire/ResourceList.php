@@ -11,7 +11,7 @@ class ResourceList extends Component
     // use WithPagination;
     public function render()
     {
-        $resources = Resource::orderBy('id', 'desc')->paginate(9);
+        $resources = Resource::orderBy('id', 'desc')->paginate(5);
         return view('livewire.resource-list', compact('resources'));
     }
 }

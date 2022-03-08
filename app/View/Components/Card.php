@@ -11,9 +11,12 @@ class Card extends Component
      *
      * @return void
      */
-    public function __construct()
+
+    public $resource;
+
+    public function __construct($resource)
     {
-        //
+        $this->resource=$resource;
     }
 
     /**
