@@ -2,11 +2,11 @@
   <div class=" bg-white rounded-md px-9 py-10 max-w-2xl">
       <div class="space-y-4">
          <div>
-          <input type="text" placeholder="Nombre del recurso" class="ml-1 outline-none px-8 text-sm border-orange-400 border-1 rounded-md" />
+          <input type="text" placeholder="Nombre del recurso" class=" outline-none px-12 py-3 text-sm border-orange-400 border-1 rounded-md" />
          </div>
          
           <div>
-           <input type="text" placeholder="Localización" class="ml-1 outline-none px-8 text-sm border-orange-400 border-1 rounded-md" />
+           <input type="text" placeholder="Localización" class=" outline-none px-12 pt-3 text-sm border-orange-400 border-1 rounded-md" />
          </div>
 
          <x-card-multiselect />
@@ -22,11 +22,11 @@
             </select>
          </div> --}}
 
-         <div class="py-4">
-           <textarea id="description" cols="28" rows="10" placeholder="Descripción/Incidencias" class="ml-1 outline-none px-2 text-sm border-orange-400 border-1 rounded-md"></textarea>
+         <div class="py-1">
+           <textarea id="description" cols="31" rows="10" placeholder="Descripción/Incidencias" class=" outline-none px-2 text-sm border-orange-400 border-1 rounded-md"></textarea>
          </div>
          
-         <div class="py-4">
+         <div class="py-1">
           <label class="block">
             <input type="file" class="block w-full text-sm text-slate-500 file:mr-4 file:py-1 file:px-6 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-orange-500 file:text-white hover:file:bg-violet-100 "/>
           </label>
