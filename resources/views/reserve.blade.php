@@ -14,7 +14,7 @@
                 <li>
                   <form method="POST" action="{{ route('logout') }}">
                     @csrf
-                    <button type="submit" class="text-sm hover:bg-gray-300 text-gray-700 block px-4 py-2">Logout</button>
+                    <button type="submit" class="text-sm hover:bg-gray-300 flex justify-center text-gray-700 block px-4 py-2">Logout</button>
                     </form>
                 </li>
               
@@ -47,7 +47,7 @@
           <input type="text" placeholder="Introduce tu nombre" class="text-gray-700 italic border-orange-500 rounded-xl  bg-[#FAF3F3]  mb-6 "  >
           <input type="number"   placeholder="Introduce tu teléfono" class="text-gray-700 italic border-orange-500 rounded-xl  bg-[#FAF3F3] mb-6"  >
           <textarea class="text-gray-700 italic border-orange-500 rounded-xl bg-[#FAF3F3] py-12 mb-6" placeholder="Comentarios" ></textarea>
-          <button class="bg-[#F8981D] hover:bg-[#ecc188] text-white font-bold py-2 px-8 shadow-xl rounded-full" type="submit">
+          <button class="bg-[#F8981D] hover:bg-[#ecc188] text-white font-bold py-2 px-8 shadow-xl rounded-full mb-2" type="submit">
             Reservar
           </button>
           
