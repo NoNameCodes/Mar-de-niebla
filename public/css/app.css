@@ -1293,6 +1293,9 @@ select {
 .place-items-center {
   place-items: center;
 }
+.content-start {
+  align-content: flex-start;
+}
 .items-center {
   align-items: center;
 }
@@ -1336,6 +1339,11 @@ select {
   --tw-space-y-reverse: 0;
   margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+.space-y-3 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
 }
 .divide-y > :not([hidden]) ~ :not([hidden]) {
   --tw-divide-y-reverse: 0;
@@ -1566,9 +1574,6 @@ select {
 .p-4 {
   padding: 1rem;
 }
-.p-3 {
-  padding: 0.75rem;
-}
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -1629,6 +1634,10 @@ select {
   padding-left: 2.25rem;
   padding-right: 2.25rem;
 }
+.px-12 {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
@@ -1640,18 +1649,6 @@ select {
 .px-16 {
   padding-left: 4rem;
   padding-right: 4rem;
-}
-.px-10 {
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
-}
-.px-11 {
-  padding-left: 2.75rem;
-  padding-right: 2.75rem;
-}
-.px-12 {
-  padding-left: 3rem;
-  padding-right: 3rem;
 }
 .pt-6 {
   padding-top: 1.5rem;
@@ -1686,14 +1683,14 @@ select {
 .pl-4 {
   padding-left: 1rem;
 }
+.pt-3 {
+  padding-top: 0.75rem;
+}
 .pt-8 {
   padding-top: 2rem;
 }
 .pb-2 {
   padding-bottom: 0.5rem;
-}
-.pt-3 {
-  padding-top: 0.75rem;
 }
 .text-left {
   text-align: left;

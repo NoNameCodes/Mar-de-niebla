@@ -2,7 +2,7 @@
   <div class=" bg-white rounded-md px-9 py-10 max-w-2xl">
       <div class="space-y-4">
          <div>
-          <input type="text" placeholder="Nombre del recurso" class=" outline-none px-12 py-3 text-sm border-orange-400 border-1 rounded-md" />
+          <input type="text" placeholder="Nombre del recurso" class=" outline-none px-12 py-3 text-sm flex border-orange-400 border-1 rounded-md" />
          </div>
          
           <div>
