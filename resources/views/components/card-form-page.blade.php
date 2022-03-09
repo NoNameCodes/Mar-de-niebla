@@ -40,7 +40,7 @@
           </div> --}}
          
          <div class="grid grid-cols-2 gap-1 place-items-center h-26">
-          <button class=" px-6 py-1 mx-auto block rounded-md text-md font-semibold text-white bg-[#A9171C]  ">Cerrar</button>
+          <button class=" px-6 py-1 mx-auto block rounded-md text-md font-semibold text-white bg-[#A9171C]  "><a id= link_dashboard href="{{route('dashboard')}}"></a> Cerrar</button>
           <button class=" px-4 py-1 mx-auto block rounded-md text-md font-semibold text-white bg-[#92C954]  ">Guardar</button>
             
          </div >         
