@@ -12,8 +12,7 @@ class DashboardController extends Controller
         $resources = Resource::orderBy('id', 'desc')->paginate(5);
         return view('welcome', compact('resources'));
     
-        // return view('welcome');
-    }    
+           }    
 
     
 }    

@@ -30,10 +30,6 @@ Route::middleware(['auth:sanctum', 'verified', 'approved'])->group(function () {
 
 Route::resource('resources', ResourceCRUDController::class);
 
-Route::middleware(['auth:sanctum', 'verified', 'approved'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
-
 Route::middleware(['auth'])->group(function () {
     Route::get('/approval', [HomeController::class, 'approval'])->name('approval');
 
