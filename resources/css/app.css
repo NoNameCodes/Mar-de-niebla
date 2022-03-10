@@ -2,7 +2,6 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-<<<<<<< HEAD
 
 body {
   --primary: #F8981D;
@@ -11,7 +10,6 @@ body {
   
 }
 
-=======
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
 -webkit-appearance: none;
@@ -22,4 +20,3 @@ margin: 0;
 }
 
 
->>>>>>> feature/reservas
