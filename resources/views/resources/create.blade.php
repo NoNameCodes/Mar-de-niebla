@@ -22,7 +22,7 @@
 {{ session('status') }}
 </div>
 @endif
-<form action="{{ route('resources.store') }}" method="POST" enctype="multipart/form-data">
+<form action="{{ route('resources.store') }}" method="POST">
 @csrf
 
 <div class="row">
@@ -58,11 +58,11 @@
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
             <strong>Resource Address:</strong>
-            <input type="" name="location_id" class="form-control" placeholder="Resource Address">
+            <input type="   " name="location_id" class="form-control" placeholder="Resource Address">
         </div>
     </div>
 
-    <button type="submit" class="btn btn-primary ml-3">Submit</button>
+    <button type="submit" class="btn btn-primary ml-3">Añadir</button>
 </div>
 </form>
 </body>
