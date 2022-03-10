@@ -22,6 +22,9 @@
         </style>
     </head>
     <body class="antialiased">
+        <x-header >
+            <a href="{{ route('register') }}" style="text-decoration: none"><h3 style="color: #F8981D">Registro</h3></a>
+        </x-header>
         <div>
             <livewire:resource-list />
         </div>
