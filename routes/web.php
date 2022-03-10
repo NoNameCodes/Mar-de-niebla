@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LogoutController;
+use App\Http\Controllers\ReserveController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,3 +27,5 @@ Route::get('/reserve', function () {
 });
 
 Route::get('logout', [LogoutController::class, 'logout'])->name('logout');
+ Route::post('/reserve', [ReserveController::class, 'store'])->middleware('auth')->name('reserve.store');
+ Route::get('/reserve', [ReserveController::class, 'create'])->middleware('auth')->name('reserve.create');
