@@ -26,43 +26,40 @@
 @csrf
 @method('PUT')
 <div class="row">
-<div class="col-xs-12 col-sm-12 col-md-12">
-<div class="form-group">
-<strong>Resource Name:</strong>
-<input type="text" name="name" value="{{ $resource->name }}" class="form-control" placeholder="Resource name">
-@error('name')
-<div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
-@enderror
-</div>
-</div>
-<div class="col-xs-12 col-sm-12 col-md-12">
-<div class="form-group">
-<strong>Resource Description:</strong>
-<input type="text" name="description" class="form-control" placeholder="Resource Description" value="{{ $resource->description }}">
-@error('description')
-<div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
-@enderror
-</div>
-</div>
-<div class="col-xs-12 col-sm-12 col-md-12">
-    <div class="form-group">
-    <strong>Resource Img:</strong>
-    <input type="img" name="img" class="form-control" placeholder="Resource Email" value="{{ $resource->img }}">
-    @error('img')
-    <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
-    @enderror
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+            <strong>Resource Name:</strong>
+            <input type="text" name="name" value="{{ $resource->name }}" class="form-control" placeholder="Resource name">
+        </div>
     </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+            <strong>Resource Description:</strong>
+            <input type="text" name="description" class="form-control" placeholder="Resource Description" value="{{ $resource->description }}">
+        </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+            <strong>Resource Img:</strong>
+            <input type="img" name="img" class="form-control" placeholder="Resource img" value="{{ $resource->img }}">
+        </div>
     </div>
     
-<div class="col-xs-12 col-sm-12 col-md-12">
-<div class="form-group">
-<strong>Resource Adress:</strong>
-<input type="adress" name="adress" value="{{ $resource->location_id }}" class="form-control" placeholder="Resource Adress">
-@error('address')
-<div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
-@enderror
-</div>
-</div>
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+            <strong>User_id:</strong>
+            <input type="" name="user_id" class="form-control" placeholder="user_id" value="{{ $resource->user_id }}">
+        </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+            <strong>Resource Adress:</strong>
+            <input type="" name="location_id" value="{{ $resource->location_id }}" class="form-control" placeholder="Resource Adress">
+        </div>
+    </div>
 <button type="submit" class="btn btn-primary ml-3">Submit</button>
 </div>
 </form>
