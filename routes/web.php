@@ -5,6 +5,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserPendingController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ResourceCRUDController;
 
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\ReserveController;
@@ -27,6 +28,11 @@ Route::middleware(['auth:sanctum', 'verified', 'approved'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');;
 });
 
+Route::resource('resources', ResourceCRUDController::class);
+
+Route::middleware(['auth:sanctum', 'verified', 'approved'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/approval', [HomeController::class, 'approval'])->name('approval');
