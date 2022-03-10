@@ -37,17 +37,27 @@
 </div>
 <div class="col-xs-12 col-sm-12 col-md-12">
 <div class="form-group">
-<strong>Resource Email:</strong>
-<input type="email" name="email" class="form-control" placeholder="Resource Email" value="{{ $resource->email }}">
-@error('email')
+<strong>Resource Description:</strong>
+<input type="text" name="description" class="form-control" placeholder="Resource Description" value="{{ $resource->description }}">
+@error('description')
 <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
 @enderror
 </div>
 </div>
 <div class="col-xs-12 col-sm-12 col-md-12">
+    <div class="form-group">
+    <strong>Resource Img:</strong>
+    <input type="img" name="img" class="form-control" placeholder="Resource Email" value="{{ $resource->img }}">
+    @error('img')
+    <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+    @enderror
+    </div>
+    </div>
+    
+<div class="col-xs-12 col-sm-12 col-md-12">
 <div class="form-group">
-<strong>Resource Address:</strong>
-<input type="text" name="address" value="{{ $resource->address }}" class="form-control" placeholder="Resource Address">
+<strong>Resource Adress:</strong>
+<input type="adress" name="adress" value="{{ $resource->location_id }}" class="form-control" placeholder="Resource Adress">
 @error('address')
 <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
 @enderror

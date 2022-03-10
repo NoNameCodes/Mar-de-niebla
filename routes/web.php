@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserPendingController;
+use App\Http\Controllers\ResourceCRUDController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +20,8 @@ use App\Http\Controllers\UserPendingController;
 Route::get('/', function () {
     return view('auth.login');
 });
+
+Route::resource('resources', ResourceCRUDController::class);
 
 Route::middleware(['auth:sanctum', 'verified', 'approved'])->get('/dashboard', function () {
     return view('dashboard');
