@@ -4,7 +4,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserPendingController;
+use App\Http\Controllers\DashboardController;
 
+use App\Http\Controllers\LogoutController;
+use App\Http\Controllers\ReserveController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,9 +23,10 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
-Route::middleware(['auth:sanctum', 'verified', 'approved'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+Route::middleware(['auth:sanctum', 'verified', 'approved'])->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');;
+});
+
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/approval', [HomeController::class, 'approval'])->name('approval');
@@ -38,3 +42,10 @@ Route::middleware(['auth'])->group(function () {
         Route::get('users/{user_id}/delete', [UserController::class, 'delete'])->name('admin.users.delete');
     });
 });
+Route::get('/reserve', function () {
+    return view('reserve');
+});
+
+Route::get('logout', [LogoutController::class, 'logout'])->name('logout');
+Route::post('/reserve', [ReserveController::class, 'store'])->middleware('auth')->name('reserve.store');
+Route::get('/reserve', [ReserveController::class, 'create'])->middleware('auth')->name('reserve.create');
