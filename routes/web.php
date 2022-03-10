@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserPendingController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,9 +21,10 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
-Route::middleware(['auth:sanctum', 'verified', 'approved'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+Route::middleware(['auth:sanctum', 'verified', 'approved'])->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');;
+});
+
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/approval', [HomeController::class, 'approval'])->name('approval');
