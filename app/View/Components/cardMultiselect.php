@@ -7,15 +7,15 @@ use Illuminate\View\Component;
 class cardMultiselect extends Component
 {
 
-    public $user;
+    public $users;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($users)
     {
-        $this->user=$user;
+        $this->users=$users;
     }
 
     /**

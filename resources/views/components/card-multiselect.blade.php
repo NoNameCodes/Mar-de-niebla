@@ -16,71 +16,27 @@
         </div>
     </button>
     <div class="w-64 mt-2 p-4 bg-white shadow rounded border border-[#F8981D]" id="dropdown">
-       <ul>
-            @foreach ($users as $user)
-               <x-card :user= "$user"/>
-            @endforeach
 
-            {{$resources->links()}}
-            
-        </ul>
-      {{--  <div class="flex items-center justify-between">
-            <div class="flex items-center">
-                <div class="pl-4 flex items-center">
-                    <div class="bg-gray-100 dark:bg-gray-800 border rounded-sm border-gray-200 dark:border-gray-700 w-3 h-3 flex flex-shrink-0 justify-center items-center relative">
-                        <input aria-labelledby="fb1" type="checkbox" class="focus:opacity-100 checkbox opacity-0 absolute cursor-pointer w-full h-full" />
-                        <div class="check-icon hidden bg-indigo-700 text-white rounded-sm">
-                            <svg class="icon icon-tabler icon-tabler-check" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" />
-                                <path d="M5 12l5 5l10 -10" />
-                            </svg>
+        @foreach ($users as $user)
+        <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <div class="pl-4 flex items-center">
+                        <div class="bg-gray-100 dark:bg-gray-800 border rounded-sm border-gray-200 dark:border-gray-700 w-3 h-3 flex flex-shrink-0 justify-center items-center relative">
+                            <input aria-labelledby="fb1" type="checkbox" class="focus:opacity-100 checkbox opacity-0 absolute cursor-pointer w-full h-full" />
+                            <div class="check-icon hidden bg-indigo-700 text-white rounded-sm">
+                                <svg class="icon icon-tabler icon-tabler-check" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" />
+                                    <path d="M5 12l5 5l10 -10" />
+                                </svg>
+                            </div>
                         </div>
+                        <p id="users" tabindex="0" class="focus:outline-none text-sm leading-normal ml-2 text-gray-800">{{$user->name}}</p>
                     </div>
-                    <p id="fb1" tabindex="0" class="focus:outline-none text-sm leading-normal ml-2 text-gray-800">Facebook</p>
                 </div>
             </div>
-        </div>
+         @endforeach
+       </div>
     
-        <div>
-            <div class="flex items-center justify-between mt-4">
-                <div class="flex items-center">
-                    <div class="pl-4 flex items-center">
-                        <div class="bg-gray-100 dark:bg-gray-800 border rounded-sm border-gray-200 dark:border-gray-700 w-3 h-3 flex flex-shrink-0 justify-center items-center relative">
-                            <input aria-labelledby="twitter2" type="checkbox" class="focus:opacity-100 checkbox opacity-0 absolute cursor-pointer w-full h-full" />
-                            <div class="check-icon hidden bg-indigo-700 text-white rounded-sm">
-                                <svg class="icon icon-tabler icon-tabler-check" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" />
-                                    <path d="M5 12l5 5l10 -10" />
-                                </svg>
-                            </div>
-                        </div>
-                        <p id="twitter2" tabindex="0" class="focus:outline-none text-sm leading-normal ml-2 text-gray-800">Twitter</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <div>
-            <div class="flex items-center justify-between mt-4">
-                <div class="flex items-center">
-                    <div class="pl-4 flex items-center">
-                        <div class="bg-gray-100 dark:bg-gray-800 border rounded-sm border-gray-200 dark:border-gray-700 w-3 h-3 flex flex-shrink-0 justify-center items-center relative">
-                            <input aria-labelledby="insta3" type="checkbox" class="focus:opacity-100 checkbox opacity-0 absolute cursor-pointer w-full h-full" />
-                            <div class="check-icon hidden bg-indigo-700 text-white rounded-sm">
-                                <svg class="icon icon-tabler icon-tabler-check" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" />
-                                    <path d="M5 12l5 5l10 -10" />
-                                </svg>
-                            </div>
-                        </div>
-                        <p id="insta3" tabindex="0" class="focus:outline-none text-sm leading-normal ml-2 text-gray-800">Instagram</p>
-                    </div>
-                </div>
-            </div>
-        </div>        
-    </div>
-</div> --}}
-
 
 <style>.checkbox:checked + .check-icon {
 display: flex;

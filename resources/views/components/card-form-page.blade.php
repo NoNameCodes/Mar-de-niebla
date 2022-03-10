@@ -1,6 +1,6 @@
 <div class="w-80 h-100 bg-white border-orange-400 border-2 rounded-md mx-10 mb-3">
   <div class=" bg-white rounded-md px-9 py-10 max-w-2xl">
-      <div class="space-y-4">
+      <div class="space-y-4 px-15">
          <div>
           <input type="text" placeholder="Nombre del recurso" class=" outline-none px-12 py-3 text-sm flex border-orange-400 border-1 rounded-md" />
          </div>
@@ -9,22 +9,13 @@
            <input type="text" placeholder="Localización" class=" outline-none px-12 pt-3 text-sm border-orange-400 border-1 rounded-md" />
          </div>
 
-         <x-card-multiselect :user= "$user />
+        
+         <x-card-multiselect :users="$users" />
 
-         {{-- <div>
-            <select class="ml-1 outline-none px-16 text-sm border-orange-400 border-1 rounded-md">
-            <option>Compartir con...</option>
-            <option>Asociación 1</option>
-            <option>Asociación 2</option>
-            <option>Asociación 3</option>
-            <option>Asociación 4</option>
-            <option>Asociación 5</option>
-            </select>
-         </div> --}}
 
-         <div class="py-1">
+         <div class="py-1 mt-3">
            <textarea id="description" cols="31" rows="10" placeholder="Descripción/Incidencias" class=" outline-none px-2 text-sm border-orange-400 border-1 rounded-md"></textarea>
-         </div>
+         </div> 
          
          <div class="py-1">
           <label class="block">
@@ -32,17 +23,10 @@
           </label>
          </div>
         
-
-         {{-- <div>
-            <div class="mt-1 flex items-center">
-              <button type="button" class="ml-1 outline-none px-2 text-md border-1 rounded-md">Adjuntar/Cambiar foto</button>
-            </div>
-          </div> --}}
          
-         <div class="grid grid-cols-2 gap-1 place-items-center h-26">
-          <button class=" px-6 py-1 mx-auto block rounded-md text-md font-semibold text-white bg-[#A9171C]  "><a id= link_dashboard href="{{route('dashboard')}}"></a> Cerrar</button>
-          <button class=" px-4 py-1 mx-auto block rounded-md text-md font-semibold text-white bg-[#92C954]  ">Guardar</button>
-            
+         <div class="grid grid-cols-2 gap-1 place-items-center h-26 mt-3">
+          <button class=" px-6 py-1 mx-auto block rounded-md text-md font-semibold text-white bg-[#A9171C]"><a id= link_dashboard href="{{route('dashboard')}}"></a> Cerrar</button>
+          <button class=" px-4 py-1 mx-auto block rounded-md text-md font-semibold text-white bg-[#92C954]">Guardar</button>            
          </div >         
        </div>
      </div>

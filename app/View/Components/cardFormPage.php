@@ -3,19 +3,20 @@
 namespace App\View\Components;
 
 use Illuminate\View\Component;
+use App\Models\User;
 
 class cardFormPage extends Component
 {
 
-    public $user;
+  
     /**
      * Create a new component instance.
      * 
      * @return void
      */
-    public function __construct($user)
+    public function __construct()
     {
-        $this->user=$user;
+       //
     }
 
     /**
@@ -25,6 +26,7 @@ class cardFormPage extends Component
      */
     public function render()
     {
-        return view('components.card-form-page');
+        $users = User::all();
+        return view('components.card-form-page', ['users'=>$users]);
     }
 }
