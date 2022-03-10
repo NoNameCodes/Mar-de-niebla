@@ -33,13 +33,15 @@ public function store(Request $request)
 {
 $request->validate([
 'name' => 'required',
-'email' => 'required',
-'address' => 'required'
+'description' => 'required',
+'img' => 'required'
 ]);
 $resource = new Resource;
 $resource->name = $request->name;
-$resource->email = $request->email;
-$resource->address = $request->address;
+$resource->description = $request->description;
+$resource->img = $request->img;
+$resource->user_id = $request->user_id;
+$resource->location_id = $request->location_id;
 $resource->save();
 return redirect()->route('resources.index')
 ->with('success','Resource has been created successfully.');
