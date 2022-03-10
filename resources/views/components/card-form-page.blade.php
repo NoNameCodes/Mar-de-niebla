@@ -9,7 +9,7 @@
            <input type="text" placeholder="Localización" class=" outline-none px-12 pt-3 text-sm border-orange-400 border-1 rounded-md" />
          </div>
 
-         <x-card-multiselect />
+         <x-card-multiselect :user= "$user />
 
          {{-- <div>
             <select class="ml-1 outline-none px-16 text-sm border-orange-400 border-1 rounded-md">

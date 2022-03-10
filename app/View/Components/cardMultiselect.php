@@ -4,16 +4,16 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class cardFormPage extends Component
+class cardMultiselect extends Component
 {
 
     public $user;
     /**
      * Create a new component instance.
-     * 
+     *
      * @return void
      */
-    public function __construct($user)
+    public function __construct()
     {
         $this->user=$user;
     }
@@ -25,6 +25,6 @@ class cardFormPage extends Component
      */
     public function render()
     {
-        return view('components.card-form-page');
+        return view('components.card-multiselect');
     }
 }

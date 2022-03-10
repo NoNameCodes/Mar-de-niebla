@@ -18,8 +18,11 @@
     <div class="w-64 mt-2 p-4 bg-white shadow rounded border border-[#F8981D]" id="dropdown">
        <ul>
             @foreach ($users as $user)
-                <li>{{$user->name}}</li>
+               <x-card :user= "$user"/>
             @endforeach
+
+            {{$resources->links()}}
+            
         </ul>
       {{--  <div class="flex items-center justify-between">
             <div class="flex items-center">
