@@ -16,12 +16,12 @@
         </div>
     </button>
     <div class="w-64 mt-2 p-4 bg-white shadow rounded border border-[#F8981D]" id="dropdown">
-       {{--  <ul>
+       <ul>
             @foreach ($users as $user)
                 <li>{{$user->name}}</li>
             @endforeach
-        </ul> --}}
-       <div class="flex items-center justify-between">
+        </ul>
+      {{--  <div class="flex items-center justify-between">
             <div class="flex items-center">
                 <div class="pl-4 flex items-center">
                     <div class="bg-gray-100 dark:bg-gray-800 border rounded-sm border-gray-200 dark:border-gray-700 w-3 h-3 flex flex-shrink-0 justify-center items-center relative">
@@ -76,7 +76,7 @@
             </div>
         </div>        
     </div>
-</div>
+</div> --}}
 
 
 <style>.checkbox:checked + .check-icon {

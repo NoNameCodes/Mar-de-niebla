@@ -19,4 +19,11 @@ class UserController extends Controller
 
         return redirect()->route('admin.users.index')->withMessage('User deleted successfully');
     }
+
+    public function share() {
+
+        $users = User::all();
+
+        return view('welcome', compact('users'));
+    }
 }
