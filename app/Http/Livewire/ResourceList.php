@@ -8,7 +8,10 @@ use Livewire\Component;
 
 class ResourceList extends Component
 {
+    
+    
     // use WithPagination;
+        
     public function render()
     {
         $resources = Resource::orderBy('id', 'desc')->paginate(5);

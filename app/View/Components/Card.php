@@ -13,6 +13,7 @@ class Card extends Component
      */
 
     public $resource;
+    
 
     public function __construct($resource)
     {
