@@ -1638,10 +1638,6 @@ select {
   padding-left: 2.25rem;
   padding-right: 2.25rem;
 }
-.px-12 {
-  padding-left: 3rem;
-  padding-right: 3rem;
-}
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
@@ -1649,6 +1645,10 @@ select {
 .py-1\.5 {
   padding-top: 0.375rem;
   padding-bottom: 0.375rem;
+}
+.px-12 {
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 .pt-6 {
   padding-top: 1.5rem;
@@ -1691,6 +1691,9 @@ select {
 }
 .pb-2 {
   padding-bottom: 0.5rem;
+}
+.pt-0 {
+  padding-top: 0px;
 }
 .text-left {
   text-align: left;
@@ -1864,6 +1867,10 @@ select {
   --tw-text-opacity: 1;
   color: rgb(209 213 219 / var(--tw-text-opacity));
 }
+.text-orange-400 {
+  --tw-text-opacity: 1;
+  color: rgb(251 146 60 / var(--tw-text-opacity));
+}
 .underline {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
@@ -1875,6 +1882,18 @@ select {
 .antialiased {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+.placeholder-orange-400::-moz-placeholder {
+  --tw-placeholder-opacity: 1;
+  color: rgb(251 146 60 / var(--tw-placeholder-opacity));
+}
+.placeholder-orange-400:-ms-input-placeholder {
+  --tw-placeholder-opacity: 1;
+  color: rgb(251 146 60 / var(--tw-placeholder-opacity));
+}
+.placeholder-orange-400::placeholder {
+  --tw-placeholder-opacity: 1;
+  color: rgb(251 146 60 / var(--tw-placeholder-opacity));
 }
 .caret-\[\#F8981D\] {
   caret-color: #F8981D;
