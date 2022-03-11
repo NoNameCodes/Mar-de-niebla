@@ -8,7 +8,7 @@
         </h2>
     </x-slot>
     <div>
-        <livewire:resource-list />
+        <livewire:resource-list :resource="$resource" />
     </div>
 
 {{-- <div class="py-6 flex justify-center">
