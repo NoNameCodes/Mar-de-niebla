@@ -13,7 +13,7 @@
 
         
     <div class="flex flex-col justify-center bg-white">
-        <div class="ms:w-full md:w-full lg:w-2/5 border-b-4 border-orange-200 flex">
+        <div class="ms:w-90 md:w-90 lg:w-2/5 border-b-4 border-orange-200 flex">
             <div class="w-3/12 p-4">
                 <img src="https://api.lorem.space/image/furniture?w=450&amp;amp;amp;amp;h=660" alt="photo de recurso" class="rounded-xl " />
             </div>
