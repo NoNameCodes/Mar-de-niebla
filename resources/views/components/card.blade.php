@@ -19,7 +19,7 @@
             <div class="flex justify-between w-3/4">
                 
                 <div class="flex flex-col justify-center">
-                    <p class="align-middle p-2 font-extrabold text-xl"></p>
+                    <p class="align-middle p-2 font-extrabold text-xl">{{ $resource->name }}</p>
                     <p class="italic p-2 font-thin">Ver registro</p>      
                 </div> 
                 
