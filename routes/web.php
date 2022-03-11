@@ -8,7 +8,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ResourceCRUDController;
 
 use App\Http\Controllers\LogoutController;
-use App\Http\Controllers\ReserveController;
+use App\Http\Controllers\ReservaController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -49,5 +49,5 @@ Route::get('/reserve', function () {
 });
 
 Route::get('logout', [LogoutController::class, 'logout'])->name('logout');
-Route::post('/reserve', [ReserveController::class, 'store'])->middleware('auth')->name('reserve.store');
-Route::get('/reserve', [ReserveController::class, 'create'])->middleware('auth')->name('reserve.create');
+Route::post('/reserve', [ReservaController::class, 'store'])->middleware('auth')->name('reserva.store');
+Route::get('/reserve', [ReservaController::class, 'create'])->middleware('auth')->name('reserva.create');

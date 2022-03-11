@@ -26,7 +26,7 @@
       </x-header >
       
       
-       <form action="{{route('reserve.store')}}" class="footerdown " method="POST" >
+       <form action="{{route('reserva.store')}}" class="footerdown " method="POST" >
         @csrf
         <div class=" mb-6 flex flex-col items-center justify-center  " >
               
