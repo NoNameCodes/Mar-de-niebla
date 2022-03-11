@@ -10,7 +10,7 @@ class DashboardController extends Controller
     public function index()
     {
         $resources = Resource::orderBy('id', 'desc')->paginate(5);
-        return view('welcome', compact('resources'));
+        return view('dashboard', compact('resources'));
     
            }    
 

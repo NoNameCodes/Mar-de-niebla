@@ -1,6 +1,6 @@
 <div>
     
-    <button class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 focus:bg-gray-100 w-64 p-4 shadow rounded bg-white text-sm font-medium leading-none text-gray-800 flex items-center justify-between cursor-pointer border border-[#F8981D]" onclick="dropdownHandler()">
+    <button class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 focus:bg-gray-100 w-60 p-4 shadow rounded bg-white text-m font-medium leading-none text-gray-800 flex items-center justify-between cursor-pointer border border-[#F8981D]" onclick="dropdownHandler()">
         Compartir con
         <div>
             <div class="hidden" id="close">
@@ -15,7 +15,7 @@
             </div>
         </div>
     </button>
-    <div class="w-64 mt-2 p-4 bg-white shadow rounded border border-[#F8981D]" id="dropdown">
+    <div class="w-60 mt-2 p-4 bg-white shadow rounded border border-[#F8981D]" id="dropdown">
 
         @foreach ($users as $user)
         <div class="flex items-center justify-between">

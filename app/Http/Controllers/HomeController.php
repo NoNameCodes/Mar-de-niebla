@@ -11,9 +11,10 @@ class HomeController extends Controller
     
     {
         
-        return view('welcome');
+        
+        //return view('welcome', compact('resources'));
     
-        // return view('welcome');
+        return view('welcome');
     }    
 
     
