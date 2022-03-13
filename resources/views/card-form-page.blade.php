@@ -40,7 +40,7 @@
             </div>
 
             <div class="py-1 mt-3">
-              <textarea id="description" cols="26" rows="10" placeholder="Descripción/Incidencias" class=" outline-none px-2 text-m border-orange-400 border-1 rounded-md"></textarea>
+              <textarea id="description" cols="25" rows="10" placeholder="Descripción/Incidencias" class=" outline-none px-2 text-m border-orange-400 border-1 rounded-md"></textarea>
             </div> 
             
             <div class="py-1">
