@@ -42,10 +42,10 @@
             
              </div> --}}
 
-            <main>
+           {{--  <main>
                 <x-card-form-page/>
             </main>
-
+ --}}
 
  {{--           <x-card></x-card> 
 
