@@ -38,3 +38,5 @@ Route::middleware(['auth'])->group(function () {
         Route::get('users/{user_id}/delete', [UserController::class, 'delete'])->name('admin.users.delete');
     });
 });
+
+Route::get('/form', [FormController::class, 'index']);
