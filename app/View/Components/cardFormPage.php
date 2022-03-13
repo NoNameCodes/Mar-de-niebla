@@ -27,6 +27,8 @@ class cardFormPage extends Component
     public function render()
     {
         $users = User::all();
-        return view('components.card-form-page', ['users'=>$users]);
+        return view('card-form-page', ['users'=>$users]);
     }
 }
+
+
