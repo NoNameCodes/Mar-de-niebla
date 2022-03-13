@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserPendingController;
+use App\Http\Controllers\FormController;
 
 /*
 |--------------------------------------------------------------------------
