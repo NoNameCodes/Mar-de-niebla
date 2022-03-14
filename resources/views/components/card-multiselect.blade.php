@@ -15,7 +15,7 @@
             </div>
         </div>
     </button>
-    <div class="w-60 mt-2 p-4 bg-white shadow rounded border border-[#F8981D]" id="dropdown">
+    <div class="w-60 mt-2 p-4 bg-white shadow rounded border border-[#F8981D]" id="dropdownShare">
 
         @foreach ($users as $user)
         <div class="flex items-center justify-between">
@@ -42,19 +42,20 @@
 display: flex;
 }
 </style>
-<script>let dropdown = document.getElementById("dropdown");
+<script>
+let dropdownShare = document.getElementById("dropdownShare");
 let open1 = document.getElementById("open");
 let close1 = document.getElementById("close");
 
 let flag = false;
 const dropdownHandler = () => {
 if (!flag) {
-dropdown.classList.add("hidden");
+dropdownShare.classList.add("hidden");
 open1.classList.add("hidden");
 close1.classList.remove("hidden");
 flag = true;
 } else {
-dropdown.classList.remove("hidden");
+dropdownShare.classList.remove("hidden");
 close1.classList.add("hidden");
 open1.classList.remove("hidden");
 flag = false;

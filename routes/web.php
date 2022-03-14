@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserPendingController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ResourceCRUDController;
+use App\Http\Controllers\FormController;
 
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\ReserveController;
@@ -51,3 +52,5 @@ Route::get('/reserve', function () {
 Route::get('logout', [LogoutController::class, 'logout'])->name('logout');
 Route::post('/reserve', [ReserveController::class, 'store'])->middleware('auth')->name('reserve.store');
 Route::get('/reserve', [ReserveController::class, 'create'])->middleware('auth')->name('reserve.create');
+
+Route::get('/form', [FormController::class, 'index']);
