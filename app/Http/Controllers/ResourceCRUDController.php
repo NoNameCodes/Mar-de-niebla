@@ -92,6 +92,7 @@ $resource->save();
 return redirect()->route('resources.index')
 ->with('success','Resource Has Been updated successfully');
 }
+
 /**
 * Remove the specified resource from storage.
 *

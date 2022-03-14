@@ -40,8 +40,9 @@ class ReservaController extends Controller
             $reserva->name=$request->input('name');
             $reserva->date=$request->input('date');
             $reserva->coments=$request->input('coments');
-            $reserva->telefono=$request->input('phone');
-          
+            $reserva->phone=$request->input('phone');
+
+            
             $reserva->save();
             return redirect()->route('dashboard');
     

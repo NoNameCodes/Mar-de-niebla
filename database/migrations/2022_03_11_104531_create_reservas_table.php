@@ -20,6 +20,16 @@ return new class extends Migration
             $table->string('phone');
             $table->string('coments');
             $table->timestamps();
+            // $table->unsignedBigInteger('user_id');
+            // $table->unsignedBigInteger('location_id');
+            // $table->unsignedBigInteger('resource_id');
+            
+            $table->foreignId('location_id')->constrained('locations')
+            ->OnDelete('cascade');
+            $table->foreignId('user_id')->constrained('users')
+            ->OnDelete('cascade');
+            $table->foreignId('resource_id')->constrained('resources')
+            ->OnDelete('cascade');
         });
     }
 
@@ -30,6 +40,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('reseras');
+        Schema::dropIfExists('reservas');
     }
 };
