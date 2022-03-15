@@ -15,7 +15,7 @@
         <a href="{{ route('resource', $resource) }}">
         <div class="ms:w-90 md:w-90 border-b-2 border-[#faba67] flex">
             <div class="w-3/12 p-4">
-                <img src="https://api.lorem.space/image/furniture?w=450&amp;amp;amp;amp;h=660" alt="photo de recurso" class="rounded-xl " />
+                <img src="{{$resource->img}}" />
             </div>
             <div class="flex justify-between w-3/4">
                 <div class="flex flex-col justify-center">
@@ -24,14 +24,15 @@
                 </div> 
               
                    <div class="flex flex-col justify-center p-6 ">
-                    @if (Route::currentRouteName() == 'home')
-                        <button class="btn inline-block select-none no-underline align-middle cursor-pointer whitespace-nowrap px-4 py-1.5 rounded text-base font-medium leading-6 tracking-tight text-white text-center border-0 bg-[#92C954] hover:bg-[#85f307] duration-300" type="button">Reservar</button> 
+                   @if (Route::currentRouteName() == 'dashboard')
+                        <div>
+                            <button><i class="fa-solid fa-pen-to-square text-green-500 text-2xl m-3"></i></button>
+                            <button><i class="fa-solid fa-trash text-red-700 text-2xl m-3"></i></button> 
+                        </div>     
                    
                    @else
-                    <div>
-                       <button><i class="fa-solid fa-pen-to-square text-green-500 text-2xl m-3"></i></button>
-                         <button><i class="fa-solid fa-trash text-red-700 text-2xl m-3"></i></button> 
-                    </div>
+                   <button class="btn inline-block select-none no-underline align-middle cursor-pointer whitespace-nowrap px-4 py-1.5 rounded text-base font-medium leading-6 tracking-tight text-white text-center border-0 bg-[#92C954] hover:bg-[#85f307] duration-300" type="button">Reservar</button>
+                    
                     @endif
 
                 </div>

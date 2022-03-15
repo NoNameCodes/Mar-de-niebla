@@ -45,7 +45,7 @@ Route::middleware(['auth'])->group(function () {
         Route::get('users/{user_id}/delete', [UserController::class, 'delete'])->name('admin.users.delete');
     });
 });
-Route::get('/reserve', function () {
+/* Route::get('/reserve', function () {
     return view('reserve');
 });
 
@@ -53,4 +53,4 @@ Route::get('logout', [LogoutController::class, 'logout'])->name('logout');
 Route::post('/reserve', [ReserveController::class, 'store'])->middleware('auth')->name('reserve.store');
 Route::get('/reserve', [ReserveController::class, 'create'])->middleware('auth')->name('reserve.create');
 
-Route::get('/form', [FormController::class, 'index']);
+Route::get('/form', [FormController::class, 'index']); */

@@ -34,6 +34,9 @@
                          <a href="{{ route('dashboard') }}" class="text-sm hover:bg-gray-300  text-gray-700 block px-4 py-2">Dashboard</a>
                      </li>
                      <li>
+                        <a href="" class="text-sm hover:bg-gray-300  text-gray-700 block px-4 py-2">Mis reservas</a>
+                    </li>
+                     <li>
                        <form method="POST" action="{{ route('logout') }}">
                          @csrf
                          <button type="submit" class="text-sm hover:bg-gray-300 flex justify-center text-gray-700  px-4 py-2">Logout</button>
