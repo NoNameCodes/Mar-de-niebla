@@ -3,16 +3,17 @@
     <button class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 focus:bg-gray-100 w-60 p-4 shadow rounded bg-white text-m font-medium leading-none text-gray-800 flex items-center justify-between cursor-pointer border border-[#F8981D]" onclick="dropdownHandler()">
         Compartir con
         <div>
-            <div class="hidden" id="close">
-                <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5.00016 0.666664L9.66683 5.33333L0.333496 5.33333L5.00016 0.666664Z" fill="#1F2937" />
-                </svg>
-            </div>
-            <div id="open">
+            <div class= "hidden" id="close">
                 <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.00016 5.33333L0.333496 0.666664H9.66683L5.00016 5.33333Z" fill="#1F2937" />
                 </svg>
             </div>
+            <div id="open">
+                <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.00016 0.666664L9.66683 5.33333L0.333496 5.33333L5.00016 0.666664Z" fill="#1F2937" />
+                </svg>
+            </div>
+         
         </div>
     </button>
     <div class="w-60 mt-2 p-4 bg-white shadow rounded border border-[#F8981D]" id="dropdownShare">
