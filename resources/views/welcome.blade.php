@@ -31,7 +31,7 @@
                    
                      <ul class="py-1" aria-labelledby="dropdown">
                      <li>
-                         <a href="{{ route('dashboard') }}" class="text-sm hover:bg-gray-300 text-gray-700 block px-4 py-2">Dashboard</a>
+                         <a href="{{ route('dashboard') }}" class="text-sm hover:bg-gray-300  text-gray-700 block px-4 py-2">Dashboard</a>
                      </li>
                      <li>
                        <form method="POST" action="{{ route('logout') }}">
@@ -49,7 +49,7 @@
             <livewire:resource-list />
         </div>
  
-
-       
+        <x-footer />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">   
     </body>
 </html>

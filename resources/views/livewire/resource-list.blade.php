@@ -1,10 +1,7 @@
-<div>
+<div class="border-2 border-[#F8981D] rounded-xl m-1.5 py-1">
     @foreach($resources as $resource)
-    <x-card :resource="$resource"/>
-    {{-- <img src="{{ $resource->img }}" class="card-img-top" alt="..."> --}}
-    {{-- <img src="	
-    https://api.lorem.space/image/furniture?w=450&amp;amp;amp;amp;h=660" alt="">
-    <h5 class="card-title">"{{ $resource->title }}"</h5> --}}
+     <x-card :resource="$resource" />
     @endforeach
-    {{ $resources->links() }}
+    <div class="m-1.5">{{ $resources->links() }}</div>
+    
 </div>
