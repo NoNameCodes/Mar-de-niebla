@@ -52,5 +52,5 @@ Route::middleware(['auth'])->group(function () {
 Route::get('logout', [LogoutController::class, 'logout'])->name('logout');
 Route::post('/reserve', [ReserveController::class, 'store'])->middleware('auth')->name('reserve.store');
 Route::get('/reserve', [ReserveController::class, 'create'])->middleware('auth')->name('reserve.create');
-
-Route::get('/form', [FormController::class, 'index']); */
+*/
+Route::get('/form', [FormController::class, 'index']); 
