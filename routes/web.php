@@ -6,8 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserPendingController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ResourceCRUDController;
-use App\Http\Controllers\FormController;
-
+use App\Http\Controllers\PageController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\ReserveController;
 /*
@@ -30,6 +29,7 @@ Route::middleware(['auth:sanctum', 'verified', 'approved'])->group(function () {
 });
 
 Route::resource('resources', ResourceCRUDController::class);
+Route::get('recurso/{resource:name}', [PageController::class, 'resource'])->name('resource');
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/approval', [HomeController::class, 'approval'])->name('approval');
