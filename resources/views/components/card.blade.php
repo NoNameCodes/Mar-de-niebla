@@ -24,7 +24,7 @@
                 </div> 
                 
                 <div class="flex flex-col justify-center p-2">
-                    <button class="btn inline-block select-none no-underline align-middle cursor-pointer whitespace-nowrap px-4 py-1.5 rounded text-base font-medium leading-6 tracking-tight text-white text-center border-0 bg-[#92C954] hover:bg-[#85f307] duration-300" type="button">Reservar</button>
+                    <a class="btn inline-block select-none no-underline align-middle cursor-pointer whitespace-nowrap px-4 py-1.5 rounded text-base font-medium leading-6 tracking-tight text-white text-center border-0 bg-[#92C954] hover:bg-[#85f307] duration-300" type="button" href="reserva/{{$resource->id}}"  >Reservar</a>
                 </div>
             </div>
         </div> 

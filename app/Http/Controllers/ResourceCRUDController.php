@@ -52,9 +52,11 @@ return redirect()->route('resources.index')
 * @param  \App\resource  $resource
 * @return \Illuminate\Http\Response
 */
-public function show(Resource $resource)
+public function show($id)
 {
-return view('resources.show',compact('resource'));
+    $resource=Resource::find($id);
+    return view('show',compact('resource'));
+
 } 
 /**
 * Show the form for editing the specified resource.

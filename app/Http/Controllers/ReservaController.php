@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Reserva;
+use App\Models\Resource;
 use Illuminate\Http\Request;
 
 class ReservaController extends Controller
@@ -14,7 +15,8 @@ class ReservaController extends Controller
      */
     public function index()
     {
-        //
+        $resources = Resource::orderBy('id', 'desc');
+        return view('reserva', compact('resources'));
     }
 
     /**
@@ -41,8 +43,9 @@ class ReservaController extends Controller
             $reserva->date=$request->input('date');
             $reserva->coments=$request->input('coments');
             $reserva->phone=$request->input('phone');
-
-            
+            // $reserva->location_id->nullable();
+            // $reserva->resource_id->nullable();
+            // $reserva->user_id->nullable();
             $reserva->save();
             return redirect()->route('dashboard');
     
@@ -57,7 +60,8 @@ class ReservaController extends Controller
      */
     public function show($id)
     {
-        //
+        $resource=Resource::find($id);
+        return view('reserva',compact('resource'));
     }
 
     /**

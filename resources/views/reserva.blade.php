@@ -20,17 +20,20 @@
               </ul>
       </div>
        <script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js"></script>
-
+      
   
     </x-header >
     
-       
-      </div>
+     <div class="flex flex-col justify-center items-center">
+      <x-resource-show :resource="$resource" /> 
+     </div>
+    
      <form action="{{route('reserva.store')}}" class="footerdown " method="POST" >
       @csrf
+      
       <div class=" mb-6 flex flex-col items-center justify-center  " >
+        
             
-            <img src="{{ asset('storage/furgoneta.PNG') }}" alt="recurso" class="  mb-2 mt-2" >
           
             
               

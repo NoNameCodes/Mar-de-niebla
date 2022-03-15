@@ -49,9 +49,8 @@ Route::middleware(['auth'])->group(function () {
 Route::get('logout', [LogoutController::class, 'logout'])->name('logout');
 Route::post('/reserve', [ReservaController::class, 'store'])->middleware('auth')->name('reserva.store');
 Route::get('/reserve', [ReservaController::class, 'create'])->middleware('auth')->name('reserva.create');
-Route::get('/reserva/{resource_id}', function () {
-    return view('reserva');
-});
-Route::get('/recursos/index', function () {
-    return view('resources.index');
-});
+// Route::get('/reserva/{resource_id}', function ($id) {
+//     return view('reserva',compact('id'));
+// })->name('reserva');
+Route::get('/reserva',[ReservaController::class,'index'])->name('reserva.index');
+Route::get('/reserva/{resource_id}',[ReservaController::class,'show'])->name('reserva');
