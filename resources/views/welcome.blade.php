@@ -44,8 +44,8 @@
              </div>
             <script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js"></script>
         </x-header >
-
-         <div class="ms:w-4/5 md:w-4/5 lg:w-2/5">
+        <x-button-add />
+        <div class="ms:w-4/5 md:w-4/5 lg:w-2/5">
             <livewire:resource-list />
         </div>
  
