@@ -62,5 +62,5 @@
     },
     "dependencies": {
         "@themesberg/tailwind-datepicker": "^1.1.0"
-    }
+   }
 }
