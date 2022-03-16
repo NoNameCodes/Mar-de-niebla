@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Resource;
-use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
@@ -11,8 +10,5 @@ class DashboardController extends Controller
     {
         $resources = Resource::orderBy('id', 'desc')->paginate(5);
         return view('dashboard', compact('resources'));
-    
-           }    
-
-    
-}    
+    }
+}
