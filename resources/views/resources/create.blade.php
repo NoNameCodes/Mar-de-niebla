@@ -51,7 +51,7 @@
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
             <strong>user_id:</strong>
-            <input type="" name="user_id" class="form-control" placeholder="Resource Address">
+            <input type="" name="user_id" class="form-control" placeholder="user_id">
         </div>
     </div>
 
