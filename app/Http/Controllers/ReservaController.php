@@ -24,9 +24,10 @@ class ReservaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
-        //
+        $resource=Resource::find($id);
+        return view('reserva', ['resource'=>$resource]);
     }
 
     /**
@@ -35,21 +36,23 @@ class ReservaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request,$id)
     {
-        {
+
+            $resource=Resource::find($id);
             $reserva=new Reserva();
             $reserva->name=$request->input('name');
             $reserva->date=$request->input('date');
             $reserva->coments=$request->input('coments');
             $reserva->phone=$request->input('phone');
-            // $reserva->location_id->nullable();
-            // $reserva->resource_id->nullable();
-            // $reserva->user_id->nullable();
+            $reserva->location_id=1;
+            $reserva->resource_id=$id;
+            $reserva->user_id=1;
             $reserva->save();
+        
             return redirect()->route('dashboard');
     
-        }
+        
     }
 
     /**
