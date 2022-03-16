@@ -19,7 +19,7 @@ class LocationFactory extends Factory
         return [
             'adress' =>$this->faker->streetAddress,
 
-            'resource_id' => rand(1,50)
+            'resource_id' => rand(1,5)
             
         ];
     }

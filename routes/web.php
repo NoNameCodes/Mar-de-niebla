@@ -8,7 +8,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ResourceCRUDController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\LogoutController;
-use App\Http\Controllers\ReserveController;
+use App\Http\Controllers\ReservaController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -45,12 +45,15 @@ Route::middleware(['auth'])->group(function () {
         Route::get('users/{user_id}/delete', [UserController::class, 'delete'])->name('admin.users.delete');
     });
 });
-/* Route::get('/reserve', function () {
-    return view('reserve');
-});
 
+Route::get('/form', [FormController::class, 'index']);
 Route::get('logout', [LogoutController::class, 'logout'])->name('logout');
-Route::post('/reserve', [ReserveController::class, 'store'])->middleware('auth')->name('reserve.store');
-Route::get('/reserve', [ReserveController::class, 'create'])->middleware('auth')->name('reserve.create');
-*/
-Route::get('/form', [FormController::class, 'index']); 
+
+
+// Route::post('/reserva/{resource_id}', function ($id) {
+//     return view('reserva',compact('id'));
+// })->name('reserva.store');
+Route::get('/reserva',[ReservaController::class,'index'])->name('reserva.index');
+Route::get('/reserva/create/resource/{resource_id}', [ReservaController::class, 'create'])->name('reserva.create');
+Route::get('/reserva/{reserva_id}',[ReservaController::class,'show'])->name('reserva');
+Route::post('/reserva/{resource_id}', [ReservaController::class, 'store'])->name('reserva.store');
