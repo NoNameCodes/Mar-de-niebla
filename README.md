@@ -87,7 +87,7 @@ _Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios
 **Sasha Bidardel** <br>
 **Diego Cortina** <br>
 **Caio Da Silva** <br>
-**Daniel** <br>
+**Daniel Gutierrez** <br>
 **Irina Petrova** <br>
 
 También puedes mirar la lista de todos los [contribuyentes](https://github.com/NoNameCodes/Mar-de-niebla/graphs/contributors) quíenes han participado en este proyecto. 
