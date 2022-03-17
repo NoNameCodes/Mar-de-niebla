@@ -83,12 +83,12 @@ Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones
 
 _Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
 
-**Alba Azcano**
-**Sasha Bidardel**
-**Diego Cortina**
-**Caio Da Silva**
-**Daniel**
-**Irina Petrova**
+**Alba Azcano** <br>
+**Sasha Bidardel** <br>
+**Diego Cortina** <br>
+**Caio Da Silva** <br>
+**Daniel** <br>
+**Irina Petrova** <br>
 
 También puedes mirar la lista de todos los [contribuyentes](https://github.com/your/project/contributors) quíenes han participado en este proyecto. 
 
