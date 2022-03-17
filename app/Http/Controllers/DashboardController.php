@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\Resource;
+use Illuminate\Support\Facades\Auth;
 
 class DashboardController extends Controller
 {
     public function index()
     {
-        $resources = Resource::orderBy('id', 'desc')->paginate(5);
-        return view('dashboard', compact('resources'));
+        $user_id = Auth::user()->id;
+        $resources = Resource::where('user_id', $user_id)->get()->paginate(5);
+        return view('dashboard', ['resources' => $resources]);
     }
 }
