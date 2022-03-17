@@ -1,5 +1,5 @@
 <div>
     @foreach ($resources as $resource)
-        <x-card :resource="$resource" />
+        <x-card :resources = "$resource" />
     @endforeach
 </div>

@@ -2,15 +2,16 @@
 
 namespace App\Http\Livewire;
 
-use App\Models\Resource;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Livewire\Component;
 
 class UserResource extends Component
 {
-    public function render($id)
+    public function render()
     {
-        $userResource = Auth::user()->id;
-        return view('livewire.user-resource', ['userResource' => $userResource, 'id' => $id]);
+        $user_id = Auth::user()->id;
+        $resources = DB::table('resources')->where('user_id', $user_id)->get();
+        return view('livewire.user-resource', ['resources' => $resources]);
     }
 }
