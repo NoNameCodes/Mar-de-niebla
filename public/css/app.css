@@ -974,9 +974,6 @@ select {
 .pointer-events-none {
   pointer-events: none;
 }
-.invisible {
-  visibility: hidden;
-}
 .static {
   position: static;
 }
@@ -1269,9 +1266,6 @@ select {
 .w-2 {
   width: 0.5rem;
 }
-.w-56 {
-  width: 14rem;
-}
 .min-w-0 {
   min-width: 0px;
 }
@@ -1319,10 +1313,6 @@ select {
   --tw-translate-y: 0px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
-.-translate-y-2 {
-  --tw-translate-y: -0.5rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
 .scale-95 {
   --tw-scale-x: .95;
   --tw-scale-y: .95;
@@ -1341,9 +1331,6 @@ select {
 }
 .cursor-pointer {
   cursor: pointer;
-}
-.cursor-not-allowed {
-  cursor: not-allowed;
 }
 .select-none {
   -webkit-user-select: none;
@@ -1435,10 +1422,6 @@ select {
 .divide-gray-200 > :not([hidden]) ~ :not([hidden]) {
   --tw-divide-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-divide-opacity));
-}
-.divide-gray-100 > :not([hidden]) ~ :not([hidden]) {
-  --tw-divide-opacity: 1;
-  border-color: rgb(243 244 246 / var(--tw-divide-opacity));
 }
 .overflow-hidden {
   overflow: hidden;
@@ -1671,9 +1654,6 @@ select {
 .p-4 {
   padding: 1rem;
 }
-.p-12 {
-  padding: 3rem;
-}
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -1789,6 +1769,15 @@ select {
 }
 .pr-10 {
   padding-right: 2.5rem;
+}
+.pr-8 {
+  padding-right: 2rem;
+}
+.pr-6 {
+  padding-right: 1.5rem;
+}
+.pr-5 {
+  padding-right: 1.25rem;
 }
 .text-left {
   text-align: left;
@@ -2109,14 +2098,6 @@ margin: 0;
 .file\:bg-orange-500::file-selector-button {
   --tw-bg-opacity: 1;
   background-color: rgb(249 115 22 / var(--tw-bg-opacity));
-}
-.file\:bg-\[\#F8981D\]::-webkit-file-upload-button {
-  --tw-bg-opacity: 1;
-  background-color: rgb(248 152 29 / var(--tw-bg-opacity));
-}
-.file\:bg-\[\#F8981D\]::file-selector-button {
-  --tw-bg-opacity: 1;
-  background-color: rgb(248 152 29 / var(--tw-bg-opacity));
 }
 .file\:py-1::-webkit-file-upload-button {
   padding-top: 0.25rem;
@@ -2613,11 +2594,6 @@ margin: 0;
   .sm\:px-20 {
     padding-left: 5rem;
     padding-right: 5rem;
-  }
-
-  .sm\:py-12 {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
   }
 
   .sm\:pt-0 {

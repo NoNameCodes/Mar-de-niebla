@@ -9,7 +9,7 @@ class LocationController extends Controller
 {
     public function index(){
         $location = Location::get();
-        return view ('card-form-page', compact('locations'));
+        return view ('card-form-page', compact('location'));
     }
 } 
 
