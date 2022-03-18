@@ -48,6 +48,12 @@
             <script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js"></script>
         </x-header >
         <x-button-add />
+       <div class="flex justify-center text-red-700 ">
+        @if (Session::has('message'))
+           {{(session('message'))}}
+
+        @endif
+       </div>
         <div class="ms:w-4/5 md:w-4/5 lg:w-2/5">
             <livewire:resource-list />
         </div>
