@@ -17,7 +17,7 @@ class LocationFactory extends Factory
     public function definition()
     {
         return [
-            'adress' =>$this->faker->streetAddress,
+            'address' =>$this->faker->streetAddress,
 
             'resource_id' => rand(1,50)
             
