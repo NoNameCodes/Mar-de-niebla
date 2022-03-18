@@ -13,7 +13,7 @@
 <h2>CRUD</h2>
 </div>
 <div class="pull-right mb-2">
-<a class="btn btn-success" href="{{ route('resources.create') }}"> Create Resource</a>
+<a class="btn btn-success" href="{{ url('/form') }}"> Create Resource</a>
 </div>
 </div>
 </div>
