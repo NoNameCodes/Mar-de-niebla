@@ -23,7 +23,7 @@
                 <div class="flex items-center">
                     <div class="pl-4 flex items-center">
                         <div class="bg-gray-100 dark:bg-gray-800 border rounded-sm border-gray-200 dark:border-gray-700 w-3 h-3 flex flex-shrink-0 justify-center items-center relative">
-                            <input aria-labelledby="fb1" type="checkbox" class="focus:opacity-100 checkbox opacity-0 absolute cursor-pointer w-full h-full" />
+                            <input aria-labelledby="user1" type="checkbox" name="user_id" value={{$user->id}} class="focus:opacity-100 checkbox opacity-0 absolute cursor-pointer w-full h-full" />
                             <div class="check-icon hidden bg-indigo-700 text-white rounded-sm">
                                 <svg class="icon icon-tabler icon-tabler-check" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                     <path stroke="none" d="M0 0h24v24H0z" />
