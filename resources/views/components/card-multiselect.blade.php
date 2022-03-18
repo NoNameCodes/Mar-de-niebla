@@ -1,5 +1,4 @@
-<div>
-    
+<div>    
     <button class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 focus:bg-gray-100 w-60 p-4 shadow rounded bg-white text-m font-medium leading-none text-gray-800 flex items-center justify-between cursor-pointer border border-[#F8981D]" onclick="dropdownHandler()">
         Compartir con
         <div>
