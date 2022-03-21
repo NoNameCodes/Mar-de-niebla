@@ -50,7 +50,7 @@ $resource->user_id =$user;
 $location->id=$request->location;
 $resource->location_id=$location->id;
 $resource->save();
-return redirect()->route('resources.index')
+return redirect()->route('home')
 ->with('success','Resource has been created successfully.');
 }
 /**
