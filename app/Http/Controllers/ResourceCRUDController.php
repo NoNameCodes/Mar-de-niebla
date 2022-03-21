@@ -1,7 +1,11 @@
 <?php
 namespace App\Http\Controllers;
+
+use App\Models\Location;
 use App\Models\Resource;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
 class ResourceCRUDController extends Controller
 {
 /**
@@ -36,12 +40,15 @@ $request->validate([
 'description' => 'required',
 'img' => 'required'
 ]);
+$user=Auth::user()->id;
+$location=Location::all();
 $resource = new Resource;
 $resource->name = $request->name;
 $resource->description = $request->description;
 $resource->img = $request->img;
-$resource->user_id = $request->user_id;
-$resource->location_id = $request->location_id;
+$resource->user_id =$user;
+$location->id=$request->location;
+$resource->location_id=$location->id;
 $resource->save();
 return redirect()->route('resources.index')
 ->with('success','Resource has been created successfully.');
