@@ -10,6 +10,8 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\ReservaController;
 use App\Http\Controllers\FormController;
+use App\Http\Controllers\MisreservasController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -27,7 +29,8 @@ Route::get('/', function () {
 });
 
 Route::middleware(['auth:sanctum', 'verified', 'approved'])->group(function () {
-    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');;
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::get('/misreservas', [MisreservasController::class, 'index'])->name('misreservas');
 });
 
 Route::resource('resources', ResourceCRUDController::class);
