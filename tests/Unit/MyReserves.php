@@ -36,19 +36,4 @@ class MyReserves extends TestCase
         $response->assertStatus(302);
         $response->assertRedirect('/home');
     }
-
-    public function test_user_with_auth_allows_dashboard()
-    {
-        $user = User::factory()->create();
-
-        $response = $this->post('/login', [
-            'email' => $user->email,
-            'password' => 'password',
-            'aproved_at' => now(),
-        ]);
-
-        $this->assertAuthenticated();
-        $response = $this->view('dashboard');
-        $response->assertSee('Aañdir nuevo recurso');
-    }
 }
