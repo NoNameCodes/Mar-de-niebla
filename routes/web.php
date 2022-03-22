@@ -61,4 +61,4 @@ Route::get('/reserva/{reserva_id}',[ReservaController::class,'show'])->name('res
 Route::post('/reserva/{resource_id}', [ReservaController::class, 'store'])->name('reserva.store');
 Route::get('/test', function () {
     return view('test');
-})->name('test');
+})->name('misreservas');
