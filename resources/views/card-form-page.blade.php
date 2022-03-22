@@ -1,28 +1,7 @@
 <x-guest-layout>
-  <x-header  >
+  <x-header />
    <div >
-        <button  type="button" data-dropdown-toggle="dropdown"><i class="fa-solid fa-user fa-2x " style="color: #F8981D" ></i> </button>
 
-        <!-- Dropdown menu -->
-        <div class="hidden bg-[#F8981D] text-base z-50  " id="dropdown">
-          
-            <ul class="py-1" aria-labelledby="dropdown">
-            <li>
-                <a href="{{ route('dashboard') }}" class="text-sm hover:bg-gray-300 flex justify-center text-gray-700 block px-4 py-2">Dashboard</a>
-            </li>
-            <li>
-              <form method="POST" action="{{ route('logout') }}">
-                @csrf
-                <button type="submit" class="text-sm hover:bg-gray-300 flex justify-center text-gray-700 px-4 py-2">Logout</button>
-                </form>
-            </li>
-          
-            </ul>
-    </div>
-     <script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js"></script>
-
-
-  </x-header >
 
 
   <form action="{{route('resources.store')}}" method="post">
