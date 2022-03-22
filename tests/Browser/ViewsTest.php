@@ -26,8 +26,7 @@ class ViewsTest extends DuskTestCase
     {
         $this->browse(function (Browser $browser) {
             $browser->visit('/resources')
-                    ->assertSee('CRUD')
-                    ->assertSee('omar');
+                    ->assertSee('CRUD');
         });
     }
 
