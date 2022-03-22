@@ -19,7 +19,7 @@ class MyReserveDusk extends DuskTestCase
             $browser->visit('/')
                     ->assertSee('Laravel');
         });
-
+linea de prueba para hacer commit
         {
             $user = User::factory()->create();
 
