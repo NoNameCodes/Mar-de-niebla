@@ -38,20 +38,22 @@
                                     </li>
                             @elseif (Route::is('misreservas'))
                                     <li>
+                                        <a href="{{ route('home') }}" class="text-sm hover:bg-gray-300  text-gray-700 block px-4 py-2">Home</a>
+                                    </li>
+                                    <li>
                                         <a href="{{ route('dashboard') }}"
                                             class="text-sm hover:bg-gray-300  text-gray-700 block px-4 py-2">Dashboard</a>
                                     </li>
-                                    <li>
-                                        <a href="{{ route('home') }}" class="text-sm hover:bg-gray-300  text-gray-700 block px-4 py-2">Home</a>
-                                    </li>
+                                    
                             @else
                                     <li>
+                                        <a href="{{ route('home') }}" class="text-sm hover:bg-gray-300  text-gray-700 block px-4 py-2">Home</a>
+                                    </li>
+                                    <li>
                                         <a href="{{ route('dashboard') }}"
                                             class="text-sm hover:bg-gray-300  text-gray-700 block px-4 py-2">Dashboard</a>
                                     </li>
-                                    <li>
-                                        <a href="{{ route('home') }}" class="text-sm hover:bg-gray-300  text-gray-700 block px-4 py-2">Home</a>
-                                    </li>
+                                   
                                     <li>
                                         <a href="{{ route('misreservas') }}" class="text-sm hover:bg-gray-300  text-gray-700 block px-4 py-2">Mis
                                             reservas</a>
