@@ -56,7 +56,7 @@ class ReservaController extends Controller
                 if (($variable->date==$reserva->date) && ($variable->resource_id==$reserva->resource_id)){
                     $message="La reserva del recurso ".$resource->name." para el día: ".strval($reserva->date)." está ocupada.Por favor,eliga otra fecha.";
                     Session::flash('message',$message);
-                    return View('reserva');
+                    return view('home');
                 }
             }
             $reserva->save();
