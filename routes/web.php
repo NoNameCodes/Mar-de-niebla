@@ -54,13 +54,12 @@ Route::middleware(['auth'])->group(function () {
 Route::get('/form', [FormController::class, 'index']);
 Route::get('logout', [LogoutController::class, 'logout'])->name('logout');
 
-
 // Route::post('/reserva/{resource_id}', function ($id) {
 //     return view('reserva',compact('id'));
 // })->name('reserva.store');
-Route::get('/reserva',[ReservaController::class,'index'])->name('reserva.index');
+Route::get('/reserva', [ReservaController::class, 'index'])->name('reserva.index');
 Route::get('/reserva/create/resource/{resource_id}', [ReservaController::class, 'create'])->name('reserva.create');
-Route::get('/reserva/{reserva_id}',[ReservaController::class,'show'])->name('reserva');
+Route::get('/reserva/{reserva_id}', [ReservaController::class, 'show'])->name('reserva');
 Route::post('/reserva/{resource_id}', [ReservaController::class, 'store'])->name('reserva.store');
 Route::get('/test', function () {
     return view('test');

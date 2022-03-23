@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Location;
 
 class LocationController extends Controller
@@ -11,5 +10,5 @@ class LocationController extends Controller
         $location = Location::get();
         return view ('card-form-page', compact('location'));
     }
-} 
+}
 

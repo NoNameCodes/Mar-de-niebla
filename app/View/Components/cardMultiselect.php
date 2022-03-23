@@ -6,7 +6,6 @@ use Illuminate\View\Component;
 
 class cardMultiselect extends Component
 {
-
     public $users;
     /**
      * Create a new component instance.
@@ -15,7 +14,7 @@ class cardMultiselect extends Component
      */
     public function __construct($users)
     {
-        $this->users=$users;
+        $this->users = $users;
     }
 
     /**

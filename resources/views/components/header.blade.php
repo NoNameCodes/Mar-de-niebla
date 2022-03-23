@@ -12,50 +12,50 @@
                     <button type="button" data-dropdown-toggle="dropdown"><i class="fa-solid fa-user fa-2x "
                             style="color: #F8981D"></i> </button>
                     <!-- Dropdown menu -->
-                    
                     <div class="hidden bg-[#F8981D] text-base z-50  " id="dropdown">
                         <ul class="py-1" aria-labelledby="dropdown">
                             @if (Route::is('dashboard'))
+                                <li>
+                                    <a href="{{ route('home') }}"
+                                        class="text-sm hover:bg-gray-300  text-gray-700 block px-4 py-2">Home</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('misreservas') }}"
+                                        class="text-sm hover:bg-gray-300  text-gray-700 block px-4 py-2">Mis
+                                        reservas</a>
+                                </li>
+                            @elseif (Route::is('home'))
+                                <ul class="py-1" aria-labelledby="dropdown">
+                                    <li>
+                                        <a href="{{ route('dashboard') }}"
+                                            class="text-sm hover:bg-gray-300  text-gray-700 block px-4 py-2">Dashboard</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('misreservas') }}"
+                                            class="text-sm hover:bg-gray-300  text-gray-700 block px-4 py-2">Mis
+                                            reservas</a>
+                                    </li>
+                                @elseif (Route::is('misreservas'))
                                     <li>
                                         <a href="{{ route('home') }}"
                                             class="text-sm hover:bg-gray-300  text-gray-700 block px-4 py-2">Home</a>
                                     </li>
-                                
                                     <li>
-                                        <a href="{{ route('misreservas') }}" class="text-sm hover:bg-gray-300  text-gray-700 block px-4 py-2">Mis
-                                            reservas</a>
+                                        <a href="{{ route('dashboard') }}"
+                                            class="text-sm hover:bg-gray-300  text-gray-700 block px-4 py-2">Dashboard</a>
                                     </li>
-                            @elseif (Route::is('home'))  
-                                    <ul class="py-1" aria-labelledby="dropdown">
-                                
+                                @else
+                                    <li>
+                                        <a href="{{ route('home') }}"
+                                            class="text-sm hover:bg-gray-300  text-gray-700 block px-4 py-2">Home</a>
+                                    </li>
                                     <li>
                                         <a href="{{ route('dashboard') }}"
                                             class="text-sm hover:bg-gray-300  text-gray-700 block px-4 py-2">Dashboard</a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('misreservas') }}" class="text-sm hover:bg-gray-300  text-gray-700 block px-4 py-2">Mis
-                                            reservas</a>
-                                    </li>
-                            @elseif (Route::is('misreservas'))
-                                    <li>
-                                        <a href="{{ route('home') }}" class="text-sm hover:bg-gray-300  text-gray-700 block px-4 py-2">Home</a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ route('dashboard') }}"
-                                            class="text-sm hover:bg-gray-300  text-gray-700 block px-4 py-2">Dashboard</a>
-                                    </li>
-                                    
-                            @else
-                                    <li>
-                                        <a href="{{ route('home') }}" class="text-sm hover:bg-gray-300  text-gray-700 block px-4 py-2">Home</a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ route('dashboard') }}"
-                                            class="text-sm hover:bg-gray-300  text-gray-700 block px-4 py-2">Dashboard</a>
-                                    </li>
-                                   
-                                    <li>
-                                        <a href="{{ route('misreservas') }}" class="text-sm hover:bg-gray-300  text-gray-700 block px-4 py-2">Mis
+                                        <a href="{{ route('misreservas') }}"
+                                            class="text-sm hover:bg-gray-300  text-gray-700 block px-4 py-2">Mis
                                             reservas</a>
                                     </li>
                             @endif
@@ -74,4 +74,3 @@
             </div>
     </header>
 </div>
-

@@ -9,11 +9,12 @@ class Location extends Model
 {
     use HasFactory;
 
-    protected $fillable=[
-        'address','resource_id'
+    protected $fillable = [
+        'address', 'resource_id'
     ];
-    public function user(){
+
+    public function user()
+    {
         return $this->hasMany(User::class);
     }
-
 }
