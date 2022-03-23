@@ -1,8 +1,5 @@
 # Web recursos Gijón Oeste
 
-<center><img src="https://mardeniebla.es/wp-content/uploads/2019/11/logo_mar-de-niebla-300x156.jpg" width="200">
-<img src="https://factoriaf5.org/wp-content/uploads/2021/07/logo-x2.png" width="200"></center>
-
 _Proyecto pedagógico propuesto por la organización [Mar de Niebla](https://mardeniebla.es) a [Factoría F5](https://factoriaf5.org/) y asignado al equipo [NoNameCoders](#autores-✒️)._
 
 _La propuesta de proyecto es la siguiente: desarrollar una web en la que las organizaciones socias de Mar de Niebla, puedan registrarse\*, loguearse, añadir y eliminar recursos; los cuales podrán decidir con qué otras organizaciones pueden compartir dicho recurso. Y reservar dichos recursos._
