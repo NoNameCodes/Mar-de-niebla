@@ -12,7 +12,7 @@
         <div x-on:click="open" class="w-full">
           <div class="mt-2 px-2 py-2 flex border border-gray-200 bg-white rounded border border-[#F8981D]">
             <div class="flex flex-auto flex-wrap">
-              <template x-for="(option,index) in selected" :key="options[option].value">
+              <template x-for="(option,index) in selected" :key="index">
                 <div class="flex justify-center items-center m-1 font-medium py-1 px-1 bg-white rounded bg-gray-100 border">
                   <div class="text-xs font-normal leading-none max-w-full flex-initial x-model=" options[option] x-text="options[option].text"></div>
                   <div class="flex flex-auto flex-row-reverse">
@@ -57,7 +57,7 @@
         <div class="w-full px-4">
           <div x-show.transition.origin.top="isOpen()" class="absolute shadow top-100 bg-white z-40 w-full left-0 rounded max-h-select" x-on:click.away="close">
             <div class="flex flex-col w-full overflow-y-auto h-64">
-              <template x-for="(option,index) in options" :key="option" class="overflow-auto">
+              <template x-for="(option,index) in options" :key="index" class="overflow-auto">
                 <div class="cursor-pointer w-full border-gray-100 rounded-t border-b hover:bg-gray-100" @click="select(index,$event)">
                   <div class="flex w-full items-center p-2 pl-2 border-transparent border-l-2 relative">
                     <div class="w-full items-center flex justify-between">
