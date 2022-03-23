@@ -56,7 +56,7 @@
                                                     class="px-2 inline-flex text-xs leading-5 font-semibold">{{ $user->created_at }}</span>
                                             </td>
                                             <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                                <a href="{{ route('admin.users.approve', $user->id) }}"
+                                                <a id='btnAceptar' href="{{ route('admin.users.approve', $user->id) }}"
                                                     class="text-indigo-600 hover:text-indigo-900">Aceptar</a>
                                         </tr>
                                     @empty
