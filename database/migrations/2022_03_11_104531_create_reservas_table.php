@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('name');
             $table->date('date');
             $table->string('phone');
-            $table->string('coments');
+            $table->string('coments')->nullable();
             $table->timestamps();
             // $table->unsignedBigInteger('user_id');
             // $table->unsignedBigInteger('location_id');
