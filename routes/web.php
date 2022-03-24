@@ -10,6 +10,8 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\ReservaController;
 use App\Http\Controllers\FormController;
+use App\Http\Controllers\MisreservasController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -27,7 +29,8 @@ Route::get('/', function () {
 });
 
 Route::middleware(['auth:sanctum', 'verified', 'approved'])->group(function () {
-    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');;
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::get('/misreservas', [MisreservasController::class, 'index'])->name('misreservas');
 });
 
 Route::resource('resources', ResourceCRUDController::class);
@@ -51,11 +54,13 @@ Route::middleware(['auth'])->group(function () {
 Route::get('/form', [FormController::class, 'index']);
 Route::get('logout', [LogoutController::class, 'logout'])->name('logout');
 
-
 // Route::post('/reserva/{resource_id}', function ($id) {
 //     return view('reserva',compact('id'));
 // })->name('reserva.store');
-Route::get('/reserva',[ReservaController::class,'index'])->name('reserva.index');
+Route::get('/reserva', [ReservaController::class, 'index'])->name('reserva.index');
 Route::get('/reserva/create/resource/{resource_id}', [ReservaController::class, 'create'])->name('reserva.create');
-Route::get('/reserva/{reserva_id}',[ReservaController::class,'show'])->name('reserva');
+Route::get('/reserva/{reserva_id}', [ReservaController::class, 'show'])->name('reserva');
 Route::post('/reserva/{resource_id}', [ReservaController::class, 'store'])->name('reserva.store');
+// Route::get('/misreservas', function () {
+//     return view('misreservas');
+// })->name('misreservas');

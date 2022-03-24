@@ -19,12 +19,11 @@ class ReservaFactory extends Factory
         return [
             'name' => $this->faker->name(),
             'date' => $this->faker->date(),
-            'coments'=> $this->faker->text(5),
-            'phone' => $this->faker->phoneNumber(),  
-            'user_id'=>rand(1,5),
-            'location_id'=>rand(1,5),
-            'resource_id'=> rand(1,5),
-                
+            'coments' => $this->faker->text(5),
+            'phone' => $this->faker->phoneNumber(),
+            'user_id' => rand(1, 5),
+            'location_id' => rand(1, 5),
+            'resource_id' => rand(1, 5),
         ];
     }
 }

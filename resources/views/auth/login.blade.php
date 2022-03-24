@@ -22,7 +22,7 @@
 
             <div class="mt-4">
                 <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required
-                    autocomplete="current-password" placeholder="Introduce tu constraseña" />
+                    autocomplete="current-password" placeholder="Introduce tu contraseña" />
             </div>
 
             <div class="block mt-4">

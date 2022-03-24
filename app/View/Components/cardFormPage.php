@@ -7,11 +7,9 @@ use App\Models\User;
 
 class cardFormPage extends Component
 {
-
-  
     /**
      * Create a new component instance.
-     * 
+     *
      * @return void
      */
     public function __construct()

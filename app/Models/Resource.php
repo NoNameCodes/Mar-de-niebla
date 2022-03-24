@@ -8,13 +8,17 @@ use Illuminate\Database\Eloquent\Model;
 class Resource extends Model
 {
     use HasFactory;
-    protected $fillable=[
-        'name','description','img','user_id','location_id'
+    protected $fillable = [
+        'name', 'description', 'img', 'user_id', 'location_id'
     ];
-    public function user(){
+
+    public function user()
+    {
         return $this->hasMany(User::class);
     }
-    public function location(){
+
+    public function location()
+    {
         return $this->belongsTo(Location::class);
     }
 }
