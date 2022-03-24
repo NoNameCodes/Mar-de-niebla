@@ -61,6 +61,6 @@ Route::get('/reserva', [ReservaController::class, 'index'])->name('reserva.index
 Route::get('/reserva/create/resource/{resource_id}', [ReservaController::class, 'create'])->name('reserva.create');
 Route::get('/reserva/{reserva_id}', [ReservaController::class, 'show'])->name('reserva');
 Route::post('/reserva/{resource_id}', [ReservaController::class, 'store'])->name('reserva.store');
-Route::get('/misreservas', function () {
-    return view('misreservas');
-})->name('misreservas');
+// Route::get('/misreservas', function () {
+//     return view('misreservas');
+// })->name('misreservas');
