@@ -18,7 +18,7 @@ return new class extends Migration
             $table->timestamps();
             $table->string('name');
             $table->text('description', 255);
-            $table->binary('img');
+            $table->string('img');
             $table->boolean('reserved')->default(0);
 
             $table->unsignedBigInteger('user_id');
