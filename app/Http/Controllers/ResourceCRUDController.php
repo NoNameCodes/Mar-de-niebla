@@ -35,24 +35,24 @@ return view('resources.create');
 */
 public function store(Request $request)
 {
-$request->validate([
-'name' => 'required',
-'description' => 'required',
-'img' => 'required'
-]);
-$user=Auth::user()->id;
-$location=Location::all();
-$resource = new Resource;
-$resource->name = $request->name;
-$resource->description = $request->description;
-$resource->img = $request->img;
-$resource->user_id =$user;
-$location->id=$request->location;
-$resource->location_id=$location->id;
-$resource->save();
-return redirect()->route('home')
-->with('success','Resource has been created successfully.');
-}
+    $request->validate([
+    'name' => 'required',
+    'description' => 'required',
+    'img' => 'required'
+    ]);
+    $user=Auth::user()->id;
+    $location=Location::all();
+    $resource = new Resource;
+    $resource->name = $request->name;
+    $resource->description = $request->description;
+    $resource->img = $request->img;
+    $resource->user_id =$user;
+    $location->id=$request->location;
+    $resource->location_id=$location->id;
+    $resource->save();
+    return redirect()->route('home')
+    ->with('success','Resource has been created successfully.');
+ }
 /**
 * Display the specified resource.
 *
