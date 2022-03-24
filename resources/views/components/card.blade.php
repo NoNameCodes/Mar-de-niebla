@@ -5,9 +5,11 @@
 
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
         body {
             font-family: "Roboto", sans-serif;
         }
+
     </style>
 
     <div class="flex flex-col justify-center bg-white rounded-xl">
@@ -25,11 +27,18 @@
                     </a>
                 </div>
 
-                <div class="flex flex-col justify-center p-6 ">
+                <div class="flex flex-col justify-center p-6">
                     @if (Route::currentRouteName() == 'dashboard')
-                        <div>
-                            <button><i class="fa-solid fa-pen-to-square text-green-500 text-2xl m-3"></i></button>
-                            <button><i class="fa-solid fa-trash text-red-700 text-2xl m-3"></i></button>
+                        <div class="flex flex-row">
+                            <a href="{{ route('resources.edit', $resource->id) }}">
+                                <button><i class="fa-solid fa-pen-to-square text-green-500 text-2xl m-3"></i></button>
+                            </a>
+                            <form action="{{ route('resources.destroy', $resource->id) }}" method="Post">
+                                <a class="btn btn-primary" href="{{ route('resources.edit', $resource->id) }}"></a>
+                                @csrf
+                                @method('DELETE')
+                                <button><i class="fa-solid fa-trash text-red-700 text-2xl m-3"></i></button>
+                            </form>
                         </div>
                     @else
                         <button
