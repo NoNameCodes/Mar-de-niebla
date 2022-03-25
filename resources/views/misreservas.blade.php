@@ -32,7 +32,7 @@
                     <x-card :resource="$resource" />
                 @empty
                     <div class="flex flex-col items-center m-5">
-                        <p class="flex justify-center rounded-md border-2 border-gray-400 bg-gray-200 p-6">No tienes
+                        <p class="flex justify-center rounded-md bg-gray-200 p-6">¡No tienes
                             nada
                             reservado
                             aún!
