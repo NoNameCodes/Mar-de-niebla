@@ -46,8 +46,8 @@ public function store(Request $request)
     $resource->name = $request->name;
     $resource->description = $request->description;
     $resource->img = $request->img;
-    $request ->file('img')->getImageName();
-    $request ->file('img')->store('public/images/resources');
+    $name= $request ->file('img')->getOriginalName();
+    $path = $request ->file('img')->store('public/images/resources');
     $resource->user_id =$user;
     $location->id=$request->location;
     $resource->location_id=$location->id;
