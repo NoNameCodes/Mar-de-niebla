@@ -26,4 +26,9 @@ class Reserva extends Model
     {
         return $this->belongsTo(Location::class);
     }
+    public function reservas()
+    {
+        return $this->hasOne(Reserva::class);
+    }
 }
+   
