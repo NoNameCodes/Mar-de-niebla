@@ -405,26 +405,29 @@
         }
 
     </style>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 
-<x-header />
-
-<x-button-add />
-
-<main class="flex justify-center mb-3">
-    <div class="ms:w-4/5 md:w-4/5 lg:w-2/5">
-        <div class="border-2 border-[#F8981D] rounded-xl m-1.5 py-1">
-            @foreach ($resources as $resource)
-                <x-card :resource="$resource" />
-            @endforeach
-            <div>{{ $resources->links() }}</div>
+<body>
+    <x-header />
+    <main class="flex flex-col items-center">
+        <x-button-add />
+        <div class="ms:w-4/5 md:w-4/5 lg:w-2/5">
+            <div class="border-2 border-[#F8981D] rounded-xl m-1.5 py-1">
+                @forelse ($resources as $resource)
+                    <x-card :resource="$resource" />
+                @empty
+                    <div class="flex flex-col items-center m-5">
+                        <p class="flex justify-center rounded-md bg-gray-200 p-6">¡Aún no has añadido ningún recurso!
+                        </p>
+                    </div>
+                @endforelse
+                <div>{{ $resources->links() }}</div>
+            </div>
         </div>
-    </div>
-</main>
-
-<x-footer />
-
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    </main>
+    <x-footer />
+</body>
 
 </html>
