@@ -13,7 +13,7 @@ class BookingResource extends DuskTestCase
      *
      * @return void
      */
-    public function testExample()
+    public function test_booking_resource()
     {
         $this->browse(function (Browser $browser)  {
             $browser->visit('/')
@@ -24,10 +24,12 @@ class BookingResource extends DuskTestCase
                     ->assertPathIs('/home')
                     ->click('#btnBooking')
                     ->assertSee('Seleccione el día')
-                    ->type('date', value:'12122022')
+                    ->type('date', value:'10122022')
                     ->type('text', value:'dani')
                     ->type('number', value:'678')
                     ->type('textarea', value:'678')
+                    ->click('#btnReserve')
+                    ->assertSee('Ha realizado correctamente la reserva');
         });
     }
 }
