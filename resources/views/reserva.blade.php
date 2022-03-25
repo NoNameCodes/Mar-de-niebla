@@ -24,7 +24,7 @@
                 class="text-gray-700 italic border-orange-500 rounded-xl  bg-[#FAF3F3] mb-6" name="phone" required>
             <textarea class="text-gray-700 italic border-orange-500 rounded-xl bg-[#FAF3F3] py-12 mb-6" placeholder="Comentarios"
                 name="coments"></textarea>
-            <button class="bg-[#F8981D] hover:bg-[#ecc188] text-white font-bold py-2 px-8 shadow-xl rounded-full mb-2"
+            <button id="btnReserve" class="bg-[#F8981D] hover:bg-[#ecc188] text-white font-bold py-2 px-8 shadow-xl rounded-full mb-2"
                 type="submit">
                 Reservar
             </button>
