@@ -105,8 +105,9 @@ class ResourceCRUDController extends Controller
      */
     public function destroy(Resource $resource)
     {
+        $resource->reservas()->delete();
         $resource->delete();
-        return redirect()->route('resources.index')
+        return redirect()->route('dashboard')
             ->with('success', 'Resource has been deleted successfully');
     }
 }

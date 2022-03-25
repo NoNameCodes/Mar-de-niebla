@@ -26,9 +26,9 @@ return new class extends Migration
             
             $table->foreignId('location_id')->constrained('locations')
             ->OnDelete('cascade');
-            $table->foreignId('user_id')->constrained('users')
+            $table->foreignId('user_id')->constrained('users','id')
             ->OnDelete('cascade');
-            $table->foreignId('resource_id')->constrained('resources')
+            $table->foreignId('resource_id')->constrained('resources','id')
             ->OnDelete('cascade');
         });
     }

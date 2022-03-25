@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Reserva;
 use App\Models\Resource;
-use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
@@ -53,10 +52,10 @@ class ReservaController extends Controller
             $reserva->resource_id=$id;
             $reserva->user_id=$user;
             foreach ($reservasTotales as $variable) {
-                if (($variable->date==$reserva->date) && ($variable->resource_id==$reserva->resource_id)){
-                    $message="La reserva del recurso ".$resource->name." para el día: ".strval($reserva->date)." está ocupada.Por favor,eliga otra fecha.";
+                if (($variable->date==$reserva->date) & ($variable->resource_id==$reserva->resource_id)){
+                    $message="La reserva del recurso ".$resource->name." para el día: ".strval($reserva->date)." está ocupada.Por favor,eliga otra fecha";
                     Session::flash('message',$message);
-                    return back();
+                    return redirect()->route('home');
                 }
             }
             $reserva->save();
@@ -75,6 +74,7 @@ class ReservaController extends Controller
      */
     public function show($id)
     {
+        
         $resource=Resource::find($id);
         return view('reserva',compact('resource'));
     }
