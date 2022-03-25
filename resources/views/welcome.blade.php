@@ -405,25 +405,24 @@
         }
 
     </style>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 
 <body class="antialiased">
     <x-header />
-
-    <x-button-add />
-    <div class="flex justify-center text-red-700 ">
-        @if (Session::has('message'))
-            {{ session('message') }}
-        @endif
-    </div>
-    <div class="ms:w-4/5 md:w-4/5 lg:w-2/5">
-        <livewire:resource-list />
-    </div>
-    </div>
-
+    <main>
+        <x-button-add />
+        <div class="flex justify-center text-red-700 ">
+            @if (Session::has('message'))
+                {{ session('message') }}
+            @endif
+        </div>
+        <div class="flex justify-center mb-20">
+            <livewire:resource-list />
+        </div>
+    </main>
     <x-footer />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </body>
 
 </html>
