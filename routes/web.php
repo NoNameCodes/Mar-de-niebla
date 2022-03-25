@@ -9,6 +9,7 @@ use App\Http\Controllers\ResourceCRUDController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\ReservaController;
+use App\Http\Controllers\MisreservasController;
 
 Route::middleware(['auth:sanctum', 'verified', 'approved'])->group(function () {
     Route::get('/', [HomeController::class, 'index'])->name('home');
