@@ -29,12 +29,12 @@ class ApproveUserTest extends DuskTestCase
                    ->type('password', value: '12345678')
                    ->click('#btnEnter')
                    ->visit('/aprove/users')
-                   ->click('#btnAceptar')
+                   ->click('#btnAceptar'::find(2))
                    ->assertSee('User approved successfully');
                    
          
-            // $first->waitForText('Hey Taylor')
-            //       ->assertSee('Jeffrey Way');
+            $first->visit('/test')
+                  ->assertSee('hola');
         });
     }
 }
