@@ -17,45 +17,45 @@
                             @if (Route::is('dashboard'))
                                 <li>
                                     <a href="{{ route('home') }}"
-                                        class="text-sm hover:bg-gray-300  text-gray-700 block px-4 py-2">Home</a>
+                                        class="text-sm hover:bg-gray-300 text-gray-700 block text-center px-4 py-2">Home</a>
                                 </li>
                                 <li>
                                     <a href="{{ route('misreservas') }}"
-                                        class="text-sm hover:bg-gray-300  text-gray-700 block px-4 py-2">Mis
+                                        class="text-sm hover:bg-gray-300  text-gray-700 block text-center px-4 py-2">Mis
                                         reservas</a>
                                 </li>
                             @elseif (Route::is('home'))
                                 <ul class="py-1" aria-labelledby="dropdown">
                                     <li>
                                         <a href="{{ route('dashboard') }}"
-                                            class="text-sm hover:bg-gray-300  text-gray-700 block px-4 py-2">Dashboard</a>
+                                            class="text-sm hover:bg-gray-300  text-gray-700 block text-center px-4 py-2">Dashboard</a>
                                     </li>
                                     <li>
                                         <a href="{{ route('misreservas') }}"
-                                            class="text-sm hover:bg-gray-300  text-gray-700 block px-4 py-2">Mis
+                                            class="text-sm hover:bg-gray-300  text-gray-700 block text-center px-4 py-2">Mis
                                             reservas</a>
                                     </li>
                                 @elseif (Route::is('misreservas'))
                                     <li>
                                         <a href="{{ route('home') }}"
-                                            class="text-sm hover:bg-gray-300  text-gray-700 block px-4 py-2">Home</a>
+                                            class="text-sm hover:bg-gray-300 text-gray-700 block text-center px-4 py-2">Home</a>
                                     </li>
                                     <li>
                                         <a href="{{ route('dashboard') }}"
-                                            class="text-sm hover:bg-gray-300  text-gray-700 block px-4 py-2">Dashboard</a>
+                                            class="text-sm hover:bg-gray-300  text-gray-700 block text-center px-4 py-2">Dashboard</a>
                                     </li>
                                 @else
                                     <li>
                                         <a href="{{ route('home') }}"
-                                            class="text-sm hover:bg-gray-300  text-gray-700 block px-4 py-2">Home</a>
+                                            class="text-sm hover:bg-gray-300  text-gray-700 block text-center px-4 py-2">Home</a>
                                     </li>
                                     <li>
                                         <a href="{{ route('dashboard') }}"
-                                            class="text-sm hover:bg-gray-300  text-gray-700 block px-4 py-2">Dashboard</a>
+                                            class="text-sm hover:bg-gray-300  text-gray-700 block text-center px-4 py-2">Dashboard</a>
                                     </li>
                                     <li>
                                         <a href="{{ route('misreservas') }}"
-                                            class="text-sm hover:bg-gray-300  text-gray-700 block px-4 py-2">Mis
+                                            class="text-sm hover:bg-gray-300  text-gray-700 block text-center px-4 py-2">Mis
                                             reservas</a>
                                     </li>
                             @endif
@@ -63,7 +63,7 @@
                                 <form method="POST" action="{{ route('logout') }}">
                                     @csrf
                                     <button type="submit"
-                                        class="text-sm hover:bg-gray-300 flex justify-center text-gray-700  px-4 py-2">Logout</button>
+                                        class="text-sm hover:bg-gray-300 text-gray-700 w-full px-4 py-2">Logout</button>
                                 </form>
                             </li>
                         </ul>
