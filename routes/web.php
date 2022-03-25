@@ -23,6 +23,7 @@ Route::middleware(['auth:sanctum', 'verified', 'approved'])->group(function () {
     Route::resource('resources', ResourceCRUDController::class);
     Route::get('recurso/{resource:name}', [PageController::class, 'resource'])->name('resource');
     Route::get('/approval', [HomeController::class, 'approval'])->name('approval');
+    Route::get('/misreservas', [MisreservasController::class, 'index'])->name('misreservas');
 
     Route::middleware(['admin'])->group(function () {
         Route::get('aprove/users', [UserPendingController::class, 'index'])->name('admin.users.pending.index');
