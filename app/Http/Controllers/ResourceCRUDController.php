@@ -5,6 +5,7 @@ use App\Models\Location;
 use App\Models\Resource;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class ResourceCRUDController extends Controller
 {
@@ -35,25 +36,34 @@ return view('resources.create');
 */
 public function store(Request $request)
 {
+    
     $request->validate([
     'name' => 'required',
     'description' => 'required',
     'img' => 'required'
     ]);
-    $user=Auth::user()->id;
-    $location=Location::all();
-    $resource = new Resource;
-    $resource->name = $request->name;
-    $resource->description = $request->description;
-    $resource->img = $request->img;
-    $name= $request ->file('img')->getOriginalName();
-    $path = $request ->file('img')->store('public/images/resources');
-    $resource->user_id =$user;
-    $location->id=$request->location;
-    $resource->location_id=$location->id;
-    $resource->save();
-    return redirect()->route('home')
-    ->with('success','Resource has been created successfully.');
+
+    try {
+        $user=Auth::user()->id;
+        $location=Location::all();
+        
+        $resource = new Resource;
+        $resource->name = $request->name;
+        $resource->description = $request->description;
+        $resource->img = Storage::putFile("public/images/resources", $request->file("img"));
+        $resource->user_id =$user;
+        $location->id=$request->location;
+        $resource->location_id=$location->id;
+        
+        $resource->save();
+        
+        return redirect()->route('home')
+        ->with('success','Resource has been created successfully.');
+    } catch (\Throwable $th) {
+       return "Error" . $th;
+    }
+
+    
  }
 /**
 * Display the specified resource.

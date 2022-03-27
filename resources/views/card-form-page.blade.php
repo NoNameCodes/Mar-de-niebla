@@ -25,7 +25,7 @@
   </x-header >
 
 
-  <form action="{{route('resources.store')}}" php amethod="post">
+  <form action="{{route('resources.store')}}" method="post" enctype="multipart/form-data">
   @csrf
   
   <div class="w-80 h-100 bg-white border-orange-400 border-2 rounded-md mx-8 mt-10 mb-10">
@@ -46,16 +46,14 @@
             
             <div class="py-1">
               <label class="block">                
-                   <input name="img" type="file" class="block w-full text-sm text-slate-500 file:mr-4 file:py-1 file:px-6 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-orange-500 file:text-white hover:file:bg-violet-100" value="{{$resources->name}}"/> 
-               
-                
+                   <input name="img" type="file" class="block w-full text-sm text-slate-500 file:mr-4 file:py-1 file:px-6 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-orange-500 file:text-white hover:file:bg-violet-100" />                           
               </label>
              </div>
      
             
             <div class="grid grid-cols-2 gap-1 place-items-center h-26 mt-3">
               <button class=" px-6 py-1 mx-auto block rounded-md text-md font-semibold text-white bg-[#A9171C]"><a href="{{ url('/dashboard') }}">Cerrar</a></button>
-              <button type="submit" class=" px-4 py-1 mx-auto block rounded-md text-md font-semibold text-white bg-[#92C954]"><a href="{{ url('/home') }}">Guardar</a></button>
+              <button type="submit" class=" px-4 py-1 mx-auto block rounded-md text-md font-semibold text-white bg-[#92C954]">Guardar</button>
             </div >         
           </div>
         </div>
