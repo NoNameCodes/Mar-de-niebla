@@ -20,6 +20,7 @@ Route::middleware(['auth:sanctum', 'verified', 'approved'])->group(function () {
     Route::get('/reserva', [ReservaController::class, 'index'])->name('reserva.index');
     Route::get('/reserva/create/resource/{resource_id}', [ReservaController::class, 'create'])->name('reserva.create');
     Route::get('/reserva/{reserva_id}', [ReservaController::class, 'show'])->name('reserva');
+    Route::get('/reserva/{reserva_id}', [ReservaController::class, 'destroy'])->name('reserva.destroy');
     Route::post('/reserva/{resource_id}', [ReservaController::class, 'store'])->name('reserva.store');
     Route::resource('resources', ResourceCRUDController::class);
     Route::get('recurso/{resource:name}', [PageController::class, 'resource'])->name('resource');
