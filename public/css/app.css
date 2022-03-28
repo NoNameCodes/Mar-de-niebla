@@ -1007,11 +1007,25 @@ select {
   grid-column: span 6 / span 6;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 .float-right {
   float: right;
 =======
 .m-1\.5 {
   margin: 0.375rem;
+=======
+.m-1\.5 {
+  margin: 0.375rem;
+}
+.m-1 {
+  margin: 0.25rem;
+}
+.m-5 {
+  margin: 1.25rem;
+}
+.m-12 {
+  margin: 3rem;
+>>>>>>> style/caio-reserveMessage
 }
 .m-1 {
   margin: 0.25rem;
@@ -1036,6 +1050,7 @@ select {
 .m-20 {
   margin: 5rem;
 }
+<<<<<<< HEAD
 .m-5 {
   margin: 1.25rem;
 }
@@ -1044,6 +1059,10 @@ select {
 =======
 .m-12 {
   margin: 3rem;
+=======
+.m-3 {
+  margin: 0.75rem;
+>>>>>>> style/caio-reserveMessage
 }
 .m-10 {
   margin: 2.5rem;
@@ -1138,6 +1157,7 @@ select {
   margin-top: -1px;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 .mb-3 {
   margin-bottom: 0.75rem;
@@ -1154,6 +1174,19 @@ select {
 }
 .mb-1 {
   margin-bottom: 0.25rem;
+=======
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+.mr-36 {
+  margin-right: 9rem;
+}
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+.mb-3 {
+  margin-bottom: 0.75rem;
+>>>>>>> style/caio-reserveMessage
 }
 .mb-20 {
   margin-bottom: 5rem;
@@ -1167,6 +1200,12 @@ select {
 .mt-0 {
   margin-top: 0px;
 }
+<<<<<<< HEAD
+=======
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+>>>>>>> style/caio-reserveMessage
 .block {
   display: block;
 }
@@ -1567,6 +1606,10 @@ select {
   --tw-border-opacity: 1;
   border-color: rgb(248 152 29 / var(--tw-border-opacity));
 }
+.border-orange-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(251 146 60 / var(--tw-border-opacity));
+}
 .border-\[\#faba67\] {
   --tw-border-opacity: 1;
   border-color: rgb(250 186 103 / var(--tw-border-opacity));
@@ -1589,6 +1632,7 @@ select {
   border-color: rgb(249 115 22 / var(--tw-border-opacity));
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 .border-green-400 {
   --tw-border-opacity: 1;
   border-color: rgb(74 222 128 / var(--tw-border-opacity));
@@ -1605,6 +1649,11 @@ select {
   --tw-border-opacity: 1;
   border-color: rgb(156 163 175 / var(--tw-border-opacity));
 >>>>>>> feature/diego/middle
+=======
+.border-red-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(248 113 113 / var(--tw-border-opacity));
+>>>>>>> style/caio-reserveMessage
 }
 .bg-white {
   --tw-bg-opacity: 1;
@@ -1695,6 +1744,7 @@ select {
   background-color: rgb(248 152 29 / var(--tw-bg-opacity));
 >>>>>>> feature/diego/middle
 }
+<<<<<<< HEAD
 .bg-\[\#FAF3F3\] {
   --tw-bg-opacity: 1;
   background-color: rgb(250 243 243 / var(--tw-bg-opacity));
@@ -1707,13 +1757,35 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(250 186 103 / var(--tw-bg-opacity));
 }
+=======
+>>>>>>> style/caio-reserveMessage
 .bg-\[\#A9171C\] {
   --tw-bg-opacity: 1;
   background-color: rgb(169 23 28 / var(--tw-bg-opacity));
 }
+<<<<<<< HEAD
+.bg-\[\#faba67\] {
+=======
+.bg-\[\#FAF3F3\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(250 243 243 / var(--tw-bg-opacity));
+}
+.bg-indigo-700 {
+>>>>>>> style/caio-reserveMessage
+  --tw-bg-opacity: 1;
+  background-color: rgb(250 186 103 / var(--tw-bg-opacity));
+}
 .bg-\[\#faba67\] {
   --tw-bg-opacity: 1;
   background-color: rgb(250 186 103 / var(--tw-bg-opacity));
+}
+.bg-green-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(187 247 208 / var(--tw-bg-opacity));
+}
+.bg-red-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 202 202 / var(--tw-bg-opacity));
 }
 .bg-opacity-25 {
   --tw-bg-opacity: 0.25;
@@ -1739,6 +1811,15 @@ select {
 }
 .p-4 {
   padding: 1rem;
+}
+.p-20 {
+  padding: 5rem;
+}
+.p-10 {
+  padding: 2.5rem;
+}
+.p-16 {
+  padding: 4rem;
 }
 .px-4 {
   padding-left: 1rem;
@@ -1800,13 +1881,13 @@ select {
   padding-top: 0.375rem;
   padding-bottom: 0.375rem;
 }
-.px-8 {
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
 .px-9 {
   padding-left: 2.25rem;
   padding-right: 2.25rem;
+}
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 .pt-6 {
   padding-top: 1.5rem;
@@ -1841,8 +1922,13 @@ select {
 .pt-8 {
   padding-top: 2rem;
 }
+<<<<<<< HEAD
 .pl-4 {
   padding-left: 1rem;
+=======
+.pl-5 {
+  padding-left: 1.25rem;
+>>>>>>> style/caio-reserveMessage
 }
 .pt-0\.5 {
   padding-top: 0.125rem;
@@ -1857,12 +1943,17 @@ select {
   padding-bottom: 0.5rem;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 .pl-5 {
   padding-left: 1.25rem;
 =======
 .pl-4 {
   padding-left: 1rem;
 >>>>>>> feature/diego/middle
+=======
+.pl-4 {
+  padding-left: 1rem;
+>>>>>>> style/caio-reserveMessage
 }
 .text-left {
   text-align: left;
@@ -2222,6 +2313,7 @@ hr {
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
 }
+<<<<<<< HEAD
 .hover\:bg-\[\#85f307\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(133 243 7 / var(--tw-bg-opacity));
@@ -2237,6 +2329,8 @@ hr {
   --tw-bg-opacity: 1;
   background-color: rgb(236 193 136 / var(--tw-bg-opacity));
 }
+=======
+>>>>>>> style/caio-reserveMessage
 .hover\:bg-gray-800:hover {
 >>>>>>> feature/diego/middle
   --tw-bg-opacity: 1;
@@ -2246,9 +2340,21 @@ hr {
   --tw-bg-opacity: 1;
   background-color: rgb(250 142 0 / var(--tw-bg-opacity));
 }
+<<<<<<< HEAD
 .hover\:bg-gray-800:hover {
+=======
+.hover\:bg-gray-300:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
+}
+.hover\:bg-\[\#ecc188\]:hover {
+>>>>>>> style/caio-reserveMessage
   --tw-bg-opacity: 1;
   background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+}
+.hover\:bg-\[\#fa8e00\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(250 142 0 / var(--tw-bg-opacity));
 }
 .hover\:bg-\[\#fa8e00\]:hover {
   --tw-bg-opacity: 1;
@@ -2594,6 +2700,14 @@ hr {
     padding: 1.5rem;
   }
 
+  .sm\:p-5 {
+    padding: 1.25rem;
+  }
+
+  .sm\:p-2 {
+    padding: 0.5rem;
+  }
+
   .sm\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -2677,9 +2791,18 @@ hr {
     width: 40%;
   }
 
+  .lg\:p-10 {
+    padding: 2.5rem;
+  }
+
   .lg\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  .lg\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
 
