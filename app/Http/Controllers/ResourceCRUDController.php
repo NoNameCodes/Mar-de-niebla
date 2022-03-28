@@ -51,6 +51,9 @@ public function store(Request $request)
         $resource->name = $request->name;
         $resource->description = $request->description;
         $resource->img = Storage::putFile("public/images/resources", $request->file("img"));
+        /* $request->validate([
+            'img' => 'required|img|mimes:jpeg,png,jpg|max:2048',
+        ]);  */
         $resource->user_id =$user;
         $location->id=$request->location;
         $resource->location_id=$location->id;
