@@ -14,11 +14,16 @@ class Resource extends Model
 
     public function user()
     {
-        return $this->hasMany(User::class);
+        return $this->belongsToMany(User::class);
     }
 
     public function location()
     {
         return $this->belongsTo(Location::class);
     }
+    public function reservas()
+    {
+        return $this->hasOne(Reserva::class);
+    }
+
 }

@@ -31,7 +31,7 @@
             @foreach ($resources as $resource)
                 <x-card :resource="$resource" />
             @endforeach
-            <div>{{ $resources->links() }}</div>
+            
         </div>
     </div>
 </main>
