@@ -2,7 +2,7 @@
 
 <x-header />
 
-<div class="m-2 grid grid-cols-2  gap-8">
+<div class="m-2 grid grid-cols-2 gap-8">
     <div class="m-2">
         <img src="{{ $resource->img }}" alt="photo de recurso" class="rounded-xl" />
     </div>
@@ -20,10 +20,12 @@
     </div>
 </div>
 </div>
-
 <hr class="m-10" />
-
-
-<div class="">
+<div class="flex justify-center mb-20">
     <livewire:resource-list />
 </div>
+
+
+<x-footer />
+
+
