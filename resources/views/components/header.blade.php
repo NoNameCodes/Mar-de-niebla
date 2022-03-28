@@ -44,6 +44,8 @@
                                         <a href="{{ route('dashboard') }}"
                                             class="text-sm hover:bg-gray-300  text-gray-700 block text-center px-4 py-2">Dashboard</a>
                                     </li>
+                                @elseif (Route::is('approval'))
+                                  
                                 @else
                                     <li>
                                         <a href="{{ route('home') }}"
