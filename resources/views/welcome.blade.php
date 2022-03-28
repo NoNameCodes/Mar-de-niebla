@@ -413,9 +413,11 @@
     <x-header />
     <main>
         <x-button-add />
-        <div class="flex justify-center text-red-700 ">
+        <div class="flex justify-center">
             @if (Session::has('message'))
-                {{ session('message') }}
+                <div class="text-xl border-2 border-green-400 bg-green-200 rounded-md p-10">
+                    {{ session('message') }}
+                </div>
             @endif
         </div>
         <div class="flex justify-center mb-20">
