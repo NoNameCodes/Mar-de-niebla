@@ -4,6 +4,6 @@
     </div>
 
     <div class="mt-6 text-gray-500">
-        Espere a que un Administrador acepte su registro!
+        Espere a que un Administrador acepte su registro
     </div>
 </div>
