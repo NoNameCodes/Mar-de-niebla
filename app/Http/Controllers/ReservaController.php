@@ -37,7 +37,7 @@ class ReservaController extends Controller
         $reserva->user_id = $user;
         foreach ($reservasTotales as $variable) {
             if (($variable->date == $reserva->date) & ($variable->resource_id == $reserva->resource_id)) {
-                $message = "La reserva del recurso " . $resource->name . " para el día: " . strval($reserva->date) . " está ocupada.Por favor,eliga otra fecha";
+                $message = "La reserva del recurso " . $resource->name . " para el día: " . strval($reserva->date) . " está ocupada. Por favor, elija otra fecha.";
                 Session::flash('message', $message);
                 return back();
             }
