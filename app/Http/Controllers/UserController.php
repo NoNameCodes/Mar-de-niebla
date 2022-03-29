@@ -13,11 +13,11 @@ class UserController extends Controller
         return view('admin-dashboard', compact('users'));
     }
 
-    public function delete($id)
-    {
-        User::find($id)->delete();
-        return redirect()->route('admin.users.index')->withMessage('User deleted successfully');
-    }
+    // public function delete($id)
+    // {
+    //     User::find($id)->delete();
+    //     return redirect()->route('admin.users.index')->withMessage('User deleted successfully');
+    // }
 
     public function share() {
 
