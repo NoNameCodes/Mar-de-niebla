@@ -11,7 +11,7 @@
 
             @auth
                 <div>
-                    <button type="button" data-dropdown-toggle="dropdown"><i class="fa-solid fa-user fa-2x "
+                    <button type="button" data-dropdown-toggle="dropdown"><i class="fa-solid fa-user fa-xl "
                             style="color: #F8981D"></i> </button>
                     <!-- Dropdown menu -->
                     <div class="hidden bg-[#F8981D] text-base z-50  " id="dropdown">
