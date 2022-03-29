@@ -16,6 +16,7 @@ class UserMiddlewareTest extends DuskTestCase
     public function testUserGoesToHome()
     {
         $this->browse(function ($first, $second) {
+
             $first->visit('/')
             ->waitForText('Login')
             ->type('email', value: 'w@w')
@@ -23,14 +24,14 @@ class UserMiddlewareTest extends DuskTestCase
             ->click('#btnEnter')
             ->assertPathIs('/');
 
-        $second->visit('/')
-        ->waitForText('Login')
-        ->type('email', value: 'w@w')
-        ->type('password', value: '1234567890')
-        ->click('#btnEnter')
-        ->assertPathIs('/')
-        ->visit('/users')
-        ->assertPathIs('/home');
+            $second->visit('/')
+            ->waitForText('Login')
+            ->type('email', value: 'w@w')
+            ->type('password', value: '1234567890')
+            ->click('#btnEnter')
+            ->assertPathIs('/')
+            ->visit('/users')
+            ->assertPathIs('/home');
         });
     }
 }
