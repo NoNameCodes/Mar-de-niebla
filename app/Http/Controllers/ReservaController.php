@@ -85,6 +85,12 @@ class ReservaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    public function remove($id)
+    {
+        $reserva=Reserva::find($id);
+        return view('modal-alert-anul-reserve', compact('reserva'));
+    }
+
     public function destroy($id)
     {
         $reserva=Reserva::find($id);
@@ -93,4 +99,5 @@ class ReservaController extends Controller
         Session::flash('message', $message);
         return redirect()->route('misreservas');
     }
+
 }
