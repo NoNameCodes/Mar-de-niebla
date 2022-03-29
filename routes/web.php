@@ -12,7 +12,7 @@ use App\Http\Controllers\ReservaController;
 use App\Http\Controllers\MisreservasController;
 
 Route::get('/approval', [HomeController::class, 'approval'])->name('approval');
-Route::middleware(['auth:sanctum', 'verified', 'approved'])->group(function () {
+Route::middleware(['auth:sanctum', 'verified', 'approved', 'user'])->group(function () {
     Route::get('/', [HomeController::class, 'index'])->name('home');
     Route::get('/home', [HomeController::class, 'index'])->name('home');
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');;
@@ -32,6 +32,7 @@ Route::middleware(['auth:sanctum', 'verified', 'approved'])->group(function () {
 Route::middleware(['auth:sanctum', 'verified', 'approved','admin'])->group(function () {
     Route::get('users', [UserController::class, 'index'])->name('admin.users.index');
     Route::get('users/{user_id}/delete', [UserController::class, 'delete'])->name('admin.users.delete');
+    Route::get('users/{user_id}/destroy', [UserController::class, 'destroy'])->name('admin.users.destroy');
     Route::get('aprove/users', [UserPendingController::class, 'index'])->name('admin.users.pending.index');
     Route::get('aprove/users/{user_id}/', [UserPendingController::class, 'approve'])->name('admin.users.approve');
 });

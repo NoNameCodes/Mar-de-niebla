@@ -20,10 +20,6 @@ return new class extends Migration
             $table->string('phone');
             $table->string('coments')->nullable();
             $table->timestamps();
-            // $table->unsignedBigInteger('user_id');
-            // $table->unsignedBigInteger('location_id');
-            // $table->unsignedBigInteger('resource_id');
-            
             $table->foreignId('location_id')->constrained('locations')
             ->OnDelete('cascade');
             $table->foreignId('user_id')->constrained('users','id')
