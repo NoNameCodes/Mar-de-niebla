@@ -27,7 +27,7 @@
                             @foreach ($reservas as $reserva)
                                 @if ($reserva->resource_id === $resource->id)
                                     <p class="italic p-2 font-thin">{{ $reserva->name }}</p>
-                                        <p class="italic p-2 font-thin">{{ $reserva->date }}</p> 
+                                    <p class="italic p-2 font-thin">{{ $reserva->date }}</p> 
                                 @endif
                             @endforeach
                        @else
