@@ -10,7 +10,7 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\ReservaController;
 use App\Http\Controllers\MisreservasController;
-
+Route::get('/approval', [HomeController::class, 'approval'])->name('approval');
 Route::middleware(['auth:sanctum', 'verified', 'approved'])->group(function () {
     Route::get('/', [HomeController::class, 'index'])->name('home');
     Route::get('/home', [HomeController::class, 'index'])->name('home');
@@ -24,7 +24,7 @@ Route::middleware(['auth:sanctum', 'verified', 'approved'])->group(function () {
     Route::post('/reserva/{resource_id}', [ReservaController::class, 'store'])->name('reserva.store');
     Route::resource('resources', ResourceCRUDController::class);
     Route::get('recurso/{resource:name}', [PageController::class, 'resource'])->name('resource');
-    Route::get('/approval', [HomeController::class, 'approval'])->name('approval');
+    
     Route::get('/misreservas', [MisreservasController::class, 'index'])->name('misreservas');
 
     Route::middleware(['admin'])->group(function () {
