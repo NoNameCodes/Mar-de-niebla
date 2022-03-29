@@ -31,8 +31,9 @@
     <div class="ms:w-4/5 md:w-4/5 lg:w-2/5">
         <div class="border-2 border-[#F8981D] rounded-xl m-1.5 py-1">
             @foreach ($resources as $resource)
-                <x-card :resource="$resource" />
+               <x-card :resource="$resource" />
             @endforeach
+           
             
         </div>
     </div>

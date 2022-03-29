@@ -23,7 +23,16 @@
                 <div class="flex flex-col justify-center">
                     <a href="{{ route('resource', $resource) }}">
                         <p class="align-middle p-2 font-extrabold text-xl">{{ $resource->name }}</p>
-                        <p class="italic p-2 font-thin">Ver registro</p>
+                        @if (Route::currentRouteName() == 'misreservas')
+                            @foreach ($reservas as $reserva)
+                                @if ($reserva->resource_id === $resource->id)
+                                    <p class="italic p-2 font-thin">{{ $reserva->name }}</p>
+                                        <p class="italic p-2 font-thin">{{ $reserva->date }}</p> 
+                                @endif
+                            @endforeach
+                       @else
+                            <p class="italic p-2 font-thin">Ver registro</p>
+                        @endif
                     </a>
                 </div>
 
