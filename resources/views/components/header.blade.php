@@ -5,7 +5,7 @@
 <div>
     <header class="p-4 bg-black">
         <div class="flex justify-between items-center">
-            <img src="{{ asset('storage/logo.jpg') }}" class="h-11" alt="logo">
+            <img draggable="false" src="{{ asset('storage/logo.png') }}" class="h-11" alt="logo">
 
             @auth
                 <div>
