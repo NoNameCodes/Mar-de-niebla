@@ -1,5 +1,7 @@
 <div>
-    <footer class="text-center p-6 bg-black inset-x-0 bottom-0 w-full">
-        <p class="text-sm text-white"> Barrio Oeste - 2022</p>
+    <footer class="flex justify-center p-6 bg-black fixed inset-x-0 bottom-0 w-full">
+        <a href="{{ route('home') }}">
+            <img draggable="false" src="{{ asset('storage/logo.png') }}" class="h-9" alt="logo">
+        </a>
     </footer>
 </div>

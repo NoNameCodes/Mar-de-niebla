@@ -5,11 +5,13 @@
 <div>
     <header class="p-4 bg-black">
         <div class="flex justify-between items-center">
-            <img src="{{ asset('storage/logo.jpg') }}" class="h-11" alt="logo">
+            <a href="{{ route('home') }}">
+                <img draggable="false" src="{{ asset('storage/logo.png') }}" class="h-11" alt="logo">
+            </a>
 
             @auth
                 <div>
-                    <button type="button" data-dropdown-toggle="dropdown"><i class="fa-solid fa-user fa-2x "
+                    <button type="button" data-dropdown-toggle="dropdown"><i class="fa-solid fa-user fa-xl "
                             style="color: #F8981D"></i> </button>
                     <!-- Dropdown menu -->
                     <div class="hidden bg-[#F8981D] text-base z-50  " id="dropdown">
