@@ -13,11 +13,24 @@ class UserMiddlewareTest extends DuskTestCase
      *
      * @return void
      */
-    public function testExample()
+    public function testUserGoesToHome()
     {
-        $this->browse(function (Browser $browser) {
-            $browser->visit('/')
-                    ->assertSee('Laravel');
+        $this->browse(function ($first, $second) {
+            $first->visit('/')
+            ->waitForText('Login')
+            ->type('email', value: 'w@w')
+            ->type('password', value: '1234567890')
+            ->click('#btnEnter')
+            ->assertPathIs('/');
+
+        $second->visit('/')
+        ->waitForText('Login')
+        ->type('email', value: 'w@w')
+        ->type('password', value: '1234567890')
+        ->click('#btnEnter')
+        ->assertPathIs('/')
+        ->visit('/users')
+        ->assertPathIs('/home');
         });
     }
 }
