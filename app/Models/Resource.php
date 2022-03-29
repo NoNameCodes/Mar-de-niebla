@@ -9,7 +9,7 @@ class Resource extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'name', 'description', 'img', 'user_id', 'location_id'
+        'id', 'name', 'description', 'img', 'user_id', 'location_id'
     ];
 
     public function user()
