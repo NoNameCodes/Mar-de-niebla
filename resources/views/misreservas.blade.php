@@ -25,7 +25,12 @@
 <body>
     <x-header />
     <main class="flex flex-col items-center">
-        <x-button-add />
+        <x-button-add  />
+        <div class="flex justify-center text-red-700 ">
+            @if (Session::has('message'))
+                {{ session('message') }}
+            @endif
+        </div>
         <div class="ms:w-4/5 md:w-4/5 lg:w-2/5">
             <div class="border-2 border-[#F8981D] rounded-xl m-1.5 py-1">
                 @forelse ($resources as $resource)
