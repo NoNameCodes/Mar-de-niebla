@@ -5,7 +5,9 @@
 <div>
     <header class="p-4 bg-black">
         <div class="flex justify-between items-center">
-            <img draggable="false" src="{{ asset('storage/logo.png') }}" class="h-11" alt="logo">
+            <a href="{{ route('home') }}">
+                <img draggable="false" src="{{ asset('storage/logo.png') }}" class="h-11" alt="logo">
+            </a>
 
             @auth
                 <div>
