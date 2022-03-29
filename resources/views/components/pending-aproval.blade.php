@@ -5,9 +5,11 @@
 
 
 @if (session('message'))
-    <div class="alert alert-success" role="alert">
+<div class="flex justify-center">
+    <div class="text-xl border-2 border-green-400 bg-green-200 rounded-md  mt-10 p-10">
         {{ session('message') }}
     </div>
+</div>
 @endif
 <div class="flex  flex-col items-center m-6">
     <h1 class="text-orange-400 mx-6 my-20 text-6xl">Validaciones pendientes</h1>
@@ -39,14 +41,14 @@
             </div>
         @empty
             <div>
-                <p>No hay usuarios pendientes por aprovar!</p>
+                <p class="rounded-md bg-gray-200 p-6">¡No hay oranizaciones pendientes por aprobar!</p>
             </div>
         @endforelse
     </div>
     <div class="m-20">
         <a href="{{ route('admin.users.index') }}">
             <button
-                class="bg-orange-400 text-white  text-3xl rounded-lg h-40 w-96 m-5 drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]">Gestionar
+                class="bg-orange-400 text-white  text-2xl rounded-lg p-10 m-5 drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]">Gestionar
                 organizaciones</button>
         </a>
     </div>
