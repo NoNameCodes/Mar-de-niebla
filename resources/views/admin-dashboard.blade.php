@@ -25,14 +25,14 @@
         </div>
         @empty
         <div>
-            <p class="flex justify-center border-2 border-green-400 bg-green-100">No hay usuarios registrados.
+            <p class="flex justify-center rounded-md bg-gray-200 p-6">No hay organizaciones registradas.
             </p>
         </div>
         @endforelse
     </div>
     <div class="m-20">
         <a href="{{ route('admin.users.pending.index') }}">
-            <button class="bg-orange-400 text-white  text-3xl rounded-lg h-40 w-96 m-5 drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]">Validaciones
+            <button class="bg-orange-400 text-white  text-2xl rounded-lg p-10 m-5 drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]">Validaciones
                 pendientes</button>
         </a>
     </div>
