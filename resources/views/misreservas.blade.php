@@ -42,7 +42,7 @@
                                 href="{{ url('/home') }}">Recursos disponibles</a></button>
                     </div>
                 @endforelse
-                <div>{{ $resources->links() }}</div>
+                
             </div>
         </div>
     </main>
