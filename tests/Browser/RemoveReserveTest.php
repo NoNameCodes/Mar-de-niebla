@@ -13,11 +13,16 @@ class RemoveReserveTest extends DuskTestCase
      *
      * @return void
      */
-    public function testExample()
+    public function test_confirm_view_when_cancelling_a_reserve()
     {
         $this->browse(function (Browser $browser) {
-            $browser->visit('/')
-                    ->assertSee('Laravel');
+            // $browser->visit('/login')
+            // ->assertPathIs('/login')
+            // ->type('email', value: 'p@p')
+            // ->type('password', value: '1234567890')
+            // ->click('#btnEnter')
+            // ->assertSee('Añadir recurso')
+            // ->assertPathIs('/home');
         });
     }
 }
