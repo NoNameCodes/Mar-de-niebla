@@ -22,7 +22,7 @@
             <div class="flex justify-between w-3/4">
                 <div class="flex flex-col justify-center">
                     <a href="{{ route('resource', $resource) }}">
-                        <p class="align-middle p-2 font-extrabold text-xl">{{ $resource->name }}</p>
+                        <p class="align-middle p-2 font-extrabold text-xl">{{ $resource->name }}</p></a>
                         @if (Route::currentRouteName() == 'misreservas')
                             @foreach ($reservas as $reserva)
                                 @if ($reserva->resource_id === $resource->id)
@@ -31,9 +31,10 @@
                                 @endif
                             @endforeach
                        @else
-                            <p class="italic p-2 font-thin">Ver registro</p>
+                            <button type="button" onclick="location.href = '{{ route('history.id', $resource->id) }}'">Ver registro</button>
                         @endif
-                    </a>
+                        
+                    
                 </div>
 
                 <div class="flex flex-col justify-center p-6">
