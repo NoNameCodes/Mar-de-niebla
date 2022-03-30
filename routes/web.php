@@ -10,6 +10,7 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\ReservaController;
 use App\Http\Controllers\MisreservasController;
+use App\Http\Controllers\FormController;
 
 Route::get('/approval', [HomeController::class, 'approval'])->name('approval');
 
