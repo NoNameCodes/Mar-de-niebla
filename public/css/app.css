@@ -961,6 +961,7 @@ select {
   margin-bottom: 0;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 .static {
   position: static;
 }
@@ -983,6 +984,11 @@ select {
 }
 >>>>>>> feature/locationTest2
 >>>>>>> 297c54b1b045ce5004797b3f541e06c4ddef9989
+=======
+.static {
+  position: static;
+}
+>>>>>>> style/viewusers
 .fixed {
   position: fixed;
 }
@@ -1030,6 +1036,7 @@ select {
 .col-span-6 {
   grid-column: span 6 / span 6;
 }
+<<<<<<< HEAD
 .float-left {
   float: left;
 <<<<<<< HEAD
@@ -1038,6 +1045,19 @@ select {
 .m-12 {
   margin: 3rem;
 >>>>>>> 297c54b1b045ce5004797b3f541e06c4ddef9989
+=======
+.float-right {
+  float: right;
+}
+.float-left {
+  float: left;
+}
+.m-2 {
+  margin: 0.5rem;
+}
+.m-10 {
+  margin: 2.5rem;
+>>>>>>> style/viewusers
 }
 .m-1\.5 {
   margin: 0.375rem;
@@ -1048,12 +1068,18 @@ select {
 .m-5 {
   margin: 1.25rem;
 }
+<<<<<<< HEAD
 .m-12 {
   margin: 3rem;
+=======
+.m-3 {
+  margin: 0.75rem;
+>>>>>>> style/viewusers
 }
 .m-6 {
   margin: 1.5rem;
 }
+<<<<<<< HEAD
 .m-3 {
   margin: 0.75rem;
 }
@@ -1068,11 +1094,19 @@ select {
 }
 .m-10 {
   margin: 2.5rem;
+=======
+.m-20 {
+  margin: 5rem;
+}
+.m-12 {
+  margin: 3rem;
+>>>>>>> style/viewusers
 }
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
 }
+<<<<<<< HEAD
 .mx-8 {
   margin-left: 2rem;
   margin-right: 2rem;
@@ -1096,6 +1130,8 @@ select {
   margin-left: 2.5rem;
   margin-right: 2.5rem;
 }
+=======
+>>>>>>> style/viewusers
 .mx-6 {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
@@ -1103,6 +1139,18 @@ select {
 .my-20 {
   margin-top: 5rem;
   margin-bottom: 5rem;
+}
+.mx-8 {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+.my-5 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+.mx-12 {
+  margin-left: 3rem;
+  margin-right: 3rem;
 }
 .ml-3 {
   margin-left: 0.75rem;
@@ -1174,6 +1222,7 @@ select {
   margin-bottom: 1rem;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -1183,8 +1232,25 @@ select {
 =======
 <<<<<<< HEAD
 >>>>>>> 297c54b1b045ce5004797b3f541e06c4ddef9989
+=======
+.-mt-px {
+  margin-top: -1px;
+}
+.mb-20 {
+  margin-bottom: 5rem;
+}
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+>>>>>>> style/viewusers
 .mb-10 {
   margin-bottom: 2.5rem;
+}
+.mr-36 {
+  margin-right: 9rem;
+}
+.mb-1 {
+  margin-bottom: 0.25rem;
 }
 .mb-3 {
   margin-bottom: 0.75rem;
@@ -1192,6 +1258,7 @@ select {
 .mb-0 {
   margin-bottom: 0px;
 }
+<<<<<<< HEAD
 .-mt-px {
   margin-top: -1px;
 }
@@ -1223,6 +1290,17 @@ select {
   margin-bottom: 5rem;
 }
 >>>>>>> 297c54b1b045ce5004797b3f541e06c4ddef9989
+=======
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+.mt-0 {
+  margin-top: 0px;
+}
+.mt-20 {
+  margin-top: 5rem;
+}
+>>>>>>> style/viewusers
 .block {
   display: block;
 }
@@ -1272,6 +1350,7 @@ select {
   height: 5rem;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 .h-11 {
   height: 2.75rem;
 }
@@ -1283,6 +1362,11 @@ select {
 }
 >>>>>>> feature/locationTest2
 >>>>>>> 297c54b1b045ce5004797b3f541e06c4ddef9989
+=======
+.h-11 {
+  height: 2.75rem;
+}
+>>>>>>> style/viewusers
 .h-3 {
   height: 0.75rem;
 }
@@ -1290,6 +1374,7 @@ select {
   height: 100%;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 .h-64 {
   height: 16rem;
 =======
@@ -1301,6 +1386,10 @@ select {
   height: 16rem;
 >>>>>>> feature/locationTest2
 >>>>>>> 297c54b1b045ce5004797b3f541e06c4ddef9989
+=======
+.h-40 {
+  height: 10rem;
+>>>>>>> style/viewusers
 }
 .h-screen {
   height: 100vh;
@@ -1350,6 +1439,7 @@ select {
 .w-20 {
   width: 5rem;
 }
+<<<<<<< HEAD
 .w-80 {
   width: 20rem;
 }
@@ -1358,6 +1448,8 @@ select {
   width: 16rem;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> style/viewusers
 .w-3\/12 {
   width: 25%;
 =======
@@ -1370,6 +1462,7 @@ select {
   width: 0.75rem;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 .w-3\/12 {
   width: 25%;
 }
@@ -1381,6 +1474,14 @@ select {
 }
 >>>>>>> feature/locationTest2
 >>>>>>> 297c54b1b045ce5004797b3f541e06c4ddef9989
+=======
+.w-96 {
+  width: 24rem;
+}
+.w-80 {
+  width: 20rem;
+}
+>>>>>>> style/viewusers
 .min-w-0 {
   min-width: 0px;
 }
@@ -1393,12 +1494,10 @@ select {
 .max-w-xl {
   max-width: 36rem;
 }
-.max-w-2xl {
-  max-width: 42rem;
-}
 .max-w-6xl {
   max-width: 72rem;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 .max-w-full {
   max-width: 100%;
@@ -1411,6 +1510,11 @@ select {
 }
 >>>>>>> feature/locationTest2
 >>>>>>> 297c54b1b045ce5004797b3f541e06c4ddef9989
+=======
+.max-w-2xl {
+  max-width: 42rem;
+}
+>>>>>>> style/viewusers
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -1691,6 +1795,7 @@ select {
   border-color: rgb(243 244 246 / var(--tw-border-opacity));
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1715,6 +1820,9 @@ select {
 >>>>>>> feature/locationTest2
 }
 .border-\[\#F8981D\] {
+=======
+.border-gray-400 {
+>>>>>>> style/viewusers
   --tw-border-opacity: 1;
 <<<<<<< HEAD
   border-color: rgb(248 152 29 / var(--tw-border-opacity));
@@ -1722,6 +1830,13 @@ select {
   border-color: rgb(156 163 175 / var(--tw-border-opacity));
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+.border-\[\#F8981D\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(248 152 29 / var(--tw-border-opacity));
+}
+>>>>>>> style/viewusers
 .border-\[\#faba67\] {
   --tw-border-opacity: 1;
   border-color: rgb(250 186 103 / var(--tw-border-opacity));
@@ -1731,6 +1846,14 @@ select {
   border-color: rgb(254 215 170 / var(--tw-border-opacity));
 >>>>>>> 297c54b1b045ce5004797b3f541e06c4ddef9989
 }
+.border-orange-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(251 146 60 / var(--tw-border-opacity));
+}
+.border-green-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(74 222 128 / var(--tw-border-opacity));
+}
 .border-red-400 {
   --tw-border-opacity: 1;
   border-color: rgb(248 113 113 / var(--tw-border-opacity));
@@ -1739,6 +1862,7 @@ select {
   --tw-border-opacity: 1;
   border-color: rgb(249 115 22 / var(--tw-border-opacity));
 }
+<<<<<<< HEAD
 .border-gray-400 {
   --tw-border-opacity: 1;
   border-color: rgb(156 163 175 / var(--tw-border-opacity));
@@ -1764,6 +1888,8 @@ select {
   --tw-border-opacity: 1;
   border-color: rgb(250 186 103 / var(--tw-border-opacity));
 }
+=======
+>>>>>>> style/viewusers
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -1813,11 +1939,15 @@ select {
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 .bg-\[\#FAF3F3\] {
+=======
+.bg-black {
+>>>>>>> style/viewusers
   --tw-bg-opacity: 1;
-  background-color: rgb(250 243 243 / var(--tw-bg-opacity));
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 .bg-\[\#F8981D\] {
 =======
@@ -1826,11 +1956,14 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(169 23 28 / var(--tw-bg-opacity));
 }
+<<<<<<< HEAD
 >>>>>>> 297c54b1b045ce5004797b3f541e06c4ddef9989
 .bg-\[\#A9171C\] {
   --tw-bg-opacity: 1;
   background-color: rgb(169 23 28 / var(--tw-bg-opacity));
 }
+=======
+>>>>>>> style/viewusers
 .bg-\[\#92C954\] {
   --tw-bg-opacity: 1;
   background-color: rgb(146 201 84 / var(--tw-bg-opacity));
@@ -1853,6 +1986,7 @@ select {
   background-color: rgb(67 56 202 / var(--tw-bg-opacity));
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 .bg-orange-400 {
 =======
 <<<<<<< HEAD
@@ -1860,10 +1994,19 @@ select {
 >>>>>>> 297c54b1b045ce5004797b3f541e06c4ddef9989
   --tw-bg-opacity: 1;
   background-color: rgb(251 146 60 / var(--tw-bg-opacity));
-}
-.bg-red-200 {
+=======
+.bg-\[\#E61818\] {
   --tw-bg-opacity: 1;
-  background-color: rgb(254 202 202 / var(--tw-bg-opacity));
+  background-color: rgb(230 24 24 / var(--tw-bg-opacity));
+>>>>>>> style/viewusers
+}
+.bg-orange-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(251 146 60 / var(--tw-bg-opacity));
+}
+.bg-\[\#A9171C\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(169 23 28 / var(--tw-bg-opacity));
 }
 .bg-\[\#FAF3F3\] {
   --tw-bg-opacity: 1;
@@ -1880,17 +2023,22 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(187 247 208 / var(--tw-bg-opacity));
 }
+<<<<<<< HEAD
 .bg-\[\#E61818\] {
   --tw-bg-opacity: 1;
   background-color: rgb(230 24 24 / var(--tw-bg-opacity));
 =======
 .bg-orange-400 {
+=======
+.bg-red-200 {
+>>>>>>> style/viewusers
   --tw-bg-opacity: 1;
-  background-color: rgb(251 146 60 / var(--tw-bg-opacity));
+  background-color: rgb(254 202 202 / var(--tw-bg-opacity));
 }
 .bg-\[\#FAF3F3\] {
   --tw-bg-opacity: 1;
   background-color: rgb(250 243 243 / var(--tw-bg-opacity));
+<<<<<<< HEAD
 }
 .bg-transparent {
   background-color: transparent;
@@ -1899,6 +2047,8 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 >>>>>>> feature/locationTest2
+=======
+>>>>>>> style/viewusers
 }
 .bg-opacity-25 {
   --tw-bg-opacity: 0.25;
@@ -1929,18 +2079,24 @@ select {
   padding: 1rem;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 .p-16 {
   padding: 4rem;
 }
 .p-1 {
   padding: 0.25rem;
 }
+=======
+>>>>>>> style/viewusers
 .p-10 {
   padding: 2.5rem;
 =======
 .p-1 {
   padding: 0.25rem;
 >>>>>>> feature/locationTest2
+}
+.p-16 {
+  padding: 4rem;
 }
 .px-4 {
   padding-left: 1rem;
@@ -1998,6 +2154,7 @@ select {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
 }
+<<<<<<< HEAD
 .px-9 {
   padding-left: 2.25rem;
   padding-right: 2.25rem;
@@ -2005,13 +2162,22 @@ select {
 }
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> style/viewusers
 .py-1\.5 {
   padding-top: 0.375rem;
   padding-bottom: 0.375rem;
 =======
 >>>>>>> feature/locationTest2
 }
+<<<<<<< HEAD
 >>>>>>> 297c54b1b045ce5004797b3f541e06c4ddef9989
+=======
+.px-9 {
+  padding-left: 2.25rem;
+  padding-right: 2.25rem;
+}
+>>>>>>> style/viewusers
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
@@ -2059,6 +2225,7 @@ select {
 .pb-1 {
   padding-bottom: 0.25rem;
 }
+<<<<<<< HEAD
 .pt-0 {
   padding-top: 0px;
 }
@@ -2074,6 +2241,8 @@ select {
 }
 >>>>>>> feature/locationTest2
 >>>>>>> 297c54b1b045ce5004797b3f541e06c4ddef9989
+=======
+>>>>>>> style/viewusers
 .pt-8 {
   padding-top: 2rem;
 }
@@ -2091,6 +2260,7 @@ select {
 .pt-0\.5 {
   padding-top: 0.125rem;
 }
+<<<<<<< HEAD
 .pl-5 {
   padding-left: 1.25rem;
 =======
@@ -2101,12 +2271,21 @@ select {
   padding-right: 0.25rem;
 >>>>>>> feature/locationTest2
 >>>>>>> 297c54b1b045ce5004797b3f541e06c4ddef9989
+=======
+.pt-0 {
+  padding-top: 0px;
+>>>>>>> style/viewusers
 }
 .pb-2 {
   padding-bottom: 0.5rem;
 }
+<<<<<<< HEAD
 .pt-0\.5 {
   padding-top: 0.125rem;
+=======
+.pl-5 {
+  padding-left: 1.25rem;
+>>>>>>> style/viewusers
 }
 .text-left {
   text-align: left;
@@ -2150,13 +2329,13 @@ select {
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
-.text-6xl {
-  font-size: 3.75rem;
-  line-height: 1;
-}
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
 }
 .font-medium {
   font-weight: 500;
@@ -2544,6 +2723,7 @@ hr {
   background-color: rgb(209 213 219 / var(--tw-bg-opacity));
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 .hover\:bg-indigo-200:hover {
   --tw-bg-opacity: 1;
 =======
@@ -2552,6 +2732,8 @@ hr {
   --tw-bg-opacity: 1;
   background-color: rgb(255 186 37 / var(--tw-bg-opacity));
 }
+=======
+>>>>>>> style/viewusers
 .hover\:bg-\[\#85f307\]:hover {
 =======
 .hover\:bg-indigo-200:hover {
@@ -2559,6 +2741,10 @@ hr {
   --tw-bg-opacity: 1;
 >>>>>>> 297c54b1b045ce5004797b3f541e06c4ddef9989
   background-color: rgb(199 210 254 / var(--tw-bg-opacity));
+}
+.hover\:bg-\[\#ffba25\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 186 37 / var(--tw-bg-opacity));
 }
 .hover\:bg-\[\#ecc188\]:hover {
   --tw-bg-opacity: 1;
@@ -2712,6 +2898,7 @@ hr {
   --tw-ring-color: rgb(191 219 254 / var(--tw-ring-opacity));
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -2729,14 +2916,19 @@ hr {
   --tw-ring-color: rgb(248 152 29 / var(--tw-ring-opacity));
 }
 >>>>>>> 297c54b1b045ce5004797b3f541e06c4ddef9989
+=======
+>>>>>>> style/viewusers
 .focus\:ring-gray-500:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(107 114 128 / var(--tw-ring-opacity));
 }
+<<<<<<< HEAD
 .focus\:ring-indigo-700:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(67 56 202 / var(--tw-ring-opacity));
 }
+=======
+>>>>>>> style/viewusers
 .focus\:ring-\[\#F8981D\]:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(248 152 29 / var(--tw-ring-opacity));
@@ -2999,6 +3191,7 @@ hr {
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -3016,14 +3209,19 @@ hr {
   }
 
 >>>>>>> 297c54b1b045ce5004797b3f541e06c4ddef9989
+=======
+>>>>>>> style/viewusers
   .md\:w-4\/5 {
     width: 80%;
   }
 
+<<<<<<< HEAD
   .md\:w-1\/2 {
     width: 50%;
   }
 
+=======
+>>>>>>> style/viewusers
   .md\:w-full {
     width: 100%;
   }

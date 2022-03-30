@@ -47,9 +47,8 @@
     </div>
     <div class="m-20">
         <a href="{{ route('admin.users.index') }}">
-            <button
-                class="bg-orange-400 text-white  text-2xl rounded-lg p-10 m-5 drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]">Gestionar
-                organizaciones</button>
+            <button id="btnAdd" class=" px-6 py-1 mx-auto block rounded-md text-md font-semibold text-white bg-[#F8981D] hover:bg-[#ffba25] duration-300 drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]">Gestionar Organizaciones</button>
+
         </a>
     </div>
 </div>
