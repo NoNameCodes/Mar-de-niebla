@@ -27,10 +27,10 @@
                             @foreach ($reservas as $reserva)
                                 @if ($reserva->resource_id === $resource->id)
                                     <p class="italic p-2 font-thin">{{ $reserva->name }}</p>
-                                    <p class="italic p-2 font-thin">{{ $reserva->date }}</p> 
+                                    <p class="italic p-2 font-thin">{{ $reserva->date }}</p>
                                 @endif
                             @endforeach
-                       @else
+                        @else
                             <p class="italic p-2 font-thin">Ver registro</p>
                         @endif
                     </a>
@@ -50,7 +50,7 @@
                             </form>
                         </div>
                     @elseif (Route::currentRouteName() == 'misreservas')
-                    <button class="btn inline-block select-none no-underline align-middle cursor-pointer whitespace-nowrap px-4 py-1.5 rounded text-base font-medium leading-6 tracking-tight text-white text-center border-0 bg-[#F8981D] hover:bg-[#ffba25]" type="button" onclick="location.href = '{{ route('reserva.destroy', $reserva->id) }}'">Anular Reserva</button>
+                    <button class="btn inline-block select-none no-underline align-middle cursor-pointer whitespace-nowrap px-4 py-1.5 rounded text-base font-medium leading-6 tracking-tight text-white text-center border-0 bg-[#F8981D] hover:bg-[#ffba25]" type="button" onclick="location.href = '{{ route('removereserve', $reserva->id) }}'">Anular Reserva</button>
                     @else
                     <button class="btn inline-block select-none no-underline align-middle cursor-pointer whitespace-nowrap px-4 py-1.5 rounded text-base font-medium leading-6 tracking-tight text-white text-center border-0 bg-[#92C954] hover:bg-[#85f307] duration-300" type="button" onclick="location.href = '{{ route('reserva.create', $resource->id) }}'">Reservar</button>
                     @endif

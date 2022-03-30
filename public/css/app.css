@@ -1000,19 +1000,8 @@ select {
 .col-span-6 {
   grid-column: span 6 / span 6;
 }
-<<<<<<< HEAD
-.float-right {
-  float: right;
-}
-.float-left {
-  float: left;
-}
-.m-2 {
-  margin: 0.5rem;
-=======
 .m-3 {
   margin: 0.75rem;
->>>>>>> feature/diego/borraruserborrareserva
 }
 .m-12 {
   margin: 3rem;
@@ -1026,21 +1015,12 @@ select {
 .m-5 {
   margin: 1.25rem;
 }
-<<<<<<< HEAD
-.m-3 {
-  margin: 0.75rem;
-}
-.m-6 {
-  margin: 1.5rem;
-}
-=======
 .m-6 {
   margin: 1.5rem;
 }
 .m-2 {
   margin: 0.5rem;
 }
->>>>>>> feature/diego/borraruserborrareserva
 .m-20 {
   margin: 5rem;
 }
@@ -1063,13 +1043,6 @@ select {
   margin-top: 5rem;
   margin-bottom: 5rem;
 }
-<<<<<<< HEAD
-.mx-8 {
-  margin-left: 2rem;
-  margin-right: 2rem;
-}
-=======
->>>>>>> feature/diego/borraruserborrareserva
 .ml-3 {
   margin-left: 0.75rem;
 }
@@ -1139,18 +1112,6 @@ select {
 .mb-4 {
   margin-bottom: 1rem;
 }
-<<<<<<< HEAD
-.-mt-px {
-  margin-top: -1px;
-}
-.mb-20 {
-  margin-bottom: 5rem;
-}
-.mb-2 {
-  margin-bottom: 0.5rem;
-}
-=======
->>>>>>> feature/diego/borraruserborrareserva
 .mb-10 {
   margin-bottom: 2.5rem;
 }
@@ -1166,8 +1127,6 @@ select {
 .mt-0 {
   margin-top: 0px;
 }
-<<<<<<< HEAD
-=======
 .-mt-px {
   margin-top: -1px;
 }
@@ -1183,7 +1142,6 @@ select {
 .mb-1 {
   margin-bottom: 0.25rem;
 }
->>>>>>> feature/diego/borraruserborrareserva
 .block {
   display: block;
 }
@@ -1238,15 +1196,9 @@ select {
 .h-full {
   height: 100%;
 }
-.h-40 {
-  height: 10rem;
-}
-<<<<<<< HEAD
-=======
 .h-11 {
   height: 2.75rem;
 }
->>>>>>> feature/diego/borraruserborrareserva
 .h-screen {
   height: 100vh;
 }
@@ -1304,15 +1256,6 @@ select {
 .w-3 {
   width: 0.75rem;
 }
-.w-96 {
-  width: 24rem;
-}
-<<<<<<< HEAD
-.w-80 {
-  width: 20rem;
-}
-=======
->>>>>>> feature/diego/borraruserborrareserva
 .min-w-0 {
   min-width: 0px;
 }
@@ -1325,11 +1268,11 @@ select {
 .max-w-xl {
   max-width: 36rem;
 }
-.max-w-6xl {
-  max-width: 72rem;
-}
 .max-w-2xl {
   max-width: 42rem;
+}
+.max-w-6xl {
+  max-width: 72rem;
 }
 .flex-1 {
   flex: 1 1 0%;
@@ -1561,30 +1504,15 @@ select {
   --tw-border-opacity: 1;
   border-color: rgb(243 244 246 / var(--tw-border-opacity));
 }
-<<<<<<< HEAD
-.border-gray-400 {
-  --tw-border-opacity: 1;
-  border-color: rgb(156 163 175 / var(--tw-border-opacity));
-}
-=======
->>>>>>> feature/diego/borraruserborrareserva
 .border-\[\#F8981D\] {
   --tw-border-opacity: 1;
   border-color: rgb(248 152 29 / var(--tw-border-opacity));
 }
-<<<<<<< HEAD
-.border-\[\#faba67\] {
-=======
 .border-orange-400 {
->>>>>>> feature/diego/borraruserborrareserva
   --tw-border-opacity: 1;
   border-color: rgb(251 146 60 / var(--tw-border-opacity));
 }
-<<<<<<< HEAD
-.border-orange-200 {
-=======
 .border-gray-400 {
->>>>>>> feature/diego/borraruserborrareserva
   --tw-border-opacity: 1;
   border-color: rgb(156 163 175 / var(--tw-border-opacity));
 }
@@ -1596,20 +1524,17 @@ select {
   --tw-border-opacity: 1;
   border-color: rgb(254 215 170 / var(--tw-border-opacity));
 }
+.border-red-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(248 113 113 / var(--tw-border-opacity));
+}
 .border-orange-500 {
   --tw-border-opacity: 1;
   border-color: rgb(249 115 22 / var(--tw-border-opacity));
 }
-<<<<<<< HEAD
-=======
 .border-green-400 {
   --tw-border-opacity: 1;
   border-color: rgb(74 222 128 / var(--tw-border-opacity));
-}
->>>>>>> feature/diego/borraruserborrareserva
-.border-red-400 {
-  --tw-border-opacity: 1;
-  border-color: rgb(248 113 113 / var(--tw-border-opacity));
 }
 .bg-white {
   --tw-bg-opacity: 1;
@@ -1659,11 +1584,7 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
-<<<<<<< HEAD
-.bg-black {
-=======
 .bg-\[\#FAF3F3\] {
->>>>>>> feature/diego/borraruserborrareserva
   --tw-bg-opacity: 1;
   background-color: rgb(250 243 243 / var(--tw-bg-opacity));
 }
@@ -1679,74 +1600,29 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(146 201 84 / var(--tw-bg-opacity));
 }
-.bg-\[\#faba67\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(250 186 103 / var(--tw-bg-opacity));
-}
 .bg-indigo-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(67 56 202 / var(--tw-bg-opacity));
 }
-<<<<<<< HEAD
-.bg-\[\#E61818\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(230 24 24 / var(--tw-bg-opacity));
-}
-.bg-orange-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(251 146 60 / var(--tw-bg-opacity));
-}
-.bg-\[\#A9171C\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(169 23 28 / var(--tw-bg-opacity));
-}
-.bg-green-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(220 252 231 / var(--tw-bg-opacity));
-}
-.bg-\[\#FAF3F3\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(250 243 243 / var(--tw-bg-opacity));
-=======
 .bg-black {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
->>>>>>> feature/diego/borraruserborrareserva
+}
+.bg-red-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 202 202 / var(--tw-bg-opacity));
 }
 .bg-green-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(187 247 208 / var(--tw-bg-opacity));
 }
-<<<<<<< HEAD
-.bg-red-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 202 202 / var(--tw-bg-opacity));
-=======
 .bg-orange-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(251 146 60 / var(--tw-bg-opacity));
->>>>>>> feature/diego/borraruserborrareserva
 }
-.bg-\[\#fa8e00\] {
+.bg-\[\#E61818\] {
   --tw-bg-opacity: 1;
-<<<<<<< HEAD
-  background-color: rgb(250 142 0 / var(--tw-bg-opacity));
-}
-.bg-\[\#fa8e00ea\] {
-  background-color: #fa8e00ea;
-}
-.bg-\[\#eba03fea\] {
-  background-color: #eba03fea;
-}
-.bg-\[\#f1a440ea\] {
-  background-color: #f1a440ea;
-=======
   background-color: rgb(230 24 24 / var(--tw-bg-opacity));
-}
-.bg-red-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 202 202 / var(--tw-bg-opacity));
->>>>>>> feature/diego/borraruserborrareserva
 }
 .bg-opacity-25 {
   --tw-bg-opacity: 0.25;
@@ -1773,11 +1649,11 @@ select {
 .p-4 {
   padding: 1rem;
 }
-.p-10 {
-  padding: 2.5rem;
-}
 .p-16 {
   padding: 4rem;
+}
+.p-10 {
+  padding: 2.5rem;
 }
 .px-4 {
   padding-left: 1rem;
@@ -1835,24 +1711,14 @@ select {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
 }
-<<<<<<< HEAD
-.py-1\.5 {
-  padding-top: 0.375rem;
-  padding-bottom: 0.375rem;
-}
-=======
->>>>>>> feature/diego/borraruserborrareserva
 .px-9 {
   padding-left: 2.25rem;
   padding-right: 2.25rem;
 }
-<<<<<<< HEAD
-=======
 .py-1\.5 {
   padding-top: 0.375rem;
   padding-bottom: 0.375rem;
 }
->>>>>>> feature/diego/borraruserborrareserva
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
@@ -1887,12 +1753,9 @@ select {
 .pb-1 {
   padding-bottom: 0.25rem;
 }
-<<<<<<< HEAD
-=======
 .pt-0 {
   padding-top: 0px;
 }
->>>>>>> feature/diego/borraruserborrareserva
 .pt-8 {
   padding-top: 2rem;
 }
@@ -1901,21 +1764,12 @@ select {
 }
 .pt-0\.5 {
   padding-top: 0.125rem;
-<<<<<<< HEAD
-=======
 }
 .pl-5 {
   padding-left: 1.25rem;
->>>>>>> feature/diego/borraruserborrareserva
 }
 .pb-2 {
   padding-bottom: 0.5rem;
-<<<<<<< HEAD
-}
-.pl-5 {
-  padding-left: 1.25rem;
-=======
->>>>>>> feature/diego/borraruserborrareserva
 }
 .text-left {
   text-align: left;
@@ -2174,10 +2028,6 @@ select {
   --tw-drop-shadow: drop-shadow(0 4px 4px rgba(0,0,0,0.25));
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
-.grayscale {
-  --tw-grayscale: grayscale(100%);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
@@ -2268,13 +2118,13 @@ hr {
   --tw-bg-opacity: 1;
   background-color: rgb(209 213 219 / var(--tw-bg-opacity));
 }
+.hover\:bg-\[\#ffba25\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 186 37 / var(--tw-bg-opacity));
+}
 .hover\:bg-\[\#85f307\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(133 243 7 / var(--tw-bg-opacity));
-}
-.hover\:bg-\[\#fa8e00\]:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(250 142 0 / var(--tw-bg-opacity));
 }
 .hover\:bg-\[\#ecc188\]:hover {
   --tw-bg-opacity: 1;
@@ -2283,41 +2133,6 @@ hr {
 .hover\:bg-gray-800:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(31 41 55 / var(--tw-bg-opacity));
-<<<<<<< HEAD
-}
-.hover\:bg-\[\#faba67\]:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(250 186 103 / var(--tw-bg-opacity));
-}
-.hover\:bg-\[\#fab567\]:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(250 181 103 / var(--tw-bg-opacity));
-}
-.hover\:bg-\[\#f79322\]:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(247 147 34 / var(--tw-bg-opacity));
-}
-.hover\:bg-\[\#ce7b1d\]:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(206 123 29 / var(--tw-bg-opacity));
-}
-.hover\:bg-\[\#ce961d\]:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(206 150 29 / var(--tw-bg-opacity));
-}
-.hover\:bg-\[\#ebac24\]:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(235 172 36 / var(--tw-bg-opacity));
-}
-.hover\:bg-\[\#ffba25\]:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 186 37 / var(--tw-bg-opacity));
-}
-.hover\:bg-\[\#F8981D\]:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(248 152 29 / var(--tw-bg-opacity));
-=======
->>>>>>> feature/diego/borraruserborrareserva
 }
 .hover\:text-gray-500:hover {
   --tw-text-opacity: 1;
