@@ -37,34 +37,30 @@ return view('resources.create');
 public function store(Request $request)
 {
     
-    $request->validate([
-    'name' => 'required',
-    'description' => 'required',
-    'img' => 'required'
-    ]);
+    if ($request->hasFile("img")) {
+        $file = $request->file("img");
+        $imageName = time() . '_' . $file->getClientOriginalName();
+        $file->move(\public_path("img/"), $imageName);
 
-    try {
-        $user=Auth::user()->id;
-        $location=Location::all();
-        
-        $resource = new Resource;
-        $resource->name = $request->name;
-        $resource->description = $request->description;
-        $resource->img = Storage::putFile("public/images/resources", $request->file("img"));
-        
-        $resource->user_id =$user;
-        $location->id=$request->location;
-        $resource->location_id=$location->id;
-        
-        $resource->save();
-        
-        return redirect()->route('home')
-        ->with('success','Resource has been created successfully.');
-    } catch (\Throwable $th) {
-       return "Error" . $th;
+        $resource = new Resource([
+
+            $user = Auth::user()->id,
+            $location = Location::all(),
+            $location->id = $request->location,
+
+            "name" => $request->name,
+            "description" => $request->description,
+            "img" => $imageName,
+            "user_id" => $user,
+            "location_id" => $location->id,
+
+        ]);
     }
+    $resource->save();
 
-    
+    return redirect('home')
+        ->with('success', 'Resource has been created successfully.');
+
  }
 /**
 * Display the specified resource.
