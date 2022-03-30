@@ -30,7 +30,7 @@
                                     <p class="italic p-2 font-thin">{{ $reserva->date }}</p>
                                 @endif
                             @endforeach
-                       @else
+                        @else
                             <p class="italic p-2 font-thin">Ver registro</p>
                         @endif
                     </a>
