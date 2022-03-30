@@ -10,7 +10,7 @@ use Tests\DuskTestCase;
 
 class LoginTest extends DuskTestCase
 {
-    
+
     /**
      * A Dusk test example.
      *
@@ -18,11 +18,8 @@ class LoginTest extends DuskTestCase
      */
     public function test_user_login()
     {
-
-     
-
         $this->browse(function (Browser $browser)  {
-            $browser->visit('/')
+            $browser->visit('/login')
                     ->waitForText('Login')
                     ->type('email', value: 'dani@dani.dani')
                     ->type('password', value: '12345678')

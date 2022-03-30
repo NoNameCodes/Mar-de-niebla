@@ -13,13 +13,17 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('locations', function (Blueprint $table) {
+        Schema::create('resource_user', function (Blueprint $table) {
             $table->id();
-            $table->string('address');
             $table->timestamps();
+
             $table->unsignedBigInteger('resource_id');
-            $table->foreign('resource_id')->references('id')->on('resources')->onDelete('cascade');
+            $table->unsignedBigInteger('user_id');
+
+            $table->foreign('resource_id')->references('id')->on('resources');
+            $table->foreign('user_id')->references('id')->on('users');
         });
+
     }
 
     /**
@@ -29,6 +33,7 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('locations');
+        Schema::dropIfExists('resource_user');
+
     }
 };

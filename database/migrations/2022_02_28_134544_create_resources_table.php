@@ -25,6 +25,7 @@ return new class extends Migration
             $table->unsignedBigInteger('location_id');
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            // $table->foreign('reserve_id')->references('id')->on('reservas')->onDdelete('cascade');
         });
     }
 

@@ -1,9 +1,11 @@
 <x-guest-layout>
     <x-header />
 
-    <div class="flex justify-center text-red-700 ">
+    <div class="flex justify-center">
         @if (Session::has('message'))
-            {{ session('message') }}
+            <div class="lg:text-xl sm:text-md border-2 border-red-400 bg-red-200 rounded-md m-5 p-16">
+                {{ session('message') }}
+            </div>
         @endif
     </div>
 
@@ -24,7 +26,8 @@
                 class="text-gray-700 italic border-orange-500 rounded-xl  bg-[#FAF3F3] mb-6" name="phone" required>
             <textarea class="text-gray-700 italic border-orange-500 rounded-xl bg-[#FAF3F3] py-12 mb-6" placeholder="Comentarios"
                 name="coments"></textarea>
-            <button class="bg-[#F8981D] hover:bg-[#ecc188] text-white font-bold py-2 px-8 shadow-xl rounded-full mb-2"
+            <button id="btnReserve"
+                class="bg-[#F8981D] hover:bg-[#ecc188] text-white font-bold py-2 px-8 shadow-xl rounded-full mb-2"
                 type="submit">
                 Reservar
             </button>

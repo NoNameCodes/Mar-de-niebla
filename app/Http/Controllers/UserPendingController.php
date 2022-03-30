@@ -20,6 +20,6 @@ class UserPendingController extends Controller
     {
         $user = User::findOrFail($user_id);
         $user->update(['aproved_at' => now()]);
-        return redirect()->route('admin.users.pending.index')->withMessage('User approved successfully');
+        return redirect()->route('admin.users.pending.index')->withMessage('¡Organización aceptada Correctamente!');
     }
 }

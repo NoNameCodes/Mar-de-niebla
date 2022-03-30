@@ -9,7 +9,7 @@ class Resource extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'name', 'description', 'img', 'user_id', 'location_id'
+        'id', 'name', 'description', 'img', 'user_id', 'location_id'
     ];
 
     public function user()
@@ -20,5 +20,9 @@ class Resource extends Model
     public function location()
     {
         return $this->belongsTo(Location::class);
+    }
+    public function reservas()
+    {
+        return $this->hasOne(Reserva::class);
     }
 }
