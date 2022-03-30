@@ -89,5 +89,4 @@ public function destroy(Resource $resource)
         return redirect()->route('dashboard')
             ->with('success', 'Resource has been deleted successfully');
     }
-
 }
