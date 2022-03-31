@@ -25,7 +25,7 @@
 <body>
     <x-header />
     <main class="flex flex-col items-center">
-        <x-button-add  />
+        <x-button-add />
         <div class="flex justify-center text-red-700 ">
             @if (Session::has('message'))
                 {{ session('message') }}
@@ -47,7 +47,6 @@
                                 href="{{ url('/home') }}">Recursos disponibles</a></button>
                     </div>
                 @endforelse
-                
             </div>
         </div>
     </main>

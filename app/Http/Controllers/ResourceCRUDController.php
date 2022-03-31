@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Location;
 use App\Models\Resource;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class ResourceCRUDController extends Controller
 {
@@ -34,38 +37,32 @@ class ResourceCRUDController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'name' => 'required',
-            'description' => 'required',
-            'img' => 'required'
-        ]);
-        $resource = new Resource;
-        $resource->name = $request->name;
-        $resource->description = $request->description;
-        $resource->img = $request->img;
-        $resource->user_id = $request->user_id;
-        $resource->location_id = $request->location_id;
+
+        if ($request->hasFile("img")) {
+            $file = $request->file("img");
+            $imageName = time() . '_' . $file->getClientOriginalName();
+            $file->move(\public_path("img/"), $imageName);
+
+            $resource = new Resource([
+
+                $user = Auth::user()->id,
+                $location = Location::all(),
+                $location->id = $request->location,
+
+                "name" => $request->name,
+                "description" => $request->description,
+                "img" => $imageName,
+                "user_id" => $user,
+                "location_id" => $location->id,
+
+            ]);
+        }
         $resource->save();
-        return redirect()->route('resources.index')
+
+        return redirect('home')
             ->with('success', 'Resource has been created successfully.');
     }
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\resource  $resource
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        $resource = Resource::find($id);
-        return view('show', compact('resource'));
-    }
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Resource  $resource
-     * @return \Illuminate\Http\Response
-     */
+
     public function edit(Resource $resource)
     {
         return view('resources.edit', compact('resource'));
@@ -93,21 +90,36 @@ class ResourceCRUDController extends Controller
         $resource->user_id = $request->user_id;
         $resource->location_id = $request->location_id;
         $resource->save();
-        return redirect()->route('resources.index')
-            ->with('success', 'Resource Has Been updated successfully');
+        $message= 'La edición del recurso "'.$resource->name.'" ha sido exitosa';
+        Session::flash('modification', $message);
+        return redirect()->route('home');
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Display the specified resource.
      *
-     * @param  \App\Resource  $resource
+     * @param  \App\resource  $resource
      * @return \Illuminate\Http\Response
      */
+    public function show($id)
+    {
+        $resource = Resource::find($id);
+        return view('show', compact('resource'));
+
+        /**
+         * Remove the specified resource from storage.
+         *
+         * @param  \App\Resource  $resource
+         * @return \Illuminate\Http\Response
+         */
+    }
+
     public function destroy(Resource $resource)
     {
         $resource->reservas()->delete();
         $resource->delete();
-        return redirect()->route('dashboard')
-            ->with('success', 'Resource has been deleted successfully');
+        $message= 'El recurso "'.$resource->name.'" ha sido borrado con éxito';
+        Session::flash('message', $message);
+        return redirect()->route('dashboard');
     }
 }

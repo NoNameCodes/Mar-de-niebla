@@ -30,9 +30,6 @@ class ExampleTest extends DuskTestCase
             $browser->loginAs(User::find(5));
             $browser->visit('/dashboard')
                 ->assertSee('Añadir nuevo recurso');
-                // ->click('#btnAdd')
-                // ->visit('/form')
-                // ->assertSee('Cerrar');
         });
     }
 }

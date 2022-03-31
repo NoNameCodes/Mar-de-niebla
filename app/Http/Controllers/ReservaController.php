@@ -85,12 +85,19 @@ class ReservaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    public function remove($id)
+    {
+        $reserva=Reserva::find($id);
+        return view('misreservas', compact('reserva'));
+    }
+
     public function destroy($id)
     {
         $reserva=Reserva::find($id);
         $reserva->delete();
-        $message= 'La reserva de '.$reserva->name.' para la fecha:'.$reserva->date.' ha sido anulada';
+        $message= 'La reserva de '.$reserva->name.' para la fecha: '.$reserva->date.' ha sido anulada';
         Session::flash('message', $message);
         return redirect()->route('misreservas');
     }
+
 }

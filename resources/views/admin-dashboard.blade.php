@@ -8,8 +8,13 @@
 </div>
 @endif
 <div class="flex flex-col items-center m-6">
-    <h1 class="text-orange-400 mx-6 my-20 text-6xl">Gestionar organizaciones</h1>
     <div class="flex  flex-col justify-center m-6">
+        <h1 class="text-orange-400 mx-6 mt-20 text-6xl">Gestionar organizaciones</h1>
+        <div class="m-20">
+            <a href="{{ route('admin.users.pending.index') }}">
+                <button id="btnAdd" class=" px-6 py-1 mx-auto block rounded-md text-md font-semibold text-white bg-[#F8981D] hover:bg-[#ffba25] duration-300 drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]">Validaciones Pendientes</button>
+            </a>
+        </div>
         @forelse ($users as $user)
         <div class="flex flex-row items-center justify-between m-2">
             <p class="text-3xl mr-36">{{ $user->email }}</p>
@@ -29,12 +34,6 @@
             </p>
         </div>
         @endforelse
-    </div>
-    <div class="m-20">
-        <a href="{{ route('admin.users.pending.index') }}">
-            <button class="bg-orange-400 text-white  text-2xl rounded-lg p-10 m-5 drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]">Validaciones
-                pendientes</button>
-        </a>
     </div>
 </div>
 <x-footer />
