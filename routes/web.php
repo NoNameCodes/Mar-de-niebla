@@ -27,8 +27,8 @@ Route::middleware(['auth:sanctum', 'verified', 'approved'])->group(function () {
     Route::resource('resources', ResourceCRUDController::class);
     Route::get('recurso/{resource:name}', [PageController::class, 'resource'])->name('resource');
     Route::get('/misreservas', [MisreservasController::class, 'index'])->name('misreservas');
-    Route::get('/history', [HistoryController::class, 'index'])->name('history');
-
+    Route::get('/history{resource:id}', [HistoryController::class, 'resource'])->name('history');
+    
 });
 
 Route::middleware(['auth:sanctum', 'verified', 'approved','admin'])->group(function () {
