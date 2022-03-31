@@ -36,13 +36,7 @@ return view('resources.create');
 * @return \Illuminate\Http\Response
 */
 public function store(Request $request)
-{
-    $request->validate([
-        'name' => 'required',
-        'description' => 'required',
-        'img' => 'required|image| mimes:jpeg,jpg,png|max:2048',
-    ]);
-    
+{ 
     if ($request->hasFile("img")) {
         $file = $request->file("img");
         $imageName = time() . '_' . $file->getClientOriginalName();

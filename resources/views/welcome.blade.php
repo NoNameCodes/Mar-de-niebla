@@ -24,7 +24,7 @@
 
 <body class="antialiased">
     <x-header />
-    <main>
+    <main class="flex flex-col items-center">
         <x-button-add />
         <div class="flex justify-center">
             @if (Session::has('message'))
@@ -33,7 +33,7 @@
                 </div>
             @endif
         </div>
-        <div class="flex justify-center mb-20">
+        <div class="flex justify-center ms:w-4/5 md:w-4/5 lg:w-2/5">
             <livewire:resource-list />
         </div>
     </main>
