@@ -23,7 +23,7 @@
             <input type="text" placeholder="Introduce tu nombre"
                 class="text-gray-700 italic border-orange-500 rounded-xl  bg-[#FAF3F3]  mb-6 " name="name" required>
             <input type="number" placeholder="Introduce tu teléfono"
-                class="text-gray-700 italic border-orange-500 rounded-xl  bg-[#FAF3F3] mb-6" name="phone" requiredmin="0" pattern="^[0-9]+" >
+                class="text-gray-700 italic border-orange-500 rounded-xl  bg-[#FAF3F3] mb-6" name="phone" required min="0" pattern="^[0-9]+" >
             <textarea class="text-gray-700 italic border-orange-500 rounded-xl bg-[#FAF3F3] py-12 mb-6" placeholder="Comentarios"
                 name="coments"></textarea>
             <button id="btnReserve"
