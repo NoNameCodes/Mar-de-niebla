@@ -37,6 +37,11 @@ return view('resources.create');
 */
 public function store(Request $request)
 {
+    $request->validate([
+        'name' => 'required',
+        'description' => 'required',
+        'img' => 'required|image| mimes:jpeg,jpg,png|max:2048',
+    ]);
     
     if ($request->hasFile("img")) {
         $file = $request->file("img");
