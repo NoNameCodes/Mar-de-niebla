@@ -37,11 +37,10 @@ class ResourceCRUDController extends Controller
      */
     public function store(Request $request)
     {
-
         if ($request->hasFile("img")) {
             $file = $request->file("img");
             $imageName = time() . '_' . $file->getClientOriginalName();
-            $file->move(\public_path("img/"), $imageName);
+            $file->move(\public_path("storage/img/"), $imageName);
 
             $resource = new Resource([
 
@@ -62,39 +61,6 @@ class ResourceCRUDController extends Controller
         return redirect('home')
             ->with('success', 'Resource has been created successfully.');
     }
-
-    public function edit(Resource $resource)
-    {
-        return view('resources.edit', compact('resource'));
-    }
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\resource  $resource
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        $request->validate([
-            'name' => 'required',
-            'description' => 'required',
-            'img' => 'required',
-            'user_id' => 'required',
-            'location_id' => 'required',
-        ]);
-        $resource = Resource::find($id);
-        $resource->name = $request->name;
-        $resource->description = $request->description;
-        $resource->img = $request->img;
-        $resource->user_id = $request->user_id;
-        $resource->location_id = $request->location_id;
-        $resource->save();
-        $message= 'La edición del recurso "'.$resource->name.'" ha sido exitosa';
-        Session::flash('modification', $message);
-        return redirect()->route('home');
-    }
-
     /**
      * Display the specified resource.
      *
@@ -118,7 +84,7 @@ class ResourceCRUDController extends Controller
     {
         $resource->reservas()->delete();
         $resource->delete();
-        $message= 'El recurso "'.$resource->name.'" ha sido borrado con éxito';
+        $message = 'El recurso "' . $resource->name . '" ha sido borrado con éxito';
         Session::flash('message', $message);
         return redirect()->route('dashboard');
     }
