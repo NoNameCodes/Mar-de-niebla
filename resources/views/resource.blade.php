@@ -21,7 +21,7 @@
 </div>
 </div>
 <hr class="m-10" />
-<div class="flex justify-center mb-20">
+<div class="flex justify-center mb-40">
     <livewire:resource-list />
 </div>
 
