@@ -26,7 +26,7 @@ class ImageController extends Controller
     {
         $this->validate($request, [
             'title' => 'required',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'image' => 'required|image|mimes:jpeg,png,jpg|max:2048',
         ]);
   
         $image = $request->file('image');
