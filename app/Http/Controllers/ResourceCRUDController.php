@@ -59,7 +59,7 @@ class ResourceCRUDController extends Controller
         $resource->save();
 
         return redirect('home')
-            ->with('success', 'Resource has been created successfully.');
+            ->with('success', '¡Recurso creado correctamente!');
     }
     /**
      * Display the specified resource.

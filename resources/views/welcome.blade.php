@@ -26,6 +26,15 @@
     <x-header />
     <main class="flex flex-col items-center">
         <x-button-add />
+
+        @if (session('success'))
+            <div class="flex justify-center">
+                <div class="text-xl border-2 border-green-400 bg-green-200 rounded-md  mt-10 p-10">
+                    {{ session('success') }}
+                </div>
+            </div>
+        @endif
+
         <div class="flex justify-center">
             @if (Session::has('message'))
                 <div class="text-xl border-2 border-green-400 bg-green-200 rounded-md p-10">
