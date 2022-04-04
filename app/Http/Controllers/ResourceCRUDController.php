@@ -40,7 +40,7 @@ class ResourceCRUDController extends Controller
         if ($request->hasFile("img")) {
             $file = $request->file("img");
             $imageName = time() . '_' . $file->getClientOriginalName();
-            $file->move(\public_path("storage/img/"), $imageName);
+            $file->move(\public_path("img/"), $imageName);
 
             $resource = new Resource([
 
@@ -73,12 +73,12 @@ class ResourceCRUDController extends Controller
         return view('show', compact('resource'));
 
         /**
-         * Remove the specified resource from storage.
+         * Display a listing of the resource.
          *
-         * @param  \App\Resource  $resource
          * @return \Illuminate\Http\Response
          */
     }
+
 
     public function destroy(Resource $resource)
     {

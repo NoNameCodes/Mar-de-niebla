@@ -38,3 +38,6 @@ Route::middleware(['auth:sanctum', 'verified', 'approved','admin'])->group(funct
     Route::get('aprove/users', [UserPendingController::class, 'index'])->name('admin.users.pending.index');
     Route::get('aprove/users/{user_id}/', [UserPendingController::class, 'approve'])->name('admin.users.approve');
 });
+
+Route::get('resizeImage', 'ImageController@resizeImage');
+Route::post('resizeImagePost', 'ImageController@resizeImagePost')->name('resizeImagePost');

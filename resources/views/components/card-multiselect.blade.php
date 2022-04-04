@@ -1,155 +1,307 @@
-<select x-cloak id="select">
-    @foreach ($users as $user)
-      <option name= "user_id" value="{{$user->id}}">{{$user->name}}</option>  
-    @endforeach
-    
-  </select>
-  
-  <div x-data="dropdown()" x-init="loadOptions()" class="w-full md:w-1/2 flex flex-col items-center h-64 mx-auto">
-    <input name="values" type="hidden" x-bind:value="selectedValues()">
-    <div class="inline-block relative w-64">
-      <div class="flex flex-col items-center relative">
-        <div x-on:click="open" class="w-full">
-          <div class="mt-2 px-2 py-2 flex border border-gray-200 bg-white rounded border border-[#F8981D]">
-            <div class="flex flex-auto flex-wrap">
-              <template x-for="(option,index) in selected" :key="index">
-                <div class="flex justify-center items-center m-1 font-medium py-1 px-1 bg-white rounded bg-gray-100 border">
-                  <div class="text-xs font-normal leading-none max-w-full flex-initial x-model=" options[option] x-text="options[option].text"></div>
-                  <div class="flex flex-auto flex-row-reverse">
-                    <div x-on:click.stop="remove(index,option)">
-                      <svg class="fill-current h-4 w-4 " role="button" viewBox="0 0 20 20">
-                        <path d="M14.348,14.849c-0.469,0.469-1.229,0.469-1.697,0L10,11.819l-2.651,3.029c-0.469,0.469-1.229,0.469-1.697,0
-                                             c-0.469-0.469-0.469-1.229,0-1.697l2.758-3.15L5.651,6.849c-0.469-0.469-0.469-1.228,0-1.697s1.228-0.469,1.697,0L10,8.183
-                                             l2.651-3.031c0.469-0.469,1.228-0.469,1.697,0s0.469,1.229,0,1.697l-2.758,3.152l2.758,3.15
-                                             C14.817,13.62,14.817,14.38,14.348,14.849z" />
-                      </svg>
-  
-                    </div>
-                  </div>
-                </div>
-              </template>
-              <div x-show="selected.length == 0" class="flex-1">
-                <input placeholder="Compartir con" class="bg-transparent p-1 px-2 appearance-none outline-none h-full w-full text-gray-800" x-bind:value="selectedValues()">
-              </div>
-            </div>
-            <div class="text-gray-300 w-8 py-1 pl-2 pr-1 border-l flex items-center border-gray-200 svelte-1l8159u">
-  
-              <button type="button" x-show="isOpen() === true" x-on:click="open" class="cursor-pointer w-6 h-6 text-gray-600 outline-none focus:outline-none">
-                <svg version="1.1" class="fill-current h-4 w-4" viewBox="0 0 20 20">
-                    <path d="M2.582,13.891c-0.272,0.268-0.709,0.268-0.979,0s-0.271-0.701,0-0.969l7.908-7.83
-                    c0.27-0.268,0.707-0.268,0.979,0l7.908,7.83c0.27,0.268,0.27,0.701,0,0.969c-0.271,0.268-0.709,0.268-0.978,0L10,6.75L2.582,13.891z
-                    " />
-                </svg>
-  
-              </button>
-              <button type="button" x-show="isOpen() === false" @click="close" class="cursor-pointer w-6 h-6 text-gray-600 outline-none focus:outline-none">
-                <svg class="fill-current h-4 w-4" viewBox="0 0 20 20">
-                    <path d="M17.418,6.109c0.272-0.268,0.709-0.268,0.979,0s0.271,0.701,0,0.969l-7.908,7.83
-      c-0.27,0.268-0.707,0.268-0.979,0l-7.908-7.83c-0.27-0.268-0.27-0.701,0-0.969c0.271-0.268,0.709-0.268,0.979,0L10,13.25
-      L17.418,6.109z" />
-                 
-                </svg>
-  
-              </button>
-            </div>
-          </div>
+<style>
+    select {
+        width: 100%;
+    }
+
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="col ">
+            <select name="organism" id="organism" multiselect-search="true" multiple multiselect-select-all="true"
+                onchange="console.log(this.selectedOptions)">
+                @foreach ($users as $user)
+                    <option name="user_id" value="{{ $user->id }}">{{ $user->name }}</option>
+                @endforeach
+            </select>
         </div>
-        <div class="w-full px-4">
-          <div x-show.transition.origin.top="isOpen()" class="absolute shadow top-100 bg-white z-40 w-full left-0 rounded max-h-select" x-on:click.away="close">
-            <div class="flex flex-col w-full overflow-y-auto h-64">
-              <template x-for="(option,index) in options" :key="index" class="overflow-auto">
-                <div class="cursor-pointer w-full border-gray-100 rounded-t border-b hover:bg-gray-100" @click="select(index,$event)">
-                  <div class="flex w-full items-center p-2 pl-2 border-transparent border-l-2 relative">
-                    <div class="w-full items-center flex justify-between">
-                      <div class="mx-2 leading-6" x-model="option" x-text="option.text"></div>
-                      <div x-show="option.selected">
-                        <svg class="svg-icon" viewBox="0 0 20 20">
-                          <path fill="none" d="M7.197,16.963H7.195c-0.204,0-0.399-0.083-0.544-0.227l-6.039-6.082c-0.3-0.302-0.297-0.788,0.003-1.087
-                              C0.919,9.266,1.404,9.269,1.702,9.57l5.495,5.536L18.221,4.083c0.301-0.301,0.787-0.301,1.087,0c0.301,0.3,0.301,0.787,0,1.087
-                              L7.741,16.738C7.596,16.882,7.401,16.963,7.197,16.963z"></path>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </template>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
 
-  <style>
+    <script>
+        var style = document.createElement('style');
+        style.setAttribute("id", "multiselect_dropdown_styles");
+        style.innerHTML = `
+.multiselect-dropdown{
+  display: inline-block;
+  padding: 5px 20px 5px 20px;
+  border-radius: 4px;
+  border: solid 1px #F8981D;
+  background-color: white;
+  position: relative;
+  /* background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e"); 
+  background-repeat: no-repeat;
+  background-position: right .75rem center;
+  background-size: 16px 12px;*/
+}
+.multiselect-dropdown span.optext, .multiselect-dropdown span.placeholder{
+  margin-right:0.5em; 
+  margin-bottom:2px;
+  padding:1px 0; 
+  border-radius: 4px; 
+  display:inline-block;
+}
+.multiselect-dropdown span.optext{
+  background-color:lightgray;
+  padding:1px 0.75em; 
+}
+.multiselect-dropdown span.optext .optdel {
+  float: right;
+  margin: 0 -6px 1px 5px;
+  font-size: 0.7em;
+  margin-top: 2px;
+  cursor: pointer;
+  color: #666;
+}
+.multiselect-dropdown span.optext .optdel:hover { color: #c66;}
+.multiselect-dropdown span.placeholder{
+  color:#ced4da;
+}
+.multiselect-dropdown-list-wrapper{
+  box-shadow: gray 0 3px 8px;
+  z-index: 100;
+  padding:2px;
+  border-radius: 4px;
+  border: solid 1px #ced4da;
+  display: none;
+  margin: -1px;
+  position: absolute;
+  top:0;
+  left: 0;
+  right: 0;
+  background: white;
+}
+.multiselect-dropdown-list-wrapper .multiselect-dropdown-search{
+  margin-bottom:5px;
+}
+.multiselect-dropdown-list{
+  padding:2px;
+  height: 15rem;
+  overflow-y:auto;
+  overflow-x: hidden;
+}
+.multiselect-dropdown-list::-webkit-scrollbar {
+  width: 6px;
+}
+.multiselect-dropdown-list::-webkit-scrollbar-thumb {
+  background-color: #bec4ca;
+  border-radius:3px;
+}
 
-     [x-cloak] {
-    display: none;
-  }
-  
-  .svg-icon {
-    width: 1em;
-    height: 1em;
-  }
-  
-  .svg-icon path,
-  .svg-icon polygon,
-  .svg-icon rect {
-    fill: #333;
-  }
-  
-  .svg-icon circle {
-    stroke: #4691f6;
-    stroke-width: 1;
-  } 
-  </style>
+.multiselect-dropdown-list div{
+  padding: 5px;
+}
+.multiselect-dropdown-list input{
+  height: 1.15em;
+  width: 1.15em;
+  margin-right: 0.35em;  
+}
+.multiselect-dropdown-list div.checked{
+}
+.multiselect-dropdown-list div:hover{
+  background-color: #ced4da;
+}
+.multiselect-dropdown span.maxselected {width:100%;}
+.multiselect-dropdown-all-selector {border-bottom:solid 1px #999;}
+`;
+        document.head.appendChild(style);
 
-  <script>
+        function MultiselectDropdown(options) {
+            var config = {
+                search: true,
+                height: '15rem',
+                placeholder: 'Compartir con',
+                txtSelected: 'selected',
+                txtAll: 'All',
+                txtRemove: 'Remove',
+                txtSearch: 'Buscar',
+                ...options
+            };
 
-function dropdown() {
-                return {
-                    options: [],
-                    selected: [],
-                    show: false,
-                    open() { this.show = true },
-                    close() { this.show = false },
-                    isOpen() { return this.show === true },
-                    select(index, event) {
-
-                        if (!this.options[index].selected) {
-
-                            this.options[index].selected = true;
-                            this.options[index].element = event.target;
-                            this.selected.push(index);
-
-                        } else {
-                            this.selected.splice(this.selected.lastIndexOf(index), 1);
-                            this.options[index].selected = false
-                        }
-                    },
-                    remove(index, option) {
-                        this.options[option].selected = false;
-                        this.selected.splice(index, 1);
-
-
-                    },
-                    loadOptions() {
-                        const options = document.getElementById('select').options;
-                        for (let i = 0; i < options.length; i++) {
-                            this.options.push({
-                                value: options[i].value,
-                                text: options[i].innerText,
-                                selected: options[i].getAttribute('selected') != null ? options[i].getAttribute('selected') : false
-                            });
-                        }
-
-
-                    },
-                    selectedValues(){
-                        return this.selected.map((option)=>{
-                            return this.options[option].value;
-                        })
-                    }
-                }
+            function newEl(tag, attrs) {
+                var e = document.createElement(tag);
+                if (attrs !== undefined) Object.keys(attrs).forEach(k => {
+                    if (k === 'class') {
+                        Array.isArray(attrs[k]) ? attrs[k].forEach(o => o !== '' ? e.classList.add(o) : 0) : (attrs[
+                            k] !== '' ? e.classList.add(attrs[k]) : 0)
+                    } else if (k === 'style') {
+                        Object.keys(attrs[k]).forEach(ks => {
+                            e.style[ks] = attrs[k][ks];
+                        });
+                    } else if (k === 'text') {
+                        attrs[k] === '' ? e.innerHTML = '&nbsp;' : e.innerText = attrs[k]
+                    } else e[k] = attrs[k];
+                });
+                return e;
             }
 
-  </script>
+
+            document.querySelectorAll("select[multiple]").forEach((el, k) => {
+
+                var div = newEl('div', {
+                    class: 'multiselect-dropdown',
+                    style: {
+                        width: config.style?.width ?? el.clientWidth + 'px',
+                        padding: config.style?.padding ?? ''
+                    }
+                });
+                el.style.display = 'none';
+                el.parentNode.insertBefore(div, el.nextSibling);
+                var listWrap = newEl('div', {
+                    class: 'multiselect-dropdown-list-wrapper'
+                });
+                var list = newEl('div', {
+                    class: 'multiselect-dropdown-list',
+                    style: {
+                        height: config.height
+                    }
+                });
+                var search = newEl('input', {
+                    class: ['multiselect-dropdown-search'].concat([config.searchInput?.class ??
+                        'form-control'
+                    ]),
+                    style: {
+                        width: '100%',
+                        display: el.attributes['multiselect-search']?.value === 'true' ? 'block' : 'none'
+                    },
+                    placeholder: config.txtSearch
+                });
+                listWrap.appendChild(search);
+                div.appendChild(listWrap);
+                listWrap.appendChild(list);
+
+                el.loadOptions = () => {
+                    list.innerHTML = '';
+
+                    if (el.attributes['multiselect-select-all']?.value == 'true') {
+                        var op = newEl('div', {
+                            class: 'multiselect-dropdown-all-selector'
+                        })
+                        var ic = newEl('input', {
+                            type: 'checkbox'
+                        });
+                        op.appendChild(ic);
+                        op.appendChild(newEl('label', {
+                            text: config.txtAll
+                        }));
+
+                        op.addEventListener('click', () => {
+                            op.classList.toggle('checked');
+                            op.querySelector("input").checked = !op.querySelector("input").checked;
+
+                            var ch = op.querySelector("input").checked;
+                            list.querySelectorAll(
+                                    ":scope > div:not(.multiselect-dropdown-all-selector)")
+                                .forEach(i => {
+                                    if (i.style.display !== 'none') {
+                                        i.querySelector("input").checked = ch;
+                                        i.optEl.selected = ch
+                                    }
+                                });
+
+                            el.dispatchEvent(new Event('change'));
+                        });
+                        ic.addEventListener('click', (ev) => {
+                            ic.checked = !ic.checked;
+                        });
+
+                        list.appendChild(op);
+                    }
+
+                    Array.from(el.options).map(o => {
+                        var op = newEl('div', {
+                            class: o.selected ? 'checked' : '',
+                            optEl: o
+                        })
+                        var ic = newEl('input', {
+                            type: 'checkbox',
+                            checked: o.selected
+                        });
+                        op.appendChild(ic);
+                        op.appendChild(newEl('label', {
+                            text: o.text
+                        }));
+
+                        op.addEventListener('click', () => {
+                            op.classList.toggle('checked');
+                            op.querySelector("input").checked = !op.querySelector("input")
+                                .checked;
+                            op.optEl.selected = !!!op.optEl.selected;
+                            el.dispatchEvent(new Event('change'));
+                        });
+                        ic.addEventListener('click', (ev) => {
+                            ic.checked = !ic.checked;
+                        });
+                        o.listitemEl = op;
+                        list.appendChild(op);
+                    });
+                    div.listEl = listWrap;
+
+                    div.refresh = () => {
+                        div.querySelectorAll('span.optext, span.placeholder').forEach(t => div.removeChild(
+                            t));
+                        var sels = Array.from(el.selectedOptions);
+                        if (sels.length > (el.attributes['multiselect-max-items']?.value ?? 5)) {
+                            div.appendChild(newEl('span', {
+                                class: ['optext', 'maxselected'],
+                                text: sels.length + ' ' + config.txtSelected
+                            }));
+                        } else {
+                            sels.map(x => {
+                                var c = newEl('span', {
+                                    class: 'optext',
+                                    text: x.text,
+                                    srcOption: x
+                                });
+                                if ((el.attributes['multiselect-hide-x']?.value !== 'true'))
+                                    c.appendChild(newEl('span', {
+                                        class: 'optdel',
+                                        text: '🗙',
+                                        title: config.txtRemove,
+                                        onclick: (ev) => {
+                                            c.srcOption.listitemEl.dispatchEvent(
+                                                new Event('click'));
+                                            div.refresh();
+                                            ev.stopPropagation();
+                                        }
+                                    }));
+
+                                div.appendChild(c);
+                            });
+                        }
+                        if (0 == el.selectedOptions.length) div.appendChild(newEl('span', {
+                            class: 'placeholder',
+                            text: el.attributes['placeholder']?.value ?? config.placeholder
+                        }));
+                    };
+                    div.refresh();
+                }
+                el.loadOptions();
+
+                search.addEventListener('input', () => {
+                    list.querySelectorAll(":scope div:not(.multiselect-dropdown-all-selector)").forEach(
+                    d => {
+                        var txt = d.querySelector("label").innerText.toUpperCase();
+                        d.style.display = txt.includes(search.value.toUpperCase()) ? 'block' :
+                            'none';
+                    });
+                });
+
+                div.addEventListener('click', () => {
+                    div.listEl.style.display = 'block';
+                    search.focus();
+                    search.select();
+                });
+
+                document.addEventListener('click', function(event) {
+                    if (!div.contains(event.target)) {
+                        listWrap.style.display = 'none';
+                        div.refresh();
+                    }
+                });
+            });
+        }
+
+        window.addEventListener('load', () => {
+            MultiselectDropdown(window.MultiselectDropdownOptions);
+        });
+    </script>
