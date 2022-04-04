@@ -12,14 +12,11 @@ class UserPendingController extends Controller
         $users = User::whereNull('aproved_at')->get();
         return view('components.pending-aproval', compact('users'));
     }
-    /*     public function approve()
-    {
-        return view('user-approval');
-    } */
+
     public function approve($user_id)
     {
         $user = User::findOrFail($user_id);
         $user->update(['aproved_at' => now()]);
-        return redirect()->route('admin.users.pending.index')->withMessage('¡Organización aceptada Correctamente!');
+        return redirect()->route('admin.users.pending.index')->withMessage('¡Organización aceptada correctamente!');
     }
 }

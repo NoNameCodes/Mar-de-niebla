@@ -22,19 +22,19 @@
             <div class="flex justify-between w-3/4">
                 <div class="flex flex-col justify-center">
                     <a href="{{ route('resource', $resource) }}">
-                        <p class="align-middle p-0 font-extrabold text-xl">{{ $resource->name }}</p></a>
-                        @if (Route::currentRouteName() == 'misreservas')
-                            @foreach ($reservas as $reserva)
-                                @if ($reserva->resource_id === $resource->id)
-                                    <p class="italic p-2 font-thin text-left">{{ $reserva->name }}</p>
-                                    <p class="italic p-2 font-thin">{{ $reserva->date }}</p> 
-                                @endif
-                            @endforeach
-                       @else
-                            <button type="button" class="italic text-slate-400 text-left mt-2" onclick="location.href = '{{ route('history', $resource->id) }}'">Ver registro</button>
-                        @endif
-                        
-                    
+                        <p class="align-middle p-0 font-extrabold text-xl">{{ $resource->name }}</p>
+                    </a>
+                    @if (Route::currentRouteName() == 'misreservas')
+                        @foreach ($reservas as $reserva)
+                            @if ($reserva->resource_id === $resource->id)
+                                <p class="italic p-2 font-thin text-left">{{ $reserva->name }}</p>
+                                <p class="italic p-2 font-thin">{{ $reserva->date }}</p>
+                            @endif
+                        @endforeach
+                    @else
+                        <button type="button" class="italic text-slate-400 text-left mt-2"
+                            onclick="location.href = '{{ route('history', $resource->id) }}'">Ver registro</button>
+                    @endif
                 </div>
 
                 <div class="flex flex-col justify-center p-6">
@@ -60,9 +60,7 @@
                         <div id="defaultModal" tabindex="-1" aria-hidden="true"
                             class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full justify-center items-center backdrop-contrast-50">
                             <div class="relative p-4 w-full max-w-2xl h-full md:h-auto">
-
                                 <div class="relative rounded-lg shadow bg-gray-700 backdrop-grayscale-0">
-
                                     <div class="flex justify-center items-start p-5 rounded-t border-b border-gray-600">
                                         <h3 class="text-lg font-bold lg:text-2xl text-white">
                                             ¿Seguro que quiere anular la reserva?
@@ -78,7 +76,6 @@
                                             </svg>
                                         </button>
                                     </div>
-
                                     <div class="p-6 space-y-6">
                                         <p class="text-base leading-relaxed text-gray-500 text-gray-400">
                                             La única manera de poder volver a disponer del recurso será realizando
@@ -107,7 +104,6 @@
                     type="button"
                     onclick="location.href = '{{ route('reserva.create', $resource->id) }}'">Reservar</button>
                 @endif
-
             </div>
         </div>
     </div>

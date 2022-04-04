@@ -1,15 +1,12 @@
 <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 <x-header />
 
-
-
-
 @if (session('message'))
-<div class="flex justify-center">
-    <div class="text-xl border-2 border-green-400 bg-green-200 rounded-md  mt-10 p-10">
-        {{ session('message') }}
+    <div class="flex justify-center">
+        <div class="text-xl border-2 border-green-400 bg-green-200 rounded-md  mt-10 p-10">
+            {{ session('message') }}
+        </div>
     </div>
-</div>
 @endif
 <div class="flex  flex-col items-center m-6">
     <h1 class="text-orange-400 mx-6 my-20 text-6xl">Validaciones pendientes</h1>
@@ -41,14 +38,15 @@
             </div>
         @empty
             <div>
-                <p class="rounded-md bg-gray-200 p-6">¡No hay oranizaciones pendientes por aprobar!</p>
+                <p class="rounded-md bg-gray-200 p-6">¡No hay organizaciones pendientes por aprobar!</p>
             </div>
         @endforelse
     </div>
     <div class="m-20">
         <a href="{{ route('admin.users.index') }}">
-            <button id="btnAdd" class=" px-6 py-1 mx-auto block rounded-md text-md font-semibold text-white bg-[#F8981D] hover:bg-[#ffba25] duration-300 drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]">Gestionar Organizaciones</button>
-
+            <button id="btnAdd"
+                class=" px-6 py-1 mx-auto block rounded-md text-md font-semibold text-white bg-[#F8981D] hover:bg-[#ffba25] duration-300 drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]">Gestionar
+                organizaciones</button>
         </a>
     </div>
 </div>
