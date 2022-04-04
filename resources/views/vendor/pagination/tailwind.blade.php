@@ -1,5 +1,8 @@
 @if ($paginator->hasPages())
+<<<<<<< HEAD
 
+=======
+>>>>>>> feature/Irina-history-page
     <nav role="navigation" aria-label="{{ __('Pagination Navigation') }}" class="flex items-center justify-between">
         <div class="flex justify-between flex-1 sm:hidden">
             @if ($paginator->onFirstPage())
@@ -26,17 +29,30 @@
         <div class="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
             <div>
                 <p class="text-sm text-gray-700 leading-5">
+<<<<<<< HEAD
                     {!! __('Mostrando') !!}
                     @if ($paginator->firstItem())
                         <span class="font-medium">{{ $paginator->firstItem() }}</span>
                         {!! __('a') !!}
+=======
+                    {!! __('Showing') !!}
+                    @if ($paginator->firstItem())
+                        <span class="font-medium">{{ $paginator->firstItem() }}</span>
+                        {!! __('to') !!}
+>>>>>>> feature/Irina-history-page
                         <span class="font-medium">{{ $paginator->lastItem() }}</span>
                     @else
                         {{ $paginator->count() }}
                     @endif
+<<<<<<< HEAD
                     {!! __('de') !!}
                     <span class="font-medium">{{ $paginator->total() }}</span>
                     {!! __('resultados') !!}
+=======
+                    {!! __('of') !!}
+                    <span class="font-medium">{{ $paginator->total() }}</span>
+                    {!! __('results') !!}
+>>>>>>> feature/Irina-history-page
                 </p>
             </div>
 

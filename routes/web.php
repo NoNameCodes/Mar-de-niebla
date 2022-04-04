@@ -11,6 +11,7 @@ use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\ReservaController;
 use App\Http\Controllers\MisreservasController;
 use App\Http\Controllers\FormController;
+use App\Http\Controllers\HistoryController;
 
 Route::get('/approval', [HomeController::class, 'approval'])->name('approval');
 
@@ -29,6 +30,8 @@ Route::middleware(['auth:sanctum', 'verified', 'approved', 'user'])->group(funct
     Route::get('recurso/{resource:name}', [PageController::class, 'resource'])->name('resource');
     Route::get('/misreservas', [MisreservasController::class, 'index'])->name('misreservas');
     Route::get('removereserve/{reserve_id}', [ReservaController::class, 'remove'])->name('removereserve');
+    Route::get('/history{resource:id}', [HistoryController::class, 'resource'])->name('history');
+    
 });
 
 Route::middleware(['auth:sanctum', 'verified', 'approved','admin'])->group(function () {
