@@ -51,29 +51,23 @@
                         </div>
                     @elseif (Route::currentRouteName() == 'misreservas')
                         <button
-                            class="btn inline-block select-none no-underline align-middle cursor-pointer whitespace-nowrap px-4 py-1.5 rounded text-base font-medium leading-6 tracking-tight text-white text-center border-0 bg-[#F8981D] hover:bg-[#ffba25]"
-                            type="button"
-                            onclick="tton>location.href = '{{ route('removereserve', $reserva->id) }}'">Anular
-                            Reserva</button>
-                        <button
-                            class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                            class="block text-white bg-[#F8981D] hover:bg-red-600 focus:ring-2 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-[#F8981D] dark:hover:bg-red-600 duration-700 dark:focus:ring-orange-300 backdrop-grayscale backdrop-brightness-40"
                             type="button" data-modal-toggle="defaultModal">
                             Anular reserva
                         </button>
 
                         <div id="defaultModal" tabindex="-1" aria-hidden="true"
-                            class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full justify-center items-center">
+                            class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full justify-center items-center backdrop-contrast-50">
                             <div class="relative p-4 w-full max-w-2xl h-full md:h-auto">
 
-                                <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                                <div class="relative rounded-lg shadow bg-gray-700 backdrop-grayscale-0">
 
-                                    <div
-                                        class="flex justify-between items-start p-5 rounded-t border-b dark:border-gray-600">
-                                        <h3 class="text-xl font-semibold text-gray-900 lg:text-2xl dark:text-white">
+                                    <div class="flex justify-center items-start p-5 rounded-t border-b border-gray-600">
+                                        <h3 class="text-lg font-bold lg:text-2xl text-white">
                                             ¿Seguro que quiere anular la reserva?
                                         </h3>
                                         <button type="button"
-                                            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                                            class="bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center text-white"
                                             data-modal-toggle="defaultModal">
                                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
                                                 xmlns="http://www.w3.org/2000/svg">
@@ -85,22 +79,21 @@
                                     </div>
 
                                     <div class="p-6 space-y-6">
-                                        <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                                        <p class="text-base leading-relaxed text-gray-500 text-gray-400">
                                             La única manera de poder volver a disponer del recurso será realizando
                                             todo el
                                             proceso de reserva de nuevo.
                                         </p>
                                     </div>
-
                                     <div
-                                        class="flex items-center p-6 space-x-2 rounded-b border-t border-gray-200 dark:border-gray-600">
+                                        class="flex justify-between p-6 space-x-2 rounded-b border-t border-gray-200 border-gray-600">
                                         <button data-modal-toggle="defaultModal" type="button"
-                                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                                            class="text-white bg-red-700 hover:bg-red-800 focus:ring-2 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-red-600 hover:bg-red-700 focus:ring-red-800"
                                             type="button"
                                             onclick="location.href = '{{ route('reserva.destroy', $reserva->id) }}'">Sí,
                                             anular</button>
                                         <button data-modal-toggle="defaultModal" type="button"
-                                            class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">No,
+                                            class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 bg-gray-700 text-gray-300 border-gray-500 hover:text-white hover:bg-gray-600 focus:ring-gray-600">No,
                                             cancelar</button>
                                     </div>
                                 </div>
