@@ -40,7 +40,7 @@ class ResourceCRUDController extends Controller
         if ($request->hasFile("img")) {
             $file = $request->file("img");
             $imageName = time() . '_' . $file->getClientOriginalName();
-            $file->move(\public_path("img/"), $imageName);
+            $file->move(\public_path("storage/img/"), $imageName);
 
             $resource = new Resource([
 
