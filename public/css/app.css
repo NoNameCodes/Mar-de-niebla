@@ -1015,11 +1015,11 @@ select {
 .m-5 {
   margin: 1.25rem;
 }
-.m-12 {
-  margin: 3rem;
-}
 .m-6 {
   margin: 1.5rem;
+}
+.m-12 {
+  margin: 3rem;
 }
 .m-20 {
   margin: 5rem;
