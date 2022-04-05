@@ -124,14 +124,7 @@
                         </ul>
                     </div>
                     <script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js"></script>
-                @else
-                <li>
-                    <form method="POST" action="{{ route('logout') }}">
-                        @csrf
-                        <button type="submit"
-                            class="text-sm hover:bg-gray-300 text-gray-700 w-full px-4 py-2">Logout</button>
-                    </form>
-                </li>
+               
                     @endauth
                 {{ $slot }}
             </div>
