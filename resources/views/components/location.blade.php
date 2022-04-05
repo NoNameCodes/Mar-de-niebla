@@ -1,9 +1,10 @@
-<div class="relative inline-flex">
+  <div class="relative flex w-full" >
   
-    <select class="border border-orange-400 rounded-md text-gray-600 h-11 pl-1 pr-1 mt-2 mb-2 mr-5 bg-white hover:border-gray-400 focus:outline-none appearance-none" name=location>
+    <select class="border border-orange-400 rounded-md text-gray-600 h-11 px-8 bg-white hover:border-gray-400 focus:outline-none appearance-none" name=location>
       <option disabled selected>--Localización--</option>
       @foreach ($location as $location)
       <option value="{{$location->id}}">{{$location->address}}</option>
      @endforeach
     </select>
 </div>
+
