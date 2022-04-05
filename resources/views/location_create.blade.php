@@ -21,7 +21,13 @@
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 <x-header />
-
+<div class="flex justify-center">
+    @if (Session::has('message'))
+        <div class="lg:text-xl sm:text-md border-2 border-red-400 bg-red-200 rounded-md m-5 p-16">
+            {{ session('message') }}
+        </div>
+    @endif
+</div>
 <div class="flex justify-center">
     <form action="{{ route('location.store') }}"  method="POST">
         @csrf
