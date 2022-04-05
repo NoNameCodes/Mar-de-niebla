@@ -10,7 +10,8 @@
             </a>
 
             @auth
-                <div>
+
+            <div>
                     <button type="button" data-dropdown-toggle="dropdown"><i class="fa-solid fa-user fa-xl "
                             style="color: #F8981D"></i> </button>
                     <!-- Dropdown menu -->
@@ -46,8 +47,34 @@
                                         <a href="{{ route('dashboard') }}"
                                             class="text-sm hover:bg-gray-300  text-gray-700 block text-center px-4 py-2">Dashboard</a>
                                     </li>
-                                @elseif (Route::is('approval'))
-                                  
+                                @elseif (Route::is('admin.users.index'))
+                                <li>
+                                    <a href="{{ route('location.create') }}"
+                                        class="text-sm hover:bg-gray-300  text-gray-700 block text-center px-4 py-2">Añadir localización</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('location.vista') }}"
+                                        class="text-sm hover:bg-gray-300  text-gray-700 block text-center px-4 py-2">Lista de localizaciones</a>
+                                </li>
+                                @elseif (Route::is('location.vista'))
+                                <li>
+                                    <a href="{{ route('admin.users.index') }}"
+                                        class="text-sm hover:bg-gray-300  text-gray-700 block text-center px-4 py-2">Admin Home</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('location.create') }}"
+                                        class="text-sm hover:bg-gray-300  text-gray-700 block text-center px-4 py-2">Añadir localización</a>
+                                </li>
+                                @elseif (Route::is('location.create'))
+                                <li>
+                                    <a href="{{ route('admin.users.index') }}"
+                                        class="text-sm hover:bg-gray-300  text-gray-700 block text-center px-4 py-2">Admin Home</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('location.vista') }}"
+                                        class="text-sm hover:bg-gray-300  text-gray-700 block text-center px-4 py-2">Lista de localizaciones</a>
+                                </li>
+                               
                                 @else
                                     <li>
                                         <a href="{{ route('home') }}"
@@ -73,7 +100,15 @@
                         </ul>
                     </div>
                     <script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js"></script>
-                @endauth
+                @else
+                <li>
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <button type="submit"
+                            class="text-sm hover:bg-gray-300 text-gray-700 w-full px-4 py-2">Logout</button>
+                    </form>
+                </li>
+                    @endauth
                 {{ $slot }}
             </div>
     </header>

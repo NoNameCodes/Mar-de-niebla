@@ -21,7 +21,6 @@ class LocationController extends Controller
     public function store(Request $request){
         $location= new Location(); 
         $location->address = $request->input('address');
-        $location->resource_id=2;
         $location->save();
         return  redirect ('/locations');
     }
