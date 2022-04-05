@@ -31,15 +31,15 @@ Route::middleware(['auth:sanctum', 'verified', 'approved', 'user'])->group(funct
     Route::get('/misreservas', [MisreservasController::class, 'index'])->name('misreservas');
     Route::get('removereserve/{reserve_id}', [ReservaController::class, 'remove'])->name('removereserve');
     Route::get('/history{resource:id}', [HistoryController::class, 'resource'])->name('history');
-    
 });
 
-Route::middleware(['auth:sanctum', 'verified', 'approved','admin'])->group(function () {
+Route::middleware(['auth:sanctum', 'verified', 'approved', 'admin'])->group(function () {
     Route::get('users', [UserController::class, 'index'])->name('admin.users.index');
     Route::get('users/{user_id}/delete', [UserController::class, 'delete'])->name('admin.users.delete');
     Route::get('users/{user_id}/destroy', [UserController::class, 'destroy'])->name('admin.users.destroy');
     Route::get('aprove/users', [UserPendingController::class, 'index'])->name('admin.users.pending.index');
     Route::get('aprove/users/{user_id}/', [UserPendingController::class, 'approve'])->name('admin.users.approve');
+    Route::get('aprove/users/reject/{user_id}/', [UserPendingController::class, 'reject'])->name('admin.users.reject');
 });
 
 Route::get('resizeImage', 'ImageController@resizeImage');
