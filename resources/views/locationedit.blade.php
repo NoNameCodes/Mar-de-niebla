@@ -36,7 +36,7 @@
                     Aceptar cambios
                 </button>
          </div>
-        <a href="{{ route('location.vista') }}"class="bg-[#F8981D] hover:bg-[#ecc188] text-white font-bold py-2 px-8 shadow-xl rounded-full mb-2 mt-8 flex justify-center">Lista de localizaciones</a>
+        <a href="{{ route('location.vista') }}"class="bg-[#F8981D] hover:bg-[#ecc188] text-white font-bold py-2 px-8 shadow-xl rounded-full mb-2 mt-8 flex justify-center">Cancelar edición</a>
     </form>
 </div>
     

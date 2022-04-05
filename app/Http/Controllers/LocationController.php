@@ -49,10 +49,12 @@ class LocationController extends Controller
             if ($locations->address == $location->address)  {
                 $message= 'La dirección '. $locations->address.' ya estaba añadida,añada una dirección nueva si lo desea';
                 Session::flash('message', $message); 
-                return  redirect ('/location');
+                return redirect ('/locations');
             }
             
         }
+        $message= 'La dirección '. $location->address.' ha sido editada correctamente';
+        Session::flash('message', $message);
         $location->save();
         return  redirect ('/locations');
     }
