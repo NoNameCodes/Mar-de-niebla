@@ -45,7 +45,7 @@
                         </p>
                     </div>
                 @endforelse
-                <div>{{ $resources->links() }}</div>
+                {{-- <div>{{ $resources->links() }}</div> --}}
             </div>
         </div>
     </main>
