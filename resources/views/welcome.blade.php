@@ -16,10 +16,8 @@
         body {
             font-family: 'Nunito', sans-serif;
         }
-
     </style>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 
 <body class="antialiased">
@@ -27,27 +25,27 @@
     <main class="flex flex-col items-center">
         <x-button-add />
 
-        @if (session('success'))
-            <div class="flex justify-center">
-                <div class="text-xl border-2 border-green-400 bg-green-200 rounded-md  mt-10 p-10">
-                    {{ session('success') }}
-                </div>
+        <div class="flex justify-center">
+            @if (session('success'))
+            <div class="text-xl border-2 border-green-400 bg-green-200 rounded-md  mb-10 p-10">
+                {{ session('success') }}
             </div>
-        @endif
+            @endif
+        </div>
 
         <div class="flex justify-center">
             @if (Session::has('message'))
-                <div class="text-xl border-2 border-green-400 bg-green-200 rounded-md p-10">
-                    {{ session('message') }}
-                </div>
+            <div class="text-xl border-2 border-green-400 bg-green-200 rounded-md p-10">
+                {{ session('message') }}
+            </div>
             @endif
         </div>
 
         <div class="flex justify-center">
             @if (Session::has('modification'))
-                <div class="lg:text-xl sm:text-md border-2 border-green-400 bg-green-200 rounded-md m-5 p-16">
-                    {{ session('modification') }}
-                </div>
+            <div class="lg:text-xl sm:text-md border-2 border-green-400 bg-green-200 rounded-md m-5 p-16">
+                {{ session('modification') }}
+            </div>
             @endif
         </div>
 
