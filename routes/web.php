@@ -12,6 +12,7 @@ use App\Http\Controllers\ReservaController;
 use App\Http\Controllers\MisreservasController;
 use App\Http\Controllers\FormController;
 use App\Http\Controllers\HistoryController;
+use App\Http\Controllers\LocationController;
 
 Route::get('/approval', [HomeController::class, 'approval'])->name('approval');
 
