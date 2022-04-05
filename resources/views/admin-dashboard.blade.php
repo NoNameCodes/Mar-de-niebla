@@ -15,11 +15,7 @@
                 <button id="btnAdd" class=" px-6 py-1 mx-auto block rounded-md text-md font-semibold text-white bg-[#F8981D] hover:bg-[#ffba25] duration-300 drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]">Validaciones Pendientes</button>
             </a>
         </div>
-        <div class="m-20">
-            <a href="{{ route('location.create') }}">
-                <button id="btnAdd2" class=" px-6 py-1 mx-auto block rounded-md text-md font-semibold text-white bg-[#F8981D] hover:bg-[#ffba25] duration-300 drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] ">Añadir Localización</button>
-            </a>
-        </div>
+       
         @forelse ($users as $user)
         <div class="flex flex-row items-center justify-between m-2">
             <p class="text-3xl mr-36">{{ $user->email }}</p>
