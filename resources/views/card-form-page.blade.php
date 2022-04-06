@@ -19,7 +19,7 @@
                         <x-location :location="$location" />
 
                         <div class="py-1 mb-0">
-                            <textarea id="description" cols="23" rows="5" name="description" placeholder="Descripción/Incidencias"
+                            <textarea id="description" cols="28" rows="5" name="description" placeholder="Descripción/Incidencias"
                                 class=" outline-none px-2 text-m border-orange-400 border-1 rounded-md"></textarea>
                         </div>
 

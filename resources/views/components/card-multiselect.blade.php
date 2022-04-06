@@ -1,307 +1,402 @@
-<style>
-    select {
-        width: 100%;
-    }
+{{-- <div class="inline-block w-fit mr-auto ml-auto pt-3 pr-4 pb-3 pl-4 container sm:px-6">
+    <select id="select-role" name="organisms[]" multiple placeholder="Compartir con" autocomplete="off" class="block w-full rounded-sm cursor-pointer focus:outline-none" multiple>
+    
+        @foreach ($users as $user)
+        <option name= "user_id" value="{{$user->id}}">{{$user->name}}</option>  
+        @endforeach 
 
-</style>
+    </select>
+</div> --}}
 
-<div class="container">
-    <div class="row">
-        <div class="col ">
-            <select name="organism" id="organism" multiselect-search="true" multiple multiselect-select-all="true"
-                onchange="console.log(this.selectedOptions)">
-                @foreach ($users as $user)
-                    <option name="user_id" value="{{ $user->id }}">{{ $user->name }}</option>
-                @endforeach
-            </select>
-        </div>
+
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <div class="w-full">
+     
+      <div class="relative flex">
+        <select id="select-role" name="roles[]"
+          placeholder="Compartir con..." autocomplete="off" class="block w-full rounded-sm cursor-pointer focus:outline-none " multiple >
+        @foreach ($users as $user)
+        <option name= "user_id" value="{{$user->id}}">{{$user->name}}</option>  
+        @endforeach 
+        </select>
+      </div>
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/tom-select/dist/js/tom-select.complete.min.js"></script>
     <script>
-        var style = document.createElement('style');
-        style.setAttribute("id", "multiselect_dropdown_styles");
-        style.innerHTML = `
-.multiselect-dropdown{
-  display: inline-block;
-  padding: 5px 20px 5px 20px;
-  border-radius: 4px;
-  border: solid 1px #F8981D;
-  background-color: white;
-  position: relative;
-  /* background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e"); 
-  background-repeat: no-repeat;
-  background-position: right .75rem center;
-  background-size: 16px 12px;*/
-}
-.multiselect-dropdown span.optext, .multiselect-dropdown span.placeholder{
-  margin-right:0.5em; 
-  margin-bottom:2px;
-  padding:1px 0; 
-  border-radius: 4px; 
-  display:inline-block;
-}
-.multiselect-dropdown span.optext{
-  background-color:lightgray;
-  padding:1px 0.75em; 
-}
-.multiselect-dropdown span.optext .optdel {
-  float: right;
-  margin: 0 -6px 1px 5px;
-  font-size: 0.7em;
-  margin-top: 2px;
-  cursor: pointer;
-  color: #666;
-}
-.multiselect-dropdown span.optext .optdel:hover { color: #c66;}
-.multiselect-dropdown span.placeholder{
-  color:#ced4da;
-}
-.multiselect-dropdown-list-wrapper{
-  box-shadow: gray 0 3px 8px;
-  z-index: 100;
-  padding:2px;
-  border-radius: 4px;
-  border: solid 1px #ced4da;
-  display: none;
-  margin: -1px;
-  position: absolute;
-  top:0;
-  left: 0;
-  right: 0;
-  background: white;
-}
-.multiselect-dropdown-list-wrapper .multiselect-dropdown-search{
-  margin-bottom:5px;
-}
-.multiselect-dropdown-list{
-  padding:2px;
-  height: 15rem;
-  overflow-y:auto;
-  overflow-x: hidden;
-}
-.multiselect-dropdown-list::-webkit-scrollbar {
-  width: 6px;
-}
-.multiselect-dropdown-list::-webkit-scrollbar-thumb {
-  background-color: #bec4ca;
-  border-radius:3px;
-}
-
-.multiselect-dropdown-list div{
-  padding: 5px;
-}
-.multiselect-dropdown-list input{
-  height: 1.15em;
-  width: 1.15em;
-  margin-right: 0.35em;  
-}
-.multiselect-dropdown-list div.checked{
-}
-.multiselect-dropdown-list div:hover{
-  background-color: #ced4da;
-}
-.multiselect-dropdown span.maxselected {width:100%;}
-.multiselect-dropdown-all-selector {border-bottom:solid 1px #999;}
-`;
-        document.head.appendChild(style);
-
-        function MultiselectDropdown(options) {
-            var config = {
-                search: true,
-                height: '15rem',
-                placeholder: 'Compartir con',
-                txtSelected: 'selected',
-                txtAll: 'All',
-                txtRemove: 'Remove',
-                txtSearch: 'Buscar',
-                ...options
-            };
-
-            function newEl(tag, attrs) {
-                var e = document.createElement(tag);
-                if (attrs !== undefined) Object.keys(attrs).forEach(k => {
-                    if (k === 'class') {
-                        Array.isArray(attrs[k]) ? attrs[k].forEach(o => o !== '' ? e.classList.add(o) : 0) : (attrs[
-                            k] !== '' ? e.classList.add(attrs[k]) : 0)
-                    } else if (k === 'style') {
-                        Object.keys(attrs[k]).forEach(ks => {
-                            e.style[ks] = attrs[k][ks];
-                        });
-                    } else if (k === 'text') {
-                        attrs[k] === '' ? e.innerHTML = '&nbsp;' : e.innerText = attrs[k]
-                    } else e[k] = attrs[k];
-                });
-                return e;
-            }
-
-
-            document.querySelectorAll("select[multiple]").forEach((el, k) => {
-
-                var div = newEl('div', {
-                    class: 'multiselect-dropdown',
-                    style: {
-                        width: config.style?.width ?? el.clientWidth + 'px',
-                        padding: config.style?.padding ?? ''
-                    }
-                });
-                el.style.display = 'none';
-                el.parentNode.insertBefore(div, el.nextSibling);
-                var listWrap = newEl('div', {
-                    class: 'multiselect-dropdown-list-wrapper'
-                });
-                var list = newEl('div', {
-                    class: 'multiselect-dropdown-list',
-                    style: {
-                        height: config.height
-                    }
-                });
-                var search = newEl('input', {
-                    class: ['multiselect-dropdown-search'].concat([config.searchInput?.class ??
-                        'form-control'
-                    ]),
-                    style: {
-                        width: '100%',
-                        display: el.attributes['multiselect-search']?.value === 'true' ? 'block' : 'none'
-                    },
-                    placeholder: config.txtSearch
-                });
-                listWrap.appendChild(search);
-                div.appendChild(listWrap);
-                listWrap.appendChild(list);
-
-                el.loadOptions = () => {
-                    list.innerHTML = '';
-
-                    if (el.attributes['multiselect-select-all']?.value == 'true') {
-                        var op = newEl('div', {
-                            class: 'multiselect-dropdown-all-selector'
-                        })
-                        var ic = newEl('input', {
-                            type: 'checkbox'
-                        });
-                        op.appendChild(ic);
-                        op.appendChild(newEl('label', {
-                            text: config.txtAll
-                        }));
-
-                        op.addEventListener('click', () => {
-                            op.classList.toggle('checked');
-                            op.querySelector("input").checked = !op.querySelector("input").checked;
-
-                            var ch = op.querySelector("input").checked;
-                            list.querySelectorAll(
-                                    ":scope > div:not(.multiselect-dropdown-all-selector)")
-                                .forEach(i => {
-                                    if (i.style.display !== 'none') {
-                                        i.querySelector("input").checked = ch;
-                                        i.optEl.selected = ch
-                                    }
-                                });
-
-                            el.dispatchEvent(new Event('change'));
-                        });
-                        ic.addEventListener('click', (ev) => {
-                            ic.checked = !ic.checked;
-                        });
-
-                        list.appendChild(op);
-                    }
-
-                    Array.from(el.options).map(o => {
-                        var op = newEl('div', {
-                            class: o.selected ? 'checked' : '',
-                            optEl: o
-                        })
-                        var ic = newEl('input', {
-                            type: 'checkbox',
-                            checked: o.selected
-                        });
-                        op.appendChild(ic);
-                        op.appendChild(newEl('label', {
-                            text: o.text
-                        }));
-
-                        op.addEventListener('click', () => {
-                            op.classList.toggle('checked');
-                            op.querySelector("input").checked = !op.querySelector("input")
-                                .checked;
-                            op.optEl.selected = !!!op.optEl.selected;
-                            el.dispatchEvent(new Event('change'));
-                        });
-                        ic.addEventListener('click', (ev) => {
-                            ic.checked = !ic.checked;
-                        });
-                        o.listitemEl = op;
-                        list.appendChild(op);
-                    });
-                    div.listEl = listWrap;
-
-                    div.refresh = () => {
-                        div.querySelectorAll('span.optext, span.placeholder').forEach(t => div.removeChild(
-                            t));
-                        var sels = Array.from(el.selectedOptions);
-                        if (sels.length > (el.attributes['multiselect-max-items']?.value ?? 5)) {
-                            div.appendChild(newEl('span', {
-                                class: ['optext', 'maxselected'],
-                                text: sels.length + ' ' + config.txtSelected
-                            }));
-                        } else {
-                            sels.map(x => {
-                                var c = newEl('span', {
-                                    class: 'optext',
-                                    text: x.text,
-                                    srcOption: x
-                                });
-                                if ((el.attributes['multiselect-hide-x']?.value !== 'true'))
-                                    c.appendChild(newEl('span', {
-                                        class: 'optdel',
-                                        text: '🗙',
-                                        title: config.txtRemove,
-                                        onclick: (ev) => {
-                                            c.srcOption.listitemEl.dispatchEvent(
-                                                new Event('click'));
-                                            div.refresh();
-                                            ev.stopPropagation();
-                                        }
-                                    }));
-
-                                div.appendChild(c);
-                            });
-                        }
-                        if (0 == el.selectedOptions.length) div.appendChild(newEl('span', {
-                            class: 'placeholder',
-                            text: el.attributes['placeholder']?.value ?? config.placeholder
-                        }));
-                    };
-                    div.refresh();
-                }
-                el.loadOptions();
-
-                search.addEventListener('input', () => {
-                    list.querySelectorAll(":scope div:not(.multiselect-dropdown-all-selector)").forEach(
-                    d => {
-                        var txt = d.querySelector("label").innerText.toUpperCase();
-                        d.style.display = txt.includes(search.value.toUpperCase()) ? 'block' :
-                            'none';
-                    });
-                });
-
-                div.addEventListener('click', () => {
-                    div.listEl.style.display = 'block';
-                    search.focus();
-                    search.select();
-                });
-
-                document.addEventListener('click', function(event) {
-                    if (!div.contains(event.target)) {
-                        listWrap.style.display = 'none';
-                        div.refresh();
-                    }
-                });
-            });
-        }
-
-        window.addEventListener('load', () => {
-            MultiselectDropdown(window.MultiselectDropdownOptions);
-        });
+      new TomSelect('#select-role', {
+        maxItems: 500,
+      });
     </script>
+
+    <style>
+      .ts-wrapper.single .ts-control, .ts-wrapper.single .ts-control input {
+  cursor: pointer;
+}
+
+.ts-wrapper.plugin-drag_drop.multi > .ts-control > div.ui-sortable-placeholder {
+  visibility: visible !important;
+  background: #f2f2f2 !important;
+  background: rgba(0, 0, 0, 0.06) !important;
+  border: 0 none !important;
+  box-shadow: inset 0 0 12px 4px #fff;
+}
+.ts-wrapper.plugin-drag_drop .ui-sortable-placeholder::after {
+  content: "!";
+  visibility: hidden;
+}
+.ts-wrapper.plugin-drag_drop .ui-sortable-helper {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.plugin-checkbox_options .option input {
+  margin-right: 0.5rem;
+}
+
+.plugin-clear_button .ts-control {
+  padding-right: calc(1em + (3 * 6px)) !important;
+}
+.plugin-clear_button .clear-button {
+  opacity: 0;
+  position: absolute;
+  top: 8px;
+  right: calc(8px - 6px);
+  margin-right: 0 !important;
+  background: transparent !important;
+  transition: opacity 0.5s;
+  cursor: pointer;
+}
+.plugin-clear_button.single .clear-button {
+  right: calc(8px - 6px + 2rem);
+}
+.plugin-clear_button.focus.has-items .clear-button, .plugin-clear_button:not(.disabled):hover.has-items .clear-button {
+  opacity: 1;
+}
+
+.ts-wrapper .dropdown-header {
+  position: relative;
+  padding: 10px 8px;
+  border-bottom: 1px solid #d0d0d0;
+  background: #f8f8f8;
+  border-radius: 3px 3px 0 0;
+}
+.ts-wrapper .dropdown-header-close {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  color: #303030;
+  opacity: 0.4;
+  margin-top: -12px;
+  line-height: 20px;
+  font-size: 20px !important;
+}
+.ts-wrapper .dropdown-header-close:hover {
+  color: black;
+}
+
+.plugin-dropdown_input.focus.dropdown-active .ts-control {
+  box-shadow: none;
+  border: 1px solid #d0d0d0;
+}
+.plugin-dropdown_input .dropdown-input {
+  border: 1px solid #d0d0d0;
+  border-width: 0 0 1px 0;
+  display: block;
+  padding: 8px 8px;
+  box-shadow: none;
+  width: 100%;
+  background: transparent;
+}
+.ts-wrapper.plugin-input_autogrow.has-items .ts-control > input {
+  min-width: 0;
+}
+.ts-wrapper.plugin-input_autogrow.has-items.focus .ts-control > input {
+  flex: none;
+  min-width: 4px;
+}
+.ts-wrapper.plugin-input_autogrow.has-items.focus .ts-control > input::-webkit-input-placeholder {
+  color: transparent;
+}
+.ts-wrapper.plugin-input_autogrow.has-items.focus .ts-control > input::-ms-input-placeholder {
+  color: transparent;
+}
+.ts-wrapper.plugin-input_autogrow.has-items.focus .ts-control > input::placeholder {
+  color: transparent;
+}
+
+.ts-dropdown.plugin-optgroup_columns .ts-dropdown-content {
+  display: flex;
+}
+.ts-dropdown.plugin-optgroup_columns .optgroup {
+  border-right: 1px solid #f2f2f2;
+  border-top: 0 none;
+  flex-grow: 1;
+  flex-basis: 0;
+  min-width: 0;
+}
+.ts-dropdown.plugin-optgroup_columns .optgroup:last-child {
+  border-right: 0 none;
+}
+.ts-dropdown.plugin-optgroup_columns .optgroup:before {
+  display: none;
+}
+.ts-dropdown.plugin-optgroup_columns .optgroup-header {
+  border-top: 0 none;
+}
+
+.ts-wrapper.plugin-remove_button .item {
+  display: inline-flex;
+  align-items: center;
+  padding-right: 0 !important;
+}
+.ts-wrapper.plugin-remove_button .item .remove {
+  color: inherit;
+  text-decoration: none;
+  vertical-align: middle;
+  display: inline-block;
+  padding: 0 6px;
+  border-left: 1px solid #d0d0d0;
+  border-radius: 0 2px 2px 0;
+  box-sizing: border-box;
+  margin-left: 6px;
+}
+.ts-wrapper.plugin-remove_button .item .remove:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+.ts-wrapper.plugin-remove_button .item.active .remove {
+  border-left-color: #cacaca;
+}
+.ts-wrapper.plugin-remove_button.disabled .item .remove:hover {
+  background: none;
+}
+.ts-wrapper.plugin-remove_button.disabled .item .remove {
+  border-left-color: white;
+}
+.ts-wrapper.plugin-remove_button .remove-single {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 23px;
+}
+
+.ts-wrapper {
+  position: relative;
+}
+
+.ts-dropdown,
+.ts-control,
+.ts-control input {
+  color: #303030;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 18px;
+  font-smoothing: inherit;
+}
+
+.ts-control,
+.ts-wrapper.single.input-active .ts-control {
+  background: #fff;
+  cursor: text;
+}
+
+.ts-control {
+  border: 1px solid #F8981D;
+  padding: 12px 12px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  box-shadow: none;
+  border-radius: 3px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.ts-wrapper.multi.has-items .ts-control {
+  padding: calc( 8px - 2px - 0) 8px calc( 8px - 2px - 3px - 0);
+}
+.full .ts-control {
+  background-color: #fff;
+}
+.disabled .ts-control, .disabled .ts-control * {
+  cursor: default !important;
+}
+.focus .ts-control {
+  box-shadow: none;
+}
+.ts-control > * {
+  vertical-align: baseline;
+  display: inline-block;
+}
+.ts-wrapper.multi .ts-control > div {
+  cursor: pointer;
+  margin: 0 3px 3px 0;
+  padding: 2px 6px;
+  background: #f2f2f2;
+  color: #303030;
+  border: 0 solid #d0d0d0;
+}
+.ts-wrapper.multi .ts-control > div.active {
+  background: #e8e8e8;
+  color: #303030;
+  border: 0 solid #cacaca;
+}
+.ts-wrapper.multi.disabled .ts-control > div, .ts-wrapper.multi.disabled .ts-control > div.active {
+  color: #7d7d7d;
+  background: white;
+  border: 0 solid white;
+}
+.ts-control > input {
+  flex: 1 1 auto;
+  min-width: 7rem;
+  display: inline-block !important;
+  padding: 0 !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  text-indent: 0 !important;
+  border: 0 none !important;
+  background: none !important;
+  line-height: inherit !important;
+  -webkit-user-select: auto !important;
+     -moz-user-select: auto !important;
+      -ms-user-select: auto !important;
+          user-select: auto !important;
+  box-shadow: none !important;
+}
+.ts-control > input::-ms-clear {
+  display: none;
+}
+.ts-control > input:focus {
+  outline: none !important;
+}
+.has-items .ts-control > input {
+  margin: 0 4px !important;
+}
+.ts-control.rtl {
+  text-align: right;
+}
+.ts-control.rtl.single .ts-control:after {
+  left: 15px;
+  right: auto;
+}
+.ts-control.rtl .ts-control > input {
+  margin: 0 4px 0 -2px !important;
+}
+.disabled .ts-control {
+  opacity: 0.5;
+  background-color: #fafafa;
+}
+.input-hidden .ts-control > input {
+  opacity: 0;
+  position: absolute;
+  left: -10000px;
+}
+
+.ts-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  border: 1px solid #d0d0d0;
+  background: #fff;
+  margin: 0.25rem 0 0 0;
+  border-top: 0 none;
+  box-sizing: border-box;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 3px 3px;
+}
+.ts-dropdown [data-selectable] {
+  cursor: pointer;
+  overflow: hidden;
+}
+.ts-dropdown [data-selectable] .highlight {
+  background: rgba(125, 168, 208, 0.2);
+  border-radius: 1px;
+}
+.ts-dropdown .option,
+.ts-dropdown .optgroup-header,
+.ts-dropdown .no-results,
+.ts-dropdown .create {
+  padding: 5px 8px;
+}
+.ts-dropdown .option, .ts-dropdown [data-disabled], .ts-dropdown [data-disabled] [data-selectable].option {
+  cursor: inherit;
+  opacity: 0.5;
+}
+.ts-dropdown [data-selectable].option {
+  opacity: 1;
+  cursor: pointer;
+}
+.ts-dropdown .optgroup:first-child .optgroup-header {
+  border-top: 0 none;
+}
+.ts-dropdown .optgroup-header {
+  color: #303030;
+  background: #fff;
+  cursor: default;
+}
+.ts-dropdown .create:hover,
+.ts-dropdown .option:hover,
+.ts-dropdown .active {
+  background-color: #f5fafd;
+  color: #495c68;
+}
+.ts-dropdown .create:hover.create,
+.ts-dropdown .option:hover.create,
+.ts-dropdown .active.create {
+  color: #495c68;
+}
+.ts-dropdown .create {
+  color: rgba(48, 48, 48, 0.5);
+}
+.ts-dropdown .spinner {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 5px 8px;
+}
+.ts-dropdown .spinner:after {
+  content: " ";
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin: 3px;
+  border-radius: 50%;
+  border: 5px solid #d0d0d0;
+  border-color: #d0d0d0 transparent #d0d0d0 transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.ts-dropdown-content {
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 200px;
+  overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+.ts-hidden-accessible {
+  border: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  -webkit-clip-path: inset(50%) !important;
+          clip-path: inset(50%) !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+    </style>
+
