@@ -20,7 +20,7 @@ class ReservaSeeder extends Seeder
             'date' => '2022-03-20',
             'phone' => '666666666',
             'user_id' => '3',
-            'location_id' => rand(1, 5),
+            // 'location_id' => rand(1, 5),
             'resource_id' => '2',
         ]);
 
@@ -29,7 +29,7 @@ class ReservaSeeder extends Seeder
             'date' => '2022-03-20',
             'phone' => '666666666',
             'user_id' => '3',
-            'location_id' => rand(1, 5),
+            // 'location_id' => rand(1, 5),
             'resource_id' => '1',
         ]);
 
@@ -38,7 +38,7 @@ class ReservaSeeder extends Seeder
             'date' => '2022-03-20',
             'phone' => '666666666',
             'user_id' => '3',
-            'location_id' => rand(1, 5),
+            // 'location_id' => rand(1, 5),
             'resource_id' => '3',
         ]);
 
@@ -47,7 +47,7 @@ class ReservaSeeder extends Seeder
             'date' => '2022-03-20',
             'phone' => '666666666',
             'user_id' => '3',
-            'location_id' => rand(1, 5),
+            // 'location_id' => rand(1, 5),
             'resource_id' => '7',
         ]);
 
@@ -56,7 +56,7 @@ class ReservaSeeder extends Seeder
             'date' => '2022-03-20',
             'phone' => '666666666',
             'user_id' => '3',
-            'location_id' => rand(1, 5),
+            // 'location_id' => rand(1, 5),
             'resource_id' => '4',
         ]);
 
@@ -65,7 +65,7 @@ class ReservaSeeder extends Seeder
             'date' => '2022-03-20',
             'phone' => '666666666',
             'user_id' => '3',
-            'location_id' => rand(1, 5),
+            // 'location_id' => rand(1, 5),
             'resource_id' => '6',
         ]);
     }

@@ -21,7 +21,7 @@ class ReservaFactory extends Factory
             'date' => $this->faker->date(),
             'phone' => $this->faker->phoneNumber(),
             'user_id' => rand(1, 5),
-            'location_id' => rand(1, 5),
+            // 'location_id' => rand(1, 5),
             'resource_id' => rand(1, 5),
         ];
     }
