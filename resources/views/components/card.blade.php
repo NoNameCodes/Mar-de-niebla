@@ -7,9 +7,9 @@
                 </a>
             </div>
             <div class="flex justify-between w-9/12">
-                <div class="w-full flex flex-col justify-center border-2 border-indigo-600">
+                <div class="w-full flex flex-col justify-center>
                     <a href="{{ route('resource', $resource) }}">
-                        <p class="align-middle font-extrabold text-xl border-1 border-grey-600">{{ $resource->name }}</p></a>
+                        <p class="align-middle font-extrabold text-xl">{{ $resource->name }}</p></a>
                         @if (Route::currentRouteName() == 'misreservas')
                             @foreach ($reservas as $reserva)
                                 @if ($reserva->resource_id === $resource->id)
