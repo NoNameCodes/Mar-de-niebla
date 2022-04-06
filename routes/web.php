@@ -12,6 +12,7 @@ use App\Http\Controllers\ReservaController;
 use App\Http\Controllers\MisreservasController;
 use App\Http\Controllers\FormController;
 use App\Http\Controllers\HistoryController;
+use App\Http\Controllers\LocationController;
 
 Route::get('/approval', [HomeController::class, 'approval'])->name('approval');
 
@@ -40,6 +41,12 @@ Route::middleware(['auth:sanctum', 'verified', 'approved', 'admin'])->group(func
     Route::get('aprove/users', [UserPendingController::class, 'index'])->name('admin.users.pending.index');
     Route::get('aprove/users/{user_id}/', [UserPendingController::class, 'approve'])->name('admin.users.approve');
     Route::get('aprove/users/reject/{user_id}/', [UserPendingController::class, 'reject'])->name('admin.users.reject');
+    Route::get('/location',[LocationController::class,'create'])->name('location.create');
+    Route::post('/location',[LocationController::class,'store'])->name('location.store');
+    Route::get('/location/{id}',[LocationController::class,'destroy'])->name('location.destroy');
+    Route::get('/locations',[LocationController::class,'vista'])->name('location.vista');
+    Route::get('/locations/{id}',[LocationController::class,'edit'])->name('location.edit');
+    Route::put('/locations/{id}',[LocationController::class,'update'])->name('location.update');
 });
 
 Route::get('resizeImage', 'ImageController@resizeImage');
