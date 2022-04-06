@@ -11,8 +11,10 @@
 
             @auth
 
-            <div>
-                    <button type="button" data-dropdown-toggle="dropdown"><i class="fa-solid fa-user fa-xl "
+            
+            <div class="text-white">
+                {{ Auth::user()->name }}
+                    <button type="button" data-dropdown-toggle="dropdown"><i class="fa-solid fa-user m-5 fa-xl "
                             style="color: #F8981D"></i> </button>
                     <!-- Dropdown menu -->
                     <div class="hidden bg-[#F8981D] text-base z-50  " id="dropdown">
