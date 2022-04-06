@@ -78,7 +78,43 @@ class ResourceCRUDController extends Controller
          * @return \Illuminate\Http\Response
          */
     }
+    public function edit(Resource $resource)
+    {
+        return view('resources.edit', compact('resource'));
+    }
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\resource  $resource
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            'name' => 'required',
+            'description' => 'required',
+            'img' => 'required',
+            'user_id' => 'required',
+            'location_id' => 'required',
+        ]);
+        $resource = Resource::find($id);
+        $resource->name = $request->name;
+        $resource->description = $request->description;
+        $resource->img = $request->img;
+        $resource->user_id = $request->user_id;
+        $resource->location_id = $request->location_id;
+        $resource->save();
+        return redirect()->route('resources.index')
+            ->with('success', 'Resource Has Been updated successfully');
+    }
 
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Resource  $resource
+     * @return \Illuminate\Http\Response
+     */
 
     public function destroy(Resource $resource)
     {
