@@ -88,7 +88,7 @@ class ReservaController extends Controller
     public function remove($id)
     {
         $reserva=Reserva::find($id);
-        return view('modal-alert-anul-reserve', compact('reserva'));
+        return view('misreservas', compact('reserva'));
     }
 
     public function destroy($id)

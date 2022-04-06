@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Location;
+use Illuminate\Http\Request;
 
 class LocationController extends Controller
 {
@@ -10,5 +11,6 @@ class LocationController extends Controller
         $location = Location::get();
         return view ('card-form-page', compact('location'));
     }
+   
 }
 
