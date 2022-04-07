@@ -43,8 +43,6 @@
             </div>
         </form>
     </div>
-
-
 </x-guest-layout>
 
 <x-footer />

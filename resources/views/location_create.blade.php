@@ -16,6 +16,7 @@
         body {
             font-family: 'Nunito', sans-serif;
         }
+
     </style>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -29,22 +30,22 @@
     @endif
 </div>
 <div class="flex justify-center">
-    <form action="{{ route('location.store') }}"  method="POST">
+    <form action="{{ route('location.store') }}" method="POST">
         @csrf
         <h1 class="text-orange-400 mx-6 mt-20 mb-6 text-3xl">Añadir localizaciones</h1>
         <div>
-        <input type="text" placeholder="Introduce tu dirección"
-                    class="text-gray-700 italic border-orange-500 rounded-xl  bg-[#FAF3F3]  mb-6 " name="address" required>
-                    <button id="btnReserve"
-                    class="bg-[#F8981D] hover:bg-[#ecc188] text-white font-bold py-2 px-8 shadow-xl rounded-full mb-2"
-                    type="submit">
-                    Añadir
-                </button>
-         </div>
-        
-        <a href="{{ route('location.vista') }}"class="bg-[#F8981D] hover:bg-[#ecc188] text-white font-bold py-2 px-8 shadow-xl rounded-full mb-2 mt-8 flex justify-center">Lista de localizaciones</a>
+            <input type="text" placeholder="Introduce tu dirección"
+                class="text-gray-700 italic border-orange-500 rounded-xl  bg-[#FAF3F3]  mb-6 " name="address" required>
+            <button id="btnReserve"
+                class="bg-[#F8981D] hover:bg-[#ecc188] text-white font-bold py-2 px-8 shadow-xl rounded-full mb-2"
+                type="submit">
+                Añadir
+            </button>
+        </div>
+
+        <a href="{{ route('location.vista') }}"
+            class="bg-[#F8981D] hover:bg-[#ecc188] text-white font-bold py-2 px-8 shadow-xl rounded-full mb-2 mt-8 flex justify-center">Lista
+            de localizaciones</a>
     </form>
 </div>
-    
-
- <x-footer />
+<x-footer />

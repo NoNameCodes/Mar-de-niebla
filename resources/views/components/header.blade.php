@@ -11,7 +11,6 @@
 
             @auth
 
-            
             <div class="text-white">
                 {{ Auth::user()->name }}
                     <button type="button" data-dropdown-toggle="dropdown"><i class="fa-solid fa-user m-5 fa-xl "
@@ -126,7 +125,6 @@
                         </ul>
                     </div>
                     <script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js"></script>
-               
                     @endauth
                 {{ $slot }}
             </div>

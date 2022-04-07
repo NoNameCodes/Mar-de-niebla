@@ -10,31 +10,17 @@ use Illuminate\Support\Facades\Session;
 
 class ResourceCRUDController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         $data['resources'] = Resource::orderBy('id', 'desc')->paginate(5);
         return view('resources.index', $data);
     }
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create()
     {
         return view('resources.create');
     }
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function store(Request $request)
     {
         if ($request->hasFile("img")) {
@@ -53,7 +39,6 @@ class ResourceCRUDController extends Controller
                 "img" => $imageName,
                 "user_id" => $user,
                 "location_id" => $location->id,
-
             ]);
         }
         $resource->save();
@@ -61,34 +46,18 @@ class ResourceCRUDController extends Controller
         return redirect('home')
             ->with('success', '¡Recurso creado correctamente!');
     }
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\resource  $resource
-     * @return \Illuminate\Http\Response
-     */
+
     public function show($id)
     {
         $resource = Resource::find($id);
-        return view('show', compact('resource'));
-
-        /**
-         * Display a listing of the resource.
-         *
-         * @return \Illuminate\Http\Response
-         */
+        return view('resource-show', compact('resource'));
     }
+
     public function edit(Resource $resource)
     {
         return view('resources.edit', compact('resource'));
     }
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\resource  $resource
-     * @return \Illuminate\Http\Response
-     */
+
     public function update(Request $request, $id)
     {
         $request->validate([
@@ -108,13 +77,6 @@ class ResourceCRUDController extends Controller
         return redirect()->route('resources.index')
             ->with('success', 'Resource Has Been updated successfully');
     }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Resource  $resource
-     * @return \Illuminate\Http\Response
-     */
 
     public function destroy(Resource $resource)
     {

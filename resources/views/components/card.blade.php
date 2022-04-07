@@ -39,10 +39,12 @@
                             <button><i class="fa-solid fa-trash text-red-700 text-2xl m-3"></i></button>
                         </form>
                     </div>
-                @elseif(Route::currentRouteName() == 'home')
+                @elseif(Route::currentRouteName() == 'home'|| 'resources')
                     <x-button-add-reservation :resource="$resource" />
+                {{-- @elseif(Route::currentRouteName() == 'resource') --}}
+                    {{-- <x-button-add-reservation :resource="$resource" /> --}}
                 @else
-                    <div class="w-0"></div>
+                    <div></div>
                 @endif
             </div>
         </div>

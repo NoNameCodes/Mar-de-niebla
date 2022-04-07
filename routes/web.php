@@ -49,5 +49,5 @@ Route::middleware(['auth:sanctum', 'verified', 'approved', 'admin'])->group(func
     Route::put('/locations/{id}',[LocationController::class,'update'])->name('location.update');
 });
 
-Route::get('resizeImage', 'ImageController@resizeImage');
-Route::post('resizeImagePost', 'ImageController@resizeImagePost')->name('resizeImagePost');
+// Route::get('resizeImage', 'ImageController@resizeImage');
+// Route::post('resizeImagePost', 'ImageController@resizeImagePost')->name('resizeImagePost');
