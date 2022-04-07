@@ -8,7 +8,7 @@ class UserController extends Controller
 {
     public function index()
     {
-        $users = User::get();
+        $users = User::get()->where('admin', false);
         return view('admin-dashboard', compact('users'));
     }
 
