@@ -9,8 +9,9 @@
             </div>
         </div>
     @endif
-    <div class="m-5 flex w-11/12 flex-col items-center rounded-md border-2 border-[#faba67]">
-        <div class="p-5 w-9/12">
+    <div
+        class="m-5 flex min-w-8/12 sm:w-7/12 md:w-6/12 lg:w-5/12 xl:w-4/12 flex-col items-center rounded-md border-2 border-[#faba67]">
+        <div class="p-5 w-full">
             @forelse ($users as $user)
                 <div class="flex w-11/12 flex-row items-center justify-between mx-2 p-2">
                     <div class="flex flex-col">

@@ -1,8 +1,9 @@
 <div class="flex flex-col justify-center items-center">
     <h1 class="text-orange-400 mx-6 mt-20 mb-6 text-3xl">Lista de localizaciones</h1>
-    <div class="m-5 flex w-3/4 flex-col items-center rounded-md border-2 border-[#faba67]">
+    <div
+        class="m-5 flex min-w-8/12 sm:w-7/12 md:w-6/12 lg:w-5/12 xl:w-4/12 flex-col items-center rounded-md border-2 border-[#faba67]">
         @foreach ($location as $location)
-            <div class="flex w-3/4 flex-row items-center justify-between p-2">
+            <div class="flex w-11/12 flex-row items-center justify-between p-2">
                 <div>
                     <p>{{ $location->address }}</p>
                 </div>
