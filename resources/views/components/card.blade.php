@@ -2,14 +2,14 @@
     <div class="flex flex-col justify-center bg-white rounded-xl">
         <div class="ms:w-90 md:w-90 border-b-2 border-[#faba67] flex">
             <div class="w-3/12 p-4">
-                <a href="{{ route('resource', $resource) }}">
-                    <img src="storage/img/{{ $resource->img }}" />
+                <a href="{{ route('resources.show', $resource) }}">
+                    <img src="{{ asset("storage/img/{$resource->img}") }}" />
                 </a>
             </div>
             <div class="flex justify-between w-9/12">
                 <div class="w-full flex flex-col justify-center>
                     <a href="
-                    {{ route('resource', $resource) }}">
+                    {{ route('resources.show', $resource) }}">
                     <p class="align-middle font-extrabold text-xl">{{ $resource->name }}</p></a>
                     @if (Route::currentRouteName() == 'misreservas')
                         @foreach ($reservas as $reserva)

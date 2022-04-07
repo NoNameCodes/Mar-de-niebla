@@ -28,7 +28,6 @@ Route::middleware(['auth:sanctum', 'verified', 'approved', 'user'])->group(funct
     Route::get('/reserva/{reserva_id}', [ReservaController::class, 'destroy'])->name('reserva.destroy');
     Route::post('/reserva/{resource_id}', [ReservaController::class, 'store'])->name('reserva.store');
     Route::resource('resources', ResourceCRUDController::class);
-    Route::get('recurso/{resource:name}', [PageController::class, 'resource'])->name('resource');
     Route::get('/misreservas', [MisreservasController::class, 'index'])->name('misreservas');
     Route::get('removereserve/{reserve_id}', [ReservaController::class, 'remove'])->name('removereserve');
     Route::get('/history{resource:id}', [HistoryController::class, 'resource'])->name('history');
@@ -41,12 +40,12 @@ Route::middleware(['auth:sanctum', 'verified', 'approved', 'admin'])->group(func
     Route::get('aprove/users', [UserPendingController::class, 'index'])->name('admin.users.pending.index');
     Route::get('aprove/users/{user_id}/', [UserPendingController::class, 'approve'])->name('admin.users.approve');
     Route::get('aprove/users/reject/{user_id}/', [UserPendingController::class, 'reject'])->name('admin.users.reject');
-    Route::get('/location',[LocationController::class,'create'])->name('location.create');
-    Route::post('/location',[LocationController::class,'store'])->name('location.store');
-    Route::get('/location/{id}',[LocationController::class,'destroy'])->name('location.destroy');
-    Route::get('/locations',[LocationController::class,'vista'])->name('location.vista');
-    Route::get('/locations/{id}',[LocationController::class,'edit'])->name('location.edit');
-    Route::put('/locations/{id}',[LocationController::class,'update'])->name('location.update');
+    Route::get('/location', [LocationController::class, 'create'])->name('location.create');
+    Route::post('/location', [LocationController::class, 'store'])->name('location.store');
+    Route::get('/location/{id}', [LocationController::class, 'destroy'])->name('location.destroy');
+    Route::get('/locations', [LocationController::class, 'vista'])->name('location.vista');
+    Route::get('/locations/{id}', [LocationController::class, 'edit'])->name('location.edit');
+    Route::put('/locations/{id}', [LocationController::class, 'update'])->name('location.update');
 });
 
 // Route::get('resizeImage', 'ImageController@resizeImage');

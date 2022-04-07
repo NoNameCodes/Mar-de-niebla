@@ -49,8 +49,9 @@ class ResourceCRUDController extends Controller
 
     public function show($id)
     {
-        $resource = Resource::find($id);
-        return view('resource-show', compact('resource'));
+        return view('resource', [
+            'resource' => Resource::findOrFail($id)
+        ]);
     }
 
     public function edit(Resource $resource)
