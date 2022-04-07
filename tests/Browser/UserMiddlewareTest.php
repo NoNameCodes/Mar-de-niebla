@@ -19,15 +19,15 @@ class UserMiddlewareTest extends DuskTestCase
 
             $first->visit('/')
             ->waitForText('Login')
-            ->type('email', value: 'w@w')
-            ->type('password', value: '1234567890')
+            ->type('email', value: 'f@f')
+            ->type('password', value: 'password')
             ->click('#btnEnter')
             ->assertPathIs('/');
 
             $second->visit('/')
             ->waitForText('Login')
-            ->type('email', value: 'w@w')
-            ->type('password', value: '1234567890')
+            ->type('email', value: 'a@a')
+            ->type('password', value: 'password')
             ->click('#btnEnter')
             ->assertPathIs('/')
             ->visit('/users')

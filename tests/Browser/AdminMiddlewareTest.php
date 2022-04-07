@@ -17,15 +17,15 @@ class AdminMiddlewareTest extends DuskTestCase
         $this->browse(function ($first, $second) {
             $first->visit('/')
             ->waitForText('Login')
-            ->type('email', value: 'q@q')
-            ->type('password', value: '1234567890')
+            ->type('email', value: 'admin@admin')
+            ->type('password', value: 'password')
             ->click('#btnEnter')
             ->assertPathIs('/users');
 
             $second->visit('/')
             ->waitForText('Login')
-            ->type('email', value: 'q@q')
-            ->type('password', value: '1234567890')
+            ->type('email', value: 'admin@admin')
+            ->type('password', value: 'password')
             ->click('#btnEnter')
             ->assertPathIs('/users')
             ->visit('/home')

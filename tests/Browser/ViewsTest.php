@@ -22,14 +22,6 @@ class ViewsTest extends DuskTestCase
         });
     }
 
-    public function test_visit_crud()
-    {
-        $this->browse(function (Browser $browser) {
-            $browser->visit('/resources')
-                    ->assertSee('CRUD');
-        });
-    }
-
     public function test_visit_register()
     {
         $this->browse(function (Browser $browser) {
@@ -42,20 +34,19 @@ class ViewsTest extends DuskTestCase
     public function test_visit_create_resource()
     {
         $this->browse(function (Browser $browser) {
-            $browser->visit('/resources/create')
-                    ->assertSee('Recurso');
+            $browser->visit('/')
+                    ->waitForText('Login')
+                    ->type('email', value: 'a@a')
+                    ->type('password', value: 'password')
+                    ->click('#btnEnter')
+                    ->assertPathIs('/')
+                    ->click('#btnAdd')
+                    ->assertPathIs('form');
                     
         });
     }
 
-    public function test_visit_edit_resource()
-    {
-        $this->browse(function (Browser $browser) {
-            $browser->visit('/resources/1/edit')
-                    ->assertSee('Edit');
-                    
-        });
-    }
+
 }
 
 

@@ -27,7 +27,7 @@ class ExampleTest extends DuskTestCase
     public function test_user_with_auth_allows_dashboard()
     {
         $this->browse(function (Browser $browser) {
-            $browser->loginAs(User::find(5));
+            $browser->loginAs(User::find(3));
             $browser->visit('/dashboard')
                 ->assertSee('Añadir nuevo recurso');
         });

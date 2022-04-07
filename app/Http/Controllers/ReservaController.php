@@ -33,7 +33,7 @@ class ReservaController extends Controller
         $reserva->date = $request->input('date');
         $reserva->coments = $request->input('coments');
         $reserva->phone = $request->input('phone');
-        $reserva->location_id = $resource->location_id;
+        // $reserva->location_id = $resource->location_id;
         $reserva->resource_id = $id;
         $reserva->user_id = $user;
         foreach ($reservasTotales as $variable) {
@@ -88,7 +88,7 @@ class ReservaController extends Controller
     public function remove($id)
     {
         $reserva=Reserva::find($id);
-        return view('modal-alert-anul-reserve', compact('reserva'));
+        return view('misreservas', compact('reserva'));
     }
 
     public function destroy($id)

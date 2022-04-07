@@ -4,7 +4,6 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\User;
 use App\Models\Resource;
 use App\Models\Location;
 use App\Models\Reserva;
@@ -18,9 +17,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        User::factory()->count(5)->create();
-        Resource::factory()->count(50)->create();
-        Location::factory()->count(5)->create();
-        Reserva::factory()->count(5)->create();
+        $this->call(UserSeeder::class);
+        $this->call(ResourceSeeder::class);
+        $this->call(LocationSeeder::class);
+        $this->call(ReservaSeeder::class);
     }
 }
