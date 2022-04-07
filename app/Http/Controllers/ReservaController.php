@@ -33,7 +33,7 @@ class ReservaController extends Controller
         $reserva->date = $request->input('date');
         $reserva->coments = $request->input('coments');
         $reserva->phone = $request->input('phone');
-        $reserva->location_id = $resource->location_id;
+        // $reserva->location_id = $resource->location_id;
         $reserva->resource_id = $id;
         $reserva->user_id = $user;
         foreach ($reservasTotales as $variable) {

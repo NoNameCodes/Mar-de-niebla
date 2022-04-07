@@ -9,7 +9,7 @@ class Reserva extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'name', 'phone', 'coments', 'date', 'user_id', 'resource_id', 'location_id'
+        'name', 'phone', 'coments', 'date', 'user_id', 'resource_id'
     ];
 
     public function user()
@@ -22,10 +22,10 @@ class Reserva extends Model
         return $this->belongsTo(Resource::class);
     }
 
-    public function location()
-    {
-        return $this->belongsTo(Location::class);
-    }
+    // public function location()
+    // {
+    //     return $this->belongsTo(Location::class);
+    // }
   
 }
    

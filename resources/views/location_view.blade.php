@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Mis reservas</title>
+    <title>Location List</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -16,6 +16,7 @@
         body {
             font-family: 'Nunito', sans-serif;
         }
+
     </style>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -31,4 +32,12 @@
         @endif
     </div>
     <x-location-list :location="$location" />
+    <div class="flex justify-center">
+        {{ $location->links() }}
+    </div>
+    <div class="flex justify-center">
+        <a href="{{ route('location.create') }}"
+            class="w-60 bg-[#F8981D] hover:bg-[#ecc188] text-white font-bold py-2 px-8 shadow-xl rounded-full mb-2 mt-8 flex justify-center">Añadir
+            localización</a>
+    </div>
     <x-footer />
