@@ -948,17 +948,6 @@ select {
 .prose > :where(:last-child):not(:where([class~="not-prose"] *)) {
   margin-bottom: 0;
 }
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
-}
 .visible {
   visibility: visible;
 }
@@ -1011,33 +1000,23 @@ select {
 .m-1 {
   margin: 0.25rem;
 }
-<<<<<<< HEAD
 .m-6 {
   margin: 1.5rem;
 }
 .m-2 {
   margin: 0.5rem;
-=======
-.m-12 {
-  margin: 3rem;
->>>>>>> hotfix/caio-resourceImages
 }
-.m-10 {
-  margin: 2.5rem;
+.m-20 {
+  margin: 5rem;
 }
 .m-3 {
   margin: 0.75rem;
 }
-<<<<<<< HEAD
 .m-12 {
   margin: 3rem;
 }
 .m-10 {
   margin: 2.5rem;
-=======
-.m-6 {
-  margin: 1.5rem;
->>>>>>> hotfix/caio-resourceImages
 }
 .mx-auto {
   margin-left: auto;
@@ -1047,7 +1026,6 @@ select {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
 }
-<<<<<<< HEAD
 .my-20 {
   margin-top: 5rem;
   margin-bottom: 5rem;
@@ -1060,23 +1038,9 @@ select {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
-=======
->>>>>>> hotfix/caio-resourceImages
 .mx-2 {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
-}
-.-my-2 {
-  margin-top: -0.5rem;
-  margin-bottom: -0.5rem;
-}
-.mx-8 {
-  margin-left: 2rem;
-  margin-right: 2rem;
-}
-.my-4 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
 }
 .ml-3 {
   margin-left: 0.75rem;
@@ -1147,32 +1111,12 @@ select {
 .mb-4 {
   margin-bottom: 1rem;
 }
-<<<<<<< HEAD
 .ml-auto {
   margin-left: auto;
-=======
-.mb-20 {
-  margin-bottom: 5rem;
-}
-.-mt-px {
-  margin-top: -1px;
-}
-.mt-20 {
-  margin-top: 5rem;
->>>>>>> hotfix/caio-resourceImages
 }
 .mb-2 {
   margin-bottom: 0.5rem;
 }
-<<<<<<< HEAD
-=======
-.mb-1 {
-  margin-bottom: 0.25rem;
-}
-.ml-auto {
-  margin-left: auto;
-}
->>>>>>> hotfix/caio-resourceImages
 .mb-10 {
   margin-bottom: 2.5rem;
 }
@@ -1182,7 +1126,6 @@ select {
 .mb-1 {
   margin-bottom: 0.25rem;
 }
-<<<<<<< HEAD
 .mt-20 {
   margin-top: 5rem;
 }
@@ -1201,11 +1144,6 @@ select {
 .mb-20 {
   margin-bottom: 5rem;
 }
-=======
-.mb-40 {
-  margin-bottom: 10rem;
-}
->>>>>>> hotfix/caio-resourceImages
 .block {
   display: block;
 }
@@ -1260,12 +1198,9 @@ select {
 .h-screen {
   height: 100vh;
 }
-<<<<<<< HEAD
 .h-1\/2 {
   height: 50%;
 }
-=======
->>>>>>> hotfix/caio-resourceImages
 .h-11 {
   height: 2.75rem;
 }
@@ -1317,7 +1252,6 @@ select {
 .w-20 {
   width: 5rem;
 }
-<<<<<<< HEAD
 .w-36 {
   width: 9rem;
 }
@@ -1327,17 +1261,6 @@ select {
 .w-3\/12 {
   width: 25%;
 }
-=======
-.w-3\/12 {
-  width: 25%;
-}
-.w-36 {
-  width: 9rem;
-}
-.w-11\/12 {
-  width: 91.666667%;
-}
->>>>>>> hotfix/caio-resourceImages
 .w-9\/12 {
   width: 75%;
 }
@@ -1346,18 +1269,12 @@ select {
 }
 .w-1\/4 {
   width: 25%;
-<<<<<<< HEAD
 }
 .w-11\/12 {
   width: 91.666667%;
-=======
->>>>>>> hotfix/caio-resourceImages
 }
 .min-w-0 {
   min-width: 0px;
-}
-.min-w-full {
-  min-width: 100%;
 }
 .max-w-7xl {
   max-width: 80rem;
@@ -1365,14 +1282,11 @@ select {
 .max-w-xl {
   max-width: 36rem;
 }
-.max-w-6xl {
-  max-width: 72rem;
-}
-.max-w-4xl {
-  max-width: 56rem;
-}
 .max-w-2xl {
   max-width: 42rem;
+}
+.max-w-6xl {
+  max-width: 72rem;
 }
 .flex-1 {
   flex: 1 1 0%;
@@ -1517,23 +1431,6 @@ select {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
   margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
-<<<<<<< HEAD
-=======
-}
-.space-y-4 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
-}
-.divide-y > :not([hidden]) ~ :not([hidden]) {
-  --tw-divide-y-reverse: 0;
-  border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
-  border-bottom-width: calc(1px * var(--tw-divide-y-reverse));
-}
-.divide-gray-200 > :not([hidden]) ~ :not([hidden]) {
-  --tw-divide-opacity: 1;
-  border-color: rgb(229 231 235 / var(--tw-divide-opacity));
->>>>>>> hotfix/caio-resourceImages
 }
 .space-y-4 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
@@ -1542,12 +1439,6 @@ select {
 }
 .overflow-hidden {
   overflow: hidden;
-}
-.overflow-scroll {
-  overflow: scroll;
-}
-.overflow-x-auto {
-  overflow-x: auto;
 }
 .overflow-y-auto {
   overflow-y: auto;
@@ -1657,17 +1548,6 @@ select {
   --tw-border-opacity: 1;
   border-color: rgb(243 244 246 / var(--tw-border-opacity));
 }
-<<<<<<< HEAD
-=======
-.border-gray-400 {
-  --tw-border-opacity: 1;
-  border-color: rgb(156 163 175 / var(--tw-border-opacity));
-}
-.border-orange-200 {
-  --tw-border-opacity: 1;
-  border-color: rgb(254 215 170 / var(--tw-border-opacity));
-}
->>>>>>> hotfix/caio-resourceImages
 .border-red-400 {
   --tw-border-opacity: 1;
   border-color: rgb(248 113 113 / var(--tw-border-opacity));
@@ -1676,7 +1556,6 @@ select {
   --tw-border-opacity: 1;
   border-color: rgb(248 152 29 / var(--tw-border-opacity));
 }
-<<<<<<< HEAD
 .border-gray-600 {
   --tw-border-opacity: 1;
   border-color: rgb(75 85 99 / var(--tw-border-opacity));
@@ -1696,25 +1575,11 @@ select {
 .border-orange-400 {
   --tw-border-opacity: 1;
   border-color: rgb(251 146 60 / var(--tw-border-opacity));
-=======
-.border-orange-400 {
-  --tw-border-opacity: 1;
-  border-color: rgb(251 146 60 / var(--tw-border-opacity));
-}
-.border-\[\#ecc188\] {
-  --tw-border-opacity: 1;
-  border-color: rgb(236 193 136 / var(--tw-border-opacity));
-}
-.border-\[\#faba67\] {
-  --tw-border-opacity: 1;
-  border-color: rgb(250 186 103 / var(--tw-border-opacity));
->>>>>>> hotfix/caio-resourceImages
 }
 .border-orange-500 {
   --tw-border-opacity: 1;
   border-color: rgb(249 115 22 / var(--tw-border-opacity));
 }
-<<<<<<< HEAD
 .border-orange-200 {
   --tw-border-opacity: 1;
   border-color: rgb(254 215 170 / var(--tw-border-opacity));
@@ -1722,19 +1587,10 @@ select {
 .border-gray-400 {
   --tw-border-opacity: 1;
   border-color: rgb(156 163 175 / var(--tw-border-opacity));
-=======
-.border-orange-500 {
-  --tw-border-opacity: 1;
-  border-color: rgb(249 115 22 / var(--tw-border-opacity));
->>>>>>> hotfix/caio-resourceImages
 }
-.border-gray-600 {
+.border-\[\#ecc188\] {
   --tw-border-opacity: 1;
-  border-color: rgb(75 85 99 / var(--tw-border-opacity));
-}
-.border-gray-500 {
-  --tw-border-opacity: 1;
-  border-color: rgb(107 114 128 / var(--tw-border-opacity));
+  border-color: rgb(236 193 136 / var(--tw-border-opacity));
 }
 .bg-white {
   --tw-bg-opacity: 1;
@@ -1784,7 +1640,6 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
-<<<<<<< HEAD
 .bg-red-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(254 202 202 / var(--tw-bg-opacity));
@@ -1792,16 +1647,10 @@ select {
 .bg-gray-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(55 65 81 / var(--tw-bg-opacity));
-=======
-.bg-\[\#F8981D\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(248 152 29 / var(--tw-bg-opacity));
->>>>>>> hotfix/caio-resourceImages
 }
 .bg-transparent {
   background-color: transparent;
 }
-<<<<<<< HEAD
 .bg-green-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(187 247 208 / var(--tw-bg-opacity));
@@ -1821,44 +1670,22 @@ select {
 .bg-blue-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(37 99 235 / var(--tw-bg-opacity));
-=======
-.bg-black {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-.bg-\[\#ecc188\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(236 193 136 / var(--tw-bg-opacity));
-}
-.bg-green-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(187 247 208 / var(--tw-bg-opacity));
->>>>>>> hotfix/caio-resourceImages
 }
 .bg-blue-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(59 130 246 / var(--tw-bg-opacity));
 }
-.bg-\[\#92C954\] {
+.bg-black {
   --tw-bg-opacity: 1;
-  background-color: rgb(146 201 84 / var(--tw-bg-opacity));
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
-<<<<<<< HEAD
 .bg-\[\#FAF3F3\] {
   --tw-bg-opacity: 1;
   background-color: rgb(250 243 243 / var(--tw-bg-opacity));
 }
-.bg-\[\#A9171C\] {
+.bg-\[\#ecc188\] {
   --tw-bg-opacity: 1;
-  background-color: rgb(169 23 28 / var(--tw-bg-opacity));
-=======
-.bg-gray-700 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(55 65 81 / var(--tw-bg-opacity));
-}
-.bg-transparent {
-  background-color: transparent;
->>>>>>> hotfix/caio-resourceImages
+  background-color: rgb(236 193 136 / var(--tw-bg-opacity));
 }
 .bg-\[\#A9171C\] {
   --tw-bg-opacity: 1;
@@ -1892,14 +1719,11 @@ select {
 .p-6 {
   padding: 1.5rem;
 }
-.p-4 {
-  padding: 1rem;
-}
 .p-16 {
   padding: 4rem;
 }
-.p-10 {
-  padding: 2.5rem;
+.p-4 {
+  padding: 1rem;
 }
 .p-5 {
   padding: 1.25rem;
@@ -1910,15 +1734,12 @@ select {
 .p-1 {
   padding: 0.25rem;
 }
-<<<<<<< HEAD
 .p-10 {
   padding: 2.5rem;
 }
 .p-12 {
   padding: 3rem;
 }
-=======
->>>>>>> hotfix/caio-resourceImages
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -1975,13 +1796,10 @@ select {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
 }
-<<<<<<< HEAD
 .px-5 {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
 }
-=======
->>>>>>> hotfix/caio-resourceImages
 .py-2\.5 {
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
@@ -1994,13 +1812,6 @@ select {
   padding-top: 0.375rem;
   padding-bottom: 0.375rem;
 }
-<<<<<<< HEAD
-=======
-.px-5 {
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-}
->>>>>>> hotfix/caio-resourceImages
 .px-9 {
   padding-left: 2.25rem;
   padding-right: 2.25rem;
@@ -2035,7 +1846,6 @@ select {
 .pb-1 {
   padding-bottom: 0.25rem;
 }
-<<<<<<< HEAD
 .pt-0\.5 {
   padding-top: 0.125rem;
 }
@@ -2048,17 +1858,6 @@ select {
 .pt-8 {
   padding-top: 2rem;
 }
-=======
-.pt-8 {
-  padding-top: 2rem;
-}
-.pt-0 {
-  padding-top: 0px;
-}
-.pb-2 {
-  padding-bottom: 0.5rem;
-}
->>>>>>> hotfix/caio-resourceImages
 .text-left {
   text-align: left;
 }
@@ -2101,6 +1900,10 @@ select {
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -2141,14 +1944,11 @@ select {
 .leading-4 {
   line-height: 1rem;
 }
-<<<<<<< HEAD
-=======
-.leading-6 {
-  line-height: 1.5rem;
-}
->>>>>>> hotfix/caio-resourceImages
 .leading-relaxed {
   line-height: 1.625;
+}
+.leading-6 {
+  line-height: 1.5rem;
 }
 .tracking-widest {
   letter-spacing: 0.1em;
@@ -2219,39 +2019,22 @@ select {
   --tw-text-opacity: 1;
   color: rgb(34 197 94 / var(--tw-text-opacity));
 }
-<<<<<<< HEAD
 .text-gray-300 {
   --tw-text-opacity: 1;
   color: rgb(209 213 219 / var(--tw-text-opacity));
 }
 .text-\[\#F8981D\] {
-=======
-.text-\[\#F8981D\] {
   --tw-text-opacity: 1;
   color: rgb(248 152 29 / var(--tw-text-opacity));
-}
-.text-gray-200 {
->>>>>>> hotfix/caio-resourceImages
-  --tw-text-opacity: 1;
-  color: rgb(248 152 29 / var(--tw-text-opacity));
-}
-.text-gray-300 {
-  --tw-text-opacity: 1;
-  color: rgb(209 213 219 / var(--tw-text-opacity));
 }
 .text-orange-400 {
   --tw-text-opacity: 1;
   color: rgb(251 146 60 / var(--tw-text-opacity));
 }
-.text-slate-400 {
-  --tw-text-opacity: 1;
-  color: rgb(148 163 184 / var(--tw-text-opacity));
-}
 .text-red-700 {
   --tw-text-opacity: 1;
   color: rgb(185 28 28 / var(--tw-text-opacity));
 }
-<<<<<<< HEAD
 .text-slate-400 {
   --tw-text-opacity: 1;
   color: rgb(148 163 184 / var(--tw-text-opacity));
@@ -2260,8 +2043,6 @@ select {
   --tw-text-opacity: 1;
   color: rgb(229 231 235 / var(--tw-text-opacity));
 }
-=======
->>>>>>> hotfix/caio-resourceImages
 .text-slate-500 {
   --tw-text-opacity: 1;
   color: rgb(100 116 139 / var(--tw-text-opacity));
@@ -2366,13 +2147,13 @@ select {
   -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
           backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
-.backdrop-grayscale {
-  --tw-backdrop-grayscale: grayscale(100%);
+.backdrop-grayscale-0 {
+  --tw-backdrop-grayscale: grayscale(0);
   -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
           backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
-.backdrop-grayscale-0 {
-  --tw-backdrop-grayscale: grayscale(0);
+.backdrop-grayscale {
+  --tw-backdrop-grayscale: grayscale(100%);
   -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
           backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
@@ -2531,25 +2312,6 @@ hr {
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
 }
-<<<<<<< HEAD
-=======
-.hover\:bg-\[\#ffba25\]:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 186 37 / var(--tw-bg-opacity));
-}
-.hover\:bg-\[\#ecc188\]:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(236 193 136 / var(--tw-bg-opacity));
-}
-.hover\:bg-\[\#85f307\]:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(133 243 7 / var(--tw-bg-opacity));
-}
-.hover\:bg-gray-800:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(31 41 55 / var(--tw-bg-opacity));
-}
->>>>>>> hotfix/caio-resourceImages
 .hover\:bg-gray-200:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
@@ -2566,18 +2328,14 @@ hr {
   --tw-bg-opacity: 1;
   background-color: rgb(75 85 99 / var(--tw-bg-opacity));
 }
-<<<<<<< HEAD
 .hover\:bg-\[\#ffba25\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(255 186 37 / var(--tw-bg-opacity));
 }
-=======
->>>>>>> hotfix/caio-resourceImages
 .hover\:bg-gray-300:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(209 213 219 / var(--tw-bg-opacity));
 }
-<<<<<<< HEAD
 .hover\:bg-\[\#ecc188\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(236 193 136 / var(--tw-bg-opacity));
@@ -2590,8 +2348,6 @@ hr {
   --tw-bg-opacity: 1;
   background-color: rgb(133 243 7 / var(--tw-bg-opacity));
 }
-=======
->>>>>>> hotfix/caio-resourceImages
 .hover\:text-gray-500:hover {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
@@ -2611,14 +2367,6 @@ hr {
 .hover\:text-gray-900:hover {
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity));
-}
-.hover\:text-indigo-900:hover {
-  --tw-text-opacity: 1;
-  color: rgb(49 46 129 / var(--tw-text-opacity));
-}
-.hover\:text-red-900:hover {
-  --tw-text-opacity: 1;
-  color: rgb(127 29 29 / var(--tw-text-opacity));
 }
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
@@ -2734,13 +2482,6 @@ hr {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(191 219 254 / var(--tw-ring-opacity));
 }
-<<<<<<< HEAD
-=======
-.focus\:ring-orange-300:focus {
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(253 186 116 / var(--tw-ring-opacity));
-}
->>>>>>> hotfix/caio-resourceImages
 .focus\:ring-red-300:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(252 165 165 / var(--tw-ring-opacity));
@@ -2756,6 +2497,10 @@ hr {
 .focus\:ring-gray-600:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(75 85 99 / var(--tw-ring-opacity));
+}
+.focus\:ring-orange-300:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(253 186 116 / var(--tw-ring-opacity));
 }
 .focus\:ring-\[\#F8981D\]:focus {
   --tw-ring-opacity: 1;
@@ -2797,14 +2542,11 @@ hr {
 }
 @media (prefers-color-scheme: dark) {
 
-<<<<<<< HEAD
   .dark\:bg-\[\#F8981D\] {
     --tw-bg-opacity: 1;
     background-color: rgb(248 152 29 / var(--tw-bg-opacity));
   }
 
-=======
->>>>>>> hotfix/caio-resourceImages
   .dark\:bg-gray-900 {
     --tw-bg-opacity: 1;
     background-color: rgb(17 24 39 / var(--tw-bg-opacity));
