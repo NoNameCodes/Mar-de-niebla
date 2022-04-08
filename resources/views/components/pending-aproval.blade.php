@@ -14,12 +14,12 @@
         <div class="p-5 w-full">
             @forelse ($users as $user)
                 <div class="flex w-11/12 flex-row items-center justify-between mx-2 p-2">
-                    <div class="flex flex-col">
+                    <div class="flex flex-col mr-6">
                         <p>{{ $user->name }}</p>
                         <p class="text-xs text-gray-500">{{ $user->email }}</p>
                     </div>
-                    <div class="flex flex-row">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20"
+                    <div class="flex flex-row ml-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 m-2 " viewBox="0 0 20 20"
                             fill="currentColor">
                             <a href="{{ route('admin.users.approve', $user->id) }}">
                                 <path fillRule="evenodd"
@@ -27,8 +27,8 @@
                                     clipRule="evenodd" />
                             </a>
                         </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20"
-                            fill="currentColor">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 m-2" viewBox="0 0 20 20"
+                            fill="red">
                             <a href="{{ route('admin.users.reject', $user->id) }}">
                                 <path fill-rule="evenodd"
                                     d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
