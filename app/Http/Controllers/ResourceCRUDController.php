@@ -76,7 +76,7 @@ class ResourceCRUDController extends Controller
         $resource->location_id = $request->location_id;
         $resource->save();
         return redirect()->route('resources.index')
-            ->with('success', 'Resource Has Been updated successfully');
+            ->with('success', 'El recurso "' . $resource->name . '" ha sido editado con éxito.');
     }
 
     public function destroy(Resource $resource)
