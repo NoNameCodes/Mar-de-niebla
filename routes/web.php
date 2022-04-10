@@ -30,7 +30,7 @@ Route::middleware(['auth:sanctum', 'verified', 'approved', 'user'])->group(funct
     Route::resource('resources', ResourceCRUDController::class);
     Route::get('/misreservas', [MisreservasController::class, 'index'])->name('misreservas');
     Route::get('removereserve/{reserve_id}', [ReservaController::class, 'remove'])->name('removereserve');
-    Route::get('/history{resource:id}', [HistoryController::class, 'resource'])->name('history');
+    Route::get('/history/{resource:id}', [HistoryController::class, 'resource'])->name('history');
 });
 
 Route::middleware(['auth:sanctum', 'verified', 'approved', 'admin'])->group(function () {

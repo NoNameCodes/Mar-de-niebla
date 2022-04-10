@@ -6,8 +6,9 @@
 
             <div class="flex justify-center items-start p-5 rounded-t border-b border-gray-600">
                 <h3 class="text-lg font-bold lg:text-2xl text-white">
-                    ¿Seguro que quiere anular la reserva?
+                    ¿Seguro que quiere anular la reserva {{$reserva->id}}?
                 </h3>
+                
                 <button type="button"
                     class="bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center text-white"
                     data-modal-toggle="defaultModal">

@@ -2,14 +2,13 @@
 
 namespace App\View\Components;
 
-use App\Models\Reserva;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\View\Component;
 
-class Card extends Component
+class ButtonDeleteReservation extends Component
 {
 
-    public $reservas;
+    public $reserva;
+   
     
     /**
      * Create a new component instance.
@@ -21,6 +20,7 @@ class Card extends Component
     {
         $this->reserva=$reserva;
         
+        
     }
 
        /**
@@ -30,6 +30,7 @@ class Card extends Component
      */
     public function render()
     {
-       return view('components.modal-delete-reservations');
+       
+        return view('components.button-delete-reservation');
     }
 }
