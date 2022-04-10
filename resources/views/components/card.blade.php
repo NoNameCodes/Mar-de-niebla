@@ -17,8 +17,9 @@
                                     <p class="italic p-2 font-thin text-left">{{ $reserva->date }} -
                                         {{ $reserva->name }}, {{$reserva->id}}</p>
                                    <x-button-delete-reservation :reserva="$reserva" />
+                                   <x-modal-delete-reservation :reserva="$reserva" />
                                 </div>
-                                <x-modal-delete-reservation :reserva="$reserva" />
+                                
                             @endif
                         @endforeach
                     @else
@@ -41,7 +42,7 @@
                 @elseif(Route::currentRouteName() == 'home'|| 'resources')
                     <x-button-add-reservation :resource="$resource" />
                 @elseif(Route::currentRouteNAme() =='misreservas')
-                    <span></span>
+                    spa
                 @endif
             </div>
         </div>

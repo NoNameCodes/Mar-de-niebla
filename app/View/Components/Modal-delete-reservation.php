@@ -9,7 +9,7 @@ use Illuminate\View\Component;
 class Card extends Component
 {
 
-    public $reservas;
+    public $reserva;
     
     /**
      * Create a new component instance.
@@ -30,6 +30,6 @@ class Card extends Component
      */
     public function render()
     {
-       return view('components.modal-delete-reservations');
+       return view('components.modal-delete-reservation');
     }
 }
