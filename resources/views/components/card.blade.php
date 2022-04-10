@@ -7,19 +7,19 @@
                 </a>
             </div>
             <div class="flex justify-between w-9/12">
-                <div class="w-full flex flex-col justify-center>
-                    <a href="
-                    {{ route('resources.show', $resource) }}">
+                <div class="w-full flex flex-col justify-center">
+                    <a href=" {{ route('resources.show', $resource) }}">
                     <p class="align-middle font-extrabold text-xl">{{ $resource->name }}</p></a>
                     @if (Route::currentRouteName() == 'misreservas')
                         @foreach ($reservas as $reserva)
                             @if ($reserva->resource_id === $resource->id)
                                 <div class="w-full flex flex-row justify-between p-2">
                                     <p class="italic p-2 font-thin text-left">{{ $reserva->date }} -
-                                        {{ $reserva->name }}</p>
-                                    <x-button-delete-reservation />
+                                        {{ $reserva->name }}, {{$reserva->id}}</p>
+                                   <x-button-delete-reservation :reserva="$reserva" />
+                                   <x-modal-delete-reservation :reserva="$reserva" />
                                 </div>
-                                <x-modal-delete-reservation :reserva="$reserva" />
+                                
                             @endif
                         @endforeach
                     @else
@@ -41,10 +41,8 @@
                     </div>
                 @elseif(Route::currentRouteName() == 'home'|| 'resources')
                     <x-button-add-reservation :resource="$resource" />
-                {{-- @elseif(Route::currentRouteName() == 'resource') --}}
-                    {{-- <x-button-add-reservation :resource="$resource" /> --}}
-                @else
-                    <div></div>
+                @elseif(Route::currentRouteNAme() =='misreservas')
+                    spa
                 @endif
             </div>
         </div>

@@ -4,7 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class Card extends Component
+class ButtonShowHistory extends Component
 {
 
     public $resource;
