@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Models\Location;
 use App\Models\Resource;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
+use PhpParser\Builder\Use_;
 
 class ResourceCRUDController extends Controller
 {
@@ -41,8 +43,17 @@ class ResourceCRUDController extends Controller
                 "location_id" => $location->id,
             ]);
         }
+        if ($location->id==null){
+            $message = 'El recurso no ha podido ser añadido ya que la localización no puede quedar vacía.Por favor añada una localización al recurso compartido';
+            Session::flash('message_location', $message);
+            return view('welcome');
+          
+        }
         $resource->save();
-
+        $usuario=User::all();
+        foreach ($usuario as $usuarios){
+        $resource->user()->attach($request->input($usuarios->id));
+        }
         return redirect('home')
             ->with('success', '¡Recurso creado correctamente!');
     }
@@ -75,6 +86,10 @@ class ResourceCRUDController extends Controller
         $resource->user_id = $request->user_id;
         $resource->location_id = $request->location_id;
         $resource->save();
+        $usuario=User::all();
+        foreach ($usuario as $usuarios){
+        $resource->user()->attach($request->input($usuarios->id));
+        }
         return redirect()->route('resources.index')
             ->with('success', 'Resource Has Been updated successfully');
     }
@@ -82,6 +97,7 @@ class ResourceCRUDController extends Controller
     public function destroy(Resource $resource)
     {
         $resource->reservas()->delete();
+        $resource->user()->detach();
         $resource->delete();
         $message = 'El recurso "' . $resource->name . '" ha sido borrado con éxito';
         Session::flash('message', $message);
