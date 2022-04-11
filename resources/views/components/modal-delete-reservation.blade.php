@@ -6,7 +6,7 @@
 
             <div class="flex justify-center items-start p-5 rounded-t border-b border-gray-600">
                 <h3 class="text-lg font-bold lg:text-2xl text-white">
-                    ¿Seguro que quiere anular la reserva {{$reserva->id}}?
+                    ¿Seguro que quiere anular la reserva?
                 </h3>
                 
                 <button type="button"
