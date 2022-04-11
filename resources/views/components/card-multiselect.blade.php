@@ -1,15 +1,11 @@
-<script src="https://cdn.tailwindcss.com"></script>
+<h2>Compartir con</h2>
 
-<div class="w-full">
-
-    <div class="relative flex">
-        <input id="select-role"  >
-            @foreach ($users as $user)
-                {{-- <option name="user_id" value="{{ $user->id }}">{{ $user->name }}</option> --}}
-                <input type="checkbox" checked id="cbox1" value="{{ $user->id }}" name="{{ $user->id }}">
-                <label for="{{ $user->id }}">{{ $user->name }}</label>
-            @endforeach 
-            
+<form action="/action_page.php">
+    <div class="dropdown">
+         @foreach ($users as $user)
+            <input type="checkbox" name="{{$user->id}}" value="{{$user->id}}">
+            <label for="{{$user->id}}"> {{$user->name}}</label><br>
+            @endforeach
     </div>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/tom-select/dist/js/tom-select.complete.min.js"></script>
+        
+  </form>
