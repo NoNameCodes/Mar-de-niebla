@@ -1,4 +1,4 @@
-{{-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -74,12 +74,12 @@
     </div>
 </body>
 
-</html> --}}
+</html>
 
-<x-guest-layout>
+{{-- <x-guest-layout>
     <x-header />
     <div class="flex flex-col items-center m-6">
-        <form action="{{ route('resources.update',$resource->id) }}" method="post" enctype="multipart/form-data">
+        <form action="{{ route('resources.update',$resource->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
             <div class="w-80 h-100 bg-white border-orange-400 border-2 rounded-md mx-8 mt-10 mb-10">
@@ -97,7 +97,7 @@
 
                         <div class="py-1 mb-0">
                             <textarea id="description" cols="28" rows="5" name="description" placeholder="Descripción/Incidencias"
-                                class=" outline-none px-2 text-m border-orange-400 border-1 rounded-md"  value="{{ $resource->description }}"required></textarea>
+                                class=" outline-none px-2 text-m border-orange-400 border-1 rounded-md"  required>{{$resource->description }}</textarea>
                         </div>
 
                         <div class="py-1">
@@ -122,4 +122,4 @@
     </div>
 </x-guest-layout>
 
-<x-footer />
+<x-footer /> --}}

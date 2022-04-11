@@ -92,7 +92,7 @@ class ResourceCRUDController extends Controller
         foreach ($usuario as $usuarios){
         $resource->user()->attach($request->input($usuarios->id));
         }
-        return redirect()->route('resources.index')
+        return redirect()->route('home')
             ->with('success', 'Resource Has Been updated successfully');
     }
 
