@@ -20,36 +20,31 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Nombre:</strong>
-                    <input type="text" name="name" value="{{ $resource->name }}"
-                        class="form-control px-3 py-2 mt-3 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-m border-orange-400 border-1 rounded-md outline-none focus:outline-none focus:ring w-full"
-                        placeholder="Resource name">
+                    <input type="text" name="name" value="{{ $resource->name }}" placeholder="Resource Name"
+                        class="form-control px-3 py-2 my-3 placeholder-blueGray-300 text-blueGray-400 relative bg-white rounded text-m border-orange-400 border-1 rounded-md outline-none focus:outline-none focus:ring w-full">
                 </div>
             </div>
 
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Descripción:</strong>
-                    <input type="text" name="description"
-                        class="form-control px-3 py-2 mt-3 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-m border-orange-400 border-1 rounded-md outline-none focus:outline-none focus:ring w-full"
-                        placeholder="Resource Description" value="{{ $resource->description }}">
+                    <input type="text" name="description" value="{{ $resource->description }}"
+                        placeholder="Resource Description"
+                        class="form-control px-3 py-2 my-3 placeholder-blueGray-300 text-blueGray-400 relative bg-white rounded text-m border-orange-400 border-1 rounded-md outline-none focus:outline-none focus:ring w-full">
                 </div>
             </div>
 
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Dirección:</strong>
-                    <input type="" name="location_id" value="{{ $resource->location_id }}"
-                        class="form-control px-3 py-2 mt-3 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-m border-orange-400 border-1 rounded-md outline-none focus:outline-none focus:ring w-full" placeholder="
-                        Resource Adress">
+                    <select name="location_id" value="{{ $resource->location_id }}" placeholder="Resource Adress"
+                        class="form-control px-3 py-2 my-3 placeholder-blueGray-300 text-blueGray-400 relative bg-white rounded text-m border-orange-400 border-1 rounded-md outline-none focus:outline-none focus:ring w-full"></select>
                 </div>
             </div>
 
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Imagen:</strong>
-                    <input type="img" name="img"
-                        class="form-control px-3 py-2 mt-3 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-m border-orange-400 border-1 rounded-md outline-none focus:outline-none focus:ring w-full"
-                        placeholder="Resource img" value="{{ $resource->img }}">
                 </div>
                 <div class="m-2 flex flex-row justify-center">
                     <img src="{{ asset("storage/img/{$resource->img}") }}" alt="Imagen del recurso"
