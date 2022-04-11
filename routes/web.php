@@ -43,7 +43,7 @@ Route::middleware(['auth:sanctum', 'verified', 'approved', 'admin'])->group(func
     Route::get('/location', [LocationController::class, 'create'])->name('location.create');
     Route::post('/location', [LocationController::class, 'store'])->name('location.store');
     Route::get('/location/{id}', [LocationController::class, 'destroy'])->name('location.destroy');
-    Route::get('/locations', [LocationController::class, 'vista'])->name('location.vista');
+    Route::get('/locations', [LocationController::class, 'index'])->name('location.index');
     Route::get('/locations/{id}', [LocationController::class, 'edit'])->name('location.edit');
     Route::put('/locations/{id}', [LocationController::class, 'update'])->name('location.update');
 });

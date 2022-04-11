@@ -13,12 +13,12 @@ class ResourceCRUDController extends Controller
     public function index()
     {
         $data['resources'] = Resource::orderBy('id', 'desc')->paginate(5);
-        return view('resources.index', $data);
+        return redirect()->route('/', $data);
     }
 
     public function create()
     {
-        return view('resources.create');
+        return view('_resources.create');
     }
 
     public function store(Request $request)
@@ -49,7 +49,7 @@ class ResourceCRUDController extends Controller
 
     public function show($id)
     {
-        return view('resource', [
+        return view('_resources.show', [
             'resource' => Resource::findOrFail($id)
         ]);
     }

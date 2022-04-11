@@ -10,11 +10,11 @@ use Illuminate\Support\Facades\Auth;
 class HistoryController extends Controller
 {
     public function resource(Resource $resource)
-        {
-            $user_id = Auth::user();
-            $id = $resource->id;
-            $reservations = Reserva::where('resource_id', $id)->get();
-           
-            return view ('history', compact('resource', 'reservations'));
-        }
+    {
+        $user_id = Auth::user();
+        $id = $resource->id;
+        $reservations = Reserva::where('resource_id', $id)->get();
+
+        return view('_resources.history', compact('resource', 'reservations'));
+    }
 }

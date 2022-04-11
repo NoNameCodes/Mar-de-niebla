@@ -8,9 +8,10 @@ use App\Models\Location;
 
 class FormController extends Controller
 {
-    public function index(){
+    public function index()
+    {
         $users = User::get();
         $location = Location::get();
-        return view ('card-form-page', compact('users', 'location'));
+        return view('_resources.create', compact('users', 'location'));
     }
 }

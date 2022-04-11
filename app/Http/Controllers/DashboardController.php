@@ -11,6 +11,6 @@ class DashboardController extends Controller
     {
         $user_id = Auth::user()->id;
         $resources = Resource::where('user_id', $user_id)->paginate(5);
-        return view('dashboard', ['resources' => $resources]);
+        return view('user.dashboard', ['resources' => $resources]);
     }
 }

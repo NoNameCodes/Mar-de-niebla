@@ -1,6 +1,4 @@
-<x-guest-layout>
-<div>
-    <x-header />
-    hola
-</div>
-</x-guest-layout>
+@extends('layouts.app', ['title' => 'Test View'])
+@section('main')
+    <livewire:resource-list />
+@endsection

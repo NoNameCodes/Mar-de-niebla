@@ -14,13 +14,13 @@ class ReservaController extends Controller
     public function index()
     {
         $resources = Resource::orderBy('id', 'desc');
-        return view('reserva', compact('resources'));
+        return view('reserves.index', compact('resources'));
     }
 
     public function create($id)
     {
         $resource = Resource::find($id);
-        return view('reserva', ['resource' => $resource]);
+        return view('reserves.create', ['resource' => $resource]);
     }
 
     public function store(Request $request, $id)

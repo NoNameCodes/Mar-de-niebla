@@ -1,10 +1,8 @@
-<x-guest-layout>
-    <x-header />
-
-    <div class="flex flex-col items-center m-6">
+@extends('layouts.app', ['title' => 'Añadir Recurso'])
+@section('main')
+    <div class="flex justify-center">
         <form action="{{ route('resources.store') }}" method="post" enctype="multipart/form-data">
             @csrf
-
             <div class="w-80 h-100 bg-white border-orange-400 border-2 rounded-md mx-8 mt-10 mb-10">
                 <div class=" bg-white rounded-md px-9 py-10 max-w-2xl">
                     <div class="space-y-4 px-15">
@@ -43,6 +41,4 @@
             </div>
         </form>
     </div>
-</x-guest-layout>
-
-<x-footer />
+@endsection

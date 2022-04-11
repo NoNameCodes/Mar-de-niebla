@@ -10,13 +10,8 @@ class LocationController extends Controller
 {
     public function index()
     {
-        $location = Location::get();
-        return view('card-form-page', compact('location'));
-    }
-    public function vista()
-    {
         $location = Location::paginate(8);
-        return view('location_view', compact('location'));
+        return view('admin.location.index', compact('location'));
     }
     public function create()
     {
@@ -42,7 +37,7 @@ class LocationController extends Controller
     public function edit($id)
     {
         $location = Location::find($id);
-        return view('locationedit', compact('location'));
+        return view('admin.location.edit', compact('location'));
     }
     public function update(Request $request, $id)
     {
