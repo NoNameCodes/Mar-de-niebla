@@ -6,15 +6,15 @@ use Illuminate\View\Component;
 
 class Location extends Component
 {
-    public $location;
+    public $locations;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($location)
+    public function __construct($locations)
     {
-        $this->location=$location;
+        $this->locations=$locations;
     }
 
     /**

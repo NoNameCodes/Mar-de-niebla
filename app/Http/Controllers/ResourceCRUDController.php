@@ -67,7 +67,9 @@ class ResourceCRUDController extends Controller
 
     public function edit(Resource $resource)
     {
-        return view('resources.edit', compact('resource'));
+        $users=User::all();
+        $locations=Location::all();
+        return view('resources.edit', compact('resource','users','locations'));
     }
 
     public function update(Request $request, $id)

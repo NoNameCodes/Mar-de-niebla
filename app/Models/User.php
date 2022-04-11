@@ -62,11 +62,15 @@ class User extends Authenticatable
 
     public function resource()
     {
-        return $this->hasMany(Resource::class);
+        return $this->belongsToMany(Resource::class);
     }
 
     public function reserve()
     {
         return $this->hasMany(Reserva::class);
+    }
+    public function ownResources()
+    {
+        return $this->hasMany(Resource::class);
     }
 }

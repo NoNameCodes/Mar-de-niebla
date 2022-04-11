@@ -25,4 +25,9 @@ class Resource extends Model
     {
         return $this->hasOne(Reserva::class);
     }
+    
+    public function owner()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
