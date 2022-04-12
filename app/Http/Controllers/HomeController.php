@@ -9,8 +9,7 @@ class HomeController extends Controller
     public function index()
 
     {
-        $reservas = Reserva::all();
-        return view('welcome', compact('reservas'));
+        return view('welcome');
     }
 
     public function approval()
