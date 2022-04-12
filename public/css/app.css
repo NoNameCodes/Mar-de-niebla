@@ -948,9 +948,6 @@ select {
 .prose > :where(:last-child):not(:where([class~="not-prose"] *)) {
   margin-bottom: 0;
 }
-.visible {
-  visibility: visible;
-}
 .static {
   position: static;
 }
@@ -982,11 +979,11 @@ select {
 .top-0 {
   top: 0px;
 }
-.bottom-0 {
-  bottom: 0px;
-}
 .top-40 {
   top: 10rem;
+}
+.bottom-0 {
+  bottom: 0px;
 }
 .z-0 {
   z-index: 0;
@@ -1142,6 +1139,9 @@ select {
 .ml-auto {
   margin-left: auto;
 }
+.mt-40 {
+  margin-top: 10rem;
+}
 .-mt-px {
   margin-top: -1px;
 }
@@ -1156,9 +1156,6 @@ select {
 }
 .mb-40 {
   margin-bottom: 10rem;
-}
-.mt-40 {
-  margin-top: 10rem;
 }
 .mr-6 {
   margin-right: 1.5rem;
@@ -1180,9 +1177,6 @@ select {
 }
 .table {
   display: table;
-}
-.table-column {
-  display: table-column;
 }
 .grid {
   display: grid;
@@ -1316,11 +1310,11 @@ select {
 .max-w-2xl {
   max-width: 42rem;
 }
-.max-w-6xl {
-  max-width: 72rem;
-}
 .max-w-md {
   max-width: 28rem;
+}
+.max-w-6xl {
+  max-width: 72rem;
 }
 .flex-1 {
   flex: 1 1 0%;
@@ -1330,9 +1324,6 @@ select {
 }
 .shrink-0 {
   flex-shrink: 0;
-}
-.flex-grow {
-  flex-grow: 1;
 }
 .origin-top-left {
   transform-origin: top left;
@@ -1723,6 +1714,14 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(250 243 243 / var(--tw-bg-opacity));
 }
+.bg-gray-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+}
+.bg-blue-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+}
 .bg-black {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
@@ -1739,17 +1738,13 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(236 193 136 / var(--tw-bg-opacity));
 }
-.bg-blue-500 {
+.bg-\[\#FFC376\] {
   --tw-bg-opacity: 1;
-  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+  background-color: rgb(255 195 118 / var(--tw-bg-opacity));
 }
-.bg-gray-900 {
+.bg-\[\#FFAF48\] {
   --tw-bg-opacity: 1;
-  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
-}
-.bg-green-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(34 197 94 / var(--tw-bg-opacity));
+  background-color: rgb(255 175 72 / var(--tw-bg-opacity));
 }
 .bg-opacity-25 {
   --tw-bg-opacity: 0.25;
@@ -1854,6 +1849,10 @@ select {
   padding-left: 2.25rem;
   padding-right: 2.25rem;
 }
+.px-12 {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
 .px-5 {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
@@ -1866,37 +1865,13 @@ select {
   padding-left: 2rem;
   padding-right: 2rem;
 }
-.py-1\.5 {
-  padding-top: 0.375rem;
-  padding-bottom: 0.375rem;
-}
-.px-12 {
-  padding-left: 3rem;
-  padding-right: 3rem;
-}
-.px-24 {
-  padding-left: 6rem;
-  padding-right: 6rem;
-}
-.px-20 {
-  padding-left: 5rem;
-  padding-right: 5rem;
-}
 .px-16 {
   padding-left: 4rem;
   padding-right: 4rem;
 }
-.px-14 {
-  padding-left: 3.5rem;
-  padding-right: 3.5rem;
-}
-.px-7 {
-  padding-left: 1.75rem;
-  padding-right: 1.75rem;
-}
-.px-10 {
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
+.py-1\.5 {
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
 }
 .pt-6 {
   padding-top: 1.5rem;
@@ -2200,9 +2175,6 @@ select {
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
-.outline {
-  outline-style: solid;
-}
 .ring-1 {
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
@@ -2427,6 +2399,10 @@ hr {
   --tw-bg-opacity: 1;
   background-color: rgb(31 41 55 / var(--tw-bg-opacity));
 }
+.hover\:bg-blue-700:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 78 216 / var(--tw-bg-opacity));
+}
 .hover\:bg-gray-300:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(209 213 219 / var(--tw-bg-opacity));
@@ -2434,10 +2410,6 @@ hr {
 .hover\:bg-\[\#85f307\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(133 243 7 / var(--tw-bg-opacity));
-}
-.hover\:bg-blue-700:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(29 78 216 / var(--tw-bg-opacity));
 }
 .hover\:text-gray-500:hover {
   --tw-text-opacity: 1;

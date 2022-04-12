@@ -1,11 +1,11 @@
   <!-- component -->
-<button class="bg-[#F8981D] text-white rounded-md px-16 py-2 hover:bg[#F8981D] transition" onclick="openModal('modal')">Compartir con</button>
+<button class="bg-[#FFAF48] text-white rounded-md px-16 py-2 hover:bg[#FFAF48] transition" onclick="openModal('modal')">Compartir con</button>
 
 <div id="modal" class="fixed hidden z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4">
     <div class="relative top-40 mx-auto shadow-lg rounded-md bg-white max-w-md">
 
         <!-- Modal header -->
-        <div class="flex justify-between items-center bg-[#F8981D] text-white text-xl rounded-t-md px-4 py-2">
+        <div class="flex justify-between items-center bg-[#FFAF48] text-white text-xl rounded-t-md px-4 py-2">
             <h3>Compartir con</h3>
             <button onclick="closeModal()">x</button>
         </div>
