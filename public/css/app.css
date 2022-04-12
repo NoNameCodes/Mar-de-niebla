@@ -948,12 +948,6 @@ select {
 .prose > :where(:last-child):not(:where([class~="not-prose"] *)) {
   margin-bottom: 0;
 }
-.visible {
-  visibility: visible;
-}
-.static {
-  position: static;
-}
 .fixed {
   position: fixed;
 }
@@ -985,9 +979,6 @@ select {
 .bottom-0 {
   bottom: 0px;
 }
-.top-40 {
-  top: 10rem;
-}
 .z-0 {
   z-index: 0;
 }
@@ -997,19 +988,17 @@ select {
 .col-span-6 {
   grid-column: span 6 / span 6;
 }
-<<<<<<< HEAD
-.float-left {
-  float: left;
+.m-6 {
+  margin: 1.5rem;
 }
-.m-5 {
-  margin: 1.25rem;
-=======
 .m-3 {
   margin: 0.75rem;
 }
 .m-12 {
   margin: 3rem;
->>>>>>> feature/diego/edit-view
+}
+.m-5 {
+  margin: 1.25rem;
 }
 .m-1\.5 {
   margin: 0.375rem;
@@ -1017,30 +1006,12 @@ select {
 .m-1 {
   margin: 0.25rem;
 }
-.m-5 {
-  margin: 1.25rem;
-}
-.m-6 {
-  margin: 1.5rem;
-}
-<<<<<<< HEAD
-.m-12 {
-  margin: 3rem;
-}
-=======
->>>>>>> feature/diego/edit-view
 .m-20 {
   margin: 5rem;
 }
 .m-2 {
   margin: 0.5rem;
 }
-<<<<<<< HEAD
-.m-3 {
-  margin: 0.75rem;
-}
-=======
->>>>>>> feature/diego/edit-view
 .m-10 {
   margin: 2.5rem;
 }
@@ -1051,43 +1022,19 @@ select {
 .mx-8 {
   margin-left: 2rem;
   margin-right: 2rem;
-<<<<<<< HEAD
-=======
-}
-.mx-6 {
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
-}
-.my-20 {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-}
-.mx-2 {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
->>>>>>> feature/diego/edit-view
 }
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
-<<<<<<< HEAD
 .mx-6 {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
-}
-.mx-10 {
-  margin-left: 2.5rem;
-  margin-right: 2.5rem;
 }
 .my-20 {
   margin-top: 5rem;
   margin-bottom: 5rem;
 }
-.mx-2 {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-=======
 .my-3 {
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
@@ -1099,7 +1046,10 @@ select {
 .mx-3 {
   margin-left: 0.75rem;
   margin-right: 0.75rem;
->>>>>>> feature/diego/edit-view
+}
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 .ml-3 {
   margin-left: 0.75rem;
@@ -1170,15 +1120,6 @@ select {
 .mb-4 {
   margin-bottom: 1rem;
 }
-<<<<<<< HEAD
-.mb-2 {
-  margin-bottom: 0.5rem;
-}
-.mb-1 {
-  margin-bottom: 0.25rem;
-}
-=======
->>>>>>> feature/diego/edit-view
 .mb-10 {
   margin-bottom: 2.5rem;
 }
@@ -1188,21 +1129,12 @@ select {
 .mb-0 {
   margin-bottom: 0px;
 }
-<<<<<<< HEAD
-.ml-auto {
-  margin-left: auto;
-=======
-.mb-5 {
-  margin-bottom: 1.25rem;
-}
-.mt-0 {
-  margin-top: 0px;
->>>>>>> feature/diego/edit-view
-}
 .-mt-px {
   margin-top: -1px;
 }
-<<<<<<< HEAD
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
 .mt-20 {
   margin-top: 5rem;
 }
@@ -1215,27 +1147,8 @@ select {
 .mb-40 {
   margin-bottom: 10rem;
 }
-.mt-40 {
-  margin-top: 10rem;
-}
-.mr-6 {
-  margin-right: 1.5rem;
-=======
-.mb-2 {
-  margin-bottom: 0.5rem;
-}
-.mt-20 {
-  margin-top: 5rem;
-}
-.mr-36 {
-  margin-right: 9rem;
->>>>>>> feature/diego/edit-view
-}
-.ml-5 {
-  margin-left: 1.25rem;
-}
-.mb-40 {
-  margin-bottom: 10rem;
+.mb-1 {
+  margin-bottom: 0.25rem;
 }
 .ml-auto {
   margin-left: auto;
@@ -1248,9 +1161,6 @@ select {
 }
 .ml-5 {
   margin-left: 1.25rem;
-}
-.mb-1 {
-  margin-bottom: 0.25rem;
 }
 .block {
   display: block;
@@ -1266,9 +1176,6 @@ select {
 }
 .table {
   display: table;
-}
-.table-column {
-  display: table-column;
 }
 .grid {
   display: grid;
@@ -1303,31 +1210,14 @@ select {
 .h-20 {
   height: 5rem;
 }
-<<<<<<< HEAD
 .h-11 {
   height: 2.75rem;
 }
-=======
->>>>>>> feature/diego/edit-view
-.h-3 {
-  height: 0.75rem;
+.h-screen {
+  height: 100vh;
 }
 .h-full {
   height: 100%;
-}
-<<<<<<< HEAD
-.h-screen {
-  height: 100vh;
-}
-.max-h-48 {
-  max-height: 12rem;
-=======
-.h-11 {
-  height: 2.75rem;
->>>>>>> feature/diego/edit-view
-}
-.h-screen {
-  height: 100vh;
 }
 .min-h-screen {
   min-height: 100vh;
@@ -1377,43 +1267,23 @@ select {
 .w-20 {
   width: 5rem;
 }
+.w-36 {
+  width: 9rem;
+}
 .w-80 {
   width: 20rem;
-}
-.w-64 {
-  width: 16rem;
-}
-<<<<<<< HEAD
-.w-3 {
-  width: 0.75rem;
-}
-.w-1\/4 {
-  width: 25%;
-=======
-.w-80 {
-  width: 20rem;
->>>>>>> feature/diego/edit-view
 }
 .w-3\/12 {
   width: 25%;
 }
-.w-36 {
-  width: 9rem;
-}
 .w-9\/12 {
   width: 75%;
 }
-<<<<<<< HEAD
-=======
-.w-3 {
-  width: 0.75rem;
-}
->>>>>>> feature/diego/edit-view
-.w-11\/12 {
-  width: 91.666667%;
-}
 .w-1\/4 {
   width: 25%;
+}
+.w-11\/12 {
+  width: 91.666667%;
 }
 .min-w-0 {
   min-width: 0px;
@@ -1430,20 +1300,11 @@ select {
 .max-w-6xl {
   max-width: 72rem;
 }
-.max-w-md {
-  max-width: 28rem;
-}
 .flex-1 {
   flex: 1 1 0%;
 }
-.flex-shrink-0 {
-  flex-shrink: 0;
-}
 .shrink-0 {
   flex-shrink: 0;
-}
-.flex-grow {
-  flex-grow: 1;
 }
 .origin-top-left {
   transform-origin: top left;
@@ -1574,19 +1435,6 @@ select {
   --tw-space-y-reverse: 0;
   margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
-<<<<<<< HEAD
-}
-.space-x-2 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(0.5rem * var(--tw-space-x-reverse));
-  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
-}
-.space-x-4 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(1rem * var(--tw-space-x-reverse));
-  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
-=======
->>>>>>> feature/diego/edit-view
 }
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
@@ -1604,9 +1452,6 @@ select {
 }
 .overflow-y-hidden {
   overflow-y: hidden;
-}
-.overflow-y-scroll {
-  overflow-y: scroll;
 }
 .truncate {
   overflow: hidden;
@@ -1661,10 +1506,6 @@ select {
   border-bottom-right-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
 }
-.rounded-t-md {
-  border-top-left-radius: 0.375rem;
-  border-top-right-radius: 0.375rem;
-}
 .border {
   border-width: 1px;
 }
@@ -1711,17 +1552,6 @@ select {
   --tw-border-opacity: 1;
   border-color: rgb(243 244 246 / var(--tw-border-opacity));
 }
-<<<<<<< HEAD
-.border-orange-400 {
-  --tw-border-opacity: 1;
-  border-color: rgb(251 146 60 / var(--tw-border-opacity));
-}
-.border-red-400 {
-  --tw-border-opacity: 1;
-  border-color: rgb(248 113 113 / var(--tw-border-opacity));
-}
-=======
->>>>>>> feature/diego/edit-view
 .border-\[\#F8981D\] {
   --tw-border-opacity: 1;
   border-color: rgb(248 152 29 / var(--tw-border-opacity));
@@ -1730,8 +1560,6 @@ select {
   --tw-border-opacity: 1;
   border-color: rgb(251 146 60 / var(--tw-border-opacity));
 }
-<<<<<<< HEAD
-=======
 .border-gray-400 {
   --tw-border-opacity: 1;
   border-color: rgb(156 163 175 / var(--tw-border-opacity));
@@ -1748,32 +1576,14 @@ select {
   --tw-border-opacity: 1;
   border-color: rgb(248 113 113 / var(--tw-border-opacity));
 }
->>>>>>> feature/diego/edit-view
 .border-orange-500 {
   --tw-border-opacity: 1;
   border-color: rgb(249 115 22 / var(--tw-border-opacity));
 }
-<<<<<<< HEAD
-.border-gray-400 {
-  --tw-border-opacity: 1;
-  border-color: rgb(156 163 175 / var(--tw-border-opacity));
-}
-.border-orange-200 {
-=======
-.border-green-400 {
->>>>>>> feature/diego/edit-view
-  --tw-border-opacity: 1;
-  border-color: rgb(74 222 128 / var(--tw-border-opacity));
-}
-<<<<<<< HEAD
 .border-green-400 {
   --tw-border-opacity: 1;
   border-color: rgb(74 222 128 / var(--tw-border-opacity));
 }
-.border-\[\#faba67\] {
-  --tw-border-opacity: 1;
-  border-color: rgb(250 186 103 / var(--tw-border-opacity));
-=======
 .border-gray-600 {
   --tw-border-opacity: 1;
   border-color: rgb(75 85 99 / var(--tw-border-opacity));
@@ -1781,15 +1591,10 @@ select {
 .border-gray-500 {
   --tw-border-opacity: 1;
   border-color: rgb(107 114 128 / var(--tw-border-opacity));
->>>>>>> feature/diego/edit-view
 }
 .border-\[\#ecc188\] {
   --tw-border-opacity: 1;
   border-color: rgb(236 193 136 / var(--tw-border-opacity));
-}
-.border-t-gray-500 {
-  --tw-border-opacity: 1;
-  border-top-color: rgb(107 114 128 / var(--tw-border-opacity));
 }
 .bg-white {
   --tw-bg-opacity: 1;
@@ -1839,7 +1644,14 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
-<<<<<<< HEAD
+.bg-\[\#F8981D\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 152 29 / var(--tw-bg-opacity));
+}
+.bg-\[\#FAF3F3\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(250 243 243 / var(--tw-bg-opacity));
+}
 .bg-\[\#A9171C\] {
   --tw-bg-opacity: 1;
   background-color: rgb(169 23 28 / var(--tw-bg-opacity));
@@ -1848,64 +1660,6 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(146 201 84 / var(--tw-bg-opacity));
 }
-.bg-red-200 {
-=======
-.bg-\[\#F8981D\] {
->>>>>>> feature/diego/edit-view
-  --tw-bg-opacity: 1;
-  background-color: rgb(248 152 29 / var(--tw-bg-opacity));
-}
-<<<<<<< HEAD
-.bg-\[\#F8981D\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(248 152 29 / var(--tw-bg-opacity));
-}
-.bg-indigo-700 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(67 56 202 / var(--tw-bg-opacity));
-}
-.bg-orange-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(251 146 60 / var(--tw-bg-opacity));
-}
-.bg-gray-700 {
-=======
-.bg-\[\#FAF3F3\] {
->>>>>>> feature/diego/edit-view
-  --tw-bg-opacity: 1;
-  background-color: rgb(250 243 243 / var(--tw-bg-opacity));
-}
-<<<<<<< HEAD
-.bg-\[\#FAF3F3\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(250 243 243 / var(--tw-bg-opacity));
-=======
-.bg-\[\#A9171C\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(169 23 28 / var(--tw-bg-opacity));
->>>>>>> feature/diego/edit-view
-}
-.bg-black {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-<<<<<<< HEAD
-.bg-green-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(187 247 208 / var(--tw-bg-opacity));
-}
-.bg-\[\#E61818\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(230 24 24 / var(--tw-bg-opacity));
-}
-.bg-\[\#ecc188\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(236 193 136 / var(--tw-bg-opacity));
-=======
-.bg-indigo-700 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(67 56 202 / var(--tw-bg-opacity));
-}
 .bg-black {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
@@ -1913,17 +1667,11 @@ select {
 .bg-red-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(254 202 202 / var(--tw-bg-opacity));
->>>>>>> feature/diego/edit-view
 }
 .bg-green-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(187 247 208 / var(--tw-bg-opacity));
 }
-<<<<<<< HEAD
-.bg-gray-900 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
-=======
 .bg-\[\#E61818\] {
   --tw-bg-opacity: 1;
   background-color: rgb(230 24 24 / var(--tw-bg-opacity));
@@ -1934,25 +1682,14 @@ select {
 }
 .bg-transparent {
   background-color: transparent;
->>>>>>> feature/diego/edit-view
 }
-.bg-green-500 {
+.bg-\[\#ecc188\] {
   --tw-bg-opacity: 1;
-<<<<<<< HEAD
-  background-color: rgb(34 197 94 / var(--tw-bg-opacity));
-=======
   background-color: rgb(236 193 136 / var(--tw-bg-opacity));
->>>>>>> feature/diego/edit-view
 }
 .bg-opacity-25 {
   --tw-bg-opacity: 0.25;
 }
-<<<<<<< HEAD
-.bg-opacity-60 {
-  --tw-bg-opacity: 0.6;
-}
-=======
->>>>>>> feature/diego/edit-view
 .bg-cover {
   background-size: cover;
 }
@@ -1975,9 +1712,6 @@ select {
 .p-4 {
   padding: 1rem;
 }
-.p-0 {
-  padding: 0px;
-}
 .p-16 {
   padding: 4rem;
 }
@@ -1993,12 +1727,6 @@ select {
 .p-1 {
   padding: 0.25rem;
 }
-<<<<<<< HEAD
-.p-10 {
-  padding: 2.5rem;
-}
-=======
->>>>>>> feature/diego/edit-view
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -2055,17 +1783,6 @@ select {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
 }
-<<<<<<< HEAD
-.px-9 {
-  padding-left: 2.25rem;
-  padding-right: 2.25rem;
-}
-.px-5 {
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-}
-=======
->>>>>>> feature/diego/edit-view
 .py-2\.5 {
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
@@ -2082,16 +1799,13 @@ select {
   padding-top: 0.375rem;
   padding-bottom: 0.375rem;
 }
-<<<<<<< HEAD
-=======
-.px-5 {
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-}
->>>>>>> feature/diego/edit-view
 .px-12 {
   padding-left: 3rem;
   padding-right: 3rem;
+}
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 .pt-6 {
   padding-top: 1.5rem;
@@ -2125,29 +1839,7 @@ select {
 }
 .pt-0 {
   padding-top: 0px;
-<<<<<<< HEAD
-=======
 }
-.pt-8 {
-  padding-top: 2rem;
-}
-.pl-4 {
-  padding-left: 1rem;
-}
-.pt-0\.5 {
-  padding-top: 0.125rem;
-}
-.pl-5 {
-  padding-left: 1.25rem;
->>>>>>> feature/diego/edit-view
-}
-.pl-5 {
-  padding-left: 1.25rem;
-}
-.pl-4 {
-  padding-left: 1rem;
-}
-<<<<<<< HEAD
 .pt-8 {
   padding-top: 2rem;
 }
@@ -2157,8 +1849,6 @@ select {
 .pb-2 {
   padding-bottom: 0.5rem;
 }
-=======
->>>>>>> feature/diego/edit-view
 .text-left {
   text-align: left;
 }
@@ -2215,30 +1905,18 @@ select {
 .font-semibold {
   font-weight: 600;
 }
-<<<<<<< HEAD
-.font-bold {
-  font-weight: 700;
-}
-.font-black {
-  font-weight: 900;
-}
-=======
->>>>>>> feature/diego/edit-view
 .font-extrabold {
   font-weight: 800;
 }
 .font-thin {
   font-weight: 100;
 }
-<<<<<<< HEAD
-=======
 .font-bold {
   font-weight: 700;
 }
 .font-black {
   font-weight: 900;
 }
->>>>>>> feature/diego/edit-view
 .uppercase {
   text-transform: uppercase;
 }
@@ -2256,21 +1934,6 @@ select {
 }
 .leading-4 {
   line-height: 1rem;
-}
-.leading-none {
-  line-height: 1;
-}
-.leading-normal {
-  line-height: 1.5;
-<<<<<<< HEAD
-}
-.leading-3 {
-  line-height: .75rem;
-}
-.leading-relaxed {
-  line-height: 1.625;
-=======
->>>>>>> feature/diego/edit-view
 }
 .leading-6 {
   line-height: 1.5rem;
@@ -2348,16 +2011,12 @@ select {
   color: rgb(34 197 94 / var(--tw-text-opacity));
 }
 .text-slate-400 {
-<<<<<<< HEAD
   --tw-text-opacity: 1;
   color: rgb(148 163 184 / var(--tw-text-opacity));
 }
 .text-slate-500 {
   --tw-text-opacity: 1;
   color: rgb(100 116 139 / var(--tw-text-opacity));
-=======
-  --tw-text-opacity: 1;
-  color: rgb(148 163 184 / var(--tw-text-opacity));
 }
 .text-gray-200 {
   --tw-text-opacity: 1;
@@ -2366,33 +2025,18 @@ select {
 .text-gray-300 {
   --tw-text-opacity: 1;
   color: rgb(209 213 219 / var(--tw-text-opacity));
->>>>>>> feature/diego/edit-view
-}
-.text-\[\#F8981D\] {
-  --tw-text-opacity: 1;
-  color: rgb(248 152 29 / var(--tw-text-opacity));
-}
-<<<<<<< HEAD
-.text-gray-300 {
-  --tw-text-opacity: 1;
-  color: rgb(209 213 219 / var(--tw-text-opacity));
-=======
-.text-\[\#F8981D\] {
-  --tw-text-opacity: 1;
-  color: rgb(248 152 29 / var(--tw-text-opacity));
->>>>>>> feature/diego/edit-view
-}
-.text-orange-400 {
-  --tw-text-opacity: 1;
-  color: rgb(251 146 60 / var(--tw-text-opacity));
-}
-.text-orange-400 {
-  --tw-text-opacity: 1;
-  color: rgb(251 146 60 / var(--tw-text-opacity));
 }
 .text-red-700 {
   --tw-text-opacity: 1;
   color: rgb(185 28 28 / var(--tw-text-opacity));
+}
+.text-\[\#F8981D\] {
+  --tw-text-opacity: 1;
+  color: rgb(248 152 29 / var(--tw-text-opacity));
+}
+.text-orange-400 {
+  --tw-text-opacity: 1;
+  color: rgb(251 146 60 / var(--tw-text-opacity));
 }
 .underline {
   -webkit-text-decoration-line: underline;
@@ -2449,9 +2093,6 @@ select {
 .outline-none {
   outline: 2px solid transparent;
   outline-offset: 2px;
-}
-.outline {
-  outline-style: solid;
 }
 .ring-1 {
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
@@ -2645,41 +2286,10 @@ hr {
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
 }
-<<<<<<< HEAD
 .hover\:bg-\[\#ffba25\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(255 186 37 / var(--tw-bg-opacity));
 }
-.hover\:bg-indigo-200:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(199 210 254 / var(--tw-bg-opacity));
-}
-.hover\:bg-gray-200:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
-}
-.hover\:bg-red-800:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(153 27 27 / var(--tw-bg-opacity));
-}
-.hover\:bg-red-700:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(185 28 28 / var(--tw-bg-opacity));
-}
-.hover\:bg-gray-600:hover {
-=======
-.hover\:bg-gray-300:hover {
->>>>>>> feature/diego/edit-view
-  --tw-bg-opacity: 1;
-  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
-}
-<<<<<<< HEAD
-=======
-.hover\:bg-\[\#ffba25\]:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 186 37 / var(--tw-bg-opacity));
-}
->>>>>>> feature/diego/edit-view
 .hover\:bg-\[\#ecc188\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(236 193 136 / var(--tw-bg-opacity));
@@ -2688,19 +2298,14 @@ hr {
   --tw-bg-opacity: 1;
   background-color: rgb(31 41 55 / var(--tw-bg-opacity));
 }
-.hover\:bg-gray-300:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
-}
 .hover\:bg-\[\#85f307\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(133 243 7 / var(--tw-bg-opacity));
 }
-<<<<<<< HEAD
-.hover\:bg-blue-700:hover {
+.hover\:bg-gray-300:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(29 78 216 / var(--tw-bg-opacity));
-=======
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
+}
 .hover\:bg-gray-200:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
@@ -2716,7 +2321,6 @@ hr {
 .hover\:bg-gray-600:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(75 85 99 / var(--tw-bg-opacity));
->>>>>>> feature/diego/edit-view
 }
 .hover\:text-gray-500:hover {
   --tw-text-opacity: 1;
@@ -2801,10 +2405,6 @@ hr {
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
 }
-.focus\:bg-indigo-200:focus {
-  --tw-bg-opacity: 1;
-  background-color: rgb(199 210 254 / var(--tw-bg-opacity));
-}
 .focus\:text-gray-700:focus {
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
@@ -2820,9 +2420,6 @@ hr {
 .focus\:text-gray-500:focus {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
-}
-.focus\:opacity-100:focus {
-  opacity: 1;
 }
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
@@ -2859,15 +2456,6 @@ hr {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(191 219 254 / var(--tw-ring-opacity));
 }
-<<<<<<< HEAD
-.focus\:ring-gray-500:focus {
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(107 114 128 / var(--tw-ring-opacity));
-}
-.focus\:ring-indigo-700:focus {
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(67 56 202 / var(--tw-ring-opacity));
-=======
 .focus\:ring-orange-300:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(253 186 116 / var(--tw-ring-opacity));
@@ -2875,11 +2463,6 @@ hr {
 .focus\:ring-\[\#F8981D\]:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(248 152 29 / var(--tw-ring-opacity));
-}
-.focus\:ring-gray-500:focus {
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(107 114 128 / var(--tw-ring-opacity));
->>>>>>> feature/diego/edit-view
 }
 .focus\:ring-red-300:focus {
   --tw-ring-opacity: 1;
@@ -2899,9 +2482,6 @@ hr {
 }
 .focus\:ring-opacity-50:focus {
   --tw-ring-opacity: 0.5;
-}
-.focus\:ring-offset-2:focus {
-  --tw-ring-offset-width: 2px;
 }
 .active\:bg-gray-100:active {
   --tw-bg-opacity: 1;
@@ -2936,34 +2516,14 @@ hr {
 }
 @media (prefers-color-scheme: dark) {
 
-  .dark\:border-gray-700 {
-    --tw-border-opacity: 1;
-    border-color: rgb(55 65 81 / var(--tw-border-opacity));
-  }
-
-<<<<<<< HEAD
-  .dark\:bg-gray-800 {
-=======
   .dark\:bg-\[\#F8981D\] {
->>>>>>> feature/diego/edit-view
     --tw-bg-opacity: 1;
-    background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+    background-color: rgb(248 152 29 / var(--tw-bg-opacity));
   }
 
   .dark\:bg-gray-900 {
     --tw-bg-opacity: 1;
     background-color: rgb(17 24 39 / var(--tw-bg-opacity));
-  }
-
-<<<<<<< HEAD
-  .dark\:bg-\[\#F8981D\] {
-    --tw-bg-opacity: 1;
-    background-color: rgb(248 152 29 / var(--tw-bg-opacity));
-=======
-  .dark\:bg-gray-800 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(31 41 55 / var(--tw-bg-opacity));
->>>>>>> feature/diego/edit-view
   }
 
   .dark\:hover\:bg-red-600:hover {

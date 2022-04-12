@@ -9,7 +9,7 @@ class UserController extends Controller
     public function index()
     {
         $users = User::get()->where('admin', false);
-        return view('admin-dashboard', compact('users'));
+        return redirect()->route('admin.users.pending.index', compact('users'));
     }
 
     public function share()
