@@ -997,11 +997,19 @@ select {
 .col-span-6 {
   grid-column: span 6 / span 6;
 }
+<<<<<<< HEAD
 .float-left {
   float: left;
 }
 .m-5 {
   margin: 1.25rem;
+=======
+.m-3 {
+  margin: 0.75rem;
+}
+.m-12 {
+  margin: 3rem;
+>>>>>>> feature/diego/edit-view
 }
 .m-1\.5 {
   margin: 0.375rem;
@@ -1009,21 +1017,30 @@ select {
 .m-1 {
   margin: 0.25rem;
 }
+.m-5 {
+  margin: 1.25rem;
+}
 .m-6 {
   margin: 1.5rem;
 }
+<<<<<<< HEAD
 .m-12 {
   margin: 3rem;
 }
+=======
+>>>>>>> feature/diego/edit-view
 .m-20 {
   margin: 5rem;
 }
 .m-2 {
   margin: 0.5rem;
 }
+<<<<<<< HEAD
 .m-3 {
   margin: 0.75rem;
 }
+=======
+>>>>>>> feature/diego/edit-view
 .m-10 {
   margin: 2.5rem;
 }
@@ -1034,11 +1051,27 @@ select {
 .mx-8 {
   margin-left: 2rem;
   margin-right: 2rem;
+<<<<<<< HEAD
+=======
+}
+.mx-6 {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+.my-20 {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+>>>>>>> feature/diego/edit-view
 }
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+<<<<<<< HEAD
 .mx-6 {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
@@ -1054,6 +1087,19 @@ select {
 .mx-2 {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
+=======
+.my-3 {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+.my-6 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.mx-3 {
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+>>>>>>> feature/diego/edit-view
 }
 .ml-3 {
   margin-left: 0.75rem;
@@ -1124,12 +1170,15 @@ select {
 .mb-4 {
   margin-bottom: 1rem;
 }
+<<<<<<< HEAD
 .mb-2 {
   margin-bottom: 0.5rem;
 }
 .mb-1 {
   margin-bottom: 0.25rem;
 }
+=======
+>>>>>>> feature/diego/edit-view
 .mb-10 {
   margin-bottom: 2.5rem;
 }
@@ -1139,12 +1188,21 @@ select {
 .mb-0 {
   margin-bottom: 0px;
 }
+<<<<<<< HEAD
 .ml-auto {
   margin-left: auto;
+=======
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+.mt-0 {
+  margin-top: 0px;
+>>>>>>> feature/diego/edit-view
 }
 .-mt-px {
   margin-top: -1px;
 }
+<<<<<<< HEAD
 .mt-20 {
   margin-top: 5rem;
 }
@@ -1162,9 +1220,37 @@ select {
 }
 .mr-6 {
   margin-right: 1.5rem;
+=======
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+.mt-20 {
+  margin-top: 5rem;
+}
+.mr-36 {
+  margin-right: 9rem;
+>>>>>>> feature/diego/edit-view
 }
 .ml-5 {
   margin-left: 1.25rem;
+}
+.mb-40 {
+  margin-bottom: 10rem;
+}
+.ml-auto {
+  margin-left: auto;
+}
+.mt-40 {
+  margin-top: 10rem;
+}
+.mr-6 {
+  margin-right: 1.5rem;
+}
+.ml-5 {
+  margin-left: 1.25rem;
+}
+.mb-1 {
+  margin-bottom: 0.25rem;
 }
 .block {
   display: block;
@@ -1217,20 +1303,31 @@ select {
 .h-20 {
   height: 5rem;
 }
+<<<<<<< HEAD
 .h-11 {
   height: 2.75rem;
 }
+=======
+>>>>>>> feature/diego/edit-view
 .h-3 {
   height: 0.75rem;
 }
 .h-full {
   height: 100%;
 }
+<<<<<<< HEAD
 .h-screen {
   height: 100vh;
 }
 .max-h-48 {
   max-height: 12rem;
+=======
+.h-11 {
+  height: 2.75rem;
+>>>>>>> feature/diego/edit-view
+}
+.h-screen {
+  height: 100vh;
 }
 .min-h-screen {
   min-height: 100vh;
@@ -1286,11 +1383,16 @@ select {
 .w-64 {
   width: 16rem;
 }
+<<<<<<< HEAD
 .w-3 {
   width: 0.75rem;
 }
 .w-1\/4 {
   width: 25%;
+=======
+.w-80 {
+  width: 20rem;
+>>>>>>> feature/diego/edit-view
 }
 .w-3\/12 {
   width: 25%;
@@ -1301,8 +1403,17 @@ select {
 .w-9\/12 {
   width: 75%;
 }
+<<<<<<< HEAD
+=======
+.w-3 {
+  width: 0.75rem;
+}
+>>>>>>> feature/diego/edit-view
 .w-11\/12 {
   width: 91.666667%;
+}
+.w-1\/4 {
+  width: 25%;
 }
 .min-w-0 {
   min-width: 0px;
@@ -1463,6 +1574,7 @@ select {
   --tw-space-y-reverse: 0;
   margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+<<<<<<< HEAD
 }
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
@@ -1473,6 +1585,13 @@ select {
   --tw-space-x-reverse: 0;
   margin-right: calc(1rem * var(--tw-space-x-reverse));
   margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+=======
+>>>>>>> feature/diego/edit-view
+}
+.space-x-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
 .overflow-hidden {
   overflow: hidden;
@@ -1592,6 +1711,7 @@ select {
   --tw-border-opacity: 1;
   border-color: rgb(243 244 246 / var(--tw-border-opacity));
 }
+<<<<<<< HEAD
 .border-orange-400 {
   --tw-border-opacity: 1;
   border-color: rgb(251 146 60 / var(--tw-border-opacity));
@@ -1600,30 +1720,52 @@ select {
   --tw-border-opacity: 1;
   border-color: rgb(248 113 113 / var(--tw-border-opacity));
 }
+=======
+>>>>>>> feature/diego/edit-view
 .border-\[\#F8981D\] {
   --tw-border-opacity: 1;
   border-color: rgb(248 152 29 / var(--tw-border-opacity));
 }
-.border-gray-600 {
+.border-orange-400 {
   --tw-border-opacity: 1;
-  border-color: rgb(75 85 99 / var(--tw-border-opacity));
+  border-color: rgb(251 146 60 / var(--tw-border-opacity));
 }
-.border-gray-500 {
-  --tw-border-opacity: 1;
-  border-color: rgb(107 114 128 / var(--tw-border-opacity));
-}
-.border-orange-500 {
-  --tw-border-opacity: 1;
-  border-color: rgb(249 115 22 / var(--tw-border-opacity));
-}
+<<<<<<< HEAD
+=======
 .border-gray-400 {
   --tw-border-opacity: 1;
   border-color: rgb(156 163 175 / var(--tw-border-opacity));
+}
+.border-\[\#faba67\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(250 186 103 / var(--tw-border-opacity));
 }
 .border-orange-200 {
   --tw-border-opacity: 1;
   border-color: rgb(254 215 170 / var(--tw-border-opacity));
 }
+.border-red-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(248 113 113 / var(--tw-border-opacity));
+}
+>>>>>>> feature/diego/edit-view
+.border-orange-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(249 115 22 / var(--tw-border-opacity));
+}
+<<<<<<< HEAD
+.border-gray-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(156 163 175 / var(--tw-border-opacity));
+}
+.border-orange-200 {
+=======
+.border-green-400 {
+>>>>>>> feature/diego/edit-view
+  --tw-border-opacity: 1;
+  border-color: rgb(74 222 128 / var(--tw-border-opacity));
+}
+<<<<<<< HEAD
 .border-green-400 {
   --tw-border-opacity: 1;
   border-color: rgb(74 222 128 / var(--tw-border-opacity));
@@ -1631,6 +1773,15 @@ select {
 .border-\[\#faba67\] {
   --tw-border-opacity: 1;
   border-color: rgb(250 186 103 / var(--tw-border-opacity));
+=======
+.border-gray-600 {
+  --tw-border-opacity: 1;
+  border-color: rgb(75 85 99 / var(--tw-border-opacity));
+}
+.border-gray-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(107 114 128 / var(--tw-border-opacity));
+>>>>>>> feature/diego/edit-view
 }
 .border-\[\#ecc188\] {
   --tw-border-opacity: 1;
@@ -1688,6 +1839,7 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
+<<<<<<< HEAD
 .bg-\[\#A9171C\] {
   --tw-bg-opacity: 1;
   background-color: rgb(169 23 28 / var(--tw-bg-opacity));
@@ -1697,9 +1849,13 @@ select {
   background-color: rgb(146 201 84 / var(--tw-bg-opacity));
 }
 .bg-red-200 {
+=======
+.bg-\[\#F8981D\] {
+>>>>>>> feature/diego/edit-view
   --tw-bg-opacity: 1;
-  background-color: rgb(254 202 202 / var(--tw-bg-opacity));
+  background-color: rgb(248 152 29 / var(--tw-bg-opacity));
 }
+<<<<<<< HEAD
 .bg-\[\#F8981D\] {
   --tw-bg-opacity: 1;
   background-color: rgb(248 152 29 / var(--tw-bg-opacity));
@@ -1713,20 +1869,27 @@ select {
   background-color: rgb(251 146 60 / var(--tw-bg-opacity));
 }
 .bg-gray-700 {
+=======
+.bg-\[\#FAF3F3\] {
+>>>>>>> feature/diego/edit-view
   --tw-bg-opacity: 1;
-  background-color: rgb(55 65 81 / var(--tw-bg-opacity));
+  background-color: rgb(250 243 243 / var(--tw-bg-opacity));
 }
-.bg-transparent {
-  background-color: transparent;
-}
+<<<<<<< HEAD
 .bg-\[\#FAF3F3\] {
   --tw-bg-opacity: 1;
   background-color: rgb(250 243 243 / var(--tw-bg-opacity));
+=======
+.bg-\[\#A9171C\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(169 23 28 / var(--tw-bg-opacity));
+>>>>>>> feature/diego/edit-view
 }
 .bg-black {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
+<<<<<<< HEAD
 .bg-green-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(187 247 208 / var(--tw-bg-opacity));
@@ -1738,25 +1901,58 @@ select {
 .bg-\[\#ecc188\] {
   --tw-bg-opacity: 1;
   background-color: rgb(236 193 136 / var(--tw-bg-opacity));
-}
-.bg-blue-500 {
+=======
+.bg-indigo-700 {
   --tw-bg-opacity: 1;
-  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+  background-color: rgb(67 56 202 / var(--tw-bg-opacity));
 }
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+.bg-red-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 202 202 / var(--tw-bg-opacity));
+>>>>>>> feature/diego/edit-view
+}
+.bg-green-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(187 247 208 / var(--tw-bg-opacity));
+}
+<<<<<<< HEAD
 .bg-gray-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+=======
+.bg-\[\#E61818\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(230 24 24 / var(--tw-bg-opacity));
+}
+.bg-gray-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(55 65 81 / var(--tw-bg-opacity));
+}
+.bg-transparent {
+  background-color: transparent;
+>>>>>>> feature/diego/edit-view
 }
 .bg-green-500 {
   --tw-bg-opacity: 1;
+<<<<<<< HEAD
   background-color: rgb(34 197 94 / var(--tw-bg-opacity));
+=======
+  background-color: rgb(236 193 136 / var(--tw-bg-opacity));
+>>>>>>> feature/diego/edit-view
 }
 .bg-opacity-25 {
   --tw-bg-opacity: 0.25;
 }
+<<<<<<< HEAD
 .bg-opacity-60 {
   --tw-bg-opacity: 0.6;
 }
+=======
+>>>>>>> feature/diego/edit-view
 .bg-cover {
   background-size: cover;
 }
@@ -1776,11 +1972,17 @@ select {
 .p-6 {
   padding: 1.5rem;
 }
+.p-4 {
+  padding: 1rem;
+}
+.p-0 {
+  padding: 0px;
+}
 .p-16 {
   padding: 4rem;
 }
-.p-4 {
-  padding: 1rem;
+.p-10 {
+  padding: 2.5rem;
 }
 .p-5 {
   padding: 1.25rem;
@@ -1791,9 +1993,12 @@ select {
 .p-1 {
   padding: 0.25rem;
 }
+<<<<<<< HEAD
 .p-10 {
   padding: 2.5rem;
 }
+=======
+>>>>>>> feature/diego/edit-view
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -1850,6 +2055,7 @@ select {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
 }
+<<<<<<< HEAD
 .px-9 {
   padding-left: 2.25rem;
   padding-right: 2.25rem;
@@ -1858,9 +2064,15 @@ select {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
 }
+=======
+>>>>>>> feature/diego/edit-view
 .py-2\.5 {
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
+}
+.px-9 {
+  padding-left: 2.25rem;
+  padding-right: 2.25rem;
 }
 .px-8 {
   padding-left: 2rem;
@@ -1870,6 +2082,13 @@ select {
   padding-top: 0.375rem;
   padding-bottom: 0.375rem;
 }
+<<<<<<< HEAD
+=======
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+>>>>>>> feature/diego/edit-view
 .px-12 {
   padding-left: 3rem;
   padding-right: 3rem;
@@ -1906,6 +2125,21 @@ select {
 }
 .pt-0 {
   padding-top: 0px;
+<<<<<<< HEAD
+=======
+}
+.pt-8 {
+  padding-top: 2rem;
+}
+.pl-4 {
+  padding-left: 1rem;
+}
+.pt-0\.5 {
+  padding-top: 0.125rem;
+}
+.pl-5 {
+  padding-left: 1.25rem;
+>>>>>>> feature/diego/edit-view
 }
 .pl-5 {
   padding-left: 1.25rem;
@@ -1913,6 +2147,7 @@ select {
 .pl-4 {
   padding-left: 1rem;
 }
+<<<<<<< HEAD
 .pt-8 {
   padding-top: 2rem;
 }
@@ -1922,6 +2157,8 @@ select {
 .pb-2 {
   padding-bottom: 0.5rem;
 }
+=======
+>>>>>>> feature/diego/edit-view
 .text-left {
   text-align: left;
 }
@@ -1978,18 +2215,30 @@ select {
 .font-semibold {
   font-weight: 600;
 }
+<<<<<<< HEAD
 .font-bold {
   font-weight: 700;
 }
 .font-black {
   font-weight: 900;
 }
+=======
+>>>>>>> feature/diego/edit-view
 .font-extrabold {
   font-weight: 800;
 }
 .font-thin {
   font-weight: 100;
 }
+<<<<<<< HEAD
+=======
+.font-bold {
+  font-weight: 700;
+}
+.font-black {
+  font-weight: 900;
+}
+>>>>>>> feature/diego/edit-view
 .uppercase {
   text-transform: uppercase;
 }
@@ -2013,15 +2262,21 @@ select {
 }
 .leading-normal {
   line-height: 1.5;
+<<<<<<< HEAD
 }
 .leading-3 {
   line-height: .75rem;
 }
 .leading-relaxed {
   line-height: 1.625;
+=======
+>>>>>>> feature/diego/edit-view
 }
 .leading-6 {
   line-height: 1.5rem;
+}
+.leading-relaxed {
+  line-height: 1.625;
 }
 .tracking-widest {
   letter-spacing: 0.1em;
@@ -2093,24 +2348,43 @@ select {
   color: rgb(34 197 94 / var(--tw-text-opacity));
 }
 .text-slate-400 {
+<<<<<<< HEAD
   --tw-text-opacity: 1;
   color: rgb(148 163 184 / var(--tw-text-opacity));
 }
 .text-slate-500 {
   --tw-text-opacity: 1;
   color: rgb(100 116 139 / var(--tw-text-opacity));
+=======
+  --tw-text-opacity: 1;
+  color: rgb(148 163 184 / var(--tw-text-opacity));
+}
+.text-gray-200 {
+  --tw-text-opacity: 1;
+  color: rgb(229 231 235 / var(--tw-text-opacity));
+}
+.text-gray-300 {
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
+>>>>>>> feature/diego/edit-view
 }
 .text-\[\#F8981D\] {
   --tw-text-opacity: 1;
   color: rgb(248 152 29 / var(--tw-text-opacity));
 }
+<<<<<<< HEAD
 .text-gray-300 {
   --tw-text-opacity: 1;
   color: rgb(209 213 219 / var(--tw-text-opacity));
-}
-.text-gray-200 {
+=======
+.text-\[\#F8981D\] {
   --tw-text-opacity: 1;
-  color: rgb(229 231 235 / var(--tw-text-opacity));
+  color: rgb(248 152 29 / var(--tw-text-opacity));
+>>>>>>> feature/diego/edit-view
+}
+.text-orange-400 {
+  --tw-text-opacity: 1;
+  color: rgb(251 146 60 / var(--tw-text-opacity));
 }
 .text-orange-400 {
   --tw-text-opacity: 1;
@@ -2211,13 +2485,13 @@ select {
   -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
           backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
-.backdrop-grayscale-0 {
-  --tw-backdrop-grayscale: grayscale(0);
+.backdrop-grayscale {
+  --tw-backdrop-grayscale: grayscale(100%);
   -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
           backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
-.backdrop-grayscale {
-  --tw-backdrop-grayscale: grayscale(100%);
+.backdrop-grayscale-0 {
+  --tw-backdrop-grayscale: grayscale(0);
   -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
           backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
@@ -2371,6 +2645,7 @@ hr {
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
 }
+<<<<<<< HEAD
 .hover\:bg-\[\#ffba25\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(255 186 37 / var(--tw-bg-opacity));
@@ -2392,9 +2667,19 @@ hr {
   background-color: rgb(185 28 28 / var(--tw-bg-opacity));
 }
 .hover\:bg-gray-600:hover {
+=======
+.hover\:bg-gray-300:hover {
+>>>>>>> feature/diego/edit-view
   --tw-bg-opacity: 1;
-  background-color: rgb(75 85 99 / var(--tw-bg-opacity));
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
 }
+<<<<<<< HEAD
+=======
+.hover\:bg-\[\#ffba25\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 186 37 / var(--tw-bg-opacity));
+}
+>>>>>>> feature/diego/edit-view
 .hover\:bg-\[\#ecc188\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(236 193 136 / var(--tw-bg-opacity));
@@ -2411,9 +2696,27 @@ hr {
   --tw-bg-opacity: 1;
   background-color: rgb(133 243 7 / var(--tw-bg-opacity));
 }
+<<<<<<< HEAD
 .hover\:bg-blue-700:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(29 78 216 / var(--tw-bg-opacity));
+=======
+.hover\:bg-gray-200:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+}
+.hover\:bg-red-800:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(153 27 27 / var(--tw-bg-opacity));
+}
+.hover\:bg-red-700:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(185 28 28 / var(--tw-bg-opacity));
+}
+.hover\:bg-gray-600:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(75 85 99 / var(--tw-bg-opacity));
+>>>>>>> feature/diego/edit-view
 }
 .hover\:text-gray-500:hover {
   --tw-text-opacity: 1;
@@ -2556,6 +2859,7 @@ hr {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(191 219 254 / var(--tw-ring-opacity));
 }
+<<<<<<< HEAD
 .focus\:ring-gray-500:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(107 114 128 / var(--tw-ring-opacity));
@@ -2563,6 +2867,19 @@ hr {
 .focus\:ring-indigo-700:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(67 56 202 / var(--tw-ring-opacity));
+=======
+.focus\:ring-orange-300:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(253 186 116 / var(--tw-ring-opacity));
+}
+.focus\:ring-\[\#F8981D\]:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(248 152 29 / var(--tw-ring-opacity));
+}
+.focus\:ring-gray-500:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(107 114 128 / var(--tw-ring-opacity));
+>>>>>>> feature/diego/edit-view
 }
 .focus\:ring-red-300:focus {
   --tw-ring-opacity: 1;
@@ -2579,14 +2896,6 @@ hr {
 .focus\:ring-gray-600:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(75 85 99 / var(--tw-ring-opacity));
-}
-.focus\:ring-orange-300:focus {
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(253 186 116 / var(--tw-ring-opacity));
-}
-.focus\:ring-\[\#F8981D\]:focus {
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(248 152 29 / var(--tw-ring-opacity));
 }
 .focus\:ring-opacity-50:focus {
   --tw-ring-opacity: 0.5;
@@ -2632,7 +2941,11 @@ hr {
     border-color: rgb(55 65 81 / var(--tw-border-opacity));
   }
 
+<<<<<<< HEAD
   .dark\:bg-gray-800 {
+=======
+  .dark\:bg-\[\#F8981D\] {
+>>>>>>> feature/diego/edit-view
     --tw-bg-opacity: 1;
     background-color: rgb(31 41 55 / var(--tw-bg-opacity));
   }
@@ -2642,9 +2955,15 @@ hr {
     background-color: rgb(17 24 39 / var(--tw-bg-opacity));
   }
 
+<<<<<<< HEAD
   .dark\:bg-\[\#F8981D\] {
     --tw-bg-opacity: 1;
     background-color: rgb(248 152 29 / var(--tw-bg-opacity));
+=======
+  .dark\:bg-gray-800 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+>>>>>>> feature/diego/edit-view
   }
 
   .dark\:hover\:bg-red-600:hover {
