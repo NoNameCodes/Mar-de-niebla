@@ -33,7 +33,7 @@
                 @if (Route::currentRouteName() == 'dashboard')
                     <div class="flex flex-row items-center ">
                         <a href="{{ route('resources.edit', $resource->id) }}">
-                            <button><i class="fa-solid fa-pen-to-square text-green-500 justify-center text-2xl m-3"></i></button>
+                            <button><i class="fa-solid fa-pen-to-square text-black justify-center text-2xl m-3"></i></button>
                         </a>
                         <form action="{{ route('resources.destroy', $resource->id) }}" method="Post">
                             <a class="btn btn-primary" href="{{ route('resources.edit', $resource->id) }}"></a>
