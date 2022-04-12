@@ -31,6 +31,7 @@ _Para instalarlas ejecutaremos los siguientes comandos:_
 ```
 composer install
 npm install && run dev
+php artisan migrate
 ```
 
 _Y para ejecutar la web en el servidor de desarrollo local:_
@@ -78,3 +79,4 @@ También puedes mirar la lista de todos los [contribuyentes](https://github.com/
 -   Comenta a otros sobre este proyecto 📢.
 -   Invita una cerveza 🍺 a alguien del equipo.
 -   Da las gracias públicamente 🤓.
+-   Pedirle a cualquier miembro del equipo el número de cuenta de PayPal.
