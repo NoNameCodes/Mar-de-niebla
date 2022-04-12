@@ -15,7 +15,7 @@
 
                         <x-card-multiselect :users="$users" />
 
-                        <x-location :location="$location" />
+                        <x-location-create :location="$location" />
 
                         <div class="py-1 mb-0">
                             <textarea id="description" cols="28" rows="5" name="description" placeholder="Descripción/Incidencias"
