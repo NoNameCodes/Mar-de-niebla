@@ -1024,6 +1024,9 @@ select {
 .m-10 {
   margin: 2.5rem;
 }
+.m-4 {
+  margin: 1rem;
+}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -1714,6 +1717,10 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(250 243 243 / var(--tw-bg-opacity));
 }
+.bg-\[\#FFAF48\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 175 72 / var(--tw-bg-opacity));
+}
 .bg-gray-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(17 24 39 / var(--tw-bg-opacity));
@@ -1737,14 +1744,6 @@ select {
 .bg-\[\#ecc188\] {
   --tw-bg-opacity: 1;
   background-color: rgb(236 193 136 / var(--tw-bg-opacity));
-}
-.bg-\[\#FFC376\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 195 118 / var(--tw-bg-opacity));
-}
-.bg-\[\#FFAF48\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 175 72 / var(--tw-bg-opacity));
 }
 .bg-opacity-25 {
   --tw-bg-opacity: 0.25;
@@ -1848,10 +1847,6 @@ select {
 .px-9 {
   padding-left: 2.25rem;
   padding-right: 2.25rem;
-}
-.px-12 {
-  padding-left: 3rem;
-  padding-right: 3rem;
 }
 .px-5 {
   padding-left: 1.25rem;
