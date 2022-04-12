@@ -11,13 +11,12 @@
             @forelse ($reservations as $reservation)
                 <ul class="py-4">
                     <li class="flex justify-start">
-                        <p class="text-left mx-6">{{ $reservation->date }}</p> - <p class="mx-6">
+                        <p class="text-left mx-6">{{ \Carbon\Carbon::parse($reservation->date)->format('d/m/Y') }}</p> - <p class="mx-6">
                             {{ $reservation->name }}</p>- <p class="mx-6">
                             {{ $reservation->phone }}</p>- <p class="mx-6">
                             {{ $reservation->coments }}</p>
                     </li>
                 </ul>
-
             @empty
                 <div class="flex flex-col items-center m-5">
                     <p class="flex justify-center rounded-md bg-gray-200 p-6">¡Este recurso no tiene historial de reservas todavia!

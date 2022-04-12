@@ -15,7 +15,7 @@
                         @foreach ($reservasFuture as $reserva)
                             @if ($reserva->resource_id === $resource->id)
                                 <div class="w-full flex flex-row justify-between p-2">
-                                    <p class="italic p-2 font-thin text-left">{{ $reserva->date }} -
+                                    <p class="italic p-2 font-thin text-left">{{ \Carbon\Carbon::parse( $reserva->date)->format('d/m/Y') }} -
                                         {{ $reserva->name }}</p>
                                    <x-button-delete-reservation :reserva="$reserva" />
                                    <x-modal-delete-reservation :reserva="$reserva" />
