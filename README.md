@@ -1,4 +1,4 @@
-# Web recursos Gijón Oeste
+# Web de recursos Gijón Oeste
 
 _Proyecto pedagógico propuesto por la organización [Mar de Niebla](https://mardeniebla.es) a [Factoría F5](https://factoriaf5.org/) y asignado al equipo [NoNameCoders](#autores-)._
 
@@ -73,7 +73,7 @@ _Para hacer el deploy de la web recomendamos seguir paso a paso la [documentacio
 También puedes mirar la lista de todos los [contribuyentes](https://github.com/NoNameCodes/Mar-de-niebla/graphs/contributors) quienes han participado en este proyecto.
 
 
-## Expresiones de Gratitud 🎁
+## Expresiones de gratitud 🎁
 
 -   Comenta a otros sobre este proyecto 📢.
 -   Invita una cerveza 🍺 a alguien del equipo.
