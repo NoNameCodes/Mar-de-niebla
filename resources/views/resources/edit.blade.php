@@ -33,8 +33,9 @@
                         class="form-control px-3 py-2 my-3 placeholder-blueGray-300 text-blueGray-400 relative bg-white rounded text-m border-orange-400 border-1 rounded-md outline-none focus:outline-none focus:ring w-full">
                 </div>
             </div>
-            <x-location :location="$location" />
+            <x-location-edit :location="$location" :resource="$resource"/>
             <x-prueba :users="$users" />
+            {{-- <x-card-multiselect :users="$users" /> --}}
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Imagen:</strong>
@@ -52,7 +53,7 @@
                     class="block w-full text-sm text-slate-500 file:mr-4 file:py-1 file:px-6 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-orange-500 file:text-white hover:file:bg-violet-100 "  />
             </label>
         </div>
-        {{-- <x-card-multiselect :users="$users" /> --}}
+        
 
        
         <div class="col-xs-12 col-sm-12 col-md-12 flex flex-row justify-center mb-6">

@@ -6,8 +6,10 @@
         <input id="select-role"  >
             @foreach ($users as $user)
                 {{-- <option name="user_id" value="{{ $user->id }}">{{ $user->name }}</option> --}}
-                <input type="checkbox" checked id="cbox1" value="{{ $user->id }}" name="{{ $user->id }}">
-                <label for="{{ $user->id }}">{{ $user->name }}</label>
+                @if(Auth::user()->id != $user->id)
+                  <input type="checkbox" checked id="cbox1" value="{{ $user->id }}" name="{{ $user->id }}">
+                  <label for="{{ $user->id }}">{{ $user->name }}</label>
+                @endif
             @endforeach 
             
     </div>

@@ -52,8 +52,9 @@ class ResourceCRUDController extends Controller
         }
         $resource->save();
         $usuario=User::all();
+        $resource->user()->attach($user);
         foreach ($usuario as $usuarios){
-        $resource->user()->attach($request->input($usuarios->id));
+         $resource->user()->attach($request->input($usuarios->id));
         }
         return redirect('home')
             ->with('success', '¡Recurso creado correctamente!');
@@ -98,6 +99,7 @@ class ResourceCRUDController extends Controller
         foreach ($usuario as $usuarios){
         $resource->user()->detach($request->input($usuarios->id));
         }
+        $resource->user()->attach(Auth::user()->id);
         foreach ($usuario as $usuarios){
         $resource->user()->attach($request->input($usuarios->id));
         }

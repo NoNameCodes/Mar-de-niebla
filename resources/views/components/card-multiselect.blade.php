@@ -15,8 +15,10 @@
             <form action="/action_page.php">
                 <div class="dropdown">
                      @foreach ($users as $user)
+                       @if(Auth::user()->id != $user->id)
                         <input type="checkbox" name="{{$user->id}}" value="{{$user->id}}">
                         <label for="{{$user->id}}"> {{$user->name}}</label><br>
+                       @endif
                         @endforeach
                 </div>
                     
