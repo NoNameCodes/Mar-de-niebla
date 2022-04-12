@@ -34,10 +34,10 @@ Route::middleware(['auth:sanctum', 'verified', 'approved', 'user'])->group(funct
 });
 
 Route::middleware(['auth:sanctum', 'verified', 'approved', 'admin'])->group(function () {
+    Route::get('aprove/users', [UserPendingController::class, 'index'])->name('admin.users.pending.index');
     Route::get('users', [UserController::class, 'index'])->name('admin.users.index');
     Route::get('users/{user_id}/delete', [UserController::class, 'delete'])->name('admin.users.delete');
     Route::get('users/{user_id}/destroy', [UserController::class, 'destroy'])->name('admin.users.destroy');
-    Route::get('aprove/users', [UserPendingController::class, 'index'])->name('admin.users.pending.index');
     Route::get('aprove/users/{user_id}/', [UserPendingController::class, 'approve'])->name('admin.users.approve');
     Route::get('aprove/users/reject/{user_id}/', [UserPendingController::class, 'reject'])->name('admin.users.reject');
     Route::get('/location', [LocationController::class, 'create'])->name('location.create');
