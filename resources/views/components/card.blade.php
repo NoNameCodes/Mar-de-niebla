@@ -31,15 +31,15 @@
                 </div>
 
                 @if (Route::currentRouteName() == 'dashboard')
-                    <div class="flex flex-row">
+                    <div class="flex flex-row items-center ">
                         <a href="{{ route('resources.edit', $resource->id) }}">
-                            <button><i class="fa-solid fa-pen-to-square text-green-500 text-2xl m-3"></i></button>
+                            <button><i class="fa-solid fa-pen-to-square text-green-500 justify-center text-2xl m-3"></i></button>
                         </a>
                         <form action="{{ route('resources.destroy', $resource->id) }}" method="Post">
                             <a class="btn btn-primary" href="{{ route('resources.edit', $resource->id) }}"></a>
                             @csrf
                             @method('DELETE')
-                            <button><i class="fa-solid fa-trash text-red-700 text-2xl m-3"></i></button>
+                            <button><i class="fa-solid fa-trash  text-black text-2xl m-3"></i></button>
                         </form>
                     </div>
                 @elseif(Route::currentRouteName() == 'home'|| 'resources')
