@@ -63,18 +63,18 @@ _Para hacer el deploy de la web recomendamos seguir paso a paso la [documentacio
 
 ## Autores ✒️
 
-    **[Alba Azcano](https://github.com/Albazcano)** <br>
-    **[Sasha Bidardel](https://github.com/SashaBidardel)** <br>
-    **[Diego Cortina](https://github.com/Cortina17)** <br>
-    **[Caio Da Silva](https://github.com/caiodstx)** <br>
-    **[Daniel Gutiérrez](https://github.com/DanielgDiaz)** <br>
-    **[Irina Petrova](https://github.com/irina-p-d)** <br>
+   **[Alba Azcano](https://github.com/Albazcano)** <br>
+   **[Sasha Bidardel](https://github.com/SashaBidardel)** <br>
+   **[Diego Cortina](https://github.com/Cortina17)** <br>
+   **[Caio Da Silva](https://github.com/caiodstx)** <br>
+   **[Daniel Gutiérrez](https://github.com/DanielgDiaz)** <br>
+   **[Irina Petrova](https://github.com/irina-p-d)** <br>
 
 También puedes mirar la lista de todos los [contribuyentes](https://github.com/NoNameCodes/Mar-de-niebla/graphs/contributors) quienes han participado en este proyecto.
 
 
 ## Expresiones de Gratitud 🎁
 
--   Comenta a otros sobre este proyecto 📢
+-   Comenta a otros sobre este proyecto 📢.
 -   Invita una cerveza 🍺 a alguien del equipo.
 -   Da las gracias públicamente 🤓.
