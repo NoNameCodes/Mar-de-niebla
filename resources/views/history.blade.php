@@ -20,8 +20,7 @@
 
             @empty
                 <div class="flex flex-col items-center m-5">
-                    <p class="flex justify-center rounded-md bg-gray-200 p-6">¡Este recurso no ha tenido reservas
-                        todavia!
+                    <p class="flex justify-center rounded-md bg-gray-200 p-6">¡Este recurso no tiene historial de reservas todavia!
                     </p>
 
                 </div>

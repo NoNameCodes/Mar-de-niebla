@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Reserva;
+
 class HomeController extends Controller
 {
     public function index()
