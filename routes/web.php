@@ -34,7 +34,7 @@ Route::middleware(['auth:sanctum', 'verified', 'approved', 'user'])->group(funct
 });
 
 Route::middleware(['auth:sanctum', 'verified', 'approved', 'admin'])->group(function () {
-    Route::get('aprove/users', [UserPendingController::class, 'index'])->name('admin.users.pending.index');
+    Route::get('/', [UserPendingController::class, 'index'])->name('admin.users.pending.index');
     Route::get('users', [UserController::class, 'index'])->name('admin.users.index');
     Route::get('users/{user_id}/delete', [UserController::class, 'delete'])->name('admin.users.delete');
     Route::get('users/{user_id}/destroy', [UserController::class, 'destroy'])->name('admin.users.destroy');
