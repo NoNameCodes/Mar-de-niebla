@@ -32,7 +32,7 @@
                 <button data-modal-toggle="defaultModal{{$reserva->id}}" type="button"
                     class="text-white bg-red-700 hover:bg-red-800 focus:ring-2 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-red-600 hover:bg-red-700 focus:ring-red-800"
                     type="button" onclick="location.href = '{{ route('reserva.destroy', $reserva->id) }}'">Sí,
-                    anular</button>
+                    anular {{$reserva->id}}</button>
                 <button data-modal-toggle="defaultModal{{$reserva->id}}" type="button"
                     class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 bg-gray-700 text-gray-300 border-gray-500 hover:text-white hover:bg-gray-600 focus:ring-gray-600">No,
                     cancelar</button>

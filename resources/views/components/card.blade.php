@@ -43,7 +43,6 @@
                 @elseif(Route::currentRouteName() == 'home'|| 'resources')
                     <x-button-add-reservation :resource="$resource" />
                 @elseif(Route::currentRouteNAme() =='misreservas')
-                    spa
                 @endif
             </div>
         </div>

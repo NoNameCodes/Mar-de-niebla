@@ -12,7 +12,8 @@
                 <ul class="py-4">
                     <li class="flex justify-start">
                         <p class="text-left mx-6">{{ \Carbon\Carbon::parse($reservation->date)->format('d/m/Y') }}</p> - <p class="mx-6">
-                            {{ $reservation->name }}</p>- <p class="mx-6">
+                            
+                            {{ $reservation->name }}</p> - <p class="mx-6">
                             {{ $reservation->phone }}</p>- <p class="mx-6">
                             {{ $reservation->coments }}</p>
                     </li>
