@@ -24,7 +24,7 @@
                         class="form-control px-3 py-2 my-3 placeholder-blueGray-300 text-blueGray-400 relative bg-white rounded text-m border-orange-400 border-1 rounded-md outline-none focus:outline-none focus:ring w-full">
                 </div>
             </div>
-
+            
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Descripción:</strong>
@@ -33,31 +33,8 @@
                         class="form-control px-3 py-2 my-3 placeholder-blueGray-300 text-blueGray-400 relative bg-white rounded text-m border-orange-400 border-1 rounded-md outline-none focus:outline-none focus:ring w-full">
                 </div>
             </div>
-
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Dirección:</strong>
-                    <select name="location_id" value="{{ $resource->location_id }}" placeholder="Resource Adress"
-                        class="form-control px-3 py-2 my-3 placeholder-blueGray-300 text-blueGray-400 relative bg-white rounded text-m border-orange-400 border-1 rounded-md outline-none focus:outline-none focus:ring w-full"></select>
-                </div>
-            </div>
-
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>User_id:</strong>
-                    <input type="" name="user_id" class="form-control" placeholder="user_id"
-                        value="{{ $resource->user_id }}">
-                </div>
-            </div>
-
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Resource Adress:</strong>
-                    <input type="" name="location_id" value="{{ $resource->location_id }}" class="form-control"
-                        placeholder="Resource Adress">
-                </div>
-            </div>
-
+            <x-location :location="$location" />
+            <x-prueba :users="$users" />
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Imagen:</strong>
@@ -68,13 +45,16 @@
                 </div>
             </div>
         </div>
-
+       
         <div class="col-xs-12 col-sm-12 col-md-12 py-1 m-2 flex flex-row justify-center">
             <label class="block">
                 <input name="img" type="file"
-                    class="block w-full text-sm text-slate-500 file:mr-4 file:py-1 file:px-6 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-orange-500 file:text-white hover:file:bg-violet-100 " />
+                    class="block w-full text-sm text-slate-500 file:mr-4 file:py-1 file:px-6 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-orange-500 file:text-white hover:file:bg-violet-100 "  />
             </label>
         </div>
+        {{-- <x-card-multiselect :users="$users" /> --}}
+
+       
         <div class="col-xs-12 col-sm-12 col-md-12 flex flex-row justify-center mb-6">
             <div class="flex flex-row justify-center my-6">
                 <button class="px-6 py-1 mx-3 block rounded-md text-md font-semibold text-white bg-[#A9171C]">

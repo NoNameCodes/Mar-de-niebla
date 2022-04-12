@@ -12,9 +12,10 @@ use PhpParser\Builder\Use_;
 
 class ResourceCRUDController extends Controller
 {
+
     public function index()
     {
-        $data['resources'] = Resource::orderBy('id', 'desc')->paginate(5);
+        $data['resources'] = Resource::orderBy('id', 'desc')->unique('id')->values()->all()->paginate(5);
         return view('resources.index', $data);
     }
 
@@ -34,7 +35,7 @@ class ResourceCRUDController extends Controller
 
                 $user = Auth::user()->id,
                 $location = Location::all(),
-                $location->id = $request->location,
+                $location->id = $request->location_id,
 
                 "name" => $request->name,
                 "description" => $request->description,
@@ -67,32 +68,43 @@ class ResourceCRUDController extends Controller
 
     public function edit(Resource $resource)
     {
-        return view('resources.edit', compact('resource'));
+        $users=User::all();
+        $location=Location::all();
+        return view('resources.edit', compact('resource','users','location'));
     }
 
     public function update(Request $request, $id)
     {
-        $request->validate([
-            'name' => 'required',
-            'description' => 'required',
-            'img' => 'required',
-            'user_id' => 'required',
-            'location_id' => 'required',
-        ]);
+        if ($request->hasFile("img")) {
+            $file = $request->file("img");
+            $imageName = time() . '_' . $file->getClientOriginalName();
+            $file->move(\public_path("storage/img/"), $imageName);
+        // $request->validate([
+        //     'name' => 'required',
+        //     'description' => 'required',
+        //     'img' => 'required',
+        //     'user_id' => 'required',
+        //     'location_id' => 'required',
+        // ]);
+       
         $resource = Resource::find($id);
         $resource->name = $request->name;
         $resource->description = $request->description;
-        $resource->img = $request->img;
-        $resource->user_id = $request->user_id;
+        $resource->img =$imageName; 
+        // $resource->user_id =  Auth::user()->id;
         $resource->location_id = $request->location_id;
-        $resource->save();
+        $resource->update();
         $usuario=User::all();
+        foreach ($usuario as $usuarios){
+        $resource->user()->detach($request->input($usuarios->id));
+        }
         foreach ($usuario as $usuarios){
         $resource->user()->attach($request->input($usuarios->id));
         }
-        return redirect()->route('resources.index')
+        return redirect()->route('dashboard')
             ->with('success', 'El recurso "' . $resource->name . '" ha sido editado con éxito.');
     }
+}
 
     public function destroy(Resource $resource)
     {
