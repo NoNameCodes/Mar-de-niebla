@@ -9,7 +9,7 @@
         @endif
     </div>
 
-    <div class="flex flex-col justify-center items-center">
+    <div class="flex flex-row justify-center items-center">
         <x-resource-show :resource="$resource" />
     </div>
 
