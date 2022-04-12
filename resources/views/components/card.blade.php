@@ -16,7 +16,10 @@
                                 <div class="w-full flex flex-row justify-between p-2">
                                     <p class="italic p-2 font-thin text-left">{{ $reserva->date }} -
                                         {{ $reserva->name }}</p>
-                                   <x-button-delete-reservation :reserva="$reserva" />
+                                        <div class="flex justify-center column-row">
+                                            <x-button-delete-reservation :reserva="$reserva" class="mx-2"/>
+                                            <x-button-add-reservation :resource="$resource" />
+                                        </div>
                                    <x-modal-delete-reservation :reserva="$reserva" />
                                 </div>
                                 
@@ -40,7 +43,7 @@
                         </form>
                     </div>
                 @elseif(Route::currentRouteName() == 'home'|| 'resources')
-                    <x-button-add-reservation :resource="$resource" />
+                    {{-- <x-button-add-reservation :resource="$resource" /> --}}
                 @elseif(Route::currentRouteNAme() =='misreservas')
                     spa
                 @endif
