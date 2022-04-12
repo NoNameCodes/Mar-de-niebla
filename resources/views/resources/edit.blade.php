@@ -44,6 +44,22 @@
 
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
+                    <strong>User_id:</strong>
+                    <input type="" name="user_id" class="form-control" placeholder="user_id"
+                        value="{{ $resource->user_id }}">
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Resource Adress:</strong>
+                    <input type="" name="location_id" value="{{ $resource->location_id }}" class="form-control"
+                        placeholder="Resource Adress">
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
                     <strong>Imagen:</strong>
                 </div>
                 <div class="m-2 flex flex-row justify-center">
