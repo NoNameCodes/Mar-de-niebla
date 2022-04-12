@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -74,9 +74,9 @@
     </div>
 </body>
 
-</html>
+</html> --}}
 
-{{-- <x-guest-layout>
+<x-guest-layout>
     <x-header />
     <div class="flex flex-col items-center m-6">
         <form action="{{ route('resources.update',$resource->id) }}" method="POST" enctype="multipart/form-data">
@@ -106,7 +106,21 @@
                                     class="block w-full text-sm text-slate-500 file:mr-4 file:py-1 file:px-6 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-orange-500 file:text-white hover:file:bg-violet-100"  value="{{ $resource->img }}" required />
                             </label>
                         </div>
-
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="form-group">
+                                
+                                <input type="hidden" name="user_id" class="form-control" placeholder="user_id"
+                                    value="{{ $resource->user_id }}">
+                            </div>
+                        </div>
+        
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="form-group">
+                               
+                                <input type="hidden" name="location_id" value="{{ $resource->location_id }}" class="form-control"
+                                    placeholder="Resource Adress">
+                            </div>
+                        </div>
 
                         <div class="grid grid-cols-2 gap-1 place-items-center h-26 mt-3">
                             <button
@@ -122,4 +136,4 @@
     </div>
 </x-guest-layout>
 
-<x-footer /> --}}
+<x-footer />

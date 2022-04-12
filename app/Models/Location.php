@@ -17,4 +17,8 @@ class Location extends Model
     {
         return $this->hasMany(User::class);
     }
+    public function resources()
+    {
+        return $this->hasMany(Resource::class);
+    }
 }
