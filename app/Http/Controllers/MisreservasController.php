@@ -11,9 +11,10 @@ class MisreservasController extends Controller
 {
     public function index()
     {
-              
+        $actualDate = date('Y-m-d');
         $user_id = Auth::user();
-        $reservas = Reserva::where('user_id', $user_id->id)->get();
+        $reservasFuture = Reserva::where('user_id', $user_id->id)->where('date', '>=' , $actualDate)->get();
+             
         $reservasId = Reserva::where('user_id', $user_id->id)->get('reservas.resource_id')->unique('resource_id')->values()->all();
         $resources =  [];         
             foreach ($reservasId as $reserva) {
@@ -21,6 +22,14 @@ class MisreservasController extends Controller
                array_push($resources, $resource);
         }   
         
-        return view('misreservas', compact('resources', 'reservas'));
+        return view('misreservas', compact('resources', 'reservasFuture'));
     }
+        
 }
+
+
+
+    
+    
+    
+   

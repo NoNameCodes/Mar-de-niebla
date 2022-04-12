@@ -11,6 +11,7 @@ class Card extends Component
 {
 
     public $resource;
+    public $reservasFuture;
     
     /**
      * Create a new component instance.
@@ -18,9 +19,10 @@ class Card extends Component
      * @return void
      */
 
-    public function __construct($resource)
+    public function __construct($resource, $reservasFuture='')
     {
         $this->resource=$resource;
+        $this->reservasFuture=$reservasFuture;
         
     }
 
@@ -31,8 +33,8 @@ class Card extends Component
      */
     public function render()
     {
-        $user_id = Auth::user();
-        $reservas = Reserva::where('user_id', $user_id->id)->get();
-        return view('components.card', compact('reservas'));
+       
+        $reservas = Reserva::all();
+        return view('components.card');
     }
 }

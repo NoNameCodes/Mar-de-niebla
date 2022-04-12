@@ -11,7 +11,8 @@
                     <a href=" {{ route('resources.show', $resource) }}">
                     <p class="align-middle font-extrabold text-xl">{{ $resource->name }}</p></a>
                     @if (Route::currentRouteName() == 'misreservas')
-                        @foreach ($reservas as $reserva)
+                                     
+                        @foreach ($reservasFuture as $reserva)
                             @if ($reserva->resource_id === $resource->id)
                                 <div class="w-full flex flex-row justify-between p-2">
                                     <p class="italic p-2 font-thin text-left">{{ $reserva->date }} -
