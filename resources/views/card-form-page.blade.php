@@ -5,7 +5,7 @@
             @csrf
 
             <div class="w-80 h-100 bg-white border-orange-400 border-2 rounded-md mx-8 mt-10 mb-10">
-                <div class=" bg-white rounded-md px-9 py-10 max-w-2xl">
+                <div class=" bg-white rounded-md px-9 py-4 max-w-2xl">
                     <div class="space-y-4 px-15">
 
                         <div class="mb-1 pt-0">
@@ -31,7 +31,7 @@
                                     required />
                             </label>
                         </div>
-                        <div class="grid grid-cols-2 gap-1 place-items-center h-26 mt-3">
+                        <div class="place-items-center h-26 mt-3">
                             <button type="submit"
                                 class="px-4 py-1 mx-auto block rounded-md text-md font-semibold text-white bg-[#92C954]">Guardar</button>
                         </div>
