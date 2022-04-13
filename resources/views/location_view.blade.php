@@ -26,7 +26,7 @@
     <x-header />
     <div class="flex justify-center">
         @if (Session::has('message'))
-            <div class="lg:text-xl sm:text-md border-2 border-red-400 bg-red-200 rounded-md m-5 p-16">
+            <div class="lg:text-xl sm:text-md border-2 border-green-400 bg-green-200 rounded-md m-5 p-16">
                 {{ session('message') }}
             </div>
         @endif
