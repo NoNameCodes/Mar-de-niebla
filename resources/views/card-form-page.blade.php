@@ -8,7 +8,7 @@
                 <div class=" bg-white rounded-md px-9 py-10 max-w-2xl">
                     <div class="space-y-4 px-15">
 
-                        <div class="mb-3 pt-0">
+                        <div class="mb-1 pt-0">
                             <input type="text" name="name" placeholder="Nombre del recurso"
                                 class="px-3 py-2 mt-3 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-m border-orange-400 border-1 rounded-md outline-none focus:outline-none focus:ring w-full" required/>
                         </div>
@@ -31,9 +31,7 @@
 
 
                         <div class="grid grid-cols-2 gap-1 place-items-center h-26 mt-3">
-                            <button
-                                class="px-6 py-1 mx-auto block rounded-md text-md font-semibold text-white bg-[#A9171C]"><a
-                                    href="{{ url('/dashboard') }}">Cerrar</a></button>
+                            <x-button-close/>
                             <button type="submit"
                                 class="px-4 py-1 mx-auto block rounded-md text-md font-semibold text-white bg-[#92C954]">Guardar</button>
                         </div>
