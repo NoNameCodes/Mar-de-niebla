@@ -15,7 +15,7 @@
 
     <form action="{{ route('reserva.store', $resource->id) }}" class="footerdown " method="POST">
         @csrf
-        <div class=" mb-6 flex flex-col items-center justify-center  ">
+        <div class=" mb-6 flex flex-col items-center justify-center">
             <label for="date" class="text-gray-700 italic">Seleccione el día</label>
             <input type="date"
                 class="form-control flex items-center text-gray-700   border-orange-500 rounded-xl  bg-[#FAF3F3] mb-6"
