@@ -4,7 +4,11 @@
     name="location_id">
         <option disabled selected>--Localización--</option>
         @foreach ($location as $location)
-            <option value="{{ $location->id }}">{{ $location->address }}</option>
+                @if ($resource->location_id== $location->id )
+                  <option value="{{ $location->id }}" selected>{{ $location->address }}</option>
+                @else
+                  <option value="{{ $location->id }}" >{{ $location->address }}</option>
+                @endif
         @endforeach
     </select>
 </div>
