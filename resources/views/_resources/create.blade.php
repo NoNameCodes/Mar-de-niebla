@@ -1,5 +1,5 @@
-<x-guest-layout>
-    <x-header />
+@extends('layouts.app', ['title' => 'Añadir Recurso | Barrio Oeste'])
+@section('main')
     <div class="flex flex-col items-center justify-center m-3">
         <form action="{{ route('resources.store') }}" method="post" enctype="multipart/form-data">
             @csrf
@@ -11,7 +11,7 @@
                             <input type="text" name="name" placeholder="Nombre del recurso"
                                 class="px-3 py-2 mt-3 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-m border-orange-400 border-1 rounded-md outline-none focus:outline-none focus:ring w-full"
                                 required />
-                        </div>                   
+                        </div>
 
                         <x-location :location="$location" />
 
@@ -23,7 +23,7 @@
 
                         <div class="">
                             <x-card-multiselect :users="$users" />
-                       </div>
+                        </div>
 
                         <div class="py-1">
                             <label class="block">
@@ -43,6 +43,4 @@
         </form>
         <x-button-close />
     </div>
-</x-guest-layout>
-
-<x-footer />
+@endsection

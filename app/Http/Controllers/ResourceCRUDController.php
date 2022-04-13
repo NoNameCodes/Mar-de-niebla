@@ -21,7 +21,9 @@ class ResourceCRUDController extends Controller
 
     public function create()
     {
-        return view('resources.create');
+        $users = User::get();
+        $location = Location::get();
+        return view('_resources.create', compact('users', 'location'));
     }
 
     public function store(Request $request)
@@ -44,17 +46,16 @@ class ResourceCRUDController extends Controller
                 "location_id" => $location->id,
             ]);
         }
-        if ($location->id==null){
+        if ($location->id == null) {
             $message = 'El recurso no ha podido ser añadido ya que la localización no puede quedar vacía.Por favor añada una localización al recurso compartido';
             Session::flash('message_location', $message);
-            return view('welcome');
-          
+            return view('_user.home');
         }
         $resource->save();
-        $usuario=User::all();
+        $usuario = User::all();
         $resource->user()->attach($user);
-        foreach ($usuario as $usuarios){
-         $resource->user()->attach($request->input($usuarios->id));
+        foreach ($usuario as $usuarios) {
+            $resource->user()->attach($request->input($usuarios->id));
         }
         return redirect('home')
             ->with('success', '¡Recurso creado correctamente!');
@@ -62,16 +63,16 @@ class ResourceCRUDController extends Controller
 
     public function show($id)
     {
-        return view('resource', [
+        return view('_resources.show', [
             'resource' => Resource::findOrFail($id)
         ]);
     }
 
     public function edit(Resource $resource)
     {
-        $users=User::all();
-        $location=Location::all();
-        return view('resources.edit', compact('resource','users','location'));
+        $users = User::all();
+        $location = Location::all();
+        return view('_resources.edit', compact('resource', 'users', 'location'));
     }
 
     public function update(Request $request, $id)
@@ -80,33 +81,33 @@ class ResourceCRUDController extends Controller
             $file = $request->file("img");
             $imageName = time() . '_' . $file->getClientOriginalName();
             $file->move(\public_path("storage/img/"), $imageName);
-        // $request->validate([
-        //     'name' => 'required',
-        //     'description' => 'required',
-        //     'img' => 'required',
-        //     'user_id' => 'required',
-        //     'location_id' => 'required',
-        // ]);
-       
-        $resource = Resource::find($id);
-        $resource->name = $request->name;
-        $resource->description = $request->description;
-        $resource->img =$imageName; 
-        // $resource->user_id =  Auth::user()->id;
-        $resource->location_id = $request->location_id;
-        $resource->update();
-        $usuario=User::all();
-        foreach ($usuario as $usuarios){
-        $resource->user()->detach($request->input($usuarios->id));
+            // $request->validate([
+            //     'name' => 'required',
+            //     'description' => 'required',
+            //     'img' => 'required',
+            //     'user_id' => 'required',
+            //     'location_id' => 'required',
+            // ]);
+
+            $resource = Resource::find($id);
+            $resource->name = $request->name;
+            $resource->description = $request->description;
+            $resource->img = $imageName;
+            // $resource->user_id =  Auth::user()->id;
+            $resource->location_id = $request->location_id;
+            $resource->update();
+            $usuario = User::all();
+            foreach ($usuario as $usuarios) {
+                $resource->user()->detach($request->input($usuarios->id));
+            }
+            $resource->user()->attach(Auth::user()->id);
+            foreach ($usuario as $usuarios) {
+                $resource->user()->attach($request->input($usuarios->id));
+            }
+            return redirect()->route('dashboard')
+                ->with('success', 'El recurso "' . $resource->name . '" ha sido editado con éxito.');
         }
-        $resource->user()->attach(Auth::user()->id);
-        foreach ($usuario as $usuarios){
-        $resource->user()->attach($request->input($usuarios->id));
-        }
-        return redirect()->route('dashboard')
-            ->with('success', 'El recurso "' . $resource->name . '" ha sido editado con éxito.');
     }
-}
 
     public function destroy(Resource $resource)
     {

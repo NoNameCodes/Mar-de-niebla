@@ -1,9 +1,5 @@
-<x-guest-layout>
-    <x-header>
-        <a href="{{ route('login') }}" style="text-decoration: none">
-            <h3 style="color: #F8981D">Login</h3>
-        </a>
-    </x-header>
+@extends('layouts.app', ['title' => 'Registro | Barrio Oeste'])
+@section('main')
     <x-jet-authentication-card>
         <x-slot name="logo">
             <x-jet-authentication-card-logo />
@@ -17,13 +13,13 @@
             @csrf
 
             <div>
-                <x-jet-input id="name" class="block mt-5 w-full" type="text" name="name" :value="old('name')" required
-                    autofocus autocomplete="name" placeholder="Nombre de la organización" />
+                <x-jet-input id="name" class="block mt-5 w-full" type="text" name="name" :value="old('name')" required autofocus
+                    autocomplete="name" placeholder="Nombre de la organización" />
             </div>
 
             <div class="mt-4">
-                <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')"
-                    required placeholder="Email de la organización" />
+                <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required
+                    placeholder="Email de la organización" />
             </div>
 
             <div class="mt-4">
@@ -33,8 +29,7 @@
 
             <div class="mt-4">
                 <x-jet-input id="password_confirmation" class="block mt-1 w-full" type="password"
-                    name="password_confirmation" required autocomplete="new-password"
-                    placeholder="Repite la contraseña" />
+                    name="password_confirmation" required autocomplete="new-password" placeholder="Repite la contraseña" />
             </div>
 
             @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
@@ -67,5 +62,4 @@
             </div>
         </form>
     </x-jet-authentication-card>
-    <x-footer />
-</x-guest-layout>
+@endsection

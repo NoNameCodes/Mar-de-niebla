@@ -13,7 +13,6 @@ class DashboardController extends Controller
         $user_id = Auth::user()->id;
         $resources = Resource::where('user_id', $user_id)->paginate(5);
         $reservas = Reserva::all();
-        return view('dashboard', compact('resources', 'reservas'));
-
+        return view('_user.dashboard', compact('resources', 'reservas'));
     }
 }

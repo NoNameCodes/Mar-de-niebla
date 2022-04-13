@@ -11,7 +11,7 @@ class UserPendingController extends Controller
     public function index()
     {
         $users = User::whereNull('aproved_at')->get();
-        return view('components.pending-aproval', compact('users'));
+        return view('_admin.orgs.requests', compact('users'));
     }
 
     public function approve($user_id)

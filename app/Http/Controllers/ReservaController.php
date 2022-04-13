@@ -20,7 +20,7 @@ class ReservaController extends Controller
     public function create($id)
     {
         $resource = Resource::find($id);
-        return view('reserva', ['resource' => $resource]);
+        return view('_reserves.create', ['resource' => $resource]);
     }
 
     public function store(Request $request, $id)

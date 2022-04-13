@@ -130,8 +130,16 @@
                     </ul>
                 </div>
                 <script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js"></script>
-            @endauth
-            {{ $slot }}
-        </div>
+            </div>
+        @endauth
+        @if (Route::is('login'))
+            <a href="{{ route('register') }}" style="text-decoration: none">
+                <h3 style="color: #F8981D">Registro</h3>
+            </a>
+        @elseif (Route::is('register'))
+            <a href="{{ route('login') }}" style="text-decoration: none">
+                <h3 style="color: #F8981D">Login</h3>
+            </a>
+        @endif
     </div>
 </header>

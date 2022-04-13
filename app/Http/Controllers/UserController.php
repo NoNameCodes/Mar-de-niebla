@@ -9,7 +9,7 @@ class UserController extends Controller
     public function index()
     {
         $users = User::get()->where('admin', false);
-        return view('admin-dashboard', compact('users'));
+        return view('_admin.orgs.index', compact('users'));
     }
 
     public function destroy($id)

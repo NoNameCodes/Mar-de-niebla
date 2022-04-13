@@ -1125,9 +1125,6 @@ select {
 .-mt-px {
   margin-top: -1px;
 }
-.mt-40 {
-  margin-top: 10rem;
-}
 .mt-20 {
   margin-top: 5rem;
 }
@@ -1157,6 +1154,9 @@ select {
 }
 .mb-40 {
   margin-bottom: 10rem;
+}
+.mt-40 {
+  margin-top: 10rem;
 }
 .block {
   display: block;
@@ -1206,11 +1206,11 @@ select {
 .h-20 {
   height: 5rem;
 }
-.h-full {
-  height: 100%;
-}
 .h-screen {
   height: 100vh;
+}
+.h-full {
+  height: 100%;
 }
 .h-11 {
   height: 2.75rem;
@@ -1286,6 +1286,9 @@ select {
 }
 .w-9\/12 {
   width: 75%;
+}
+.w-96 {
+  width: 24rem;
 }
 .min-w-0 {
   min-width: 0px;
