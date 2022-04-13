@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('address');
             $table->timestamps();
             $table->unsignedBigInteger('resource_id')->nullable();
-            $table->foreign('resource_id')->references('id')->on('resources')->onDelete('cascade');
+            $table->foreign('resource_id')->references('id')->on('resources')->nullOnDelete();
         });
     }
 
