@@ -47,25 +47,25 @@
                                         <a href="{{ route('dashboard') }}"
                                             class="text-sm hover:bg-gray-300 text-gray-700 block text-center px-4 py-2">Dashboard</a>
                                     </li>
-                                @elseif (Route::is('admin.users.index'))
-                                    <li>
-                                        <a href="{{ route('location.create') }}"
-                                            class="text-sm hover:bg-gray-300 text-gray-700 block text-center px-4 py-2">Añadir
-                                            localización</a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ route('location.vista') }}"
-                                            class="text-sm hover:bg-gray-300 text-gray-700 block text-center px-4 py-2">Lista
-                                            de localizaciones</a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ route('admin.users.pending.index') }}"
-                                            class="text-sm hover:bg-gray-300 text-gray-700 block text-center px-4 py-2">Validaciones
-                                            pendientes</a>
-                                    </li>
+                                @elseif (Route::is('admin.users.pending.index'))
+                                <li>
+                                    <a href="{{ route('location.create') }}"
+                                    class="text-sm hover:bg-gray-300 text-gray-700 block text-center px-4 py-2">Añadir
+                                    localización</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('location.vista') }}"
+                                    class="text-sm hover:bg-gray-300 text-gray-700 block text-center px-4 py-2">Lista
+                                    de localizaciones</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('admin.users.index') }}"
+                                        class="text-sm hover:bg-gray-300 text-gray-700 block text-center px-4 py-2">Gestionar
+                                        organizaciones</a>
+                                </li>
                                 @elseif (Route::is('location.vista'))
                                     <li>
-                                        <a href="{{ route('admin.users.index') }}"
+                                        <a href="{{ route('admin.users.pending.index') }}"
                                             class="text-sm hover:bg-gray-300 text-gray-700 block text-center px-4 py-2">Admin
                                             home</a>
                                     </li>
@@ -75,9 +75,8 @@
                                             localización</a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('admin.users.pending.index') }}"
-                                            class="text-sm hover:bg-gray-300 text-gray-700 block text-center px-4 py-2">Validaciones
-                                            pendientes</a>
+                                        <a href="{{ route('admin.users.index') }}"
+                                            class="text-sm hover:bg-gray-300 text-gray-700 block text-center px-4 py-2">Gestionar organizaciones</a>
                                     </li>
                                 @elseif (Route::is('location.create'))
                                     <li>
@@ -91,38 +90,37 @@
                                             de localizaciones</a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('admin.users.pending.index') }}"
-                                            class="text-sm hover:bg-gray-300 text-gray-700 block text-center px-4 py-2">Validaciones
-                                            pendientes</a>
-                                    </li>
-                                @elseif (Route::is('admin.users.pending.index'))
-                                    <li>
                                         <a href="{{ route('admin.users.index') }}"
-                                            class="text-sm hover:bg-gray-300  text-gray-700 block text-center px-4 py-2">Admin
-                                            home</a>
+                                            class="text-sm hover:bg-gray-300 text-gray-700 block text-center px-4 py-2">Gestionar
+                                            organizaciones</a>
                                     </li>
+                                @elseif (Route::is('admin.users.index'))
                                     <li>
-                                        <a href="{{ route('location.vista') }}"
-                                            class="text-sm hover:bg-gray-300  text-gray-700 block text-center px-4 py-2">Lista
-                                            de localizaciones</a>
+                                        <a href="{{ route('admin.users.pending.index') }}"
+                                            class="text-sm hover:bg-gray-300 text-gray-700 block text-center px-4 py-2">Admin home</a>
                                     </li>
                                     <li>
                                         <a href="{{ route('location.create') }}"
-                                            class="text-sm hover:bg-gray-300  text-gray-700 block text-center px-4 py-2">Añadir
-                                            localización</a>
+                                        class="text-sm hover:bg-gray-300 text-gray-700 block text-center px-4 py-2">Añadir
+                                        localización</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('location.vista') }}"
+                                            class="text-sm hover:bg-gray-300 text-gray-700 block text-center px-4 py-2">Lista
+                                            de localizaciones</a>
                                     </li>
                                 @else
                                     <li>
                                         <a href="{{ route('home') }}"
-                                            class="text-sm hover:bg-gray-300  text-gray-700 block text-center px-4 py-2">Home</a>
+                                            class="text-sm hover:bg-gray-300 text-gray-700 block text-center px-4 py-2">Home</a>
                                     </li>
                                     <li>
                                         <a href="{{ route('dashboard') }}"
-                                            class="text-sm hover:bg-gray-300  text-gray-700 block text-center px-4 py-2">Dashboard</a>
+                                            class="text-sm hover:bg-gray-300 text-gray-700 block text-center px-4 py-2">Dashboard</a>
                                     </li>
                                     <li>
                                         <a href="{{ route('misreservas') }}"
-                                            class="text-sm hover:bg-gray-300  text-gray-700 block text-center px-4 py-2">Mis
+                                            class="text-sm hover:bg-gray-300 text-gray-700 block text-center px-4 py-2">Mis
                                             reservas</a>
                                     </li>
                             @endif
