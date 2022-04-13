@@ -17,7 +17,10 @@
                                 <div class="w-full flex flex-row justify-between p-2">
                                     <p class="italic p-2 font-thin text-left">{{ \Carbon\Carbon::parse( $reserva->date)->format('d/m/Y') }} -
                                         {{ $reserva->name }}</p>
-                                   <x-button-delete-reservation :reserva="$reserva" />
+                                        <div class="flex justify-center column-row">
+                                            <x-button-delete-reservation :reserva="$reserva" class="mx-2"/>
+                                            <x-button-add-reservation :resource="$resource" />
+                                        </div>
                                    <x-modal-delete-reservation :reserva="$reserva" />
                                 </div>
                                 
@@ -29,19 +32,19 @@
                 </div>
 
                 @if (Route::currentRouteName() == 'dashboard')
-                    <div class="flex flex-row">
+                    <div class="flex flex-row items-center ">
                         <a href="{{ route('resources.edit', $resource->id) }}">
-                            <button><i class="fa-solid fa-pen-to-square text-green-500 text-2xl m-3"></i></button>
+                            <button><i class="fa-solid fa-pen-to-square text-black justify-center text-2xl m-3"></i></button>
                         </a>
                         <form action="{{ route('resources.destroy', $resource->id) }}" method="Post">
                             <a class="btn btn-primary" href="{{ route('resources.edit', $resource->id) }}"></a>
                             @csrf
                             @method('DELETE')
-                            <button><i class="fa-solid fa-trash text-red-700 text-2xl m-3"></i></button>
+                            <button><i class="fa-solid fa-trash  text-black text-2xl m-3"></i></button>
                         </form>
                     </div>
                 @elseif(Route::currentRouteName() == 'home'|| 'resources')
-                    <x-button-add-reservation :resource="$resource" />
+                    {{-- <x-button-add-reservation :resource="$resource" /> --}}
                 @elseif(Route::currentRouteNAme() =='misreservas')
                 @endif
             </div>
