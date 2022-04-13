@@ -19,22 +19,15 @@
 
     <!-- Scripts -->
     <script src="{{ mix('js/app.js') }}" defer></script>
+
 </head>
 
 <body>
-
-    <header>
-        <x-header />
-    </header>
-
+    <x-header />
     <main>
         @yield('main')
     </main>
-
-    <footer>
-        <x-footer />
-    </footer>
-
+    <x-footer />
 </body>
 
 </html>
