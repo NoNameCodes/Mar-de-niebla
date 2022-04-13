@@ -1,28 +1,29 @@
 <x-guest-layout>
     <x-header />
-    <div class="flex flex-col items-center m-6">
+    <div class="flex flex-col items-center justify-center m-3">
         <form action="{{ route('resources.store') }}" method="post" enctype="multipart/form-data">
             @csrf
 
-            <div class="w-80 h-100 bg-white border-orange-400 border-2 rounded-md mx-8 mt-10 mb-10">
-                <div class=" bg-white rounded-md px-9 py-4 max-w-2xl">
-                    <div class="space-y-4 px-15">
-
-                        <div class="mb-1 pt-0">
+            <div class="w-100 h-100 bg-white border-orange-400 border-2 rounded-md mx-8 mt-10 mb-10">
+                <div class=" bg-white rounded-md px-5 py-3 max-w-2xl">
+                    <div class="space-y-4 px-12 flex flex-col items-center">
+                        <div class="mb-1 pt-0 relative flex w-full">
                             <input type="text" name="name" placeholder="Nombre del recurso"
                                 class="px-3 py-2 mt-3 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-m border-orange-400 border-1 rounded-md outline-none focus:outline-none focus:ring w-full"
                                 required />
-                        </div>
-
-                        <x-card-multiselect :users="$users" />
+                        </div>                   
 
                         <x-location :location="$location" />
 
                         <div class="py-1 mb-0">
-                            <textarea id="description" cols="24" rows="5" name="description" placeholder="Descripción/Incidencias"
+                            <textarea id="description" cols="32" rows="5" name="description" placeholder="Descripción/Incidencias"
                                 class=" outline-none px-2 text-m border-orange-400 border-1 rounded-md"
                                 required></textarea>
                         </div>
+
+                        <div class="">
+                            <x-card-multiselect :users="$users" />
+                       </div>
 
                         <div class="py-1">
                             <label class="block">
