@@ -48,21 +48,21 @@
                                             class="text-sm hover:bg-gray-300 text-gray-700 block text-center px-4 py-2">Dashboard</a>
                                     </li>
                                 @elseif (Route::is('admin.users.pending.index'))
-                                <li>
-                                    <a href="{{ route('location.create') }}"
-                                    class="text-sm hover:bg-gray-300 text-gray-700 block text-center px-4 py-2">Añadir
-                                    localización</a>
-                                </li>
-                                <li>
-                                    <a href="{{ route('location.vista') }}"
-                                    class="text-sm hover:bg-gray-300 text-gray-700 block text-center px-4 py-2">Lista
-                                    de localizaciones</a>
-                                </li>
-                                <li>
-                                    <a href="{{ route('admin.users.index') }}"
-                                        class="text-sm hover:bg-gray-300 text-gray-700 block text-center px-4 py-2">Gestionar
-                                        organizaciones</a>
-                                </li>
+                                    <li>
+                                        <a href="{{ route('location.create') }}"
+                                            class="text-sm hover:bg-gray-300 text-gray-700 block text-center px-4 py-2">Añadir
+                                            localización</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('location.vista') }}"
+                                            class="text-sm hover:bg-gray-300 text-gray-700 block text-center px-4 py-2">Lista
+                                            de localizaciones</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('admin.users.index') }}"
+                                            class="text-sm hover:bg-gray-300 text-gray-700 block text-center px-4 py-2">Gestionar
+                                            organizaciones</a>
+                                    </li>
                                 @elseif (Route::is('location.vista'))
                                     <li>
                                         <a href="{{ route('admin.users.pending.index') }}"
@@ -76,7 +76,8 @@
                                     </li>
                                     <li>
                                         <a href="{{ route('admin.users.index') }}"
-                                            class="text-sm hover:bg-gray-300 text-gray-700 block text-center px-4 py-2">Gestionar organizaciones</a>
+                                            class="text-sm hover:bg-gray-300 text-gray-700 block text-center px-4 py-2">Gestionar
+                                            organizaciones</a>
                                     </li>
                                 @elseif (Route::is('location.create'))
                                     <li>
@@ -97,12 +98,13 @@
                                 @elseif (Route::is('admin.users.index'))
                                     <li>
                                         <a href="{{ route('admin.users.pending.index') }}"
-                                            class="text-sm hover:bg-gray-300 text-gray-700 block text-center px-4 py-2">Admin home</a>
+                                            class="text-sm hover:bg-gray-300 text-gray-700 block text-center px-4 py-2">Admin
+                                            home</a>
                                     </li>
                                     <li>
                                         <a href="{{ route('location.create') }}"
-                                        class="text-sm hover:bg-gray-300 text-gray-700 block text-center px-4 py-2">Añadir
-                                        localización</a>
+                                            class="text-sm hover:bg-gray-300 text-gray-700 block text-center px-4 py-2">Añadir
+                                            localización</a>
                                     </li>
                                     <li>
                                         <a href="{{ route('location.vista') }}"
