@@ -4,7 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class Card extends Component
+class ButtonAddReservation extends Component
 {
 
     public $resource;

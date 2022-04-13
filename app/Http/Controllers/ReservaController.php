@@ -87,17 +87,16 @@ class ReservaController extends Controller
      */
     public function remove($id)
     {
-        $reserva=Reserva::find($id);
+        $reserva = Reserva::find($id);
         return view('misreservas', compact('reserva'));
     }
 
     public function destroy($id)
     {
-        $reserva=Reserva::find($id);
+        $reserva = Reserva::find($id);
         $reserva->delete();
-        $message= 'La reserva de '.$reserva->name.' para la fecha: '.$reserva->date.' ha sido anulada';
+        $message = 'La reserva de ' . $reserva->name . ' para la fecha: ' . Carbon::parse($reserva->date)->locale('es_ES')->isoFormat('dddd, D MMMM YYYY') . ' ha sido anulada';
         Session::flash('message', $message);
         return redirect()->route('misreservas');
     }
-
 }

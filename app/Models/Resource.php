@@ -14,7 +14,7 @@ class Resource extends Model
 
     public function user()
     {
-        return $this->hasMany(User::class);
+        return $this->belongsToMany(User::class);
     }
 
     public function location()
@@ -25,4 +25,9 @@ class Resource extends Model
     {
         return $this->hasOne(Reserva::class);
     }
+    public function owner()
+    {
+        return $this->belongsTo(User::class);
+    }
+    
 }

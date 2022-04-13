@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>Barrio Oeste</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -24,7 +24,13 @@
     <x-header />
     <main class="flex flex-col items-center">
         <x-button-add />
-
+        <div class="flex justify-center">
+            @if (Session::has('message_location'))
+            <div class="text-xl border-2 border-green-400 bg-green-200 rounded-md p-10">
+                {{ session('message_location') }}
+            </div>
+            @endif
+        </div>
         <div class="flex justify-center">
             @if (session('success'))
             <div class="text-xl border-2 border-green-400 bg-green-200 rounded-md  mb-10 p-10">
@@ -47,11 +53,13 @@
                 {{ session('modification') }}
             </div>
             @endif
+
         </div>
 
         <div class="flex justify-center ms:w-4/5 md:w-4/5 lg:w-2/5">
             <livewire:resource-list />
         </div>
+
     </main>
     <x-footer />
 </body>

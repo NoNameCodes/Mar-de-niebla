@@ -4,7 +4,7 @@
 
 <div class="m-2 grid grid-cols-2 gap-8">
     <div class="m-2">
-        <img src="{{ $resource->img }}" alt="photo de recurso" class="rounded-xl" />
+        <img src="{{ asset("storage/img/{$resource->img}") }}" alt="Imagen del recurso" class="rounded-xl" />
     </div>
     <div class="flex w-3/4">
         <div class="flex flex-col">

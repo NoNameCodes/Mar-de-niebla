@@ -2,39 +2,30 @@
 
 namespace App\View\Components;
 
-use App\Models\Reserva;
-use App\Models\Resource;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\View\Component;
 
-class Card extends Component
+class locationEdit extends Component
 {
-
+    public $location;
     public $resource;
-    public $reservasFuture;
-    
     /**
      * Create a new component instance.
      *
      * @return void
      */
-
-    public function __construct($resource, $reservasFuture='')
+    public function __construct($location,$resource)
     {
+        $this->location=$location; 
         $this->resource=$resource;
-        $this->reservasFuture=$reservasFuture;
-        
     }
 
-       /**
+    /**
      * Get the view / contents that represent the component.
      *
      * @return \Illuminate\Contracts\View\View|\Closure|string
      */
     public function render()
     {
-       
-        $reservas = Reserva::all();
-        return view('components.card');
+        return view('components.location-edit');
     }
 }

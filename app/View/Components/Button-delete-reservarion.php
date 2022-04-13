@@ -2,16 +2,13 @@
 
 namespace App\View\Components;
 
-use App\Models\Reserva;
-use App\Models\Resource;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\View\Component;
 
-class Card extends Component
+class ButtonDeleteReservation extends Component
 {
 
-    public $resource;
-    public $reservasFuture;
+    public $reserva;
+   
     
     /**
      * Create a new component instance.
@@ -19,10 +16,10 @@ class Card extends Component
      * @return void
      */
 
-    public function __construct($resource, $reservasFuture='')
+    public function __construct($reserva)
     {
-        $this->resource=$resource;
-        $this->reservasFuture=$reservasFuture;
+        $this->reserva=$reserva;
+        
         
     }
 
@@ -34,7 +31,6 @@ class Card extends Component
     public function render()
     {
        
-        $reservas = Reserva::all();
-        return view('components.card');
+        return view('components.button-delete-reservation');
     }
 }

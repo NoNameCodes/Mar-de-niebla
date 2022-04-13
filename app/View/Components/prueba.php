@@ -2,34 +2,28 @@
 
 namespace App\View\Components;
 
-use App\Models\Reserva;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\View\Component;
 
-class Card extends Component
+class prueba extends Component
 {
-
-    public $reserva;
-    
+    public $users;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-
-    public function __construct($reserva)
+    public function __construct($users)
     {
-        $this->reserva=$reserva;
-        
+        $this->users=$users;
     }
 
-       /**
+    /**
      * Get the view / contents that represent the component.
      *
      * @return \Illuminate\Contracts\View\View|\Closure|string
      */
     public function render()
     {
-       return view('components.modal-delete-reservation');
+        return view('components.prueba');
     }
 }

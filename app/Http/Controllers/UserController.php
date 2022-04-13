@@ -12,12 +12,6 @@ class UserController extends Controller
         return view('admin-dashboard', compact('users'));
     }
 
-    public function share()
-    {
-        $users = User::all();
-        return view('/', compact('users'));
-    }
-
     public function destroy($id)
     {
         $user = User::find($id);
