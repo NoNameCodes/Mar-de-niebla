@@ -20,7 +20,7 @@
                     </div>
                     <div class="flex flex-row ml-5">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 m-2 " viewBox="0 0 20 20"
-                            fill="currentColor">
+                            fill="green">
                             <a href="{{ route('admin.users.approve', $user->id) }}">
                                 <path fillRule="evenodd"
                                     d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
@@ -48,11 +48,7 @@
         </div>
     </div>
     <div class="m-2">
-        <a href="{{ route('admin.users.index') }}">
-            <button
-                class="text-md mx-auto block rounded-md bg-[#F8981D] px-6 py-2 font-semibold text-white drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] duration-300 hover:bg-[#ffba25]">Gestionar
-                organizaciones</button>
-        </a>
+        <x-manage-orgs />
     </div>
 </div>
 <x-footer />

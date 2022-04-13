@@ -15,7 +15,7 @@
 
     <form action="{{ route('reserva.store', $resource->id) }}" class="footerdown " method="POST">
         @csrf
-        <div class=" mb-6 flex flex-col items-center justify-center  ">
+        <div class=" mb-6 flex flex-col items-center justify-center">
             <label for="date" class="text-gray-700 italic">Seleccione el día</label>
             <input type="date"
                 class="form-control flex items-center text-gray-700   border-orange-500 rounded-xl  bg-[#FAF3F3] mb-6"
@@ -27,11 +27,7 @@
                 min="0" pattern="^[0-9]+">
             <textarea class="text-gray-700 italic border-orange-500 rounded-xl bg-[#FAF3F3] py-12 mb-6" placeholder="Comentarios"
                 name="coments"></textarea>
-            <button id="btnReserve"
-                class="bg-[#F8981D] hover:bg-[#ecc188] text-white font-bold py-2 px-8 shadow-xl rounded-full mb-2"
-                type="submit">
-                Reservar
-            </button>
+            <x-button-reserve />
         </div>
     </form>
 

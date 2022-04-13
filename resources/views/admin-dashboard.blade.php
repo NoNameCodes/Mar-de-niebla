@@ -4,7 +4,7 @@
     <h1 class="mx-6 mt-20 mb-6 text-3xl text-orange-400">Gestionar organizaciones</h1>
     @if (session('message'))
         <div class="flex justify-center">
-            <div class="text-xl border-2 border-green-400 bg-green-200 rounded-md mt-10 p-10">
+            <div class="text-xl border-2 border-red-400 bg-red-200 rounded-md mt-10 p-10">
                 {{ session('message') }}
             </div>
         </div>
@@ -18,16 +18,7 @@
                         <p>{{ $user->name }}</p>
                         <p class="text-xs text-gray-500">{{ $user->email }}</p>
                     </div>
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20"
-                            fill="currentColor">
-                            <a href="{{ route('admin.users.destroy', $user->id) }}">
-                                <path fill-rule="evenodd"
-                                    d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
-                                    clip-rule="evenodd" />
-                            </a>
-                        </svg>
-                    </div>
+                    <x-button-delete-org :user="$user" />
                 </div>
             @empty
                 <div>
@@ -37,14 +28,8 @@
             @endforelse
         </div>
     </div>
-    <div class="flex flex-rol justify-center">
-    </div>
-    <div class="m-2">
-        <a href="{{ route('admin.users.pending.index') }}">
-            <button
-                class="text-md mx-auto block rounded-md bg-[#F8981D] px-6 py-2 font-semibold text-white drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] duration-300 hover:bg-[#ffba25]">Validaciones
-                pendientes</button>
-        </a>
+    <div class="flex flex-row justify-center m-2">
+        <x-button-pending-users />
     </div>
 </div>
 <x-footer />
