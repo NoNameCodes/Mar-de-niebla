@@ -1,5 +1,5 @@
 @extends('layouts.app')
-<x-header />
+
 <div class="flex flex-col items-center justify-center">
     <h1 class="mx-6 mt-20 mb-6 text-3xl text-orange-400">Gestionar organizaciones</h1>
     @if (session('message'))
@@ -32,4 +32,3 @@
         <x-button-pending-users />
     </div>
 </div>
-<x-footer />
