@@ -1163,8 +1163,13 @@ select {
 .mt-20 {
   margin-top: 5rem;
 }
+<<<<<<< HEAD
 .mr-36 {
   margin-right: 9rem;
+=======
+.mb-0 {
+  margin-bottom: 0px;
+>>>>>>> feature/diego/buttons
 }
 .mb-20 {
   margin-bottom: 5rem;
@@ -2133,11 +2138,15 @@ select {
   --tw-text-opacity: 1;
   color: rgb(100 116 139 / var(--tw-text-opacity));
 }
+<<<<<<< HEAD
 .text-\[\#F8981D\] {
   --tw-text-opacity: 1;
   color: rgb(248 152 29 / var(--tw-text-opacity));
 }
 .text-gray-300 {
+=======
+.text-slate-400 {
+>>>>>>> feature/diego/buttons
   --tw-text-opacity: 1;
   color: rgb(209 213 219 / var(--tw-text-opacity));
 }
@@ -2145,6 +2154,7 @@ select {
   --tw-text-opacity: 1;
   color: rgb(229 231 235 / var(--tw-text-opacity));
 }
+<<<<<<< HEAD
 .text-orange-400 {
   --tw-text-opacity: 1;
   color: rgb(251 146 60 / var(--tw-text-opacity));
@@ -2152,6 +2162,27 @@ select {
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
+=======
+.text-red-400 {
+  --tw-text-opacity: 1;
+  color: rgb(248 113 113 / var(--tw-text-opacity));
+}
+.text-green-700 {
+  --tw-text-opacity: 1;
+  color: rgb(21 128 61 / var(--tw-text-opacity));
+}
+.text-red-700 {
+  --tw-text-opacity: 1;
+  color: rgb(185 28 28 / var(--tw-text-opacity));
+}
+.text-\[\#A9171C\] {
+  --tw-text-opacity: 1;
+  color: rgb(169 23 28 / var(--tw-text-opacity));
+}
+.text-\[\#92C954\] {
+  --tw-text-opacity: 1;
+  color: rgb(146 201 84 / var(--tw-text-opacity));
+>>>>>>> feature/diego/buttons
 }
 .underline {
   -webkit-text-decoration-line: underline;

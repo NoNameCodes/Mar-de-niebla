@@ -5,7 +5,7 @@
 <div>
     <header class="p-4 bg-black">
         <div class="flex justify-between items-center">
-            <a href="{{ route('home') }}">
+            <a href="{{ url('/') }}">
                 <img draggable="false" src="{{ asset('storage/logo.png') }}" class="h-11" alt="logo">
             </a>
 
@@ -98,8 +98,7 @@
                                 @elseif (Route::is('admin.users.index'))
                                     <li>
                                         <a href="{{ route('admin.users.pending.index') }}"
-                                            class="text-sm hover:bg-gray-300 text-gray-700 block text-center px-4 py-2">Admin
-                                            home</a>
+                                            class="text-sm hover:bg-gray-300 text-gray-700 block text-center px-4 py-2">Admin home</a>
                                     </li>
                                     <li>
                                         <a href="{{ route('location.create') }}"

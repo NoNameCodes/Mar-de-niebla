@@ -23,14 +23,12 @@
                     <p class="flex justify-center rounded-md bg-gray-200 p-6">¡Este recurso no tiene historial de
                         reservas todavia!
                     </p>
-
                 </div>
             @endforelse
-        </div>
 
+        </div>
     </div>
-    <button id="btnAdd"
-        class="text-lg m-12 px-6 py-1 mx-auto block rounded-md text-md font-semibold text-white bg-[#F8981D] drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]"><a
-            href="{{ url('/home') }}">Volver</a></button>
+    <x-button-back-to-home />
+
 </main>
 <x-footer />
