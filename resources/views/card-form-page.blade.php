@@ -33,7 +33,7 @@
                             </label>
                         </div>
 
-                        <div class="grid grid-cols-2 gap-1 place-items-center h-26 mt-3">
+                        <div class="place-items-center h-26 mt-3">
                             <button type="submit"
                                 class="px-4 py-1 mx-auto block rounded-md text-md font-semibold text-white bg-[#92C954] drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]">Guardar</button>
                         </div>
