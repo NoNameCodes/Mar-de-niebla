@@ -7,5 +7,5 @@
             @endif
         @endfor
     @endforeach
-    {{-- <div class="m-1.5">{{ $resources->links() }}</div> --}}
+    <div class="m-1.5">{{ $resources->links() }}</div>
 </div>

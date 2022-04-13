@@ -6,7 +6,7 @@
                     <img src="{{ asset("storage/img/{$resource->img}") }}" />
                 </a>
             </div>
-            <div class="flex justify-between w-9/12">
+            <div class="flex justify-between items-center w-9/12 mr-6">
                 <div class="w-full flex flex-col justify-center">
                     <a href=" {{ route('resources.show', $resource) }}">
                         <p class="align-middle font-extrabold text-xl">{{ $resource->name }}</p>

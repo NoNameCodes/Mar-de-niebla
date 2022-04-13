@@ -31,7 +31,6 @@
             </div>
             @endif
         </div>
-       
         <div class="flex justify-center">
             @if (session('success'))
             <div class="text-xl border-2 border-green-400 bg-green-200 rounded-md  mb-10 p-10">
@@ -54,13 +53,13 @@
                 {{ session('modification') }}
             </div>
             @endif
-            
+
         </div>
 
         <div class="flex justify-center ms:w-4/5 md:w-4/5 lg:w-2/5">
             <livewire:resource-list />
         </div>
-        
+
     </main>
     <x-footer />
 </body>
