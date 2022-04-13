@@ -14,7 +14,7 @@ class Reserva extends Model
 
     public function user()
     {
-        return $this->hasMany(User::class);
+        return $this->belongsTo(User::class);
     }
 
     public function resource()
@@ -26,6 +26,4 @@ class Reserva extends Model
     // {
     //     return $this->belongsTo(Location::class);
     // }
-  
 }
-   
