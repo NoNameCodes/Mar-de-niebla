@@ -10,8 +10,7 @@
                   <input type="checkbox" checked id="cbox1" value="{{ $user->id }}" name="{{ $user->id }}">
                   <label for="{{ $user->id }}">{{ $user->name }}</label>
                 @endif
-            @endforeach 
-            
+            @endforeach          
     </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/tom-select/dist/js/tom-select.complete.min.js"></script>
