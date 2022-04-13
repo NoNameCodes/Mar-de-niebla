@@ -33,18 +33,13 @@
 
                 @if (Route::currentRouteName() == 'dashboard')
                     <div class="flex flex-row items-center ">
-                        <a href="{{ route('resources.edit', $resource->id) }}">
-                            <button><i
-                                    class="fa-solid fa-pen-to-square text-black justify-center text-2xl m-3"></i></button>
-                        </a>
+                        <x-button-edit-resource :resource="$resource" />
                         <form action="{{ route('resources.destroy', $resource->id) }}" method="Post">
-                            <a class="btn btn-primary" href="{{ route('resources.edit', $resource->id) }}"></a>
                             @csrf
                             @method('DELETE')
-                            <button><i class="fa-solid fa-trash text-black text-2xl m-3"></i></button>
+                            <button><i class="fa-solid fa-trash text-[#A9171C] text-2xl m-3"></i></button>
                         </form>
                     </div>
-
                 @elseif(Route::currentRouteName() == 'home')
                     <x-button-add-reservation :resource="$resource" />
                 @elseif(Route::currentRouteName() == 'resources')
