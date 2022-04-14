@@ -1,11 +1,14 @@
 @extends('layouts.app', ['title' => 'Dashboard | Barrio Oeste'])
 @section('main')
-    <div>
-        <div class="flex justify-center">
+    <div class="flex flex-col">
+        <div>
             @if (Session::has('message'))
                 <div class="lg:text-xl sm:text-md border-2 border-red-400 bg-red-200 rounded-md m-5 p-16">
                     {{ session('message') }}
                 </div>
+            @elseif (Session::has('success'))
+                <div class="lg:text-xl sm:text-md border-2 border-green-400 bg-green-200 rounded-md m-5 p-16">
+                    {{ session('success') }}
             @endif
         </div>
         <x-button-add />

@@ -7,6 +7,7 @@ use App\Models\Resource;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Session;
 use PhpParser\Builder\Use_;
 
@@ -77,36 +78,33 @@ class ResourceCRUDController extends Controller
 
     public function update(Request $request, $id)
     {
+
+        $usuario = User::all();
+        $resource = Resource::find($id);
+        $resource->name = $request->name;
+        $resource->description = $request->description;
+        $resource->location_id = $request->location_id;
+        $resource->user()->attach(Auth::user()->id);
+
         if ($request->hasFile("img")) {
+            $directory = '\public_path("storage/img/")' . $resource->img;
+            if (File::exists($directory)) {
+                File::delete($directory);
+            }
             $file = $request->file("img");
             $imageName = time() . '_' . $file->getClientOriginalName();
             $file->move(\public_path("storage/img/"), $imageName);
-            // $request->validate([
-            //     'name' => 'required',
-            //     'description' => 'required',
-            //     'img' => 'required',
-            //     'user_id' => 'required',
-            //     'location_id' => 'required',
-            // ]);
-
-            $resource = Resource::find($id);
-            $resource->name = $request->name;
-            $resource->description = $request->description;
             $resource->img = $imageName;
-            // $resource->user_id =  Auth::user()->id;
-            $resource->location_id = $request->location_id;
-            $resource->update();
-            $usuario = User::all();
-            foreach ($usuario as $usuarios) {
-                $resource->user()->detach($request->input($usuarios->id));
-            }
-            $resource->user()->attach(Auth::user()->id);
-            foreach ($usuario as $usuarios) {
-                $resource->user()->attach($request->input($usuarios->id));
-            }
-            return redirect()->route('dashboard')
-                ->with('success', 'El recurso "' . $resource->name . '" ha sido editado con éxito.');
         }
+        foreach ($usuario as $usuarios) {
+            $resource->user()->detach($request->input($usuarios->id));
+        }
+        foreach ($usuario as $usuarios) {
+            $resource->user()->attach($request->input($usuarios->id));
+        }
+        $resource->update();
+        return redirect()->route('dashboard')
+            ->with('success', 'El recurso "' . $resource->name . '" ha sido editado con éxito.');
     }
 
     public function destroy(Resource $resource)
