@@ -15,10 +15,10 @@
         <div class="max-h-48 overflow-y-scroll p-4">
             <form action="/action_page.php">
                 <div class="dropdown">
+                    <input type="checkbox" onClick="toggle(this)" /> Todos<br/>
                     @foreach ($users as $user)
                         @if (Auth::user()->id != $user->id)
-                            <input type="checkbox" name="{{ $user->id }}" value="{{ $user->id }}">
-                            <label for="{{ $user->id }}"> {{ $user->name }}</label><br>
+                        <input type="checkbox" value="{{ $user->id }}" name="{{ $user->id }}" >{{ $user->name }} <br/>
                         @endif
                     @endforeach
                 </div>
@@ -43,4 +43,11 @@
         modal = document.getElementById('modal')
         modal.classList.add('hidden')
     }
+    function toggle(source) {
+    var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    for (var i = 0; i < checkboxes.length; i++) {
+        if (checkboxes[i] != source)
+            checkboxes[i].checked = source.checked;
+    }
+}
 </script>
