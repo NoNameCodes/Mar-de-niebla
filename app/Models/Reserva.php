@@ -21,9 +21,4 @@ class Reserva extends Model
     {
         return $this->belongsTo(Resource::class);
     }
-
-    // public function location()
-    // {
-    //     return $this->belongsTo(Location::class);
-    // }
 }

@@ -6,11 +6,9 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserPendingController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ResourceCRUDController;
-use App\Http\Controllers\PageController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\ReservaController;
 use App\Http\Controllers\MisreservasController;
-use App\Http\Controllers\FormController;
 use App\Http\Controllers\HistoryController;
 use App\Http\Controllers\LocationController;
 
@@ -46,6 +44,3 @@ Route::middleware(['auth:sanctum', 'verified', 'approved', 'admin'])->group(func
     Route::get('/locations/{id}', [LocationController::class, 'edit'])->name('location.edit');
     Route::put('/locations/{id}', [LocationController::class, 'update'])->name('location.update');
 });
-
-// Route::get('resizeImage', 'ImageController@resizeImage');
-// Route::post('resizeImagePost', 'ImageController@resizeImagePost')->name('resizeImagePost');

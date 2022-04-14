@@ -8,11 +8,9 @@
 
     <title>{{ $title ?? config('app.name', 'Barrio Oeste') }}</title>
 
-    <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
-    <!-- Styles -->
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -21,7 +19,6 @@
 
     @livewireStyles
 
-    <!-- Scripts -->
     <script src="{{ mix('js/app.js') }}" defer></script>
 
 </head>

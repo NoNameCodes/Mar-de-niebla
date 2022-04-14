@@ -18,7 +18,6 @@ class MisreservasController extends Controller
         $resources =  [];
         foreach ($reservasId as $reserva) {
             $resource = Resource::where('id', '=', $reserva->resource_id)->first();
-            //dd($resource);
             array_push($resources, $resource);
         }
 

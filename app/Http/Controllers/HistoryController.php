@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Reserva;
 use App\Models\Resource;
-use App\Models\User;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class HistoryController extends Controller

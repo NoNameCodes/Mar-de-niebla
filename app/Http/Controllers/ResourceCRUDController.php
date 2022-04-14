@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Location;
 use App\Models\Resource;
-use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
-use PhpParser\Builder\Use_;
 
 class ResourceCRUDController extends Controller
 {
@@ -81,19 +80,12 @@ class ResourceCRUDController extends Controller
             $file = $request->file("img");
             $imageName = time() . '_' . $file->getClientOriginalName();
             $file->move(\public_path("storage/img/"), $imageName);
-            // $request->validate([
-            //     'name' => 'required',
-            //     'description' => 'required',
-            //     'img' => 'required',
-            //     'user_id' => 'required',
-            //     'location_id' => 'required',
-            // ]);
 
             $resource = Resource::find($id);
             $resource->name = $request->name;
             $resource->description = $request->description;
             $resource->img = $imageName;
-            // $resource->user_id =  Auth::user()->id;
+
             $resource->location_id = $request->location_id;
             $resource->update();
             $usuario = User::all();
