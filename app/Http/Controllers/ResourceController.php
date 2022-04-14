@@ -21,7 +21,7 @@ class ResourceController extends Controller
 
     public function create()
     {
-        $users = User::get();
+        $users = User::get()->where('admin', false);
         $location = Location::get();
         return view('_resources.create', compact('users', 'location'));
     }
@@ -100,6 +100,11 @@ class ResourceController extends Controller
         }
         foreach ($usuario as $usuarios) {
             $resource->user()->attach($request->input($usuarios->id));
+        }
+        if ($resource->location_id == null) {
+            $message = 'El recurso no ha podido ser editado ya que la localización no puede quedar vacía.Por favor añada una localización';
+            Session::flash('message_location', $message);
+            return view('_user.home');
         }
         $resource->update();
         return redirect()->route('dashboard')
