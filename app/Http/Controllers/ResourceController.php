@@ -21,7 +21,7 @@ class ResourceController extends Controller
 
     public function create()
     {
-        $users = User::get();
+        $users = User::get()->where('admin', false);
         $location = Location::get();
         return view('_resources.create', compact('users', 'location'));
     }
