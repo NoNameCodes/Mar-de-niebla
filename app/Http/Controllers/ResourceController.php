@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Session;
 
-class ResourceCRUDController extends Controller
+class ResourceController extends Controller
 {
 
     public function index()

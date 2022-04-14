@@ -5,7 +5,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserPendingController;
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\ResourceCRUDController;
+use App\Http\Controllers\ResourceController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\ReservaController;
 use App\Http\Controllers\MisreservasController;
@@ -24,7 +24,7 @@ Route::middleware(['auth:sanctum', 'verified', 'approved', 'user'])->group(funct
     Route::get('/reserva/{reserva_id}', [ReservaController::class, 'show'])->name('reserva');
     Route::get('/reserva/{reserva_id}', [ReservaController::class, 'destroy'])->name('reserva.destroy');
     Route::post('/reserva/{resource_id}', [ReservaController::class, 'store'])->name('reserva.store');
-    Route::resource('resources', ResourceCRUDController::class);
+    Route::resource('resources', ResourceController::class);
     Route::get('/misreservas', [MisreservasController::class, 'index'])->name('misreservas');
     Route::get('removereserve/{reserve_id}', [ReservaController::class, 'remove'])->name('removereserve');
     Route::get('/history/{resource:id}', [HistoryController::class, 'resource'])->name('history');
