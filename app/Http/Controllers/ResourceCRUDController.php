@@ -70,7 +70,7 @@ class ResourceCRUDController extends Controller
 
     public function edit(Resource $resource)
     {
-        $users = User::all();
+        $users = User::get()->where('admin', false);
         $location = Location::all();
         return view('_resources.edit', compact('resource', 'users', 'location'));
     }
