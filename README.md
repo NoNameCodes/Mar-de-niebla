@@ -1,64 +1,81 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Web de recursos Gijón Oeste
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+_Proyecto pedagógico propuesto por la organización [Mar de Niebla](https://mardeniebla.es) a [Factoría F5](https://factoriaf5.org/) y asignado al equipo [NoNameCoders](#autores-)._
 
-## About Laravel
+_La propuesta de proyecto es la siguiente: desarrollar una web en la que las organizaciones socias de Mar de Niebla, puedan registrarse\*, loguearse, añadir y eliminar recursos; los cuales podrán decidir con qué otras organizaciones pueden compartir dicho recurso. Y reservar dichos recursos._
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+_Estos recursos una vez reservados no podrán ser reservados por otra organización si las fechas coinciden._
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+###### _\* El registro de una nueva organización deberá ser aceptado por un administrador de la web. De esta manera se evitan registros ajenos a las organizaciones._
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Comenzando 🚀
 
-## Learning Laravel
+_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Mira **[Deployment](#despliegue-📦)** para conocer como desplegar el proyecto.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Pre-requisitos 📋
 
-## Laravel Sponsors
+_Que cosas necesitas para instalar el proyecto y como instalarlas_
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+```
+Clonar el proyecto: https://github.com/NoNameCodes/Mar-de-niebla.git
+```
 
-### Premium Partners
+### Instalación 🔧
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+_Una vez clonado el repositorio instalaremos las dependencias de desarrollo y las ejecutaremos._
 
-## Contributing
+_Para instalarlas ejecutaremos los siguientes comandos:_
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```
+composer install
+npm install && run dev
+php artisan migrate
+```
 
-## Code of Conduct
+_Y para ejecutar la web en el servidor de desarrollo local:_
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```
+npm run watch
+php artisan serve
+```
 
-## Security Vulnerabilities
+_Una vez hecho los pasos anteriores podremos ver la web en local en un ambiente de desarrollo._
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Ejecutando las pruebas ⚙️
 
-## License
+_Para ejecutar los tests utiliza:_
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```
+php artisan dusk
+php artisan test
+```
+
+## Despliegue 📦
+
+_Para hacer el deploy de la web recomendamos seguir paso a paso la [documentacion de Laravel](https://laravel.com/docs/9.x/deployment#main-content)._
+
+## Construido con 🛠️
+
+- [Laravel](https://laravel.com/) - El framework usado para el desarrollo del proyecto.
+- [Tailwindcss](https://tailwindcss.com/) - Manejador de estilos.
+- [Jetstream](https://jetstream.laravel.com/2.x/introduction.html) - Usado para generar el sistema de Login y Registro.
+
+## Autores ✒️
+
+   **[Alba Azcano](https://github.com/Albazcano)** <br>
+   **[Sasha Bidardel](https://github.com/SashaBidardel)** <br>
+   **[Diego Cortina](https://github.com/Cortina17)** <br>
+   **[Caio Da Silva](https://github.com/caiodstx)** <br>
+   **[Daniel Gutiérrez](https://github.com/DanielgDiaz)** <br>
+   **[Irina Petrova](https://github.com/irina-p-d)** <br>
+
+También puedes mirar la lista de todos los [contribuyentes](https://github.com/NoNameCodes/Mar-de-niebla/graphs/contributors) quienes han participado en este proyecto.
+
+## Expresiones de gratitud 🎁
+
+- Comenta a otros sobre este proyecto 📢.
+- Invita una cerveza 🍺 a alguien (o a todos los miembros) del equipo.
+- Pedirle a cualquier miembro del equipo el número de cuenta de PayPal 💸.
+- Da las gracias públicamente 🤓.
