@@ -1,4 +1,4 @@
-@extends('layouts.app', ['title' => 'Login | Barrio Oeste'])
+@extends('layouts.app', ['title' => 'Iniciar sesión | Barrio Oeste'])
 @section('main')
     <x-jet-authentication-card class="w-4">
         <x-jet-validation-errors class="mb-4" />
@@ -8,7 +8,7 @@
             </div>
         @endif
         <h3 class="mt-1 mb-10 text-[#F8981D] text-2xl font-semibold italic">
-            Login
+            Iniciar sesión
         </h3>
         <form method="POST" action="{{ route('login') }}">
             @csrf
@@ -30,12 +30,12 @@
                 </label>
             </div>
 
-            <div class="flex items-center justify-center mt-8">
+            <div class="flex items-center justify-center mt-6">
                 <x-jet-button class="ml-4 bg-[#F8981D] font-bold">
                     {{ __('Entrar') }}
                 </x-jet-button>
             </div>
-            <div class="flex items-center justify-center mt-8">
+            <div class="flex items-center justify-center mt-6">
                 @if (Route::has('password.request'))
                     <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
                         {{ __('¿Olvidaste tu contraseña?') }}

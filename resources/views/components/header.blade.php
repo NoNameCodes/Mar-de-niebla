@@ -124,7 +124,7 @@
                             <form method="POST" action="{{ route('logout') }}">
                                 @csrf
                                 <button type="submit"
-                                    class="text-sm hover:bg-gray-300 text-gray-700 w-full px-4 py-2">Logout</button>
+                                    class="text-sm hover:bg-gray-300 text-gray-700 w-full px-4 py-2">Salir</button>
                             </form>
                         </li>
                     </ul>
@@ -138,7 +138,7 @@
             </a>
         @elseif (Route::is('register'))
             <a href="{{ route('login') }}" style="text-decoration: none">
-                <h3 style="color: #F8981D">Login</h3>
+                <h3 style="color: #F8981D">Entrar</h3>
             </a>
         @endif
     </div>
