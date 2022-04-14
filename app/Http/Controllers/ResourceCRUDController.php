@@ -2,14 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Location;
 use App\Models\Resource;
-use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Session;
-use PhpParser\Builder\Use_;
 
 class ResourceCRUDController extends Controller
 {

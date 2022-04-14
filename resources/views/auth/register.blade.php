@@ -56,7 +56,7 @@
             <div>
                 <a class="flex items-center justify-center mt-8 underline text-sm text-gray-600 hover:text-gray-900"
                     href="{{ route('login') }}">
-                    {{ __('¿Ya estás registrad@?') }}
+                    {{ __('¿Ya tienes cuenta? Haz click aquí.') }}
                 </a>
             </div>
             </div>

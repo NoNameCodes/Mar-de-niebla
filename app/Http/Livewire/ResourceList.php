@@ -2,8 +2,8 @@
 
 namespace App\Http\Livewire;
 
-use App\Models\Resource;
 use Livewire\Component;
+use App\Models\Resource;
 
 class ResourceList extends Component
 {

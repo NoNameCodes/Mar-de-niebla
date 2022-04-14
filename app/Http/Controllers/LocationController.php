@@ -10,7 +10,7 @@ class LocationController extends Controller
 {
     public function index()
     {
-        $location = Location::paginate(8);
+        $location = Location::paginate(5);
         return view('_admin.locations.index', compact('location'));
     }
     public function create()
@@ -46,7 +46,7 @@ class LocationController extends Controller
         $locationTotal = Location::all();
         foreach ($locationTotal as $locations) {
             if ($locations->address == $location->address) {
-                $message = 'La dirección ' . $locations->address . ' ya estaba añadida,añada una dirección nueva si lo desea';
+                $message = 'La dirección ' . $locations->address . ' ya estaba añadida, añada una dirección nueva si lo desea';
                 Session::flash('message', $message);
                 return redirect('/locations');
             }
