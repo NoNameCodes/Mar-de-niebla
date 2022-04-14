@@ -49,9 +49,8 @@
 
             <div class="col-xs-12 col-sm-12 col-md-12 py-1 m-2 flex flex-row justify-center">
                 <label class="block">
-                    <input name="img" type="file"
-                        class="block w-full text-sm text-slate-500 file:mr-4 file:py-1 file:px-6 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-orange-500 file:text-white hover:file:bg-violet-100 "
-                        required />
+                    <input name="img" type="file" value="{{ $resource->img }}"
+                        class="block w-full text-sm text-slate-500 file:mr-4 file:py-1 file:px-6 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-orange-500 file:text-white hover:file:bg-violet-100 " />
                 </label>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 flex flex-row justify-center mb-6">
