@@ -4,10 +4,10 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class prueba extends Component
+class share extends Component
 {
     public $users;
-
+    public $reserva;
     public function __construct($users)
     {
         $this->users = $users;
@@ -15,6 +15,6 @@ class prueba extends Component
 
     public function render()
     {
-        return view('components.prueba');
+        return view('components.share');
     }
 }
