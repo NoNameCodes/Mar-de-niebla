@@ -25,7 +25,7 @@
 
 <body>
     <x-header />
-    <main class="flex flex-col justify-between h-screen">
+    <main>
         @yield('main')
     </main>
     <x-footer />

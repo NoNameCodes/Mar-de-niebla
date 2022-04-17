@@ -1,23 +1,31 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
-
+html {
+    min-height: 100%;
+    position: relative;
+  }
 body {
-    --primary: #f78d03;
-    --buttonColorReserve: #92c954;
-    --secondary: black;
+     margin: 0;
+     margin-bottom: 80px;
 }
-
+footer {
+    position: absolute;
+    bottom: 0;
+    height: 80px;
+    
+  }
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
-}
-.footerdown {
-    min-height: 88vh;
 }
 
 hr {
     height: 1px;
     background-color: #f8981d;
 }
+
+
+  
+  

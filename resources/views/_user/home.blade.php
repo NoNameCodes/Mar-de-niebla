@@ -33,9 +33,6 @@
             @endif
 
         </div>
-
-        <div class="flex justify-center ms:w-4/5 md:w-4/5 lg:w-2/5">
-            <livewire:resource-list />
-        </div>
+        <livewire:resource-list />        
     </div>
 @endsection

@@ -9,8 +9,8 @@
                 </div>
             @endif
         </div>
-        <div class="ms:w-4/5 md:w-4/5 lg:w-2/5">
-            <div class="border-2 border-[#F8981D] rounded-xl m-1.5 py-1">
+        <div class="flex justify-center">
+            <div class="border-2 border-[#F8981D] rounded-xl m-1.5 py-1 w-11/12 tablet:w-6/12 desktop:w-5/12">
                 @forelse ($resources as $resource)
                     <x-card :resource="$resource" :reservasFuture="$reservasFuture" />
                 @empty
@@ -23,6 +23,7 @@
                         <x-button-back-to-home />
                     </div>
                 @endforelse
+                
             </div>
         </div>
     </div>
