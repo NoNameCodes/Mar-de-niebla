@@ -5,10 +5,8 @@
 
         @foreach ($users as $user)
             @if (Auth::user()->id != $user->id)
-                <div>
-                    <input type="checkbox" value="{{ $user->id }}"
-                        name="{{ $user->id }}">{{ $user->name }}<br />
-                </div>
+            <input type="checkbox" name="{{ $user->id }}" value="{{ $user->id }}">
+            <label for="{{ $user->id }}"> {{ $user->name }}</label><br>
             @endif
         @endforeach
     </div>
