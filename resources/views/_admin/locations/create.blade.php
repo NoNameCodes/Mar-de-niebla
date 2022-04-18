@@ -17,14 +17,14 @@
                         class="text-gray-700 italic border-orange-500 rounded-xl  bg-[#FAF3F3]  mb-6 " name="address"
                         required>
                     <button id="btnReserve"
-                        class="bg-[#F8981D] hover:bg-[#ecc188] text-white font-bold py-2 px-8 shadow-xl rounded-full mb-2"
+                        class="bg-[#F8981D] hover:bg-[#ffba25] text-white font-bold py-2 px-8 shadow-xl rounded mb-2"
                         type="submit">
                         Añadir
                     </button>
                 </div>
 
                 <a href="{{ route('location.vista') }}"
-                    class="bg-[#F8981D] hover:bg-[#ecc188] text-white font-bold py-2 px-8 shadow-xl rounded-full mb-2 mt-8 flex justify-center">Lista
+                    class="bg-[#F8981D] hover:bg-[#ffba25] text-white font-bold py-2 px-8 shadow-xl rounded mb-2 mt-8 flex justify-center">Lista
                     de localizaciones</a>
             </form>
         </div>
