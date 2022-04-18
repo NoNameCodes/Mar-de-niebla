@@ -14,14 +14,14 @@ class AdminTest extends DuskTestCase
     {
         $this->browse(function (Browser $browser) {
             $browser->visit('/')
-            ->waitForText('Login')
+            ->waitForText('Iniciar sesión')
             ->type('email', value: 'admin@admin')
             ->type('password', value: 'password')
             ->click('#btnEnter')
             ->assertPathIs('/')
             ->click('#btnManage')
             ->assertPathIs('organizations')
-            ->assertSee('Gestionar organizacionessss');
+            ->assertSee('Gestionar organizaciones');
         });
     }
 }

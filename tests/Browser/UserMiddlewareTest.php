@@ -18,14 +18,14 @@ class UserMiddlewareTest extends DuskTestCase
         $this->browse(function ($first, $second) {
 
             $first->visit('/')
-            ->waitForText('Login')
+            ->waitForText('Iniciar sesión')
             ->type('email', value: 'f@f')
             ->type('password', value: 'password')
             ->click('#btnEnter')
             ->assertPathIs('/');
 
             $second->visit('/')
-            ->waitForText('Login')
+            ->waitForText('Iniciar sesión')
             ->type('email', value: 'a@a')
             ->type('password', value: 'password')
             ->click('#btnEnter')

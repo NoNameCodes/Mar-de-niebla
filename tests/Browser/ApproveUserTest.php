@@ -17,7 +17,7 @@ class ApproveUserTest extends DuskTestCase
     {
         $this->browse(function ($first, $second) {
             $first->visit('/')
-                ->waitForText('Login')
+                ->waitForText('Iniciar sesión')
                 ->type('email', value: 'prueba@prueba.com')
                 ->type('password', value: 'pruebaprueba')
                 ->click('#btnEnter')
@@ -25,15 +25,12 @@ class ApproveUserTest extends DuskTestCase
 
             $second->visit('/')
                 ->waitForText('Login')
-                ->type('email', value: 'dani@dani.dani')
+                ->type('email', value: 'admin@admin')
                 ->type('password', value: '12345678')
                 ->click('#btnEnter')
                 ->visit('/aprove/users')
-                ->click('#btnAceptar'::find(2))
+                ->click('#btnAceptar')
                 ->assertSee('User approved successfully');
-
-            $first->visit('/test')
-                ->assertSee('hola');
         });
     }
 }

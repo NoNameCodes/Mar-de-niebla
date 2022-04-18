@@ -20,7 +20,7 @@ class LoginTest extends DuskTestCase
     {
         $this->browse(function (Browser $browser)  {
             $browser->visit('/login')
-                    ->waitForText('Login')
+                    ->waitForText('Iniciar sesión')
                     ->type('email', value: 'f@f')
                     ->type('password', value: 'password')
                     ->click('#btnEnter')

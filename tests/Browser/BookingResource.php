@@ -17,14 +17,14 @@ class BookingResource extends DuskTestCase
     {
         $this->browse(function (Browser $browser)  {
             $browser->visit('/')
-                    ->waitForText('Login')
+                    ->waitForText('Iniciar sesión')
                     ->type('email', value: 'f@f')
                     ->type('password', value: 'password')
                     ->click('#btnEnter')
                     ->assertPathIs('/home')
                     ->click('#btnBooking')
                     ->assertSee('Seleccione el día')
-                    ->type('date', value:'10122023')
+                    ->type('date', value:'10102023')
                     ->type('text', value:'dani')
                     ->type('number', value:'678')
                     ->type('textarea', value:'678')

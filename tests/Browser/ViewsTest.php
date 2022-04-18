@@ -17,7 +17,7 @@ class ViewsTest extends DuskTestCase
     {
         $this->browse(function (Browser $browser) {
             $browser->visit('/login')
-                    ->assertSee('Login')
+                    ->assertSee('Iniciar sesión')
                     ->assertSee('Recordarme');
         });
     }
@@ -35,7 +35,7 @@ class ViewsTest extends DuskTestCase
     {
         $this->browse(function (Browser $browser) {
             $browser->visit('/')
-                    ->waitForText('Login')
+                    ->waitForText('Iniciar sesión')
                     ->type('email', value: 'a@a')
                     ->type('password', value: 'password')
                     ->click('#btnEnter')
