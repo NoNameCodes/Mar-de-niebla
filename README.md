@@ -2,9 +2,9 @@
 
 _Proyecto pedagógico propuesto por la organización [Mar de Niebla](https://mardeniebla.es) a [Factoría F5](https://factoriaf5.org/) y asignado al equipo [NoNameCoders](#autores-)._
 
-_La propuesta de proyecto es la siguiente: desarrollar una web en la que las organizaciones socias de Mar de Niebla, puedan registrarse\*, loguearse, añadir y eliminar recursos; los cuales podrán decidir con qué otras organizaciones pueden compartir dicho recurso. Y reservar dichos recursos._
+_La propuesta de proyecto es la siguiente: desarrollar una web en la que las organizaciones socias de Mar de Niebla, puedan registrarse\*, loguearse, añadir, eliminar recursos y reservar recursos disponibles; las cuales podrán decidir con qué otras organizaciones quieren compartir dicho recurso._
 
-_Estos recursos una vez reservados no podrán ser reservados por otra organización si las fechas coinciden._
+_Estos recursos, una vez reservados, no podrán ser reservados por otra organización en la misma fecha._
 
 ###### _\* El registro de una nueva organización deberá ser aceptado por un administrador de la web. De esta manera se evitan registros ajenos a las organizaciones._
 
@@ -12,7 +12,7 @@ _Estos recursos una vez reservados no podrán ser reservados por otra organizaci
 
 _Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
 
-Mira **[Deployment](#despliegue-📦)** para conocer como desplegar el proyecto.
+Mira **[Despliegue](#despliegue-📦)** para conocer como desplegar el proyecto.
 
 ### Pre-requisitos 📋
 
@@ -70,8 +70,6 @@ _Para hacer el deploy de la web recomendamos seguir paso a paso la [documentacio
    **[Caio Da Silva](https://github.com/caiodstx)** <br>
    **[Daniel Gutiérrez](https://github.com/DanielgDiaz)** <br>
    **[Irina Petrova](https://github.com/irina-p-d)** <br>
-
-También puedes mirar la lista de todos los [contribuyentes](https://github.com/NoNameCodes/Mar-de-niebla/graphs/contributors) quienes han participado en este proyecto.
 
 ## Expresiones de gratitud 🎁
 
