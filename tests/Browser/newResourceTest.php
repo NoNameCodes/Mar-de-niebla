@@ -36,4 +36,17 @@ class newResourceTest extends DuskTestCase
                 ->assertPathIs('/form');
         });
     }
+
+    public function testFormDescription()
+    {
+        $this->browse(function (Browser $browser) {
+            $browser->visit('/')
+                ->type('email', value: 'm@m')
+                ->type('password', value: 'password')
+                ->click('#btnEnter')
+                ->assertPathIs('/')
+                ->click('#btnAdd')
+                ->type('textarea', value:'Está aparcada en la Calle Brasil');
+        });
+    }
 }
