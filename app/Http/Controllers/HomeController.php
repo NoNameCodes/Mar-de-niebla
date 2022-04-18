@@ -2,18 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Reserva;
+use App\Models\Resource;
 
 class HomeController extends Controller
 {
     public function index()
-
     {
-        return view('welcome');
+        return view('_user.home');
     }
 
     public function approval()
     {
-        return view('user-approval');
+        return view('_user.pending');
     }
 }

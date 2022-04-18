@@ -6,11 +6,6 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
         Schema::create('reservas', function (Blueprint $table) {
@@ -20,20 +15,13 @@ return new class extends Migration
             $table->string('phone');
             $table->string('coments')->nullable();
             $table->timestamps();
-            // $table->foreignId('location_id')->constrained('locations')
-            // ->OnDelete('cascade');
-            $table->foreignId('user_id')->constrained('users','id')
-            ->OnDelete('cascade');
-            $table->foreignId('resource_id')->constrained('resources','id')
-            ->OnDelete('cascade');
+            $table->foreignId('user_id')->constrained('users', 'id')
+                ->cascadeOnDelete();
+            $table->foreignId('resource_id')->constrained('resources', 'id')
+                ->cascadeOnDelete();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('reservas');

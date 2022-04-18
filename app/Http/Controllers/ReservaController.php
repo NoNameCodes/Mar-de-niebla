@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use App\Models\Reserva;
 use App\Models\Resource;
-use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
@@ -20,7 +20,7 @@ class ReservaController extends Controller
     public function create($id)
     {
         $resource = Resource::find($id);
-        return view('reserva', ['resource' => $resource]);
+        return view('_reserves.create', ['resource' => $resource]);
     }
 
     public function store(Request $request, $id)
@@ -33,7 +33,6 @@ class ReservaController extends Controller
         $reserva->date = $request->input('date');
         $reserva->coments = $request->input('coments');
         $reserva->phone = $request->input('phone');
-        // $reserva->location_id = $resource->location_id;
         $reserva->resource_id = $id;
         $reserva->user_id = $user;
         foreach ($reservasTotales as $variable) {
@@ -56,35 +55,6 @@ class ReservaController extends Controller
         return view('reserva', compact('resource'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function remove($id)
     {
         $reserva = Reserva::find($id);

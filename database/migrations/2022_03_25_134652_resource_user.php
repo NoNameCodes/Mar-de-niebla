@@ -6,11 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+
     public function up()
     {
         Schema::create('resource_user', function (Blueprint $table) {
@@ -20,20 +16,13 @@ return new class extends Migration
             $table->unsignedBigInteger('resource_id');
             $table->unsignedBigInteger('user_id');
 
-            $table->foreign('resource_id')->references('id')->on('resources')->OnDelete('cascade');;
-            $table->foreign('user_id')->references('id')->on('users')->OnDelete('cascade');;
+            $table->foreign('resource_id')->references('id')->on('resources')->cascadeOnDelete();
+            $table->foreign('user_id')->references('id')->on('users')->cascadeOnDelete();
         });
-
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('resource_user');
-
     }
 };

@@ -3,16 +3,11 @@
 namespace Database\Seeders;
 
 use App\Models\Reserva;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class ReservaSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
+
     public function run()
     {
         Reserva::factory()->create([
@@ -20,7 +15,6 @@ class ReservaSeeder extends Seeder
             'date' => '2022-03-20',
             'phone' => '666666666',
             'user_id' => '3',
-            // 'location_id' => rand(1, 5),
             'resource_id' => '2',
         ]);
 
@@ -29,7 +23,6 @@ class ReservaSeeder extends Seeder
             'date' => '2022-03-20',
             'phone' => '666666666',
             'user_id' => '3',
-            // 'location_id' => rand(1, 5),
             'resource_id' => '1',
         ]);
 
@@ -38,7 +31,6 @@ class ReservaSeeder extends Seeder
             'date' => '2022-03-20',
             'phone' => '666666666',
             'user_id' => '3',
-            // 'location_id' => rand(1, 5),
             'resource_id' => '3',
         ]);
 
@@ -47,7 +39,6 @@ class ReservaSeeder extends Seeder
             'date' => '2022-03-20',
             'phone' => '666666666',
             'user_id' => '3',
-            // 'location_id' => rand(1, 5),
             'resource_id' => '7',
         ]);
 
@@ -56,7 +47,6 @@ class ReservaSeeder extends Seeder
             'date' => '2022-03-20',
             'phone' => '666666666',
             'user_id' => '3',
-            // 'location_id' => rand(1, 5),
             'resource_id' => '4',
         ]);
 
@@ -65,7 +55,6 @@ class ReservaSeeder extends Seeder
             'date' => '2022-03-20',
             'phone' => '666666666',
             'user_id' => '3',
-            // 'location_id' => rand(1, 5),
             'resource_id' => '6',
         ]);
     }

@@ -13,23 +13,14 @@ class MisreservasController extends Controller
     {
         $actualDate = date('Y-m-d');
         $user_id = Auth::user();
-        $reservasFuture = Reserva::where('user_id', $user_id->id)->where('date', '>=' , $actualDate)->get();
-        $reservasId = Reserva::where('date', '>=' , $actualDate)->where('user_id', $user_id->id)->get('reservas.resource_id')->unique('resource_id')->values()->all();
-        $resources =  [];         
-            foreach ($reservasId as $reserva) {
-               $resource = Resource::where('id', '=', $reserva->resource_id)->first(); 
-               //dd($resource);
-               array_push($resources, $resource);
-        }   
-        
-        return view('misreservas', compact('resources', 'reservasFuture'));
+        $reservasFuture = Reserva::where('user_id', $user_id->id)->where('date', '>=', $actualDate)->get();
+        $reservasId = Reserva::where('date', '>=', $actualDate)->where('user_id', $user_id->id)->get('reservas.resource_id')->unique('resource_id')->values()->all();
+        $resources =  [];
+        foreach ($reservasId as $reserva) {
+            $resource = Resource::where('id', '=', $reserva->resource_id)->first();
+            array_push($resources, $resource);
+        }
+
+        return view('_user.reserves', compact('resources', 'reservasFuture'));
     }
-        
 }
-
-
-
-    
-    
-    
-   

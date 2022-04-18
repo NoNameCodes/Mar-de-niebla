@@ -5,8 +5,8 @@
             <x-jet-authentication-card-logo />
         </x-slot>
 
-        <div class="mb-4 text-sm text-gray-600">
-            {{ __('¿Olvidaste tu contreseña? No hay problema. Introduce tu cuenta de email y te enviaremos un enlace de recuperación para que puedas elegir otra.') }}
+        <div class="my-4 text-sm text-gray-600">
+            {{ __('¿Olvidaste tu contraseña? No hay problema. Introduce tu cuenta de email y te enviaremos un enlace de recuperación para que puedas elegir otra.') }}
         </div>
 
         @if (session('status'))
@@ -24,9 +24,9 @@
                 <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus placeholder="Introduce tu email" />
             </div>
 
-            <div class="flex items-center justify-end mt-4">
+            <div class="flex items-center justify-center mt-4">
                 <x-jet-button>
-                    {{ __('Enlace de recuperación') }}
+                    {{ __('Crear enlace de recuperación') }}
                 </x-jet-button>
             </div>
         </form>

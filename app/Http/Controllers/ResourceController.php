@@ -2,15 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Location;
 use App\Models\Resource;
-use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Session;
-use PhpParser\Builder\Use_;
 
-class ResourceCRUDController extends Controller
+class ResourceController extends Controller
 {
 
     public function index()
@@ -21,7 +21,9 @@ class ResourceCRUDController extends Controller
 
     public function create()
     {
-        return view('resources.create');
+        $users = User::get()->where('admin', false);
+        $location = Location::get();
+        return view('_resources.create', compact('users', 'location'));
     }
 
     public function store(Request $request)
@@ -44,17 +46,16 @@ class ResourceCRUDController extends Controller
                 "location_id" => $location->id,
             ]);
         }
-        if ($location->id==null){
+        if ($location->id == null) {
             $message = 'El recurso no ha podido ser añadido ya que la localización no puede quedar vacía.Por favor añada una localización al recurso compartido';
             Session::flash('message_location', $message);
-            return view('welcome');
-          
+            return view('_user.home');
         }
         $resource->save();
-        $usuario=User::all();
+        $usuario = User::all();
         $resource->user()->attach($user);
-        foreach ($usuario as $usuarios){
-         $resource->user()->attach($request->input($usuarios->id));
+        foreach ($usuario as $usuarios) {
+            $resource->user()->attach($request->input($usuarios->id));
         }
         return redirect('home')
             ->with('success', '¡Recurso creado correctamente!');
@@ -62,51 +63,53 @@ class ResourceCRUDController extends Controller
 
     public function show($id)
     {
-        return view('resource', [
+        return view('_resources.show', [
             'resource' => Resource::findOrFail($id)
         ]);
     }
 
     public function edit(Resource $resource)
     {
-        $users=User::all();
-        $location=Location::all();
-        return view('resources.edit', compact('resource','users','location'));
+        $users = User::get()->where('admin', false);
+        $location = Location::all();
+        return view('_resources.edit', compact('resource', 'users', 'location'));
     }
 
     public function update(Request $request, $id)
     {
-        if ($request->hasFile("img")) {
-            $file = $request->file("img");
-            $imageName = time() . '_' . $file->getClientOriginalName();
-            $file->move(\public_path("storage/img/"), $imageName);
-        // $request->validate([
-        //     'name' => 'required',
-        //     'description' => 'required',
-        //     'img' => 'required',
-        //     'user_id' => 'required',
-        //     'location_id' => 'required',
-        // ]);
-       
+
+        $usuario = User::all();
         $resource = Resource::find($id);
         $resource->name = $request->name;
         $resource->description = $request->description;
-        $resource->img =$imageName; 
-        // $resource->user_id =  Auth::user()->id;
         $resource->location_id = $request->location_id;
-        $resource->update();
-        $usuario=User::all();
-        foreach ($usuario as $usuarios){
-        $resource->user()->detach($request->input($usuarios->id));
-        }
         $resource->user()->attach(Auth::user()->id);
-        foreach ($usuario as $usuarios){
-        $resource->user()->attach($request->input($usuarios->id));
+
+        if ($request->hasFile("img")) {
+            $directory = '\public_path("storage/img/")' . $resource->img;
+            if (File::exists($directory)) {
+                File::delete($directory);
+            }
+            $file = $request->file("img");
+            $imageName = time() . '_' . $file->getClientOriginalName();
+            $file->move(\public_path("storage/img/"), $imageName);
+            $resource->img = $imageName;
         }
+        foreach ($usuario as $usuarios) {
+            $resource->user()->detach($request->input($usuarios->id));
+        }
+        foreach ($usuario as $usuarios) {
+            $resource->user()->attach($request->input($usuarios->id));
+        }
+        if ($resource->location_id == null) {
+            $message = 'El recurso no ha podido ser editado ya que la localización no puede quedar vacía.Por favor añada una localización';
+            Session::flash('message_location', $message);
+            return view('_user.home');
+        }
+        $resource->update();
         return redirect()->route('dashboard')
             ->with('success', 'El recurso "' . $resource->name . '" ha sido editado con éxito.');
     }
-}
 
     public function destroy(Resource $resource)
     {

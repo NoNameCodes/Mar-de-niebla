@@ -8,17 +8,12 @@ use Illuminate\Database\Seeder;
 
 class ResourceSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
     public function run()
     {
 
         Resource::factory()->create([
             'name' => 'Furgoneta',
-            'description' => 'furgoneta blanca grande disponible para logística.',
+            'description' => 'Furgoneta blanca grande disponible para logística.',
             'img' => 'furgoneta.png',
             'user_id' => '4',
             'location_id' => '1',
@@ -33,16 +28,16 @@ class ResourceSeeder extends Seeder
         ]);
 
         Resource::factory()->create([
-            'name' => 'Camara Nikon',
-            'description' => 'Camara de fotos nikon modelo D3200.',
+            'name' => 'Cámara Nikon',
+            'description' => 'Cámara de fotos nikon modelo D3200.',
             'img' => 'camara-nikon.jpg',
             'user_id' => '4',
             'location_id' => '1',
         ]);
 
         Resource::factory()->create([
-            'name' => 'Pala Padel',
-            'description' => 'Pala padel de adidas.',
+            'name' => 'Pala Pádel',
+            'description' => 'Pala pádel de Adidas.',
             'img' => 'pala-padel.jpeg',
             'user_id' => '4',
             'location_id' => '1',
@@ -58,7 +53,7 @@ class ResourceSeeder extends Seeder
 
         Resource::factory()->create([
             'name' => 'Aula proyección',
-            'description' => 'Aula para proyecciones situada en la calzada.',
+            'description' => 'Aula para proyecciones situada en La Calzada.',
             'img' => 'aula-proyeccion.jpeg',
             'user_id' => '4',
             'location_id' => '1',
