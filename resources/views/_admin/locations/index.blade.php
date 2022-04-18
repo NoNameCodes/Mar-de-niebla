@@ -14,7 +14,7 @@
         </div>
         <div class="flex justify-center">
             <a href="{{ route('location.create') }}"
-                class="w-60 bg-[#F8981D] hover:bg-[#ecc188] text-white font-bold py-2 px-8 shadow-xl rounded-full mb-2 mt-8 flex justify-center">Añadir
+                class="w-60 bg-[#F8981D] hover:bg-[#ffba25] text-white font-bold py-2 px-8 shadow-xl rounded mb-2 mt-8 flex justify-center">Añadir
                 localización</a>
         </div>
     </div>
