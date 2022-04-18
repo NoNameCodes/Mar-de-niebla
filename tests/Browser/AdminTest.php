@@ -8,6 +8,7 @@ use Tests\DuskTestCase;
 
 class AdminTest extends DuskTestCase
 {
+/** @test */
 
     public function admin_views()
     {
