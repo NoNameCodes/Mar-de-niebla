@@ -9,14 +9,15 @@ use Tests\DuskTestCase;
 
 class newResourceTest extends DuskTestCase
 {  
+
     public function testFormSave()
     {
         $this->browse(function (Browser $browser) {
-            $browser->visit('/')
+            $browser->visit('/home')
                 ->type('email', value: 'm@m')
                 ->type('password', value: 'password')
                 ->click('#btnEnter')
-                ->assertPathIs('/')
+                ->assertPathIs('/home')
                 ->click('#btnAdd')
                 ->assertSee('Guardar')
                 ->pressAndWaitFor('Guardar');
@@ -26,25 +27,25 @@ class newResourceTest extends DuskTestCase
     public function testFormClose()
     {
         $this->browse(function (Browser $browser) {
-            $browser->visit('/')
+            $browser->visit('/home')
                 ->type('email', value: 'm@m')
                 ->type('password', value: 'password')
                 ->click('#btnEnter')
-                ->assertPathIs('/')
+                ->assertPathIs('/home')
                 ->click('#btnAdd')
-                ->assertSee('Cerrar')
-                ->assertPathIs('/form');
+                ->assertSee('Cancelar')
+                ->assertPathIs('/resources/create');
         });
     }
 
     public function testFormDescription()
     {
         $this->browse(function (Browser $browser) {
-            $browser->visit('/')
+            $browser->visit('/home')
                 ->type('email', value: 'm@m')
                 ->type('password', value: 'password')
                 ->click('#btnEnter')
-                ->assertPathIs('/')
+                ->assertPathIs('/home')
                 ->click('#btnAdd')
                 ->type('textarea', value:'Está aparcada en la Calle Brasil');
         });
