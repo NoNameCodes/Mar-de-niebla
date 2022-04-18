@@ -31,7 +31,38 @@ _Para instalarlas ejecutaremos los siguientes comandos:_
 ```
 composer install
 npm install && run dev
-php artisan migrate
+```
+_Después necesitarás configurar el archivo .env de la siguiente manera:_
+
+```
+APP_NAME=Laravel -> Nombre de la web.
+APP_ENV=local -> Tipo de entorno (Local o production).
+APP_KEY= -> Key de la app, para obtener dicha key ejecutamos el comando php artisan key:generate en terminal.
+APP_DEBUG=true
+APP_URL=http://localhost -> Aquí es donde se indica el dominio de la web.
+
+
+DB_CONNECTION=mysql -> Tipo de base de datos.
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=laravel -> Nombre de la base de datos dedicada a la web
+DB_USERNAME=root -> Credenciales para acceder al cliente de base de datos.
+DB_PASSWORD=
+
+```
+
+_Para configurar el sistema de Mail deberemos configurar esta sección del .env con los datos adecuados según el servicio de mailing que usemos:_
+
+```
+MAIL_MAILER=smtp
+MAIL_HOST=mailhog
+MAIL_PORT=1025
+MAIL_USERNAME=null
+MAIL_PASSWORD=null
+MAIL_ENCRYPTION=null
+MAIL_FROM_ADDRESS="hello@example.com"
+MAIL_FROM_NAME="${APP_NAME}"
+
 ```
 
 _Y para ejecutar la web en el servidor de desarrollo local:_
